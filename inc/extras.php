@@ -98,8 +98,7 @@ function vendd_body_classes( $classes ) {
 	endif;
 	
 	// Adds classes to blogs based on main sidebar use.
-	if (	get_post_type( $post ) == 'download' ||
-			is_page_template( 'edd_templates/edd-checkout.php' ) ||
+	if (	is_page_template( 'edd_templates/edd-checkout.php' ) ||
 			is_page_template( 'edd_templates/edd-confirmation.php' ) ||
 			is_page_template( 'edd_templates/edd-history.php' ) ||
 			is_page_template( 'edd_templates/edd-members.php' ) ||

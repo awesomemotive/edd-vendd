@@ -174,7 +174,6 @@ a img {
 #primary { float: left; padding-right: 40px; width: 68%; }
 #secondary { float: left; width: 32%; }
 .vendd-no-sidebar #primary { margin: 0 auto; }
-.single-download #primary { float: none; margin: 0 auto; max-width: 722px; }
 .edd-store-front-template #primary,
 .post-type-archive-download #primary { float: none; padding: 0; width: 100%; }
 
