@@ -707,8 +707,62 @@ a:hover {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .widget-title {
-	font-size: 28px;
+	font-size: 22px;
+	font-weight: 700;
 	display: block;
+}
+.widget ul {
+	background: #fff;
+	list-style: none;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+	margin: 0;
+}
+.widget ul.children,
+.widget ul.sub-menu {
+	border: none;
+	margin-left: 20px;
+}
+.widget li {
+	padding: 10px 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.widget li:before {
+	color: #ddd;
+	font-family: "FontAwesome";
+	content: "\f0da";
+	margin-right: 10px;
+}
+.widget li.page_item_has_children:before,
+.widget li.menu-item-has-children:before {
+	color: #ddd;
+	font-family: "FontAwesome";
+	content: "\f0d7";
+	margin-right: 10px;
+}
+.widget .children li:before,
+.widget .sub-menu li:before {
+	content: "\f105";
+}
+.widget .children li:first-child,
+.widget .sub-menu li:first-child {
+	border-top: 1px dotted rgba(0, 0, 0, 0.05);
+	margin-top: 10px;
+}
+.widget li:last-child,
+.widget .children li:last-child,
+.widget .sub-menu li:last-child {
+	border-bottom: none;
+}
+.widget .children li:last-child,
+.widget .sub-menu li:last-child {
+	padding-bottom: 0;
+}
+.widget ul.children li,
+.widget ul.sub-menu li {
+	padding-left: 0;
+	border-bottom: 1px dotted rgba(0, 0, 0, 0.05);
+	margin-right: -20px;
 }
 /* Make sure select elements fit in widgets */
 .widget select {
