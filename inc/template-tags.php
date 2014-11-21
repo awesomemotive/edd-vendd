@@ -145,6 +145,14 @@ function vendd_comment_template( $comment, $args, $depth ) {
 						?>
 						<div class="comment-meta commentmetadata">
 							<cite class="fn"><?php printf(__( 'by %s', 'vendd' ), get_comment_author_link() ); ?></cite>
+							<?php
+								// Is it the post author? If so, let us know.
+								if ( $post = get_post( $post_id ) ) {
+									if ( $comment->user_id === $post->post_author ) {
+										echo '<span class="by-post-author">' . __( 'post author', 'vendd' ) . ' </span>';
+									}
+								}
+							?>
 							<span class="comment-date">
 								<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 									<time pubdate datetime="<?php comment_time( 'c' ); ?>"><?php echo get_comment_date(); // translators: 1: date, 2: time ?></time>

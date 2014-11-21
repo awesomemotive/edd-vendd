@@ -43,8 +43,7 @@ a,
 #edd_download_pagination .page-numbers:hover {
 	color: #428bca;
 }
-h1, h2,
-.bypostauthor .comment-footer {
+h1, h2 {
 	border-color: #428BCA;
 }
 
@@ -249,6 +248,7 @@ pre {
 	padding: 10px;
 	border: 1px solid #f2f2f2;
 	border-width: 4px 1px 1px;
+	border-radius: 0 0 4px 4px;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 	overflow: auto;
@@ -941,11 +941,22 @@ a:hover {
 	color: #999;
 	line-height: 48px;
 	font-style: normal;
+	margin-right: 2px;
 }
 .comment-meta .fn a {
 	text-decoration: none;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: bold;
+}
+.by-post-author {
+	display: inline-block;
+	background: #428bca;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 2px 6px;
+	border-radius: 3px;
 }
 .comment-meta .comment-date {
 	position: absolute;
