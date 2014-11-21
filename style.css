@@ -699,8 +699,14 @@ a:hover {
 /*--------------------------------------------------------------
 >>> Widgets
 --------------------------------------------------------------*/
+#secondary {
+	background: #fafafa;
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+	border-left: 1px dotted rgba(0, 0, 0, 0.05);
+}
 .widget {
-	margin: 0 0 1.5em;
+	padding: 30px 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .widget-title {
 	font-size: 28px;
