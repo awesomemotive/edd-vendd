@@ -228,6 +228,8 @@ i {
 blockquote {
 	background: #fafafa;
 	padding: 20px;
+	border: 1px solid #F2F2F2;
+	border-radius: 4px;
 	margin: 0 0 1.5em 1.5em;
 }
 blockquote p {
@@ -327,11 +329,13 @@ dt {
 	font-weight: bold;
 	padding: 10px;
 	border: 1px solid #f2f2f2;
+	border-radius: 4px 4px 0 0;
 }
 
 dd {
 	padding: 10px;
 	border: 1px solid #f2f2f2;
+	border-radius: 0 0 4px 4px;
 	margin: -1px 0 1.5em;
 }
 
@@ -346,6 +350,7 @@ figure {
 
 .entry-content table {
 	border: 1px solid #f2f2f2;
+	border-radius: 4px;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
@@ -357,9 +362,30 @@ figure {
 	border-bottom: 1px solid #f2f2f2;
 }
 
-.entry-content td {
+.entry-content table th:first-child {
+	border-radius: 4px 0 0 0;
+}
+
+.entry-content table th:last-child {
+	border-radius: 0 4px 0 0;
+}
+
+.entry-content table td {
+	background: #fff;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
+}
+
+.entry-content table tr:last-child td {
+	border: none;
+}
+
+.entry-content table tr:last-child td:first-child {
+	border-radius: 0 0 0 4px;
+}
+
+.entry-content table tr:last-child td:last-child {
+	border-radius: 0 0 4px 0;
 }
 
 
@@ -561,6 +587,7 @@ a:hover {
 .post-nav-title {
 	display: block;
 	font-size: 20px;
+	font-weight: 700;
 }
 
 
@@ -699,12 +726,12 @@ a:hover {
 --------------------------------------------------------------*/
 #secondary {
 	background: #fafafa;
-	border-top: 1px solid rgba(0, 0, 0, 0.08);
-	border-left: 1px dotted rgba(0, 0, 0, 0.05);
+	border-top: 1px solid #f2f2f2;
+	border-left: 1px dotted #f2f2f2;
 }
 .widget {
 	padding: 30px 20px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	border-bottom: 1px solid #f2f2f2;
 }
 .widget-title {
 	font-size: 22px;
@@ -714,7 +741,7 @@ a:hover {
 .widget ul {
 	background: #fff;
 	list-style: none;
-	border: 1px solid rgba(0, 0, 0, 0.05);
+	border: 1px solid #f2f2f2;
 	border-radius: 4px;
 	margin: 0;
 }
@@ -725,7 +752,7 @@ a:hover {
 }
 .widget li {
 	padding: 10px 20px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	border-bottom: 1px solid #f2f2f2;
 }
 .widget li:before {
 	color: #ddd;
@@ -746,7 +773,7 @@ a:hover {
 }
 .widget .children li:first-child,
 .widget .sub-menu li:first-child {
-	border-top: 1px dotted rgba(0, 0, 0, 0.05);
+	border-top: 1px dotted #f2f2f2;
 	margin-top: 10px;
 }
 .widget li:last-child,
@@ -761,8 +788,12 @@ a:hover {
 .widget ul.children li,
 .widget ul.sub-menu li {
 	padding-left: 0;
-	border-bottom: 1px dotted rgba(0, 0, 0, 0.05);
+	border-bottom: 1px dotted #f2f2f2;
 	margin-right: -20px;
+}
+.wp-caption .wp-caption-text {
+	font-size: 13px;
+	font-style: italic;
 }
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -775,7 +806,7 @@ a:hover {
 /* calendar widget */
 .widget_calendar #calendar_wrap {
 	background: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.05);
+	border: 1px solid #f2f2f2;
 	border-radius: 4px;
 }
 .widget_calendar table,
@@ -784,7 +815,7 @@ a:hover {
 }
 #wp-calendar caption {
 	padding: 10px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	border-bottom: 1px solid #f2f2f2;
 }
 #wp-calendar caption:before {
 	font-family: "FontAwesome";
@@ -793,12 +824,18 @@ a:hover {
 }
 #wp-calendar thead th {
 	background: #fafafa;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	border-bottom: 1px solid #f2f2f2;
 }
 #wp-calendar th,
 #wp-calendar td {
 	text-align: center;
 	padding: 6px 10px;
+}
+/* RSS widget */
+.widget_rss .rss-date {
+	display: block;
+	color: #999;
+	font-size: 13px;
 }
 
 
@@ -902,6 +939,7 @@ a:hover {
 .comments-title {
 	display: block;
 	font-size: 28px;
+	font-weight: 700;
 	margin-bottom: 1em;
 }
 .comments-title .fa {
@@ -919,9 +957,10 @@ a:hover {
 }
 .comment-footer {
 	position: relative;
-	background: #f5f5f5;
+	background: #fafafa;
 	padding: 10px;
-	border-left: 4px solid #eee;
+	border: 4px solid #eee;
+	border-width: 1px 1px 1px 4px;
 	border-radius: 0 4px 4px 0;
 	margin-bottom: 16px;
 }
@@ -972,11 +1011,8 @@ a:hover {
 	word-wrap: break-word;
 }
 .comment-reply-link {
-	background: #f5f5f5;
 	color: #ccc;
 	text-decoration: none;
-	padding: 6px;
-	border-radius: 3px;
 }
 #cancel-comment-reply-link {
 	text-decoration: none;
