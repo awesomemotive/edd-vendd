@@ -247,7 +247,7 @@ pre {
 	line-height: 1.6;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	padding: 10px;
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 	border-width: 4px 1px 1px;
 	margin-bottom: 1.5em;
 	max-width: 100%;
@@ -326,12 +326,12 @@ dt {
 	background: #fafafa;
 	font-weight: bold;
 	padding: 10px;
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 }
 
 dd {
 	padding: 10px;
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 	margin: -1px 0 1.5em;
 }
 
@@ -345,7 +345,7 @@ figure {
 }
 
 .entry-content table {
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
@@ -354,12 +354,12 @@ figure {
 	background: #fafafa;
 	font-weight: bold;
 	padding: 10px;
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: 1px solid #f2f2f2;
 }
 
 .entry-content td {
 	padding: 10px;
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: 1px solid #f2f2f2;
 }
 
 
@@ -381,7 +381,7 @@ input[type="password"],
 input[type="search"],
 textarea {
 	padding: 8px;
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 	border-radius: 4px;
 	box-shadow: none;
 }
@@ -481,7 +481,7 @@ a:hover {
 	z-index: 99999;
 	background: #fff;
 	font-size: 13px;
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 	margin-left: 10px;
 }
 .main-navigation ul ul ul {
@@ -1076,7 +1076,7 @@ object {
 	position: absolute;
 		right: 20px;
 		bottom: 13px;
-	color: #eaeaea;
+	color: #f2f2f2;
 	font-size: 30px;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
@@ -1182,7 +1182,7 @@ input[type=submit].edd-submit {
 
 /* variable pricing description - http://wordpress.org/plugins/edd-variable-pricing-descriptions/ */
 .edd_price_options ul {
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 	border-radius: 4px;
 }
 .edd_download_purchase_form .edd_price_options li {
@@ -1231,7 +1231,7 @@ input[type=submit].edd-submit {
 .edd-confirmation-template #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products tbody td,
 #edd_purchase_receipt_products th {
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 }
 .edd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
 .edd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
@@ -1252,7 +1252,7 @@ input[type=submit].edd-submit {
 	border-bottom-width: 0;
 }
 #edd_checkout_cart {
-	border: 1px solid #eaeaea;
+	border: 1px solid #f2f2f2;
 	border-width: 0 1px 1px 0;
 }
 #edd_checkout_cart .edd_cart_header_row th,
