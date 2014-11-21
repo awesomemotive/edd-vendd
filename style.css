@@ -772,6 +772,34 @@ a:hover {
 .widget_search .search-submit {
 	display: none;
 }
+/* calendar widget */
+.widget_calendar #calendar_wrap {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+}
+.widget_calendar table,
+.widget_edd_downloads_calendar table {
+	width: 100%;
+}
+#wp-calendar caption {
+	padding: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+#wp-calendar caption:before {
+	font-family: "FontAwesome";
+	content: "\f073";
+	margin: 0 10px 0 6px;
+}
+#wp-calendar thead th {
+	background: #fafafa;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+#wp-calendar th,
+#wp-calendar td {
+	text-align: center;
+	padding: 6px 10px;
+}
 
 
 /*--------------------------------------------------------------
