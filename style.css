@@ -441,7 +441,7 @@ a:hover {
 	color: midnightblue;
 }
 .site-title {
-	font: 700 60px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 700 40px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: 0;
 }
 .site-title a {
@@ -704,7 +704,7 @@ a:hover {
 	display: inline-block;
 	position: absolute;
 		right: 40px;
-		top: 50px;
+		top: 40px;
 	background: rgba(0, 0, 0, .05);
 	color: #fff;
 	text-decoration: none;
