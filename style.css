@@ -198,7 +198,6 @@ h1, h2, h3, h4, h5, h6,
 .comments-title {
 	clear: both;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight: 300;
 	line-height: 1.4;
 	margin-bottom: .4em;
 }
@@ -414,7 +413,7 @@ a:hover {
 	color: midnightblue;
 }
 .site-title {
-	font: 300 60px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 700 60px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: 0;
 }
 .site-title a {
@@ -555,7 +554,7 @@ a:hover {
 }
 .site-main .post-navigation {
 	padding-bottom: 40px;
-	border-bottom: 2px solid #eee;
+	border-bottom: 1px dotted #eee;
 }
 .post-navigation .nav-previous {
 	margin-bottom: 8px;
@@ -735,7 +734,7 @@ a:hover {
 	margin: 0 0 30px;
 }
 .hentry .entry-title {
-	font: 300 36px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 700 36px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .hentry .entry-title a {
 	color: #555;
@@ -749,14 +748,14 @@ a:hover {
 }
 .entry-title .entry-subtitle {
 	font-size: 16px;
-	margin-top: 10px;
+	font-weight: 300;
 }
 .single .entry-header .entry-meta {
 	padding-bottom: 10px;
-	border-bottom: 2px solid #eee;
+	border-bottom: 1px dotted #eee;
 	margin: 0px 0px 10px;
 }
-.single .entry-title .entry-subtitle {
+.entry-title .entry-subtitle {
 	color: #666;
 	font-style: italic;
 }
@@ -771,7 +770,7 @@ a:hover {
 }
 .entry-footer {
 	padding-bottom: 10px;
-	border-bottom: 2px solid #eee;
+	border-bottom: 1px dotted #eee;
 }
 .entry-footer a {
 	color: #555;
@@ -1008,7 +1007,7 @@ object {
 	max-width: 722px;
 }
 .store-front-header .entry-title {
-	font: 300 40px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 700 40px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: .4em;
 }
 #store-front {
