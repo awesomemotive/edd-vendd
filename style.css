@@ -1174,19 +1174,15 @@ object {
 }
 #edd-purchase-button, 
 .edd-submit, 
-input[type=submit].edd-submit {
+input[type="submit"].edd-submit {
 	font-size: 18px;
 	border: none;
 	border-radius: 4px;
 	padding: 15px;
 }
-.entry-content .edd_purchase_submit_wrapper a.edd-add-to-cart,
 #edd_purchase_submit #edd-purchase-button {
 	display: block;
 	width: 100%;
-}
-.entry-content .edd_purchase_submit_wrapper a.edd-add-to-cart[style*="none;"] ~ a.edd_go_to_checkout {
-	display: block !important;
 }
 .edd_go_to_checkout {
 	text-decoration: none;
