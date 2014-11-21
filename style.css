@@ -806,6 +806,10 @@ a:hover {
 .widget_search .search-submit {
 	display: none;
 }
+#secondary .widget_search input[type="search"] {
+	background: #fff url('inc/images/sprite.png') no-repeat 11px 13px;
+	padding-left: 36px;
+}
 /* calendar widget */
 .widget_calendar #calendar_wrap {
 	background: #fff;
@@ -1130,8 +1134,34 @@ object {
 
 
 /*--------------------------------------------------------------
->>> Easy Digital Downloads
+>>> Plugin Support
 --------------------------------------------------------------*/
+
+/* Kolakube Email Forms */
+#secondary .widget_kol_email {
+	background: #3d3d3d;
+	color: #fff;
+}
+#secondary .widget_kol_email .kol-email-field-name,
+#secondary .widget_kol_email .kol-email-field-email,
+#secondary .widget_kol_email .kol-email-field-submit {
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+#secondary .widget_kol_email .kol-email-field-submit {
+	margin-bottom: 0;
+}
+#secondary .widget_kol_email input[type="text"] {
+	background: #fff url('inc/images/sprite.png') no-repeat 11px -36px;
+	padding-left: 36px;
+}
+#secondary .widget_kol_email input[type="email"] {
+	background: #fff url('inc/images/sprite.png') no-repeat 11px -85px;
+	padding-left: 36px;
+}
+
+/* Easy Digital Downloads */
 .store-front-header {
 	text-align: center;
 	margin: 0 auto 60px;
