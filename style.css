@@ -406,6 +406,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="number"],
 textarea {
 	padding: 8px;
 	border: 1px solid #f2f2f2;
@@ -1349,13 +1350,48 @@ input[type="submit"].edd-submit {
 	border-bottom: none;
 	border-radius: 0 0 4px 4px;
 }
-.edd_download_purchase_form .edd_price_options li:nth-child(odd) {
-	background: #fafafa;
+.edd_download_purchase_form .edd_price_options li:before {
+	content: "";
+	margin: 0;
+}
+.edd_download_purchase_form .edd_price_options li input[type="radio"] {
+	margin-right: 6px;
 }
 .edd-variable-pricing-desc {
 	color: #999;
 	font-size: 13px;
 	margin: 4px 0 0;
+}
+.widget .edd_download_purchase_form .edd-submit {
+	font-size: 15px;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+}
+.widget .edd_download_purchase_form input[type="number"] {
+	margin-bottom: 8px;
+}
+.widget .edd_download_purchase_form .edd_download_quantity_wrapper:before {
+	color: #d8d8d8;
+	font-family: "FontAwesome";
+	content: "\f00d";
+	margin: 0 10px 0 16px;
+}
+.widget_edd_product_details .edd-meta {
+	font-size: 13px;
+	margin-bottom: 0;
+}
+.widget_edd_cart_widget .edd_subtotal {
+	background: #fafafa;
+	font-style: normal;
+	margin: 0;
+}
+.widget_edd_cart_widget .edd_subtotal:before,
+.widget_edd_cart_widget .edd_checkout:before,
+.widget_edd_cart_widget .cart_item.empty:before {
+	content: none;
+	margin: 0;
 }
 
 /* templates */
