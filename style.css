@@ -807,8 +807,8 @@ a:hover {
 	display: none;
 }
 #secondary .widget_search input[type="search"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 11px 13px;
-	padding-left: 36px;
+	background: #fff url('inc/images/sprite.png') no-repeat 16px 13px;
+	padding-left: 42px;
 }
 /* calendar widget */
 .widget_calendar #calendar_wrap {
@@ -1153,12 +1153,12 @@ object {
 	margin-bottom: 0;
 }
 #secondary .widget_kol_email input[type="text"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 11px -36px;
-	padding-left: 36px;
+	background: #fff url('inc/images/sprite.png') no-repeat 16px -36px;
+	padding-left: 42px;
 }
 #secondary .widget_kol_email input[type="email"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 11px -85px;
-	padding-left: 36px;
+	background: #fff url('inc/images/sprite.png') no-repeat 16px -85px;
+	padding-left: 42px;
 }
 
 /* Easy Digital Downloads */
