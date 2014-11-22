@@ -1138,10 +1138,6 @@ object {
 --------------------------------------------------------------*/
 
 /* Kolakube Email Forms */
-#secondary .widget_kol_email {
-	background: #3d3d3d;
-	color: #fff;
-}
 #secondary .widget_kol_email .kol-email-field-name,
 #secondary .widget_kol_email .kol-email-field-email,
 #secondary .widget_kol_email .kol-email-field-submit {
