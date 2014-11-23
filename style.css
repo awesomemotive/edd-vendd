@@ -43,7 +43,8 @@ button,
 }
 a,
 .comment-full:hover > .reply > .comment-reply-link,
-#edd_download_pagination .page-numbers:hover {
+#edd_download_pagination .page-numbers:hover,
+.edd_download .edd_download_inner:hover .product-link:hover {
 	color: #428bca;
 }
 h1, h2 {
@@ -891,17 +892,21 @@ a:hover {
 	color: #666;
 }
 .entry-title .entry-subtitle {
+	color: #666;
 	font-size: 16px;
 	font-weight: 300;
+	font-style: italic;
+}
+.vendd-edd-template .entry-title .entry-subtitle {
+	font-style: normal;
+}
+.edd_download_inner .edd_download_title .entry-subtitle {
+	display: none;
 }
 .single .entry-header .entry-meta {
 	padding-bottom: 10px;
 	border-bottom: 1px dotted #eee;
 	margin: 0px 0px 10px;
-}
-.entry-title .entry-subtitle {
-	color: #666;
-	font-style: italic;
 }
 .entry-meta,
 .entry-footer {
@@ -1209,9 +1214,15 @@ object {
 .edd_download .edd_download_inner {
 	position: relative;
 	background: #fff;
-	padding: 20px;
+	padding: 0;
 	border-radius: 4px;
 	margin-bottom: 0;
+}
+.edd_download .edd_download_inner:hover {
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s;
 }
 .edd_download_columns_4 .edd_download .edd_download_inner,
 .edd_download_columns_5 .edd_download .edd_download_inner,
@@ -1221,8 +1232,12 @@ object {
 .edd_download_image {
 	margin-bottom: 15px;
 }
+.edd_download_image img {
+	border-radius: 4px 4px 0 0;
+}
 .edd_download_title {
 	font: 300 22px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	padding: 0 20px;
 	margin-bottom: 15px;
 }
 .edd_download_columns_4 .edd_download_title,
@@ -1239,12 +1254,14 @@ object {
 .edd_download_full_content {
 	color: #757575;
 	font-size: 13px;
+	padding: 0 20px;
 }
 .product-price {
-	padding: 4px 8px;
 	display: inline-block;
-	color: #FFF;
+	color: #fff;
+	padding: 4px 8px;
 	border-radius: 3px;
+	margin: 0 0 20px 20px;
 }
 .edd_download_columns_5 .product-price,
 .edd_download_columns_6 .product-price {
@@ -1256,12 +1273,15 @@ object {
 .product-link {
 	position: absolute;
 		right: 20px;
-		bottom: 13px;
+		bottom: 10px;
 	color: #f2f2f2;
 	font-size: 30px;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
+}
+.edd_download .edd_download_inner:hover .product-link {
+	color: #555;
 }
 .edd_download_columns_5 .product-link,
 .edd_download_columns_6 .product-link {
@@ -1270,9 +1290,6 @@ object {
 	line-height: 1;
 	text-align: center;
 	margin-top: 10px;
-}
-.product-link:hover {
-	color: #555;
 }
 #edd_download_pagination {
 	font-size: 13px;

@@ -549,7 +549,8 @@ function vendd_customizer_head_styles() {
 			}			
 			a,
 			.comment-full:hover > .reply > .comment-reply-link,
-			#edd_download_pagination .page-numbers:hover {
+			#edd_download_pagination .page-numbers:hover,
+			.edd_download .edd_download_inner:hover .product-link:hover {
 				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}			
 			h1,
