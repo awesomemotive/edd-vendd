@@ -9,7 +9,7 @@
 
 
 /**
- * Add support for excerpts on pages
+ * Add support for excerpts on pages.
  */
 function vendd_download_excerpts() {
 	add_post_type_support( 'page', 'excerpt' );
@@ -21,7 +21,7 @@ add_action( 'init', 'vendd_download_excerpts' );
  * Set excerpt length
  */
 function custom_excerpt_length( $length ) {
-	return 60;
+	return 35;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
