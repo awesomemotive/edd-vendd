@@ -536,6 +536,9 @@ function vendd_customizer_head_styles() {
 			.edd-submit.button:hover {
 				background: #3d3d3d !important; color: #fff;
 			}
+			.edd_download .edd_download_inner:hover .product-link:hover {
+				color: <?php echo vendd_sanitize_hex_color( $edd_button_color ); ?>;
+			}
 		<?php endif; ?>
 		<?php if ( '#428bca' != $design_color && '' != $design_color ) : // Is the design color no longer the default? ?>
 			#masthead,
@@ -549,8 +552,7 @@ function vendd_customizer_head_styles() {
 			}			
 			a,
 			.comment-full:hover > .reply > .comment-reply-link,
-			#edd_download_pagination .page-numbers:hover,
-			.edd_download .edd_download_inner:hover .product-link:hover {
+			#edd_download_pagination .page-numbers:hover {
 				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}			
 			h1,
