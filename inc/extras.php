@@ -30,7 +30,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
  * Replace excerpt ellipses with new ellipses and link to full article
  */
 function vendd_excerpt_more( $more ) {
-	return '...</p><p class="continue-reading"><a class="more-link" href="' . get_permalink( get_the_ID() ) . '">' . get_theme_mod( 'vendd_read_more', __( 'Continue reading', 'vendd' ) ) . ' &rarr;';
+	return '...</p><p class="continue-reading"><a class="more-link" href="' . get_permalink( get_the_ID() ) . '">' . get_theme_mod( 'vendd_read_more', __( 'Continue reading', 'vendd' ) ) . ' &rarr;</a></p>';
 }
 add_filter( 'excerpt_more', 'vendd_excerpt_more' );
 
