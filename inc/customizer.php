@@ -9,6 +9,7 @@
  * Add postMessage support for site title and description for the Theme Customizer.
  */
 function vendd_customize_register( $wp_customize ) {
+	global $edd_options;
 
 	/** ===============
 	 * Extends controls class to add textarea with description
@@ -306,6 +307,50 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'	=> 20,
 			'type'      => 'checkbox',
 		) );
+		
+		/**
+		 * EDD button color
+		 *
+		 * Respect and reflect the EDD button color setting by default and
+		 * only change the EDD button color if changes in the customizer.
+		 */
+		switch ( $edd_options['checkout_color'] ){
+			case 'white':
+				$edd_button_color_hex = '#404040';
+				break;
+			case 'gray':
+				$edd_button_color_hex = '#f1f1f1';
+				break;
+			case 'blue':
+				$edd_button_color_hex = '#428bca';
+				break;
+			case 'red':
+				$edd_button_color_hex = '#E74C3C';
+				break;
+			case 'green':
+				$edd_button_color_hex = '#2ECC71';
+				break;
+			case 'yellow':
+				$edd_button_color_hex = '#F1C40F';
+				break;
+			case 'orange':
+				$edd_button_color_hex = '#E67E22';
+				break;
+			case 'dark-gray':
+				$edd_button_color_hex = '#3d3d3d';
+				break;
+		}
+		$wp_customize->add_setting( 'vendd_edd_button_color', array(
+			'default'		=> $edd_button_color_hex,
+			'type'			=> 'option', 
+			'capability'	=> 'edit_theme_options',
+		) );		
+		$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_edd_button_color', array(
+			'label'			=> __( 'EDD Button Color', 'vendd' ), 
+			'section'		=> 'vendd_edd_options',
+			'description'	=> __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Click "Default" to revert back to the default EDD setting.', 'vendd' ),
+			'priority'		=> 30
+		) ) );
 	
 		// Store Front Title
 		$wp_customize->add_setting( 'vendd_store_front_title', array(
@@ -315,7 +360,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_store_front_title', array(
 			'label'			=> __( 'Store Front Title', 'vendd' ),
 			'section'		=> 'vendd_edd_options',
-			'priority'		=> 60,
+			'priority'		=> 40,
 			'description'	=> __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 		) ) );	
 	}
@@ -479,8 +524,11 @@ function vendd_sanitize_hex_color( $color ) {
  * Add Customizer theme styles to <head>
  */
 function vendd_customizer_head_styles() {
-	$design_color	= get_option( 'vendd_design_color' );
-	$bg_color		= get_option( 'vendd_background_color' ); ?>
+	$design_color		= get_option( 'vendd_design_color' );
+	$bg_color			= get_option( 'vendd_background_color' );
+	$edd_button_color	= get_option( 'vendd_edd_button_color' );
+	$edd_color_defaults	= array( '#404040', '#f1f1f1', '#E74C3C', '#2ECC71', '#F1C40F', '#E67E22', '#3d3d3d' );
+	?>
 
 	<style type="text/css">
 		<?php if ( 1 == get_theme_mod( 'vendd_hide_tagline' ) ) : // if no tagline, reposition the header cart total ?>
@@ -491,6 +539,14 @@ function vendd_customizer_head_styles() {
 		<?php if ( '#f1f1f1' != $bg_color && '' != $bg_color ) : // Is the background color no longer the default? ?>
 			body {
 				background: <?php echo vendd_sanitize_hex_color( $bg_color ); ?>;
+			}
+		<?php endif; ?>
+		<?php if ( '' != $edd_button_color && ! in_array( $edd_button_color, $edd_color_defaults ) ) : ?>
+			.edd-submit.button {
+				background: <?php echo vendd_sanitize_hex_color( $edd_button_color ); ?> !important;
+			}			
+			.edd-submit.button:hover {
+				background: #3d3d3d !important; color: #fff;
 			}
 		<?php endif; ?>
 		<?php if ( '#428bca' != $design_color && '' != $design_color ) : // Is the design color no longer the default? ?>
