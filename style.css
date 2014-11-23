@@ -1317,9 +1317,6 @@ input[type="submit"].edd-submit {
 .edd-submit.button.dark-gray {
 	background: #3d3d3d;
 }
-.edd-submit.button.orange {
-	background: #E67E22;
-}
 .edd-submit.button.white:hover {
 	background: #F2F3F5;
 }
