@@ -1219,7 +1219,7 @@ object {
 	margin-bottom: 0;
 }
 .edd_download .edd_download_inner:hover {
-	box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
@@ -1229,15 +1229,12 @@ object {
 .edd_download_columns_6 .edd_download .edd_download_inner {
 	padding: 10px;
 }
-.edd_download_image {
-	margin-bottom: 15px;
-}
 .edd_download_image img {
 	border-radius: 4px 4px 0 0;
 }
 .edd_download_title {
 	font: 300 22px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	padding: 0 20px;
+	padding: 15px 20px 0;
 	margin-bottom: 15px;
 }
 .edd_download_columns_4 .edd_download_title,
@@ -1254,7 +1251,10 @@ object {
 .edd_download_full_content {
 	color: #757575;
 	font-size: 13px;
-	padding: 0 20px;
+	padding: 0 20px 15px;
+}
+.edd_download_excerpt p:last-child {
+	margin-bottom: 0;
 }
 .product-price {
 	display: inline-block;
