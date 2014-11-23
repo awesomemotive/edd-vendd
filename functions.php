@@ -14,7 +14,9 @@ define( 'VENDD_AUTHOR', 'Sean Davis' );
 define( 'VENDD_VERSION', '0.1' );
 define( 'VENDD_HOME', '' );
 
-require get_template_directory() . '/inc/edd-functions.php'; // EDD functions
+if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+	require get_template_directory() . '/inc/edd-functions.php'; // EDD functions
+}
 
 
 if ( ! function_exists( 'vendd_setup' ) ) :
