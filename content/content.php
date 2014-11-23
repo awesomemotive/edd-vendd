@@ -17,7 +17,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() || is_archive() || 1 == get_theme_mod( 'vendd_post_content' ) ) : ?>
+	<?php if ( is_archive() || 1 == get_theme_mod( 'vendd_post_content' ) ) : ?>
 		<div class="entry-summary">
 			<?php
 				// display featured image full
