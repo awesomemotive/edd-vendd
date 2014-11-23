@@ -440,7 +440,7 @@ button:hover {
 >>> Links
 --------------------------------------------------------------*/
 a:hover {
-	color: midnightblue;
+	color: #999;
 }
 .site-title {
 	font: 700 40px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
