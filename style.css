@@ -1251,7 +1251,7 @@ object {
 	margin-bottom: 0;
 }
 .edd_download .edd_download_inner:hover {
-	box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.17);
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
