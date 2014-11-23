@@ -1,5 +1,7 @@
 <?php
 /**
+ * The default template part for displaying content lists.
+ *
  * @package Vendd
  */
 ?>
