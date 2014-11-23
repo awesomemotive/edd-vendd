@@ -97,13 +97,14 @@ function vendd_body_classes( $classes ) {
 		$classes[] = 'vendd-failed-template vendd-edd-template';
 	endif;
 	
-	// Adds classes to blogs based on main sidebar use.
+	// Adds class based on whether or not is has a sidebar
 	if (	is_page_template( 'edd_templates/edd-checkout.php' ) ||
 			is_page_template( 'edd_templates/edd-confirmation.php' ) ||
 			is_page_template( 'edd_templates/edd-history.php' ) ||
 			is_page_template( 'edd_templates/edd-members.php' ) ||
 			is_page_template( 'edd_templates/edd-failed.php' ) ||
-			is_post_type_archive( 'download' ) ) {
+			is_post_type_archive( 'download' ) ||
+			is_404() ) {
 		$classes[] = 'vendd-no-sidebar';
 	}
 

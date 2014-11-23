@@ -176,7 +176,7 @@ a img {
 /* primary content */
 #primary { float: left; padding-right: 40px; width: 68%; }
 #secondary { float: left; width: 32%; font-size: 13px; }
-.vendd-no-sidebar #primary { margin: 0 auto; }
+.vendd-no-sidebar #primary { float: none; margin: 0 auto; }
 .vendd-store-front-template #primary,
 .post-type-archive-download #primary { float: none; padding: 0; width: 100%; }
 
@@ -807,9 +807,13 @@ a:hover {
 .widget_search .search-submit {
 	display: none;
 }
-#secondary .widget_search input[type="search"] {
+#secondary .widget_search input[type="search"],
+.error-404 input[type="search"] {
 	background: #fff url('inc/images/sprite.png') no-repeat 13px 11px;
 	padding-left: 32px;
+}
+.error-404 input[type="search"] {
+	background-position-y: 13px;
 }
 /* calendar widget */
 .widget_calendar #calendar_wrap {
@@ -860,6 +864,17 @@ a:hover {
 	font-size: 15px;
 	font-weight: 300;
 	font-style: italic;
+}
+.error-404 .page-title {
+	font-size: 36px;
+	font-weight: 700;
+	font-style: normal;
+}
+.error-404 .page-content .widget {
+	background: #fafafa;
+}
+.error-404 .search-wrap {
+	margin-bottom: 40px;
 }
 .entry-footer .fa {
 	margin-right: 4px;
