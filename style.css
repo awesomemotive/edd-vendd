@@ -1334,6 +1334,10 @@ input[type="submit"].edd-submit {
 	background: #F2F3F5;
 	color: #555;
 }
+.edd-cart-added-alert {
+	color: #999;
+	font-size: 12px;
+}
 
 /* variable pricing description - http://wordpress.org/plugins/edd-variable-pricing-descriptions/ */
 .edd_price_options ul {
@@ -1399,11 +1403,18 @@ input[type="submit"].edd-submit {
 	font-size: 13px;
 	margin-bottom: 0;
 }
+.widget_edd_cart_widget {
+	font-size: 13px;
+}
 .widget_edd_cart_widget .edd_subtotal {
 	background: #fafafa;
 	font-style: normal;
 	margin: 0;
 }
+.widget_edd_cart_widget .edd_subtotal .subtotal {
+	color: #19b219;
+}
+.widget_edd_cart_widget .edd-cart-item:before,
 .widget_edd_cart_widget .edd_subtotal:before,
 .widget_edd_cart_widget .edd_checkout:before,
 .widget_edd_cart_widget .cart_item.empty:before {
