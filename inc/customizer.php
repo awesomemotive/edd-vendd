@@ -296,18 +296,6 @@ function vendd_customize_register( $wp_customize ) {
 			'type'      => 'checkbox',
 		) );
 		
-		// purchase button below download content?
-		$wp_customize->add_setting( 'vendd_purchase_button', array( 
-			'default'			=> 0,
-			'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
-		) );
-		$wp_customize->add_control( 'vendd_purchase_button', array(
-			'label'		=> __( 'Show Purchase Button Below Content', 'vendd' ),
-			'section'	=> 'vendd_edd_options',
-			'priority'	=> 20,
-			'type'      => 'checkbox',
-		) );
-		
 		/**
 		 * EDD button color
 		 *
