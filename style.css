@@ -1172,6 +1172,7 @@ object {
 	background: #fafafa;
 	border-radius: 4px;
 }
+
 /* [downloads] shortcode in store front page template */
 .edd_download {
 	padding: 20px;
@@ -1277,6 +1278,8 @@ object {
 	display: inline-block;
 	padding: 10px;
 }
+
+/* EDD button styles */
 #edd-purchase-button, 
 .edd-submit, 
 input[type="submit"].edd-submit {
@@ -1339,7 +1342,7 @@ input[type="submit"].edd-submit {
 	font-size: 12px;
 }
 
-/* variable pricing description - http://wordpress.org/plugins/edd-variable-pricing-descriptions/ */
+/* variable pricing w/ support for descriptions (http://wordpress.org/plugins/edd-variable-pricing-descriptions/) */
 .edd_price_options ul {
 	border: 1px solid #f2f2f2;
 	border-radius: 4px;
@@ -1373,6 +1376,8 @@ input[type="submit"].edd-submit {
 	font-size: 13px;
 	margin: 4px 0 0;
 }
+
+/* purchase form */
 .widget_edd_product_details .edd_download_purchase_form .edd-submit {
 	font-size: 15px;
 	padding: 10px;
@@ -1403,6 +1408,8 @@ input[type="submit"].edd-submit {
 	font-size: 13px;
 	margin-bottom: 0;
 }
+
+/* cart widget */
 .widget_edd_cart_widget {
 	font-size: 13px;
 }
@@ -1422,7 +1429,7 @@ input[type="submit"].edd-submit {
 	margin: 0;
 }
 
-/* templates */
+/* EDD templates */
 .edd-checkout-template #primary,
 .edd-history-template #primary,
 .edd-confirmation-template #primary,
