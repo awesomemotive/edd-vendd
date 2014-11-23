@@ -175,7 +175,7 @@ a img {
 
 /* primary content */
 #primary { float: left; padding-right: 40px; width: 68%; }
-#secondary { float: left; width: 32%; }
+#secondary { float: left; width: 32%; font-size: 13px; }
 .vendd-no-sidebar #primary { margin: 0 auto; }
 .vendd-store-front-template #primary,
 .post-type-archive-download #primary { float: none; padding: 0; width: 100%; }
@@ -191,7 +191,7 @@ select,
 textarea {
 	color: #555;
 	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.6;
 }
 h1, h2, h3, h4, h5, h6,
@@ -808,8 +808,8 @@ a:hover {
 	display: none;
 }
 #secondary .widget_search input[type="search"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 16px 13px;
-	padding-left: 42px;
+	background: #fff url('inc/images/sprite.png') no-repeat 13px 11px;
+	padding-left: 32px;
 }
 /* calendar widget */
 .widget_calendar #calendar_wrap {
@@ -843,7 +843,6 @@ a:hover {
 .widget_rss .rss-date {
 	display: block;
 	color: #999;
-	font-size: 13px;
 }
 
 
@@ -891,7 +890,6 @@ a:hover {
 	color: #666;
 }
 .entry-title .entry-subtitle {
-	color: #666;
 	font-size: 16px;
 	font-weight: 300;
 	font-style: italic;
@@ -1178,11 +1176,11 @@ object {
 	margin-bottom: 0;
 }
 #secondary .widget_kol_email input[type="text"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 16px -36px;
+	background: #fff url('inc/images/sprite.png') no-repeat 13px -38px;
 	padding-left: 42px;
 }
 #secondary .widget_kol_email input[type="email"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 16px -85px;
+	background: #fff url('inc/images/sprite.png') no-repeat 13px -87px;
 	padding-left: 42px;
 }
 
@@ -1410,7 +1408,6 @@ input[type="submit"].edd-submit {
 }
 .edd-variable-pricing-desc {
 	color: #999;
-	font-size: 13px;
 	margin: 4px 0 0;
 }
 
@@ -1442,14 +1439,10 @@ input[type="submit"].edd-submit {
 	margin-top: 2px;
 }
 .widget_edd_product_details .edd-meta {
-	font-size: 13px;
 	margin-bottom: 0;
 }
 
 /* cart widget */
-.widget_edd_cart_widget {
-	font-size: 13px;
-}
 .widget_edd_cart_widget .edd_subtotal {
 	background: #fafafa;
 	font-style: normal;
