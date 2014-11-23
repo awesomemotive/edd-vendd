@@ -175,7 +175,7 @@ a img {
 #primary { float: left; padding-right: 40px; width: 68%; }
 #secondary { float: left; width: 32%; }
 .vendd-no-sidebar #primary { margin: 0 auto; }
-.edd-store-front-template #primary,
+.vendd-store-front-template #primary,
 .post-type-archive-download #primary { float: none; padding: 0; width: 100%; }
 
 
@@ -1427,11 +1427,11 @@ input[type="submit"].edd-submit {
 }
 
 /* EDD templates */
-.edd-checkout-template #primary,
-.edd-history-template #primary,
-.edd-confirmation-template #primary,
-.edd-members-template #primary,
-.edd-failed-template #primary {
+.vendd-checkout-template #primary,
+.vendd-history-template #primary,
+.vendd-confirmation-template #primary,
+.vendd-members-template #primary,
+.vendd-failed-template #primary {
 	float: none;
 	margin: 0 auto;
 	max-width: 722px;
@@ -1447,30 +1447,30 @@ input[type="submit"].edd-submit {
 #edd_user_history,
 #edd_purchase_receipt_products,
 #edd_profile_editor_form,
-.edd-confirmation-template #edd_purchase_receipt thead th:first-child, 
-.edd-confirmation-template #edd_purchase_receipt tbody td:first-child,
-.edd-confirmation-template #edd_purchase_receipt thead th:last-child, 
-.edd-confirmation-template #edd_purchase_receipt tbody td:last-child,
+.vendd-confirmation-template #edd_purchase_receipt thead th:first-child, 
+.vendd-confirmation-template #edd_purchase_receipt tbody td:first-child,
+.vendd-confirmation-template #edd_purchase_receipt thead th:last-child, 
+.vendd-confirmation-template #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products tbody td,
 #edd_purchase_receipt_products th {
 	border: 1px solid #f2f2f2;
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
 	padding: 15px 10px; 
 	border-width: 0 1px 0 0; 
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products th {
 	padding: 15px 10px; 
 	border-width: 0 0 1px; 
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
 	border-bottom-width: 0;
 }
 #edd_checkout_cart {
@@ -1507,22 +1507,22 @@ input[type="submit"].edd-submit {
 #edd_user_history { 
 	margin-bottom: 2em; 
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
 	padding: 15px 10px; 
 	border-width: 0 1px 0 0; 
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child { 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child { 
 	padding: 15px 10px; 
 	border-width: 0 0 1px; 
 }
-.edd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td,
-.edd-confirmation-template .entry-content #edd_purchase_receipt_products tbody tr:last-child td {
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt_products tbody tr:last-child td {
 	border-bottom-width: 0;
 }
 #edd_purchase_receipt_products { 

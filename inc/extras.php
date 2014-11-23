@@ -84,17 +84,17 @@ function vendd_body_classes( $classes ) {
 	
 	// Adds classes based on EDD page template
 	if ( is_page_template( 'edd_templates/edd-store-front.php' ) ) :		
-		$classes[] = 'edd-store-front-template vendd-edd-template';
+		$classes[] = 'vendd-store-front-template vendd-edd-template';
 	elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) :		
-		$classes[] = 'edd-checkout-template vendd-edd-template';	
+		$classes[] = 'vendd-checkout-template vendd-edd-template';	
 	elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) :		
-		$classes[] = 'edd-confirmation-template vendd-edd-template';
+		$classes[] = 'vendd-confirmation-template vendd-edd-template';
 	elseif ( is_page_template( 'edd_templates/edd-history.php' ) ) :		
-		$classes[] = 'edd-history-template vendd-edd-template';
+		$classes[] = 'vendd-history-template vendd-edd-template';
 	elseif ( is_page_template( 'edd_templates/edd-members.php' ) ) :		
-		$classes[] = 'edd-members-template vendd-edd-template';
+		$classes[] = 'vendd-members-template vendd-edd-template';
 	elseif ( is_page_template( 'edd_templates/edd-failed.php' ) ) :		
-		$classes[] = 'edd-failed-template vendd-edd-template';
+		$classes[] = 'vendd-failed-template vendd-edd-template';
 	endif;
 	
 	// Adds classes to blogs based on main sidebar use.
