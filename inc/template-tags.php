@@ -102,6 +102,41 @@ function vendd_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'vendd_posted_in' ) ) :
+/**
+ * Prints HTML with category/tag information for the current post-date/time and author.
+ */
+function vendd_posted_in() { ?>
+
+	<footer class="entry-footer">
+		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$categories_list = get_the_category_list( __( ', ', 'vendd' ) );
+				if ( $categories_list && vendd_categorized_blog() ) :
+			?>
+			<span class="cat-links">
+				<i class="fa fa-archive"></i>
+				<?php echo $categories_list; ?><br>
+			</span>
+			<?php endif; // End if categories ?>
+
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', __( ', ', 'vendd' ) );
+				if ( $tags_list ) :
+			?>
+			<span class="tags-links">
+				<i class="fa fa-tags"></i>
+				<?php echo $tags_list; ?>
+			</span>
+			<?php endif; // End if $tags_list ?>
+		<?php endif; // End if 'post' == get_post_type() ?>
+	</footer><!-- .entry-footer -->
+	<?php
+}
+endif;
+
 if ( !function_exists( 'vendd_comment_template' ) ) :
 /**
  * Used as a custom callback by wp_list_comments() for displaying

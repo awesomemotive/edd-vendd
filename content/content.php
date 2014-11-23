@@ -29,6 +29,8 @@
 				endif;
 				// output the excerpt
 				the_excerpt();
+				// category/tag information
+				vendd_posted_in();
 			?>
 		</div><!-- .entry-summary -->
 	<?php else : ?>
@@ -48,6 +50,8 @@
 					'before' => '<div class="page-links">' . __( 'Pages:', 'vendd' ),
 					'after'  => '</div>',
 				) );
+				// category/tag information
+				vendd_posted_in();
 			?>
 		</div><!-- .entry-content -->
 	<?php endif; ?>
