@@ -533,7 +533,7 @@ function vendd_customizer_head_styles() {
 	<style type="text/css">
 		<?php if ( 1 == get_theme_mod( 'vendd_hide_tagline' ) ) : // if no tagline, reposition the header cart total ?>
 			.header-cart {
-				top: 3.6rem;
+				top: 26px;
 			}
 		<?php endif; ?>
 		<?php if ( '#f1f1f1' != $bg_color && '' != $bg_color ) : // Is the background color no longer the default? ?>
