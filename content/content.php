@@ -21,7 +21,7 @@
 				// display featured image full
 				if ( has_post_thumbnail() && 1 == get_theme_mod( 'vendd_feed_featured_image' ) ) : ?>
 					<a href="<?php the_permalink(); ?>" rel="bookmark">
-						<?php the_post_thumbnail( 'vendd_featured_image', array( 'class' => 'featured-img' ) ); ?>
+						<?php the_post_thumbnail( 'vendd_featured_image_thumb', array( 'class' => 'featured-img alignleft' ) ); ?>
 					</a>
 					<?php
 				endif;

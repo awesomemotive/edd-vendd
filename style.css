@@ -666,7 +666,9 @@ a:hover {
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after,
+.entry-summary:before,
+.entry-summary:after {
 	content: '';
 	display: table;
 }
@@ -676,7 +678,9 @@ a:hover {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after,
+.entry-summary:before,
+.entry-summary:after {
 	clear: both;
 }
 
@@ -925,8 +929,14 @@ a:hover {
 	margin-right: 6px;
 }
 .featured-img {
+	background: #fafafa;
+	padding: 4px;
+	border: 1px solid #f2f2f2;
 	border-radius: 4px;
 	margin-bottom: 1.5em;
+}
+.featured-img-thumb {
+	float: left;
 }
 .page-content,
 .entry-content,
