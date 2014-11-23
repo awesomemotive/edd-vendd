@@ -557,14 +557,12 @@ function vendd_customizer_head_styles() {
 			.product-price,
 			.by-post-author {
 				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
-			}
-			
+			}			
 			a,
 			.comment-full:hover > .reply > .comment-reply-link,
 			#edd_download_pagination .page-numbers:hover {
 				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
-			}
-			
+			}			
 			h1,
 			h2 {
 				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
