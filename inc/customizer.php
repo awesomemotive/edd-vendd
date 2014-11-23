@@ -542,6 +542,7 @@ function vendd_customizer_head_styles() {
 			input[type="submit"],
 			input[type="button"],
 			button,
+			.more-link,
 			.product-price,
 			.by-post-author {
 				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;

@@ -36,6 +36,7 @@ Vendd is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, 
 input[type="submit"],
 input[type="button"],
 button,
+.more-link,
 .product-price,
 .by-post-author {
 	background: #428bca;
@@ -331,7 +332,7 @@ dt {
 	font-weight: bold;
 	padding: 10px;
 	border: 1px solid #f2f2f2;
-	border-radius: 4px 4px 0 0;
+	border-width: 4px 1px 1px;
 }
 
 dd {
@@ -352,7 +353,8 @@ figure {
 
 .entry-content table {
 	border: 1px solid #f2f2f2;
-	border-radius: 4px;
+	border-width: 4px 1px 1px;
+	border-radius: 0 0 4px 4px;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
@@ -362,14 +364,6 @@ figure {
 	font-weight: bold;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
-}
-
-.entry-content table th:first-child {
-	border-radius: 4px 0 0 0;
-}
-
-.entry-content table th:last-child {
-	border-radius: 0 4px 0 0;
 }
 
 .entry-content table td {
@@ -855,6 +849,23 @@ a:hover {
 /*--------------------------------------------------------------
 >>> Content
 --------------------------------------------------------------*/
+.featured-img {
+	background: #fafafa;
+	padding: 4px;
+	border: 1px solid #f2f2f2;
+	border-radius: 4px;
+	margin-bottom: 2.6em;
+}
+.page-title {
+	font-size: 15px;
+	font-weight: 300;
+	font-style: italic;
+}
+.entry-footer .fa {
+	margin-right: 4px;
+}
+
+
 /*--------------------------------------------------------------
 >>> Posts and pages
 --------------------------------------------------------------*/
@@ -863,9 +874,11 @@ a:hover {
 }
 .hentry {
 	margin: 0 0 30px;
+	border-bottom: 1px dotted #f2f2f2;
 }
 .hentry .entry-title {
 	font: 700 36px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin-bottom: .2em;
 }
 .hentry .entry-title a {
 	color: #555;
@@ -893,19 +906,18 @@ a:hover {
 .entry-meta,
 .entry-footer {
 	color: #999;
-	font-size: 13px;
+	font-size: 12px;
 }
-.entry-meta a {
+.entry-meta a,
+.entry-footer a {
 	color: #999;
 	text-decoration: none;
 }
 .entry-footer {
-	padding-bottom: 10px;
-	border-bottom: 1px dotted #eee;
+	font-style: italic;
 }
-.entry-footer a {
-	color: #555;
-	text-decoration: none;
+.entry-footer {
+	padding-bottom: 10px;
 }
 .entry-meta a:hover,
 .entry-footer a:hover {
@@ -928,16 +940,6 @@ a:hover {
 .byline-item .fa-comments {
 	margin-right: 6px;
 }
-.featured-img {
-	background: #fafafa;
-	padding: 4px;
-	border: 1px solid #f2f2f2;
-	border-radius: 4px;
-	margin-bottom: 1.5em;
-}
-.featured-img-thumb {
-	float: left;
-}
 .page-content,
 .entry-content,
 .entry-summary {
@@ -947,8 +949,17 @@ a:hover {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.more-link {
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+	padding: 2px 6px;
+	border-radius: 4px;
+}
 .more-link:hover {
-	color: #555;
+	background: #3d3d3d;
+	color: #fff;
 }
 
 
