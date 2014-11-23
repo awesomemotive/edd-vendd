@@ -36,7 +36,8 @@ Vendd is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, 
 input[type="submit"],
 input[type="button"],
 button,
-.product-price {
+.product-price,
+.by-post-author {
 	background: #428bca;
 }
 a,
@@ -45,7 +46,7 @@ a,
 	color: #428bca;
 }
 h1, h2 {
-	border-color: #428BCA;
+	border-color: #428bca;
 }
 
 
@@ -997,7 +998,6 @@ a:hover {
 }
 .by-post-author {
 	display: inline-block;
-	background: #428bca;
 	color: #fff;
 	font-size: 11px;
 	font-weight: 700;

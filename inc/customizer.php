@@ -484,7 +484,9 @@ function vendd_customizer_head_styles() {
 
 	<style type="text/css">
 		<?php if ( 1 == get_theme_mod( 'vendd_hide_tagline' ) ) : // if no tagline, reposition the header cart total ?>
-			.header-cart { top: 3.6rem; }
+			.header-cart {
+				top: 3.6rem;
+			}
 		<?php endif; ?>
 		<?php if ( '#f1f1f1' != $bg_color && '' != $bg_color ) : // Is the background color no longer the default? ?>
 			body {
@@ -492,9 +494,25 @@ function vendd_customizer_head_styles() {
 			}
 		<?php endif; ?>
 		<?php if ( '#428bca' != $design_color && '' != $design_color ) : // Is the design color no longer the default? ?>
-			#masthead, .product-price { background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>; }
-			a, #edd_download_pagination .page-numbers:hover { color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>; }
-			h1, h2 { border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>; }
+			#masthead,
+			input[type="submit"],
+			input[type="button"],
+			button,
+			.product-price,
+			.by-post-author {
+				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
+			}
+			
+			a,
+			.comment-full:hover > .reply > .comment-reply-link,
+			#edd_download_pagination .page-numbers:hover {
+				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
+			}
+			
+			h1,
+			h2 {
+				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
+			}
 		<?php endif; ?>
 	</style>
 	<?php
