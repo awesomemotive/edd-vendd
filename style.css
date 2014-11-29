@@ -1538,9 +1538,25 @@ input[type="submit"].edd-submit {
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
 	border-bottom-width: 0;
 }
-#edd_checkout_cart {
+.entry-content #edd_checkout_cart,
+.entry-content #edd_user_history,
+.entry-content #edd_purchase_receipt,
+.entry-content #edd_purchase_receipt_products {
 	border: 1px solid #f2f2f2;
-	border-width: 0 1px 1px 0;
+	border-width: 4px 1px 1px;
+	border-radius: 0 0 4px 4px;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+#edd_user_history th {
+	background: #fafafa;
+}
+.edd_purchase_row:last-child td {
+	border-bottom: none !important;
+}
+.entry-content #edd_checkout_cart td:first-child,
+.entry-content #edd_checkout_cart th:first-child {
+	border-left: none;
 }
 #edd_checkout_cart .edd_cart_header_row th,
 #edd_checkout_cart td,
