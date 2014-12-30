@@ -1448,6 +1448,12 @@ input[type="submit"].edd-submit {
 }
 
 /* purchase form */
+.widget_edd_product_details .widget-title {
+	font-size: 28px;
+}
+.widget_edd_product_details .download-title {
+	display: none;
+}
 .widget_edd_product_details .edd_download_purchase_form .edd-submit {
 	font-size: 15px;
 	padding: 10px;
@@ -1476,6 +1482,9 @@ input[type="submit"].edd-submit {
 }
 .widget_edd_product_details .edd-meta {
 	margin-bottom: 0;
+}
+.widget_edd_product_details .edd-meta .download-terms {
+	display: block;
 }
 
 /* cart widget */
