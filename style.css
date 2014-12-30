@@ -437,6 +437,10 @@ button:hover {
 a:hover {
 	color: #999;
 }
+a:focus {
+	border: none;
+	outline: none;
+}
 .site-title {
 	font: 700 40px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: 0;
