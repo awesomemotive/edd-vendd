@@ -1253,12 +1253,12 @@ object {
 	padding: 0;
 	border-radius: 4px;
 	margin-bottom: 0;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
 }
 .edd_download .edd_download_inner:hover {
-	box-shadow: 0 0 25px rgba(0, 0, 0, 0.17);
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
 }
 .edd_download_columns_4 .edd_download .edd_download_inner,
 .edd_download_columns_5 .edd_download .edd_download_inner,
