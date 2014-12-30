@@ -336,7 +336,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_edd_button_color', array(
 			'label'			=> __( 'EDD Button Color', 'vendd' ), 
 			'section'		=> 'vendd_edd_options',
-			'description'	=> __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Click "Default" to revert back to the default EDD setting.', 'vendd' ),
+			'description'	=> __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Clear the color field back to default to revert back to the EDD setting.', 'vendd' ),
 			'priority'		=> 30
 		) ) );
 	
