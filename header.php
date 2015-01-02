@@ -59,10 +59,15 @@
 			<?php endif; ?>
 		</div>
 		
-		<?php if ( class_exists( 'Easy_Digital_Downloads' ) ) : ?>
+		<?php if ( class_exists( 'Easy_Digital_Downloads' ) && ! is_page_template( 'edd_templates/edd-checkout.php' ) ) : ?>
 			<a href="<?php echo edd_get_checkout_uri(); ?>" class="header-cart">
 				<i class="fa fa-shopping-cart"></i>
-				<?php echo __( 'Cart total:', 'vendd' ) . ' '; edd_cart_total(); ?> 
+				<?php echo __( 'Cart total:', 'vendd' ) . ' '; ?>
+				<span class="cart_item edd_subtotal">
+					<span class="subtotal">
+						<?php edd_cart_total(); ?>
+					</span>
+				</span>
 			</a>
 		<?php endif; ?>
 
