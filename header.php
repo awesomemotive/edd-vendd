@@ -22,37 +22,41 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'vendd' ); ?></a>
 
-	<div id="info-bar" class="info-bar">
-		<?php if ( '' != get_theme_mod( 'vendd_info_bar' ) ) : ?>
-			<span class="info-bar-text"><?php echo get_theme_mod( 'vendd_info_bar' ); ?></span>
-		<?php endif; ?>
-
-		<?php if ( ! is_page_template( 'edd_templates/edd-checkout.php' ) ) { ?>
-			<div id="info-bar-navigation" class="secondary-navigation" role="navigation">
-				<?php
-					wp_nav_menu( array(
-						'theme_location'	=> 'info_bar',
-						'menu_class'		=> 'info-bar-navigation',
-						'fallback_cb'		=> '__return_false',
-						'depth'				=> -1,
-					) );
-				?>
-			</div><!-- #site-navigation -->
-		<?php } ?>
-	</div>
+	<?php if ( ! is_page_template( 'edd_templates/edd-checkout.php' ) ) { ?>
+		<div id="info-bar" class="info-bar">
+			<?php if ( '' != get_theme_mod( 'vendd_info_bar' ) ) : ?>
+				<span class="info-bar-text"><?php echo get_theme_mod( 'vendd_info_bar' ); ?></span>
+			<?php endif; ?>
+	
+			<?php if ( ! is_page_template( 'edd_templates/edd-checkout.php' ) ) { ?>
+				<div id="info-bar-navigation" class="secondary-navigation" role="navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location'	=> 'info_bar',
+							'menu_class'		=> 'info-bar-navigation',
+							'fallback_cb'		=> '__return_false',
+							'depth'				=> -1,
+						) );
+					?>
+				</div><!-- #site-navigation -->
+			<?php } ?>
+		</div>
+	<?php } ?>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<span class="site-title">
-				<?php if ( get_theme_mod( 'vendd_logo' ) ) : ?>
+				<?php if ( ! is_page_template( 'edd_templates/edd-checkout.php' ) ) { ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_theme_mod( 'vendd_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+				<?php } ?>
+					<?php if ( get_theme_mod( 'vendd_logo' ) ) : ?>
+							<img src="<?php echo get_theme_mod( 'vendd_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+					<?php else : ?>
+							<?php bloginfo( 'name' ); ?>
+					<?php endif; ?>
+				<?php if ( ! is_page_template( 'edd_templates/edd-checkout.php' ) ) { ?>
 					</a>
-				<?php else : ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php bloginfo( 'name' ); ?>
-					</a>
-				<?php endif; ?>
+				<?php } ?>
 			</span>
 			<?php if ( 1 != get_theme_mod( 'vendd_hide_tagline' ) ) : ?>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>

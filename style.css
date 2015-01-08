@@ -442,6 +442,7 @@ a:focus {
 	outline: none;
 }
 .site-title {
+	color: #fff;
 	font: 400 40px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: 0;
 }
@@ -1505,9 +1506,11 @@ input[type="submit"].edd-submit {
 	content: none;
 	margin: 0;
 }
+.edd_cart_item_image {
+	display: none;
+}
 
 /* EDD templates */
-.vendd-checkout-template #primary,
 .vendd-history-template #primary,
 .vendd-confirmation-template #primary,
 .vendd-members-template #primary,
@@ -1534,6 +1537,24 @@ input[type="submit"].edd-submit {
 #edd_purchase_receipt_products tbody td,
 #edd_purchase_receipt_products th {
 	border: 1px solid #f2f2f2;
+}
+.vendd-checkout-template #masthead {
+	text-align: center;
+}
+.vendd-checkout-template #page {
+	width: 100%;
+	max-width: 800px;
+}
+.vendd-checkout-template #primary {
+	margin: 0 auto;
+	width: 100%;
+	padding-right: 0;
+}
+.vendd-checkout-template .entry-header {
+	display: none;
+}
+.vendd-checkout-template tbody tr {
+	font-size: 13px;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
