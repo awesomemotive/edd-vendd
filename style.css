@@ -191,7 +191,7 @@ select,
 textarea {
 	color: #555;
 	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 1.6;
 }
 h1, h2, h3, h4, h5, h6,
@@ -442,7 +442,7 @@ a:focus {
 	outline: none;
 }
 .site-title {
-	font: 700 40px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 400 40px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: 0;
 }
 .site-title a {
@@ -702,8 +702,10 @@ a:focus {
 	padding: 40px;
 }
 .site-description {
-	color: rgba(255, 255, 255, .5);
-	font: 400 16px/1.4 "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	color: rgba(255, 255, 255, .6);
+	font: 300 14px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-style: italic;
+	margin-top: 3px;
 }
 .header-cart {
 	display: inline-block;
@@ -743,7 +745,7 @@ a:focus {
 }
 .widget-title {
 	font-size: 22px;
-	font-weight: 700;
+	font-weight: 400;
 	display: block;
 }
 .widget ul {
@@ -871,7 +873,7 @@ a:focus {
 }
 .error-404 .page-title {
 	font-size: 36px;
-	font-weight: 700;
+	font-weight: 400;
 	font-style: normal;
 }
 .error-404 .page-content .widget {
@@ -895,7 +897,7 @@ a:focus {
 	margin: 0 0 30px;
 }
 .hentry .entry-title {
-	font: 700 36px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 400 36px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: .2em;
 }
 .hentry .entry-title a {
@@ -909,7 +911,7 @@ a:focus {
 	color: #666;
 }
 .entry-title .entry-subtitle {
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 300;
 	font-style: italic;
 }
@@ -991,7 +993,7 @@ a:focus {
 .comments-title {
 	display: block;
 	font-size: 28px;
-	font-weight: 700;
+	font-weight: 400;
 	margin-bottom: 1em;
 }
 .comments-title .fa {
@@ -1043,7 +1045,7 @@ a:focus {
 	display: inline-block;
 	color: #fff;
 	font-size: 11px;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	padding: 2px 6px;
 	border-radius: 3px;
@@ -1127,7 +1129,7 @@ object {
 >>> Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 20px;
 	max-width: 100%;
 }
 
@@ -1227,7 +1229,7 @@ object {
 	max-width: 722px;
 }
 .store-front-header .entry-title {
-	font: 700 40px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 400 40px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: .4em;
 }
 #store-front {
@@ -1440,7 +1442,7 @@ input[type="submit"].edd-submit {
 	margin-right: 6px;
 }
 .edd_download_purchase_form .edd_price_options li .edd_price_option_name {
-	font-weight: 700;
+	font-weight: 400;
 }
 .edd-variable-pricing-desc {
 	color: #999;
