@@ -277,7 +277,7 @@ function vendd_customize_register( $wp_customize ) {
 	 * Easy Digital Downloads Options
 	 */
 	// only if EDD is activated
-	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+	if ( vendd_edd_is_activated() ) {
 		$wp_customize->add_section( 'vendd_edd_options', array(
 	    	'title'       	=> __( 'Easy Digital Downloads', 'vendd' ),
 			'description' 	=> __( 'All other EDD options are under Dashboard => Downloads. If you deactivate EDD, these options will no longer appear.', 'vendd' ),

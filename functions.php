@@ -14,10 +14,6 @@ define( 'VENDD_AUTHOR', 'Sean Davis' );
 define( 'VENDD_VERSION', '0.1' );
 define( 'VENDD_HOME', '' );
 
-if ( class_exists( 'Easy_Digital_Downloads' ) ) {
-	require get_template_directory() . '/inc/edd-functions.php'; // EDD functions
-}
-
 
 if ( ! function_exists( 'vendd_setup' ) ) :
 /**
@@ -129,6 +125,20 @@ function vendd_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'vendd_scripts' );
+
+
+/**
+ * Custom conditional tags
+ */
+require get_template_directory() . '/inc/conditional-tags.php';
+
+
+/**
+ * Custom EDD functions
+ */
+if ( vendd_edd_is_activated() ) {
+	require get_template_directory() . '/inc/edd-functions.php';
+}
 
 
 /**
