@@ -82,20 +82,29 @@ function vendd_body_classes( $classes ) {
 		$classes[] = 'front-page';
 	}
 	
-	// Adds classes based on EDD page template
-	if ( is_page_template( 'edd_templates/edd-store-front.php' ) ) :		
-		$classes[] = 'vendd-store-front-template vendd-edd-template';
-	elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) :		
-		$classes[] = 'vendd-checkout-template vendd-edd-template';	
-	elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) :		
-		$classes[] = 'vendd-confirmation-template vendd-edd-template';
-	elseif ( is_page_template( 'edd_templates/edd-history.php' ) ) :		
-		$classes[] = 'vendd-history-template vendd-edd-template';
-	elseif ( is_page_template( 'edd_templates/edd-members.php' ) ) :		
-		$classes[] = 'vendd-members-template vendd-edd-template';
-	elseif ( is_page_template( 'edd_templates/edd-failed.php' ) ) :		
-		$classes[] = 'vendd-failed-template vendd-edd-template';
-	endif;
+	if ( vendd_edd_is_activated() ) {
+		// Adds classes based on EDD page template
+		if ( is_page_template( 'edd_templates/edd-store-front.php' ) ) :		
+			$classes[] = 'vendd-store-front-template vendd-edd-template';
+		elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) :		
+			$classes[] = 'vendd-checkout-template vendd-edd-template';	
+		elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) :		
+			$classes[] = 'vendd-confirmation-template vendd-edd-template';
+		elseif ( is_page_template( 'edd_templates/edd-history.php' ) ) :		
+			$classes[] = 'vendd-history-template vendd-edd-template';
+		elseif ( is_page_template( 'edd_templates/edd-members.php' ) ) :		
+			$classes[] = 'vendd-members-template vendd-edd-template';
+		elseif ( is_page_template( 'edd_templates/edd-failed.php' ) ) :		
+			$classes[] = 'vendd-failed-template vendd-edd-template';
+		endif;
+	}
+	
+	if ( vendd_fes_is_activated() ) {
+		// Adds classes based on FES page template
+		if ( is_page_template( 'fes_templates/fes-dashboard.php' ) ) :			
+			$classes[] = 'vendd-fes-dashboard-template vendd-edd-template vendd-fes-template';
+		endif;
+	}
 	
 	// Adds class based on whether or not is has a sidebar
 	if (	is_page_template( 'edd_templates/edd-checkout.php' ) ||

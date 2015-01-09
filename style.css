@@ -1203,27 +1203,7 @@ object {
 >>> Plugin Support
 --------------------------------------------------------------*/
 
-/* Kolakube Email Forms */
-#secondary .widget_kol_email .kol-email-field-name,
-#secondary .widget_kol_email .kol-email-field-email,
-#secondary .widget_kol_email .kol-email-field-submit {
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-}
-#secondary .widget_kol_email .kol-email-field-submit {
-	margin-bottom: 0;
-}
-#secondary .widget_kol_email input[type="text"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 13px -38px;
-	padding-left: 42px;
-}
-#secondary .widget_kol_email input[type="email"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 13px -87px;
-	padding-left: 42px;
-}
-
-/* Easy Digital Downloads */
+/* Easy Digital Downloads (and support extensions) */
 .store-front-header {
 	text-align: center;
 	margin: 0 auto 60px;
@@ -1686,6 +1666,84 @@ input[type="submit"].edd-submit {
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_discount_code,
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_purchase_submit {
 	background: none;
+}
+
+/* FES Templates */
+.vendd-fes-dashboard-template #primary {
+	width: 100%;
+	padding-right: 0;
+}
+.vendd-fes-dashboard-template .fes-dashboard-header {
+	text-align: center;
+	margin: 0 auto 60px;
+	max-width: 722px;
+}
+.vendd-fes-dashboard-template #fes-vendor-dashboard {
+	float: right;
+	padding-left: 40px;
+	width: 68%;
+}
+.vendd-fes-dashboard-template .fes-vendor-menu {
+	float: left;
+	background: #fafafa;
+	font-size: 13px;
+	padding: 30px 20px;
+	border-top: 1px solid #f2f2f2;
+	border-right: 1px dotted #f2f2f2;
+	width: 32%;
+}
+.vendd-fes-dashboard-template .fes-vendor-menu > ul {
+	background: #fff;
+	list-style: none;
+	border: 1px solid #f2f2f2;
+	border-radius: 4px;
+	margin: 0;
+}
+.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
+	display: block;
+	text-align: left;
+	border-bottom: 1px solid #f2f2f2;
+	width: 100%;
+}
+.vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a {
+	letter-spacing: normal;
+	padding: 10px 20px;
+}
+.vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a:hover,
+.vendd-fes-dashboard-template .fes-vendor-menu > ul > li.active > a {
+	background: #fafafa;
+}
+.vendd-fes-dashboard-template #fes-vendor-announcements {
+	background: #fafad2;
+	font-size: 13px;
+	padding: 20px;
+	border: 1px solid #f2f2b8;
+	margin-bottom: 6px;
+}
+.vendd-fes-dashboard-template #fes-vendor-store-link {
+	color: #a3a3a3;
+	font-size: 11px;
+	text-align: right;
+}
+
+/* Kolakube Email Forms */
+#secondary .widget_kol_email .kol-email-field-name,
+#secondary .widget_kol_email .kol-email-field-email,
+#secondary .widget_kol_email .kol-email-field-submit {
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+#secondary .widget_kol_email .kol-email-field-submit {
+	margin-bottom: 0;
+}
+#secondary .widget_kol_email input[type="text"] {
+	background: #fff url('inc/images/sprite.png') no-repeat 13px -38px;
+	padding-left: 42px;
+}
+#secondary .widget_kol_email input[type="email"] {
+	background: #fff url('inc/images/sprite.png') no-repeat 13px -87px;
+	padding-left: 42px;
 }
 
 

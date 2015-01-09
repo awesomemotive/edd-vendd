@@ -353,6 +353,31 @@ function vendd_customize_register( $wp_customize ) {
 		) ) );	
 	}
 	
+	
+	/** ===============
+	 * EDD Frontend Submissions Options
+	 */
+	// only if FES is activated
+	if ( vendd_fes_is_activated() && vendd_edd_is_activated() ) {
+		$wp_customize->add_section( 'vendd_fes_options', array(
+	    	'title'       	=> __( 'EDD Frontend Submissions', 'vendd' ),
+			'description' 	=> __( 'All other FES options are under Dashboard => EDD FES. If you deactivate EDD or FES, these options will no longer appear.', 'vendd' ),
+			'priority'   	=> 41,
+		) );
+	
+		// FES Dashboard Title
+		$wp_customize->add_setting( 'vendd_fes_dashboard_title', array(
+			'default'			=> null,
+			'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
+		) );
+		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_fes_dashboard_title', array(
+			'label'			=> __( 'FES Dashboard Title', 'vendd' ),
+			'section'		=> 'vendd_fes_options',
+			'priority'		=> 40,
+			'description'	=> __( 'This optional field allows you to replace the title of your FES Dashboard. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+		) ) );	
+	}
+	
 
 	/** ===============
 	 * Navigation Menus

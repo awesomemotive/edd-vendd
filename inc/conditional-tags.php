@@ -32,3 +32,17 @@ function vendd_is_checkout() {
 		return false;
 	}
 }
+
+
+/**
+ * Is FES activated?
+ *
+ * @return bool
+ */
+function vendd_fes_is_activated() {
+	if ( class_exists( 'EDD_Front_End_Submissions' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
