@@ -182,7 +182,8 @@ function vendd_comment_template( $comment, $args, $depth ) {
 							<cite class="fn"><?php printf(__( 'by %s', 'vendd' ), get_comment_author_link() ); ?></cite>
 							<?php
 								// Is it the post author? If so, let us know.
-								if ( $post = get_post( $post_id ) ) {
+								if ( 'post' == get_post_type() ) {
+									$post = get_post( get_the_ID() );
 									if ( $comment->user_id === $post->post_author ) {
 										echo '<span class="by-post-author">' . __( 'post author', 'vendd' ) . ' </span>';
 									}
