@@ -270,7 +270,7 @@ function vendd_customize_register( $wp_customize ) {
 		'section'		=> 'vendd_content_section',
 		'priority'		=> 70,
 		'description'	=> __( 'Displays site title, tagline, copyright, and year by default. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
-	) ) );	
+	) ) );
 	
 	
 	/** ===============

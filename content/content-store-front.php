@@ -26,7 +26,7 @@
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		}
 	?>
-</div><!-- .entry-header -->
+</div><!-- .store-front-header -->
 <div id="store-front" <?php post_class(); ?>>
 	<?php the_content(); ?>
 </div><!-- #post-## -->
