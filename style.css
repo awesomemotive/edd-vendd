@@ -1496,6 +1496,7 @@ input[type="submit"].edd-submit {
 .vendd-members-template #primary,
 .vendd-failed-template #primary {
 	float: none;
+	padding-right: 0;
 	margin: 0 auto;
 	max-width: 722px;
 }
