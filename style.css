@@ -178,7 +178,8 @@ a img {
 #secondary { float: left; width: 32%; font-size: 13px; }
 .vendd-no-sidebar #primary { float: none; margin: 0 auto; }
 .vendd-store-front-template #primary,
-.post-type-archive-download #primary { float: none; padding: 0; width: 100%; }
+.tax-download_category #primary,
+.tax-download_tag #primary { float: none; padding: 0; width: 100%; }
 
 
 /*--------------------------------------------------------------
