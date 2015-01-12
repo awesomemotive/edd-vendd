@@ -143,6 +143,30 @@ function vendd_customize_register( $wp_customize ) {
 		'priority'	=> 20
 	) ) );
 	
+	// announcement background color	
+	$wp_customize->add_setting( 'vendd_announcement_background_color', array(
+		'default'		=> '#f7f7db',
+		'type'			=> 'option', 
+		'capability'	=> 'edit_theme_options',
+	) );		
+	$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_announcement_background_color', array(
+		'label'		=> __( 'Announcement Background Color', 'vendd' ), 
+		'section'	=> 'vendd_design',
+		'priority'	=> 30
+	) ) );
+	
+	// announcement text color	
+	$wp_customize->add_setting( 'vendd_announcement_text_color', array(
+		'default'		=> '#555555',
+		'type'			=> 'option', 
+		'capability'	=> 'edit_theme_options',
+	) );		
+	$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_announcement_text_color', array(
+		'label'		=> __( 'Announcement Text Color', 'vendd' ), 
+		'section'	=> 'vendd_design',
+		'priority'	=> 40
+	) ) );
+	
 	/**
 	 * restructure the default Colors section/control
 	 */
@@ -153,7 +177,7 @@ function vendd_customize_register( $wp_customize ) {
 		// change the Colors label
 		$wp_customize->get_control( 'background_color' )->label = __( 'Full Site Background Color', 'vendd' );
 		// put Colors option in a logical spot
-		$wp_customize->get_control( 'background_color' )->priority = 40;
+		$wp_customize->get_control( 'background_color' )->priority = 50;
 		
 	/**
 	 * restructure the default Background Image section
@@ -165,7 +189,7 @@ function vendd_customize_register( $wp_customize ) {
 		// change the Background Image label
 		$wp_customize->get_control( 'background_image' )->label = __( 'Full Site Background Image', 'vendd' );
 		// put Background Image uploader in a logical spot
-		$wp_customize->get_control( 'background_image' )->priority = 50;
+		$wp_customize->get_control( 'background_image' )->priority = 60;
 		
 	// parallax background image
 	$wp_customize->add_setting( 'vendd_parallax_bg', array( 
@@ -175,7 +199,7 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'vendd_parallax_bg', array(
 		'label'		=> __( 'Enable Parallax Background Effect', 'vendd' ),
 		'section'	=> 'vendd_design',
-		'priority'	=> 60,
+		'priority'	=> 70,
 		'type'      => 'checkbox',
 	) );
 
@@ -258,7 +282,31 @@ function vendd_customize_register( $wp_customize ) {
 		'section'		=> 'vendd_content_section',
 		'priority'		=> 60,
 		'description'	=> __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
-	) ) );	
+	) ) );
+	
+	// show announcement?
+	$wp_customize->add_setting( 'vendd_announcement', array( 
+		'default'			=> 0,
+		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+	) );
+	$wp_customize->add_control( 'vendd_announcement', array(
+		'label'		=> __( 'Enable Announcement', 'vendd' ),
+		'section'	=> 'vendd_content_section',
+		'priority'	=> 70,
+		'type'      => 'checkbox',
+	) );
+	
+	// site-wide announcement text
+	$wp_customize->add_setting( 'vendd_announcement_text', array(
+		'default'			=> null,
+		'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
+	) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_announcement_text', array(
+		'label'			=> __( 'Announcement Text', 'vendd' ),
+		'section'		=> 'vendd_content_section',
+		'priority'		=> 80,
+		'description'	=> __( 'This text appears in an attention-grabbing area below the header/main menu. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+	) ) );
 	
 	// credits & copyright
 	$wp_customize->add_setting( 'vendd_credits_copyright', array(
@@ -268,7 +316,7 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_credits_copyright', array(
 		'label'			=> __( 'Footer Credits & Copyright', 'vendd' ),
 		'section'		=> 'vendd_content_section',
-		'priority'		=> 70,
+		'priority'		=> 90,
 		'description'	=> __( 'Displays site title, tagline, copyright, and year by default. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
 	) ) );
 	
@@ -540,6 +588,8 @@ function vendd_customizer_head_styles() {
 	$design_color		= get_option( 'vendd_design_color' );
 	$bg_color			= get_option( 'vendd_background_color' );
 	$edd_button_color	= get_option( 'vendd_edd_button_color' );
+	$announcement_bg	= get_option( 'vendd_announcement_background_color' );
+	$announcement_text	= get_option( 'vendd_announcement_text_color' );
 	$edd_color_defaults	= array( '#404040', '#f1f1f1', '#E74C3C', '#2ECC71', '#F1C40F', '#E67E22', '#3d3d3d' );
 	?>
 
@@ -583,6 +633,16 @@ function vendd_customizer_head_styles() {
 			h1,
 			h2 {
 				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
+			}
+		<?php endif; ?>
+		<?php if ( '#f7f7db' != $announcement_bg && '' != $announcement_bg ) : // Has the announcement background color changed? ?>
+			.announcement-area {
+				background-color: <?php echo vendd_sanitize_hex_color( $announcement_bg ); ?>;
+			}
+		<?php endif; ?>
+		<?php if ( '#555555' != $announcement_text && '' != $announcement_text ) : // Has the announcement text color changed? ?>
+			.announcement-area {
+				color: <?php echo vendd_sanitize_hex_color( $announcement_text ); ?>;
 			}
 		<?php endif; ?>
 	</style>

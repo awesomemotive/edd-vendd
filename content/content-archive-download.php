@@ -1,9 +1,6 @@
 <?php
 /**
- * download archive template... matches the download taxonomy template
- *
- * all changes made here should also be made to the download taxonomy template
- * found at - templates/content-download-taxonomy.php
+ * download archive template
  */
 ?>
 

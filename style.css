@@ -50,7 +50,11 @@ a,
 h1, h2 {
 	border-color: #428bca;
 }
-
+.announcement-area,
+.announcement-area a {
+	background-color: #f7f7db;
+	color: #555;
+}
 
 /*--------------------------------------------------------------
 >>> Reset
@@ -730,6 +734,30 @@ a:focus {
 }
 .header-cart:hover {
 	color: rgba(255, 255, 255, .5);
+}
+
+
+/*--------------------------------------------------------------
+>>> Announcement
+--------------------------------------------------------------*/
+.announcement-area {
+	font-size: 13px;
+	padding: 15px 40px;
+}
+.announcement-icon {
+	display: inline-block;
+	background: #fff;
+	color: rgba(0,0,0,.7);
+	padding: 7px;
+	margin-right: 10px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+	box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+}
+.announcement-area a {
+	text-decoration: none;
+	border-bottom: 1px dotted;
 }
 
 

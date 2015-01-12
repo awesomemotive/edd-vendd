@@ -80,5 +80,11 @@
 			</nav><!-- #site-navigation -->
 		<?php } ?>
 	</header><!-- #masthead -->
+	
+	<?php
+		if ( get_theme_mod( 'vendd_announcement' ) && ! vendd_is_checkout() ) :
+			get_template_part( 'content/content', 'announcement' );
+		endif;
+	?>
 
 	<div id="content" class="site-content">
