@@ -641,7 +641,8 @@ function vendd_customizer_head_styles() {
 			}
 		<?php endif; ?>
 		<?php if ( '#555555' != $announcement_text && '' != $announcement_text ) : // Has the announcement text color changed? ?>
-			.announcement-area {
+			.announcement-area,
+			.announcement-area a {
 				color: <?php echo vendd_sanitize_hex_color( $announcement_text ); ?>;
 			}
 		<?php endif; ?>
