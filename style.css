@@ -1249,6 +1249,9 @@ object {
 	background: #fafafa;
 	border-radius: 4px;
 }
+.edd-required-indicator {
+	color: red;
+}
 
 /* [downloads] shortcode in store front page template */
 .edd_download {
@@ -1887,6 +1890,86 @@ input[type="submit"].edd-submit {
 .vendd-fes-template #fes-product-list .fes-product-list-td a[class*="-product-fes"] {
 	display: block;
 	font-size: 11px;
+}
+
+/* FES dashboard - All Forms */
+.vendd-fes-template .fes-submission-form,
+.vendd-fes-template .fes-profile-form {
+	border: 1px solid #f2f2f2;
+	font-size: 13px;
+}
+.vendd-fes-template .fes-label label {
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.vendd-fes-template .fes-fields label {
+	display: block;
+}
+.vendd-fes-template div.fes-form fieldset {
+	padding: 20px;
+	border-bottom: 1px solid #f2f2f2;
+	margin-bottom: 0;
+}
+.vendd-fes-template div.fes-form fieldset:last-child {
+	border-bottom: none;
+}
+.vendd-fes-template .fes-form fieldset .fes-label .fes-help {
+	color: #a3a3a3;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields textarea {
+	padding: 6px;
+	height: 170px;
+	width: 100%;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields input[type=email],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type=number],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type=password],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type=text],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type=url],
+.vendd-fes-template .fes-form fieldset .fes-fields textarea {
+	border: 1px solid #e2e2e2;
+	box-shadow: none;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields textarea[name="toc"] {
+	margin-bottom: 10px;
+}
+.vendd-fes-template .fes-fields .fes-feat-image-upload,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload {
+	background: #fafafa;
+	border: none;
+	border-radius: 4px;
+	margin: 0;
+	max-width: 100%;
+}
+.vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
+	background: #fafafa;
+	color: #aaa;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: none;
+}
+.vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover {
+	background: #d5d5d5;
+	color: #fff;
+	text-shadow: none;
+}
+.vendd-fes-template .multiple .fes-fields .multiple th {
+	background: none;
+	padding: 0;
+	border: none;
+}
+.vendd-fes-template div.fes-form fieldset .fes-section-wrap {
+	background: #fafafa;
+	padding: 15px 20px;
+	border: none;
+	margin: -20px;
+}
+.vendd-fes-template div.fes-form fieldset .fes-section-title {
+	font-size: 24px;
 }
 
 
