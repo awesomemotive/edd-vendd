@@ -1707,6 +1707,7 @@ input[type="submit"].edd-submit {
 --------------------------------------------------------------*/
 
 /* FES Templates */
+/* FES general */
 .vendd-fes-dashboard-template #primary {
 	width: 100%;
 	padding-right: 0;
@@ -1721,6 +1722,11 @@ input[type="submit"].edd-submit {
 	padding-left: 40px;
 	width: 68%;
 }
+.vendd-fes-template .fes-table {
+	font-size: 13px;
+}
+
+/* FES dashboard menu */
 .vendd-fes-dashboard-template .fes-vendor-menu {
 	float: left;
 	background: #fafafa;
@@ -1751,6 +1757,8 @@ input[type="submit"].edd-submit {
 .vendd-fes-dashboard-template .fes-vendor-menu > ul > li.active > a {
 	background: #fafafa;
 }
+
+/* FES dashboard - Dashboard */
 .vendd-fes-dashboard-template #fes-vendor-announcements {
 	background: #f7f7db;
 	font-size: 13px;
@@ -1762,6 +1770,8 @@ input[type="submit"].edd-submit {
 	font-size: 11px;
 	text-align: right;
 }
+
+/* FES dashboard comments */
 .vendd-fes-template .fes-comments-wrap table,
 .vendd-fes-template #fes-comments-table {
 	font-size: 13px;
