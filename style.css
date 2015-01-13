@@ -1232,7 +1232,10 @@ object {
 >>> Plugin Support
 --------------------------------------------------------------*/
 
-/* Easy Digital Downloads (and support extensions) */
+/*--------------------------------------------------------------
+>>> Easy Digital Downloads (and supporting extensions)
+--------------------------------------------------------------*/
+
 .store-front-header {
 	text-align: center;
 	margin: 0 auto 60px;
@@ -1698,6 +1701,11 @@ input[type="submit"].edd-submit {
 	background: none;
 }
 
+
+/*--------------------------------------------------------------
+>>> Frontend Submissions
+--------------------------------------------------------------*/
+
 /* FES Templates */
 .vendd-fes-dashboard-template #primary {
 	width: 100%;
@@ -1744,10 +1752,9 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 }
 .vendd-fes-dashboard-template #fes-vendor-announcements {
-	background: #fafad2;
+	background: #f7f7db;
 	font-size: 13px;
 	padding: 20px;
-	border: 1px solid #f2f2b8;
 	margin-bottom: 6px;
 }
 .vendd-fes-dashboard-template #fes-vendor-store-link {
@@ -1755,8 +1762,109 @@ input[type="submit"].edd-submit {
 	font-size: 11px;
 	text-align: right;
 }
+.vendd-fes-template .fes-comments-wrap table,
+.vendd-fes-template #fes-comments-table {
+	font-size: 13px;
+	border: none;
+}
+.vendd-fes-template #fes-comments-table th[class*="col-"],
+.vendd-fes-template #fes-comments-table td[class*="col-"] {
+	background: none;
+	padding: 0;
+	border: none;
+}
+.vendd-fes-template #fes-comments-table th.col-author,
+.vendd-fes-template #fes-comments-table th.col-content,
+.vendd-fes-template #fes-comments-table br,
+.vendd-fes-template #fes-comments-table hr {
+	display: none;
+}
+.vendd-fes-template #fes-comments-table .fes-author-img {
+	float: none;
+	text-align: center;
+	padding: 0;
+	margin: 0 0 4px;
+}
+.vendd-fes-template #fes-comments-table .fes-author-img img {
+	width: auto;
+	vertical-align: bottom;
+}
+.vendd-fes-template #fes-comments-table #fes-comment-author {
+	display: block;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 0 10px;
+}
+.vendd-fes-template #fes-comments-table .fes-light-green,
+.vendd-fes-template #fes-comments-table .fes-light-red,
+.vendd-fes-template #fes-comments-table #fes-comment-date {
+	display: block;
+	background: #fafafa;
+	color: inherit;
+	font-size: 11px;
+	text-align: left;
+	padding: 4px;
+	border: 1px solid #f2f2f2;
+	border-width: 1px 1px 0;
+	margin: 0;
+}
+.vendd-fes-template #fes-comments-table #fes-comment-date {
+	border-bottom: 1px solid #f2f2f2;
+	margin-bottom: 10px;
+}
+.vendd-fes-template #fes-comments-table td.col-content {
+	padding: 0 0 0 20px;
+}
+.vendd-fes-template #fes-comments-table #fes-product-name a,
+.vendd-fes-template #fes-comments-table #fes-view-comment {
+	display: block;
+	font-size: 11px;
+	margin: 0;
+}
+.vendd-fes-template #fes-comments-table #fes-view-comment a {
+	color: #a3a3a3;
+	text-decoration: none;
+}
+.vendd-fes-template #fes-comments-table #fes-view-comment a:after {
+	color: #a3a3a3;
+	font-family: "FontAwesome";
+	content: "\f0c1";
+	text-decoration: none;
+	padding-left: 6px;
+}
+.vendd-fes-template #fes-comments-table .fes-comments-content {
+	margin-bottom: 20px;
+}
+.vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form {
+	border-bottom: 1px dotted #f2f2f2;
+	margin-bottom: 25px;
+}
+.vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form > span {
+	color: #a3a3a3;
+	font-size: 11px;
+}
+.vendd-fes-template #fes-comments-table .fes-cmt-submit-form,
+.vendd-fes-template #fes-comments-table .fes-ignore {
+	display: inline-block;
+}
+.vendd-fes-template #fes-comments-table .fes-ignore {
+	background: none;
+	color: #a3a3a3;
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+}
+.vendd-fes-template #fes-comments-table .fes-ignore:after {
+	font-family: "FontAwesome";
+	content: "\f00d";
+	padding-left: 4px;
+}
 
-/* Kolakube Email Forms */
+
+/*--------------------------------------------------------------
+>>> Kolakube Email Forms
+--------------------------------------------------------------*/
+
 #secondary .widget_kol_email .kol-email-field-name,
 #secondary .widget_kol_email .kol-email-field-email,
 #secondary .widget_kol_email .kol-email-field-submit {
