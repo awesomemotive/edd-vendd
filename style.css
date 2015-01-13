@@ -1870,6 +1870,23 @@ input[type="submit"].edd-submit {
 	padding-left: 4px;
 }
 
+/* FES dashboard - Products */
+.fes-product-list-status-bar {
+	color: #a3a3a3;
+	font-size: 13px;
+	margin-bottom: 6px;
+}
+.fes-product-list-status-bar a {
+	text-decoration: none;
+}
+.vendd-fes-template #fes-product-list .fes-product-list-td img {
+	width: 50px;
+}
+.vendd-fes-template #fes-product-list .fes-product-list-td a[class*="-product-fes"] {
+	display: block;
+	font-size: 11px;
+}
+
 
 /*--------------------------------------------------------------
 >>> Kolakube Email Forms
