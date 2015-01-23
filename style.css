@@ -51,11 +51,11 @@ a,
 h1, h2 {
 	border-color: #428bca;
 }
-.announcement-area,
-.announcement-area a {
+.vendd-notifications {
 	background-color: #f7f7db;
 	color: #555;
 }
+
 
 /*--------------------------------------------------------------
 >>> Reset
@@ -739,30 +739,6 @@ a:focus {
 
 
 /*--------------------------------------------------------------
->>> Announcement
---------------------------------------------------------------*/
-.announcement-area {
-	font-size: 13px;
-	padding: 15px 40px;
-}
-.announcement-icon {
-	display: inline-block;
-	background: #fff;
-	color: rgba(0,0,0,.7);
-	padding: 7px;
-	margin-right: 10px;
-	border-radius: 50%;
-	-webkit-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
-	-moz-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
-	box-shadow: 0 0 0 3px rgba(0,0,0,.05);
-}
-.announcement-area a {
-	text-decoration: none;
-	border-bottom: 1px dotted;
-}
-
-
-/*--------------------------------------------------------------
 >>> Widgets
 --------------------------------------------------------------*/
 #secondary {
@@ -1134,6 +1110,26 @@ a:focus {
 	display: block;
 	font-size: 11px;
 	margin-top: 6px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Footer
+--------------------------------------------------------------*/
+.site-footer {
+	color: #999;
+	font-size: 13px;
+	padding: 10px 40px;
+}
+.site-footer a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s;
+}
+.site-footer a:hover {
+	color: #ddd;
 }
 
 
@@ -2041,20 +2037,57 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
->>> Footer
+>>> Simple Notices
 --------------------------------------------------------------*/
-.site-footer {
-	color: #999;
+.vendd-notifications {
+	position: relative;
+	padding: 15px 40px;
+}
+.vendd-notifications #notification-area,
+.vendd-notifications #notification-area #notice-content {
+	display: inline !important;
+	position: static;
+	background: none;
+	color: inherit;
 	font-size: 13px;
-	padding: 10px 40px;
+	padding: 0;
+	border: none;
+	width: 100%;
+	text-shadow: none;
 }
-.site-footer a {
-	color: #fff;
-	text-decoration: none;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
+.vendd-notifications #notification-area h3 {
+	display: none;
 }
-.site-footer a:hover {
-	color: #ddd;
+.vendd-notifications #notification-area p,
+.vendd-notifications #notification-area #notice-content {
+	display: inline;
+	color: inherit;
+	text-shadow: none;
+	margin: 0;
+}
+.vendd-notifications-icon {
+	display: inline-block;
+	background: #fff;
+	color: rgba(0,0,0,.7);
+	padding: 7px;
+	margin-right: 10px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+	box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+}
+.vendd-notifications #notification-area #remove-notice {
+	position: absolute;
+		top: 18px;
+		right: 40px;
+	color: inherit;
+	border: none;
+	margin: 0;
+}
+.vendd-notifications #notification-area #remove-notice:hover {
+	background: none;
+	color: inherit;
+}
+.vendd-notifications #notification-area #notice-icon {
+	display: none;
 }

@@ -637,13 +637,12 @@ function vendd_customizer_head_styles() {
 			}
 		<?php endif; ?>
 		<?php if ( '#f7f7db' != $announcement_bg && '' != $announcement_bg ) : // Has the announcement background color changed? ?>
-			.announcement-area {
+			.vendd-notifications {
 				background-color: <?php echo vendd_sanitize_hex_color( $announcement_bg ); ?>;
 			}
 		<?php endif; ?>
 		<?php if ( '#555555' != $announcement_text && '' != $announcement_text ) : // Has the announcement text color changed? ?>
-			.announcement-area,
-			.announcement-area a {
+			.vendd-notifications {
 				color: <?php echo vendd_sanitize_hex_color( $announcement_text ); ?>;
 			}
 		<?php endif; ?>
