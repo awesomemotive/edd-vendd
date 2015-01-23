@@ -44,13 +44,13 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<span class="site-title">
-				<?php echo ! vendd_is_checkout() ? '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' : ''; ?>
+				<?php echo ! vendd_is_checkout() || false === edd_get_cart_contents() ? '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' : ''; ?>
 					<?php if ( get_theme_mod( 'vendd_logo' ) ) : ?>
 							<img src="<?php echo get_theme_mod( 'vendd_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 					<?php else : ?>
 							<?php bloginfo( 'name' ); ?>
 					<?php endif; ?>
-				<?php echo ! vendd_is_checkout() ? '</a>' : ''; ?>
+				<?php echo ! vendd_is_checkout() || false === edd_get_cart_contents() ? '</a>' : ''; ?>
 			</span>
 			<?php if ( 1 != get_theme_mod( 'vendd_hide_tagline' ) ) : ?>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
