@@ -35,6 +35,20 @@ function vendd_is_checkout() {
 
 
 /**
+ * Is it the EDD Store Front template?
+ *
+ * @return bool
+ */
+function vendd_is_store_front() {
+	if ( is_page_template( 'edd_templates/edd-store-front.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/**
  * Is FES activated?
  *
  * @return bool
