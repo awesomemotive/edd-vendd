@@ -622,7 +622,8 @@ function vendd_customizer_head_styles() {
 			button,
 			.more-link,
 			.product-price,
-			.by-post-author {
+			.by-post-author,
+			.main-navigation ul ul {
 				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}			
 			a,

@@ -38,7 +38,8 @@ input[type="button"],
 button,
 .more-link,
 .product-price,
-.by-post-author {
+.by-post-author,
+.main-navigation ul ul {
 	background: #428bca;
 }
 a,
@@ -516,18 +517,17 @@ a:focus {
 	position: absolute;
 		top: 55px;
 	z-index: 99999;
-	background: #fff;
-	font-size: 13px;
-	border: 1px solid #f2f2f2;
 	margin-left: 10px;
 }
 .main-navigation ul ul ul {
 	left: 100%;
 	top: 0;
+	margin-left: 0;
 }
 .main-navigation .sub-menu a {
-	color: #555;
-	font: 400 15px/1.6 "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	background: rgba(0, 0, 0, .05);
+	color: #fff;
+	font: 400 13px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding: 10px;
 	width: 200px;
 }
@@ -539,6 +539,7 @@ a:focus {
 .main-navigation ul ul :hover > a {
 }
 .main-navigation ul ul a:hover {
+	background: transparent;
 }
 .main-navigation ul li:hover > ul {
 	display: block;
