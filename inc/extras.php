@@ -64,6 +64,29 @@ add_filter( 'the_content_more_link', 'vendd_remove_more_tag_link_jump' );
 
 
 /**
+ * Removes Page Templates from Add/Edit Page screen based on plugins
+ *
+ * @return array
+ */
+function vendd_page_template_conditions( $page_templates ) {
+	if ( ! vendd_fes_is_activated() ) {
+		unset( $page_templates['fes_templates/fes-dashboard.php'] );
+		unset( $page_templates['fes_templates/fes-vendor.php'] );
+	}
+	if ( ! vendd_edd_is_activated() ) {
+		unset( $page_templates['edd_templates/edd-checkout.php'] );
+		unset( $page_templates['edd_templates/edd-confirmation.php'] );
+		unset( $page_templates['edd_templates/edd-failed.php'] );
+		unset( $page_templates['edd_templates/edd-history.php'] );
+		unset( $page_templates['edd_templates/edd-members.php'] );
+		unset( $page_templates['edd_templates/edd-store-front.php'] );
+	}
+	return $page_templates;
+}
+add_filter( 'theme_page_templates', 'vendd_page_template_conditions' );
+
+
+/**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
