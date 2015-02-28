@@ -132,26 +132,33 @@ add_action( 'wp_enqueue_scripts', 'vendd_scripts' );
  */
 require get_template_directory() . '/inc/conditional-tags.php';
 
-
 /**
  * Custom EDD functions
+ *
+ * Only require if Easy Digital Downloads is activated
  */
 if ( vendd_edd_is_activated() ) {
 	require get_template_directory() . '/inc/edd-functions.php';
 }
 
+/**
+ * Custom FES for EDD functions
+ *
+ * Only require if Frontend Submissions for Easy Digital Downloads is activated
+ */
+if ( vendd_fes_is_activated() ) {
+	require get_template_directory() . '/inc/fes-functions.php';
+}
 
 /**
  * Custom template tags
  */
 require get_template_directory() . '/inc/template-tags.php';
 
-
 /**
  * Custom functions that act independently of the theme templates
  */
 require get_template_directory() . '/inc/extras.php';
-
 
 /**
  * Customizer additions

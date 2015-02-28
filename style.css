@@ -1283,6 +1283,29 @@ object {
 .edd_download_image img {
 	border-radius: 4px 4px 0 0;
 }
+.edd_download_byline {
+	color: #999;
+	font-size: 12px;
+	padding: 15px 0 10px;
+	border-bottom: 1px solid #fafafa;
+	margin: 0 20px;
+}
+.edd_byline_author_avatar img {
+	border-radius: 50%;
+	margin: -3px 5px 0 0;
+	vertical-align: middle;
+}
+.edd_byline_by {
+	font-style: italic;
+}
+.edd_byline_author_url {
+	color: #757575;
+	text-decoration: none;
+}
+.edd_byline_author_url:hover {
+	color: #757575;
+	text-decoration: underline;
+}
 .edd_download_title {
 	font: 300 22px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding: 15px 20px 0;
