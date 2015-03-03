@@ -4,7 +4,7 @@
  */
 
 if ( vendd_is_store_front() ) { ?>
-	<a class="product-link" href="<?php the_permalink(); ?>"><i class="fa fa-arrow-circle-right"></i></a>
+	<a class="product-link" href="<?php the_permalink(); ?>"><i class="fa fa-info-circle"></i></a>
 	<?php
 } else { ?>
 	<div class="edd_download_buy_button">
