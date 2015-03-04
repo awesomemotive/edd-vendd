@@ -136,8 +136,10 @@ function vendd_body_classes( $classes ) {
 	
 	if ( vendd_fes_is_activated() ) {
 		// Adds classes based on FES page template
-		if ( is_page_template( 'fes_templates/fes-dashboard.php' ) ) :			
+		if ( is_page_template( 'fes_templates/fes-dashboard.php' ) ) :
 			$classes[] = 'vendd-fes-dashboard-template vendd-edd-template vendd-fes-template';
+		elseif ( is_page_template( 'fes_templates/fes-vendor.php' ) ) :
+			$classes[] = 'vendd-fes-vendor-template vendd-edd-template';
 		endif;
 	}
 	
@@ -147,6 +149,7 @@ function vendd_body_classes( $classes ) {
 			is_page_template( 'edd_templates/edd-history.php' ) ||
 			is_page_template( 'edd_templates/edd-members.php' ) ||
 			is_page_template( 'edd_templates/edd-failed.php' ) ||
+			is_page_template( 'fes_templates/fes-vendor.php' ) ||
 			is_post_type_archive( 'download' ) ||
 			is_404() ) {
 		$classes[] = 'vendd-no-sidebar';

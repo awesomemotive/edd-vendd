@@ -1,9 +1,9 @@
 <?php
 /**
- * replace the purchase button
+ * replace the purchase button with an information icon on specific page templates
  */
 
-if ( vendd_is_store_front() ) { ?>
+if ( vendd_is_store_front() || vendd_is_fes_vendor_template() ) { ?>
 	<a class="product-link" href="<?php the_permalink(); ?>"><i class="fa fa-info-circle"></i></a>
 	<?php
 } else { ?>

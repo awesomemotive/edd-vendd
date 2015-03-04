@@ -3,6 +3,7 @@
  * functions specific to Frontend Submissions for Easy Digital Downloads
  */
  
+ 
 /**
  * get the FES vendor URL
  */

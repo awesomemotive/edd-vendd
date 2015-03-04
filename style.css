@@ -1782,6 +1782,27 @@ input[type="submit"].edd-submit {
 	padding-left: 40px;
 	width: 68%;
 }
+.vendor-header {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.vendor-avatar img {
+	border-radius: 50%;
+}
+.vendor-header .vendor-store-title {
+	font-size: 40px;
+	line-height: 1.4;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.is-vendor-profile .vendor-store-title .entry-subtitle {
+	display: none;
+}
+.vendor-header .vendor-bio,
+.vendor-store-title .entry-subtitle {
+	display: block;
+	font-size: 15px;
+	font-weight: 300;
+}
 .vendd-fes-template .fes-table {
 	font-size: 13px;
 }
@@ -2027,6 +2048,22 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-template div.fes-form fieldset .fes-section-title {
 	font-size: 24px;
+}
+
+/* FES Vendor Template */
+.vendd-fes-vendor-template #primary {
+	float: none;
+	padding: 0;
+	width: 100%;
+}
+.vendor-header {
+	text-align: center;
+	margin: 0 auto 60px;
+	max-width: 722px;
+}
+#vendd-vendor {
+	background: #fafafa;
+	border-radius: 4px;
 }
 
 

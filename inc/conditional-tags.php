@@ -60,3 +60,31 @@ function vendd_fes_is_activated() {
 		return false;
 	}
 }
+
+
+/**
+ * Is it the FES Vendor Dashboard?
+ *
+ * @return bool
+ */
+function vendd_is_fes_dashboard() {
+	if ( is_page_template( 'fes_templates/fes-dashbaord.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/**
+ * Is it the FES Vendor Template?
+ *
+ * @return bool
+ */
+function vendd_is_fes_vendor_template() {
+	if ( is_page_template( 'fes_templates/fes-vendor.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
