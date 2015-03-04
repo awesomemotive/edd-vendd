@@ -44,8 +44,7 @@ button,
 }
 a,
 .comment-full:hover > .reply > .comment-reply-link,
-#edd_download_pagination .page-numbers:hover,
-.edd_download .edd_download_inner:hover .product-link:hover {
+#edd_download_pagination .page-numbers:hover {
 	color: #428bca;
 }
 h1, h2 {
@@ -1275,11 +1274,6 @@ object {
 .edd_download .edd_download_inner:hover {
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
 }
-.edd_download_columns_4 .edd_download .edd_download_inner,
-.edd_download_columns_5 .edd_download .edd_download_inner,
-.edd_download_columns_6 .edd_download .edd_download_inner {
-	padding: 10px;
-}
 .edd_download_image img {
 	border-radius: 4px 4px 0 0;
 }
@@ -1351,12 +1345,17 @@ object {
 	font-size: 13px;
 	padding: 2px 8px;
 }
+.product-price-wrap,
+.product-price-wrap:hover {
+	display: block;
+	text-decoration: none;
+	padding: 0 20px 20px;
+}
 .product-price {
 	display: inline-block;
 	color: #fff;
 	padding: 4px 8px;
 	border-radius: 3px;
-	margin: 0 0 20px 20px;
 }
 .entry-content .product-price {
 	background: none;
@@ -1377,14 +1376,14 @@ object {
 .product-link {
 	position: absolute;
 		right: 20px;
-		bottom: 10px;
+		bottom: 12px;
 	color: #f2f2f2;
-	font-size: 30px;
+	font-size: 20px;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
 }
-.edd_download .edd_download_inner:hover .product-link {
+.product-link:hover {
 	color: #555;
 }
 .edd_download_columns_5 .product-link,
