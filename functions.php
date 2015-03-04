@@ -90,15 +90,18 @@ function vendd_widgets_init() {
 		'before_title'  => '<span class="widget-title">',
 		'after_title'   => '</span>',
 	) );
-	register_sidebar( array(
-		'name'          => __( 'Download Sidebar', 'vendd' ),
-		'id'            => 'sidebar-download',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<span class="widget-title">',
-		'after_title'   => '</span>',
-	) );
+	// only register download sidebar if EDD is activated
+	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
+		register_sidebar( array(
+			'name'          => __( 'Download Sidebar', 'vendd' ),
+			'id'            => 'sidebar-download',
+			'description'   => '',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<span class="widget-title">',
+			'after_title'   => '</span>',
+		) );
+	}
 }
 add_action( 'widgets_init', 'vendd_widgets_init' );
 
