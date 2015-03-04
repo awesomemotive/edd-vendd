@@ -865,10 +865,6 @@ a:focus {
 >>> Content
 --------------------------------------------------------------*/
 .featured-img {
-	background: #fafafa;
-	padding: 4px;
-	border: 1px solid #f2f2f2;
-	border-radius: 4px;
 	margin-bottom: 2em;
 }
 .page-title {
