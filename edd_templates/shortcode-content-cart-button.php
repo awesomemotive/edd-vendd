@@ -1,6 +1,6 @@
 <?php
 /**
- * replace the purchase button with an information icon on specific page templates
+ * hide purchase button behind a toggle button
  */
 ?>
 
