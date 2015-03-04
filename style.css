@@ -1277,7 +1277,7 @@ object {
 	color: #999;
 	font-size: 12px;
 	padding: 15px 0 10px;
-	border-bottom: 1px solid #fafafa;
+	border-bottom: 2px solid #f2f2f2;
 	margin: 0 20px;
 }
 .edd_byline_author_avatar img {
@@ -1324,12 +1324,18 @@ object {
 .edd_download_excerpt p:last-child {
 	margin-bottom: 0;
 }
+.vendd-price-button-container {
+	display: none;
+	padding-top: 20px;
+	border-top: 2px solid #f2f2f2;
+	margin: 0 20px 20px;
+}
 .edd_download_buy_button {
 	font-size: 13px;
 	padding: 20px;
 }
 .entry-content .edd_download_buy_button {
-	border-top: 1px solid #fafafa;
+	border-top: 2px solid #f2f2f2;
 }
 .entry-content .edd_download_inner #edd-purchase-button,
 .entry-content .edd_download_inner .edd-submit,
@@ -1343,9 +1349,9 @@ object {
 }
 .product-price-wrap,
 .product-price-wrap:hover {
-	display: block;
+	display: inline-block;
 	text-decoration: none;
-	padding: 0 20px 20px;
+	margin: 0 20px 20px;
 }
 .product-price {
 	display: inline-block;
@@ -1369,17 +1375,29 @@ object {
 	text-align: center;
 	padding: 4px;
 }
-.product-link {
-	position: absolute;
-		right: 20px;
-		bottom: 12px;
-	color: #f2f2f2;
-	font-size: 20px;
+.vendd-price-button-icon {
+	display: inline-block;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
 }
-.product-link:hover {
+.vendd-price-button-displayed .vendd-price-button-icon {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+.product-link {
+	position: absolute;
+		right: -10px;
+		bottom: -10px;
+	color: #f2f2f2;
+	font-size: 20px;
+	line-height: 1;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s;
+}
+.edd_download_inner:hover .product-link {
 	color: #555;
 }
 .edd_download_columns_5 .product-link,
@@ -1389,6 +1407,10 @@ object {
 	line-height: 1;
 	text-align: center;
 	margin-top: 10px;
+}
+.vendd-price-button-container .edd_purchase_submit_wrapper {
+	display: inline-block;
+	padding-bottom: 20px;
 }
 #edd_download_pagination {
 	font-size: 13px;
@@ -1424,6 +1446,10 @@ input[type="submit"].edd-submit {
 	border: none;
 	border-radius: 4px;
 	padding: 15px;
+}
+.vendd-price-button-container .vendd-price-button .edd-submit {
+	font-size: 13px;
+	padding: 4px 8px;
 }
 #edd_purchase_submit #edd-purchase-button {
 	display: block;
