@@ -81,6 +81,11 @@
 		<?php } ?>
 	</header><!-- #masthead -->
 	
-	<?php get_template_part( 'content/content', 'announcement' ); ?>
+	<?php
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		if ( is_plugin_active( 'simple-notices/simple-notices.php' ) || is_plugin_active( 'simple-notices-pro/simple-notices.php' ) ) {
+			get_template_part( 'content/content', 'announcement' );
+		}
+	?>
 
 	<div id="content" class="site-content">
