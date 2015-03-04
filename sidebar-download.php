@@ -20,8 +20,8 @@
 			<?php
 				the_title( '<h3 class="download-title">', '</h3>' );
 				echo edd_get_purchase_link( array( 'id' => get_the_ID() ) );
-				$download_cats = get_the_term_list( $post->ID, 'download_category', '<span class="download-categories-title">Categories:</span> ', ', ', '' );
-				$download_tags = get_the_term_list( $post->ID, 'download_tag', '<span class="download-tags-title">Tags:</span> ', ', ', '' );
+				$download_cats = get_the_term_list( $post->ID, 'download_category', '<span class="download-categories-title">' . __( 'Categories', 'vendd' ) . ':</span> ', ', ', '' );
+				$download_tags = get_the_term_list( $post->ID, 'download_tag', '<span class="download-tags-title">' . __( 'Tags', 'vendd' ) . ':</span> ', ', ', '' );
 			?>
 			<p class="edd-meta">
 				<?php
