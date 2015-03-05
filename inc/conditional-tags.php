@@ -6,6 +6,11 @@
  */
 
 
+/*--------------------------------------------------------------
+>>> Easy Digital Downloads
+>>> https://easydigitaldownloads.com/
+--------------------------------------------------------------*/
+
 /**
  * Is EDD activated?
  *
@@ -19,20 +24,18 @@ function vendd_edd_is_activated() {
 	}
 }
 
-
 /**
  * Is it the EDD checkout page?
  *
  * @return bool
  */
 function vendd_is_checkout() {
-	if ( is_page_template( 'edd_templates/edd-checkout.php' ) ) {
+	if ( vendd_edd_is_activated() && is_page_template( 'edd_templates/edd-checkout.php' ) ) {
 		return true;
 	} else {
 		return false;
 	}
 }
-
 
 /**
  * Is it the EDD Store Front template?
@@ -40,13 +43,18 @@ function vendd_is_checkout() {
  * @return bool
  */
 function vendd_is_store_front() {
-	if ( is_page_template( 'edd_templates/edd-store-front.php' ) ) {
+	if ( vendd_edd_is_activated() && is_page_template( 'edd_templates/edd-store-front.php' ) ) {
 		return true;
 	} else {
 		return false;
 	}
 }
 
+
+/*--------------------------------------------------------------
+>>> Frontend Submissions for Easy Digital Downloads
+>>> https://easydigitaldownloads.com/extensions/frontend-submissions/
+--------------------------------------------------------------*/
 
 /**
  * Is FES activated?
@@ -61,20 +69,18 @@ function vendd_fes_is_activated() {
 	}
 }
 
-
 /**
  * Is it the FES Vendor Dashboard?
  *
  * @return bool
  */
 function vendd_is_fes_dashboard() {
-	if ( is_page_template( 'fes_templates/fes-dashbaord.php' ) ) {
+	if ( vendd_fes_is_activated() && is_page_template( 'fes_templates/fes-dashbaord.php' ) ) {
 		return true;
 	} else {
 		return false;
 	}
 }
-
 
 /**
  * Is it the FES Vendor Template?
@@ -82,7 +88,27 @@ function vendd_is_fes_dashboard() {
  * @return bool
  */
 function vendd_is_fes_vendor_template() {
-	if ( is_page_template( 'fes_templates/fes-vendor.php' ) ) {
+	if ( vendd_fes_is_activated() && is_page_template( 'fes_templates/fes-vendor.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/*--------------------------------------------------------------
+>>> Simple Notices and Simple Notices Pro
+>>> https://pippinsplugins.com/simple-notices-plugin/
+--------------------------------------------------------------*/
+
+/**
+ * Are either of the Simple Notices extensions activated?
+ *
+ * @return bool
+ */
+function vendd_simple_notices_is_activated() {
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	if ( is_plugin_active( 'simple-notices/simple-notices.php' ) || is_plugin_active( 'simple-notices-pro/simple-notices.php' ) ) {
 		return true;
 	} else {
 		return false;

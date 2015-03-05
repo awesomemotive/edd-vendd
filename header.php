@@ -57,7 +57,7 @@
 			<?php endif; ?>
 		</div>
 		
-		<?php if ( vendd_edd_is_activated() && ! vendd_is_checkout() ) : ?>
+		<?php if ( ! vendd_is_checkout() ) : ?>
 			<a href="<?php echo edd_get_checkout_uri(); ?>" class="header-cart">
 				<i class="fa fa-shopping-cart"></i>
 				<?php
@@ -82,8 +82,7 @@
 	</header><!-- #masthead -->
 	
 	<?php
-		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-		if ( is_plugin_active( 'simple-notices/simple-notices.php' ) || is_plugin_active( 'simple-notices-pro/simple-notices.php' ) ) {
+		if ( vendd_simple_notices_is_activated() && ! vendd_is_checkout() ) {
 			get_template_part( 'content/content', 'announcement' );
 		}
 	?>
