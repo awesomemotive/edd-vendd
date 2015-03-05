@@ -1277,7 +1277,7 @@ object {
 	color: #999;
 	font-size: 12px;
 	padding: 15px 0 10px;
-	border-bottom: 2px solid #f2f2f2;
+	border-bottom: 1px solid #f2f2f2;
 	margin: 0 20px;
 }
 .edd_byline_author_avatar img {
@@ -1327,7 +1327,7 @@ object {
 .vendd-price-button-container {
 	display: none;
 	padding-top: 20px;
-	border-top: 2px solid #f2f2f2;
+	border-top: 1px solid #f2f2f2;
 	margin: 0 20px 20px;
 }
 .edd_download_buy_button {
