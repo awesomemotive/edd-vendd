@@ -1530,6 +1530,7 @@ input[type="submit"].edd-submit {
 	padding: 0;
 }
 .edd_download_purchase_form .edd_price_options {
+	color: #757575;
 	margin-bottom: 6px;
 }
 .widget-area .edd_download_purchase_form .edd_price_options li {
