@@ -36,31 +36,33 @@
 
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', __( ', ', 'vendd' ) );
-
-			if ( ! vendd_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
+			
+			if ( 'post' == get_post_type() ) {
+				if ( ! vendd_categorized_blog() ) {
+					// This blog only has 1 category so we just need to worry about tags in the meta text
+					if ( '' != $tag_list ) {
+						$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
+					} else {
+						$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
+					}
+	
 				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
+					// But this blog has loads of categories so we should probably display them here
+					if ( '' != $tag_list ) {
+						$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
+					} else {
+						$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'vendd' );
+					}
+	
+				} // end check for categories on this blog
+	
+				printf(
+					$meta_text,
+					$category_list,
+					$tag_list,
+					get_permalink()
+				);
+			}
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
