@@ -284,18 +284,6 @@ function vendd_customize_register( $wp_customize ) {
 		'description'	=> __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 	) ) );
 	
-	// show announcement?
-	$wp_customize->add_setting( 'vendd_announcement', array( 
-		'default'			=> 0,
-		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
-	) );
-	$wp_customize->add_control( 'vendd_announcement', array(
-		'label'		=> __( 'Enable Announcement', 'vendd' ),
-		'section'	=> 'vendd_content_section',
-		'priority'	=> 70,
-		'type'      => 'checkbox',
-	) );
-	
 	// site-wide announcement text
 	$wp_customize->add_setting( 'vendd_announcement_text', array(
 		'default'			=> null,
