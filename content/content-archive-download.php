@@ -15,6 +15,7 @@
 							edd_get_template_part( 'shortcode', 'content-title' );
 							edd_get_template_part( 'shortcode', 'content-excerpt' );
 							edd_get_template_part( 'shortcode', 'content-price' );
+							edd_get_template_part( 'shortcode', 'content-cart-button' );
 						?>
 					</div>
 				</div>
