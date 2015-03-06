@@ -284,18 +284,6 @@ function vendd_customize_register( $wp_customize ) {
 		'description'	=> __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 	) ) );
 	
-	// site-wide announcement text
-	$wp_customize->add_setting( 'vendd_announcement_text', array(
-		'default'			=> null,
-		'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
-	) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_announcement_text', array(
-		'label'			=> __( 'Announcement Text', 'vendd' ),
-		'section'		=> 'vendd_content_section',
-		'priority'		=> 80,
-		'description'	=> __( 'This text appears in an attention-grabbing area below the header/main menu. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
-	) ) );
-	
 	// credits & copyright
 	$wp_customize->add_setting( 'vendd_credits_copyright', array(
 		'default'			=> null,
