@@ -161,6 +161,21 @@ add_filter( 'body_class', 'vendd_body_classes' );
 
 
 /**
+ * Add Social Network URL Fields to User Profile
+ */
+function vendd_add_social_profiles( $contactmethods ) {
+	
+	$contactmethods['twitter_profile']	= __( 'Twitter Profile URL', 'vendd' );
+	$contactmethods['facebook_profile']	= __( 'Facebook Profile URL', 'vendd' );
+	$contactmethods['gplus_profile']	= __( 'Google Plus Profile URL', 'vendd' );
+	$contactmethods['youtube_profile']	= __( 'YouTube Profile URL', 'vendd' );
+	
+	return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'vendd_add_social_profiles', 10, 1 );
+
+
+/**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
  * @param string $title Default title text for current view.

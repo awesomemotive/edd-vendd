@@ -97,6 +97,26 @@ function vendd_is_fes_vendor_template() {
 
 
 /*--------------------------------------------------------------
+>>> Software Licensing for Easy Digital Downloads
+>>> https://easydigitaldownloads.com/extensions/software-licensing/
+--------------------------------------------------------------*/
+
+/**
+ * Is Software Licensing activated?
+ *
+ * @return bool
+ */
+function vendd_SL_is_activated() {
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	if ( is_plugin_active( 'edd-software-licensing/edd-software-licenses.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/*--------------------------------------------------------------
 >>> Simple Notices and Simple Notices Pro
 >>> https://pippinsplugins.com/simple-notices-plugin/
 --------------------------------------------------------------*/

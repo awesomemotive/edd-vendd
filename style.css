@@ -1097,6 +1097,8 @@ a:focus {
 }
 #comments .required {
 	color: red;
+	font-size: 12px;
+	margin-left: 3px;
 }
 .comment-form .form-allowed-tags {
 	text-align: left;
@@ -1444,6 +1446,10 @@ object {
 	padding: 0 20px;
 	margin: -10px 0 10px;
 }
+.widget_edd_product_details .downloads-footer {
+	padding: 0;
+	margin-bottom: 0;
+}
 .downloads-footer a {
 	color: #999;
 	text-decoration: none;
@@ -1612,6 +1618,9 @@ input[type="submit"].edd-submit {
 .widget_edd_product_details .download-title {
 	display: none;
 }
+.single-download .widget_edd_product_details .edd_download_purchase_form {
+	margin-bottom: 0;
+}
 .widget_edd_product_details .edd_download_purchase_form .edd-submit {
 	font-size: 15px;
 	padding: 10px;
@@ -1663,6 +1672,75 @@ input[type="submit"].edd-submit {
 }
 .edd_cart_item_image {
 	display: none;
+}
+
+/* Author & Download Details */
+
+.vendd-download-author {
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.vendd-download-author .avatar {
+	border-radius: 50%;
+}
+.vendd-author-contact {
+	padding: 10px 20px 8px;
+}
+.vendd-contact-method {
+	display: inline-block;
+	margin-right: 6px;
+}
+.vendd-social-profile {
+	font-size: 20px;
+	line-height: 1;
+}
+.vendd-twitter {
+	color: #00aced;
+}
+.vendd-google-plus {
+	color: #dd4b39;
+}
+.vendd-facebook {
+	color: #3b5998;
+}
+.vendd-youtube {
+	color: #bb0000;
+}
+.vendd-author-website {
+	float: right;
+}
+.vendd-website {
+	color: #555;
+}
+.vendd-social-profile:hover {
+	color: #555;
+}
+.vendd-website:hover {
+	color: #757575;
+}
+.widget li.vendd-details-list-item {
+	padding: 0;
+}
+.widget li.vendd-details-list-item:before {
+	content: "";
+	margin-right: 0;
+}
+.vendd-details-list-item .vendd-detail-name,
+.vendd-details-list-item .vendd-detail-info {
+	display: inline-block;
+	width: 48%;
+}
+.vendd-details-list-item .vendd-detail-name {
+	vertical-align: top;
+	padding: 10px 0 10px 17px;
+}
+.vendd-details-list-item .vendd-detail-info {
+	text-align: right;
+	padding: 10px 20px 10px 0;
+}
+.vendd-detail-name {
+	font-weight: 700;
 }
 
 /* EDD templates */
@@ -2159,6 +2237,57 @@ input[type="submit"].edd-submit {
 #vendd-vendor {
 	background: #fafafa;
 	border-radius: 4px;
+}
+
+
+/*--------------------------------------------------------------
+>>> EDD Product Reviews
+>>> https://easydigitaldownloads.com/extensions/product-reviews/
+--------------------------------------------------------------*/
+
+.comment-form .comment_form_review_title {
+	margin-bottom: 15px;
+}
+.comment-form .comment_form_review_title > label,
+.comment-form .comment_form_rating > label {
+	min-width: 100px;
+}
+.comment-content .star-rating {
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+.comment-content .star-rating .edd_reviews_rating_box {
+	display: block;
+	float: none;
+}
+.comment-content .star-rating p {
+	clear: both;
+	margin-bottom: 0;
+}
+.comment-content .edd-review-vote {
+	background: #fafafa;
+	padding: 10px 20px 10px 15px;
+	border: 1px solid #f2f2f2;
+	border-radius: 4px;
+}
+.comment-content .edd-review-vote p {
+	margin-bottom: 5px;
+}
+.comment-content .edd-reviews-voting-buttons {
+	display: block;
+	padding-top: 8px;
+}
+.comment-content .edd-reviews-voting-buttons br {
+	display: none;
+}
+.comment-content .edd-reviews-voting-buttons a {
+	background: #555;
+	padding: 4px 8px;
+	border-radius: 4px;
+	margin: 0 2px 0 0;
+}
+.comment-content .edd-reviews-voting-buttons a:hover {
+	color: #ccc;
 }
 
 
