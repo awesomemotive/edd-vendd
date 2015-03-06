@@ -332,6 +332,18 @@ function vendd_customize_register( $wp_customize ) {
 			'type'      => 'checkbox',
 		) );
 		
+		// show categories/tags on [downloads] shortcode?
+		$wp_customize->add_setting( 'vendd_downloads_taxonomies', array( 
+			'default'			=> 0,
+			'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+		) );
+		$wp_customize->add_control( 'vendd_downloads_taxonomies', array(
+			'label'		=> __( 'Show Categories/Tags on Downloads grid', 'vendd' ),
+			'section'	=> 'vendd_edd_options',
+			'priority'	=> 20,
+			'type'      => 'checkbox',
+		) );
+		
 		/**
 		 * EDD button color
 		 *
@@ -373,7 +385,7 @@ function vendd_customize_register( $wp_customize ) {
 			'label'			=> __( 'EDD Button Color', 'vendd' ), 
 			'section'		=> 'vendd_edd_options',
 			'description'	=> __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Clear the color field back to default to revert back to the EDD setting.', 'vendd' ),
-			'priority'		=> 30
+			'priority'		=> 40
 		) ) );
 	
 		// Store Front Title
@@ -384,9 +396,9 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_store_front_title', array(
 			'label'			=> __( 'Store Front Title', 'vendd' ),
 			'section'		=> 'vendd_edd_options',
-			'priority'		=> 40,
+			'priority'		=> 50,
 			'description'	=> __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
-		) ) );	
+		) ) );
 	}
 	
 	

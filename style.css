@@ -1245,7 +1245,7 @@ object {
 	color: red;
 }
 
-/* [downloads] shortcode in store front page template */
+/* [downloads] shortcode */
 .edd_download {
 	padding: 20px;
 }
@@ -1437,6 +1437,27 @@ object {
 .no-downloads {
 	display: inline-block;
 	padding: 10px;
+}
+.downloads-footer {
+	color: #999;
+	font-style: italic;
+	padding: 0 20px;
+	margin: -10px 0 10px;
+}
+.downloads-footer a {
+	color: #999;
+	text-decoration: none;
+}
+.downloads-footer a:hover {
+	text-decoration: underline;
+}
+.vendd-download-terms {
+	display: block;
+	color: #757575;
+	font-size: 12px;
+}
+.downloads-footer .fa {
+	margin-right: 4px;
 }
 
 /* EDD button styles */

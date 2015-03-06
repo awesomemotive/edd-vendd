@@ -12,3 +12,8 @@
 <h3 itemprop="name" class="edd_download_title">
 	<a title="<?php the_title_attribute(); ?>" itemprop="url" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 </h3>
+<?php
+	if ( 1 == get_theme_mod( 'vendd_downloads_taxonomies' ) ) {
+		get_template_part( 'edd_templates/shortcode', 'content-taxonomies' );
+	}
+?>
