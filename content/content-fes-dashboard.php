@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="fes-dashboard-header">
 		<?php
-			if ( ! empty( get_theme_mod( 'vendd_fes_dashboard_title' ) ) ) {
+			if ( '' != get_theme_mod( 'vendd_fes_dashboard_title' ) ) {
 				echo '<h1 class="entry-title">
 						<span class="entry-title-primary">' .
 							get_theme_mod( 'vendd_fes_dashboard_title' ) .
