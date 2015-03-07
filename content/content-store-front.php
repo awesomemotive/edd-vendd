@@ -12,7 +12,7 @@
 
 <div class="store-front-header">
 	<?php
-		if ( ! empty( get_theme_mod( 'vendd_store_front_title' ) ) ) {
+		if ( '' != get_theme_mod( 'vendd_store_front_title' ) ) {
 			echo '<h1 class="entry-title">
 					<span class="entry-title-primary">' .
 						get_theme_mod( 'vendd_store_front_title' ) .
