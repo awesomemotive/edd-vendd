@@ -30,7 +30,7 @@ function vendd_edd_is_activated() {
  * @return bool
  */
 function vendd_is_checkout() {
-	if ( vendd_edd_is_activated() && is_page_template( 'edd_templates/edd-checkout.php' ) ) {
+	if ( is_page_template( 'edd_templates/edd-checkout.php' ) ) {
 		return true;
 	} else {
 		return false;
@@ -43,7 +43,7 @@ function vendd_is_checkout() {
  * @return bool
  */
 function vendd_is_store_front() {
-	if ( vendd_edd_is_activated() && is_page_template( 'edd_templates/edd-store-front.php' ) ) {
+	if ( is_page_template( 'edd_templates/edd-store-front.php' ) ) {
 		return true;
 	} else {
 		return false;
@@ -75,7 +75,7 @@ function vendd_fes_is_activated() {
  * @return bool
  */
 function vendd_is_fes_dashboard() {
-	if ( vendd_fes_is_activated() && is_page_template( 'fes_templates/fes-dashbaord.php' ) ) {
+	if ( is_page_template( 'fes_templates/fes-dashbaord.php' ) ) {
 		return true;
 	} else {
 		return false;
@@ -88,7 +88,7 @@ function vendd_is_fes_dashboard() {
  * @return bool
  */
 function vendd_is_fes_vendor_template() {
-	if ( vendd_fes_is_activated() && is_page_template( 'fes_templates/fes-vendor.php' ) ) {
+	if ( is_page_template( 'fes_templates/fes-vendor.php' ) ) {
 		return true;
 	} else {
 		return false;

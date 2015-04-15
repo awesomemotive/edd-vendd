@@ -57,7 +57,7 @@
 			<?php endif; ?>
 		</div>
 		
-		<?php if ( ! vendd_is_checkout() ) : ?>
+		<?php if ( vendd_edd_is_activated() && ! vendd_is_checkout() ) : ?>
 			<a href="<?php echo edd_get_checkout_uri(); ?>" class="header-cart">
 				<i class="fa fa-shopping-cart"></i>
 				<?php
