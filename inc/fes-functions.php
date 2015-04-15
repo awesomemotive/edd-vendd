@@ -21,3 +21,11 @@ function vendd_edd_fes_author_url( $author = null ) {
 	
 	return FES_Vendors::get_vendor_store_url( $author->ID );
 }
+
+/**
+ * filter download comment author avatar size in FES dashboard
+ */
+function vendd_comment_author_image_size( $size ) {
+	return 75;
+}
+add_filter( 'fes_get_avatar_size_comment_author_image', 'vendd_comment_author_image_size' );
