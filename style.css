@@ -181,7 +181,7 @@ a img {
 #primary { float: left; padding-right: 40px; width: 68%; }
 #secondary { float: left; width: 32%; font-size: .87em; }
 .vendd-no-sidebar #primary { float: none; margin: 0 auto; }
-.vendd-store-front-template #primary,
+.vendd-downloads-template #primary,
 .post-type-archive-download #primary,
 .tax-download_category #primary,
 .tax-download_tag #primary { float: none; padding: 0; width: 100%; }
@@ -1245,14 +1245,92 @@ object {
 .edd_download {
 	padding: 20px;
 }
-.edd_downloads_list.edd_download_columns_3 .edd_download {
-	width: 33.33333% !important;
+.edd_download_inner:before,
+.edd_download_inner:after{
+	content: '';
+	display: table;
+	clear: both;
 }
-.edd_download_columns_4 .edd_download,
+
+/* shared column variation styles */
 .edd_download_columns_5 .edd_download,
 .edd_download_columns_6 .edd_download {
 	padding: 10px;
 }
+.edd_downloads_list[class*="edd_download_columns_"] .edd_download {
+	float: none !important;
+	display: inline-block;
+	vertical-align: top;
+}
+.edd_downloads_list[class*="edd_download_columns_"] > div[style="clear:both;"] {
+	display: none;
+}
+
+/* 1 column [downloads] */
+.edd_downloads_list.edd_download_columns_1 .edd_download {
+	font-size: 1em;
+}
+
+@media all and ( min-width: 1041px ) {
+	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_byline {
+		padding-top: 20px;
+	}
+	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_excerpt,
+	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_full_content {
+		font-size: 1em;
+	}
+	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download {
+		margin-bottom: 20px;
+	}
+	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image {
+		float: left;
+		width: 50%;
+	}
+	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image img {
+		border-radius: 4px 0 0 4px;
+	}
+	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-download-information {
+		float: right;
+		width: 48%;
+	}
+	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-price-button-container {
+		width: 48%;
+	}
+}
+
+/* 2 column [downloads] */
+.edd_downloads_list.edd_download_columns_2 .edd_download {
+	width: 49.59% !important;
+}
+
+/* 3 column [downloads] */
+.edd_downloads_list.edd_download_columns_3 .edd_download {
+	width: 32.89% !important;
+}
+.entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
+	font-size: .93em;
+}
+
+/* 4 column [downloads] */
+.edd_downloads_list.edd_download_columns_4 .edd_download {
+	width: 24.7% !important;
+}
+
+/* 5, 6 column [downloads] - Vendd will not support more than 5 columns wide on the EDD Downloads template */
+.edd_downloads_list.edd_download_columns_5 .edd_download,
+.edd_downloads_list.edd_download_columns_6 .edd_download {
+	width: 19.7% !important;
+}
+
+/* 4, 5, 6 column [downloads] - show 2 columns if NOT using the EDD Downloads template */
+.entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+.entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+.entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+	padding: 20px;
+	width: 49.59% !important;
+}
+
+/* general [downloads] styles */
 .edd_download .edd_download_inner {
 	position: relative;
 	background: #fff;
@@ -1297,15 +1375,12 @@ object {
 	padding: 15px 20px 0;
 	margin-bottom: 15px;
 }
-.entry-content .edd_download_title {
-	font-size: 1.2em;
-	margin-bottom: 10px;
-}
+.entry-content .edd_download_columns_2 .edd_download_title,
+.entry-content .edd_download_columns_3 .edd_download_title,
 .edd_download_columns_4 .edd_download_title,
 .edd_download_columns_5 .edd_download_title,
 .edd_download_columns_6 .edd_download_title {
 	font-size: 1.2em;
-	line-height: 1.4;
 }
 .edd_download_title a {
 	color: #555;
@@ -1316,6 +1391,10 @@ object {
 	color: #757575;
 	font-size: .87em;
 	padding: 0 20px 15px;
+}
+.entry-content .edd_download_columns_3 .edd_download_excerpt,
+.entry-content .edd_download_columns_3 .edd_download_full_content {
+	font-size: .87em;
 }
 .edd_download_full_content p:last-child,
 .edd_download_excerpt p:last-child {
@@ -1371,22 +1450,6 @@ object {
 .product-price:hover {
 	color: #555;
 }
-.entry-content .product-price {
-	background: none;
-	color: #999;
-	font-size: .87em;
-	padding: 0;
-}
-.entry-content .product-price:hover {
-	color: #555;
-}
-.edd_download_columns_5 .product-price,
-.edd_download_columns_6 .product-price {
-	display: block;
-	font-size: .73em;
-	text-align: center;
-	padding: 4px;
-}
 .vendd-price-button-icon {
 	display: inline-block;
 	-webkit-transition: all .2s;
@@ -1412,14 +1475,6 @@ object {
 }
 .edd_download:hover .product-link {
 	color: #555;
-}
-.edd_download_columns_5 .product-link,
-.edd_download_columns_6 .product-link {
-	display: block;
-	position: static;
-	line-height: 1;
-	text-align: center;
-	margin-top: 10px;
 }
 .vendd-price-button-container .edd_purchase_submit_wrapper {
 	display: block;
@@ -1999,7 +2054,7 @@ input[type="submit"].edd-submit {
 	width: 32%;
 }
 .vendd-fes-dashboard-template .fes-vendor-menu > ul {
-	background: #fff;
+	background: #fafafa;
 	list-style: none;
 	border: 1px solid #f2f2f2;
 	border-radius: 4px;
@@ -2012,6 +2067,7 @@ input[type="submit"].edd-submit {
 	width: 100%;
 }
 .vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a {
+	background: #fff;
 	letter-spacing: normal;
 	padding: 10px 20px;
 }
@@ -2384,7 +2440,64 @@ input[type="submit"].edd-submit {
 >>> Responsive CSS
 --------------------------------------------------------------*/
 
-@media all and ( max-width: 840px ) {
+@media all and ( max-width: 1200px ) {
+	.edd_downloads_list.edd_download_columns_4 .edd_download,
+	.edd_downloads_list.edd_download_columns_5 .edd_download,
+	.edd_downloads_list.edd_download_columns_6 .edd_download {
+		float: none !important;
+		display: inline-block;
+		padding: 20px;
+		width: 24.65% !important;
+		vertical-align: top;
+	}
+}
+
+@media all and ( max-width: 1040px ) {
+	.edd_downloads_list.edd_download_columns_1 .edd_download {
+		display: block;
+		margin: 0 auto;
+		max-width: 722px !important;
+	}
+	#wp-calendar th,
+	#wp-calendar td {
+		padding: 3px 5px;
+	}
+}
+
+@media all and ( max-width: 1000px ) {
+	.edd_downloads_list.edd_download_columns_3 .edd_download,
+	.edd_downloads_list.edd_download_columns_4 .edd_download,
+	.edd_downloads_list.edd_download_columns_5 .edd_download,
+	.edd_downloads_list.edd_download_columns_6 .edd_download {
+		display: inline-block;
+		padding: 20px;
+		width: 49.59% !important;
+	}
+	.entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
+		font-size: 1em;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu,
+	.vendd-fes-dashboard-template #fes-vendor-dashboard {
+		float: none;
+		width: 100%;
+	}
+	.vendd-fes-dashboard-template #fes-vendor-dashboard {
+		padding-left: 0;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
+		display: inline-block;
+		border-right: 1px solid #f2f2f2;
+		width: auto;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child {
+		margin-right: -1px;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a {
+		padding: 10px 15px;
+	}
+}
+
+@media all and ( max-width: 860px ) {
 	#primary,
 	#secondary {
 		float: none;
@@ -2427,9 +2540,36 @@ input[type="submit"].edd-submit {
 	.main-navigation ul {
 		display: none;
 	}
+	#wp-calendar th,
+	#wp-calendar td {
+		padding: 6px 10px;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
+		display: inline-block;
+		border-bottom: 1px solid #f2f2f2;
+		width: 50%;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child {
+		margin-right: 0;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:nth-child(odd) {
+		border-right: 1px solid #f2f2f2;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child:nth-child(odd) {
+		border-right: 1px solid #f2f2f2;
+	}
 }
 
 @media all and ( max-width: 600px ) {
+	body,
+	button,
+	input,
+	select,
+	textarea,
+	#secondary,
+	.comment-full {
+		font-size: 14px;
+	}
 	#content {
 		padding: 20px;
 	}
@@ -2440,14 +2580,22 @@ input[type="submit"].edd-submit {
 	.main-navigation {
 		padding: 0 20px;
 	}
-	body,
-	button,
-	input,
-	select,
-	textarea,
-	#secondary,
-	.comment-full {
-		font-size: 14px;
+	.info-bar-navigation {
+		text-align: left;
+		margin: 0;
+	}
+	.info-bar-navigation li {
+		display: inline-block;
+		width: 47.5%;
+		margin-right: 4%;
+	}
+	.info-bar-navigation li:nth-child(even) {
+		margin-right: 0;
+	}
+	.info-bar-navigation li a {
+		display: block;
+		text-align: center;
+		margin: 0 0 10px;
 	}
 	.featured-img {
 		float: none;
@@ -2457,5 +2605,27 @@ input[type="submit"].edd-submit {
 	}
 	.post-author-label {
 		display: none;
+	}
+	.edd_downloads_list[class*="edd_download_columns_"] .edd_download,
+	.entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+	.entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+	.entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+		width: 100% !important;
+	}
+	#content .edd_download_title {
+		font-size: 1.2em;
+	}
+	#content .edd_download_excerpt,
+	#content .edd_download_full_content {
+		font-size: .93em;
+	}
+	#wp-calendar th,
+	#wp-calendar td {
+		padding: 3px 5px;
+	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
+		border: 1px solid #f2f2f2;
+		border-width: 0 0 1px !important;
+		width: 100%;
 	}
 }

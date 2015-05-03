@@ -48,7 +48,7 @@ function vendd_setup() {
 	// add a hard cropped (for uniformity) image size for content lists
 	add_image_size( 'vendd_featured_image_thumb', 200, 200, true );
 	// add a hard cropped (for uniformity) image size for the product grid
-	add_image_size( 'vendd_product_image', 722, 450, true );
+	add_image_size( 'vendd_product_image', 722, 570, true );
 
 	/*
 	 * Theme nav menus

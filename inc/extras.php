@@ -79,7 +79,7 @@ function vendd_page_template_conditions( $page_templates ) {
 		unset( $page_templates['edd_templates/edd-failed.php'] );
 		unset( $page_templates['edd_templates/edd-history.php'] );
 		unset( $page_templates['edd_templates/edd-members.php'] );
-		unset( $page_templates['edd_templates/edd-store-front.php'] );
+		unset( $page_templates['edd_templates/edd-downloads-shortcode.php'] );
 	}
 	return $page_templates;
 }
@@ -119,8 +119,8 @@ function vendd_body_classes( $classes ) {
 	
 	if ( vendd_edd_is_activated() ) {
 		// Adds classes based on EDD page template
-		if ( is_page_template( 'edd_templates/edd-store-front.php' ) ) :		
-			$classes[] = 'vendd-store-front-template vendd-edd-template';
+		if ( is_page_template( 'edd_templates/edd-downloads-shortcode.php' ) ) :		
+			$classes[] = 'vendd-downloads-template vendd-edd-template';
 		elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) :		
 			$classes[] = 'vendd-checkout-template vendd-edd-template';	
 		elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) :		
