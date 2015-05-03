@@ -37,7 +37,6 @@ input[type="submit"],
 input[type="button"],
 button,
 .more-link,
-.product-price,
 .by-post-author,
 .main-navigation ul ul {
 	background: #428bca;
@@ -47,7 +46,8 @@ a,
 #edd_download_pagination .page-numbers:hover {
 	color: #428bca;
 }
-h1, h2 {
+h1, h2,
+.vendd-price-button-container {
 	border-color: #428bca;
 }
 .vendd-notifications {
@@ -182,6 +182,7 @@ a img {
 #secondary { float: left; width: 32%; font-size: 13px; }
 .vendd-no-sidebar #primary { float: none; margin: 0 auto; }
 .vendd-store-front-template #primary,
+.post-type-archive-download #primary,
 .tax-download_category #primary,
 .tax-download_tag #primary { float: none; padding: 0; width: 100%; }
 
@@ -1323,15 +1324,25 @@ object {
 	font-size: 13px;
 	padding: 0 20px 15px;
 }
+.edd_download_full_content p:last-child,
 .edd_download_excerpt p:last-child {
 	margin-bottom: 0;
 }
 .vendd-price-button-container {
+	position: absolute;
+		bottom: 0;
 	display: none;
+	background: #fff;
 	font-size: 13px;
-	padding-top: 20px;
-	border-top: 1px solid #f2f2f2;
-	margin: 0 20px 20px;
+	padding: 20px;
+	border-top-style: solid;
+	border-top-width: 3px;
+	border-radius: 0 0 4px 4px;
+	width: 100%;
+	max-height: 375px;
+	overflow-y: scroll;
+	box-shadow: 0px -2px 12px 0px rgba(21,21,21,.06);
+	z-index: 1;
 }
 .edd_download_buy_button {
 	font-size: 13px;
@@ -1358,9 +1369,14 @@ object {
 }
 .product-price {
 	display: inline-block;
-	color: #fff;
+	background: #f1f1f1;
+	color: #999;
+	font-size: 13px;
 	padding: 4px 8px;
 	border-radius: 3px;
+}
+.product-price:hover {
+	color: #555;
 }
 .entry-content .product-price {
 	background: none;
@@ -1399,8 +1415,9 @@ object {
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
+	z-index: 2;
 }
-.edd_download_inner:hover .product-link {
+.edd_download:hover .product-link {
 	color: #555;
 }
 .edd_download_columns_5 .product-link,
@@ -1413,7 +1430,6 @@ object {
 }
 .vendd-price-button-container .edd_purchase_submit_wrapper {
 	display: block;
-	padding-bottom: 20px;
 }
 #edd_download_pagination {
 	font-size: 13px;
@@ -1533,14 +1549,14 @@ input[type="submit"].edd-submit {
 }
 .widget-area .edd-cart-added-alert {
 	right: 0;
-	bottom: 0;
+	bottom: -22px;
 }
 .edd_download_inner .edd-cart-added-alert {
 	position: static;
 	display: inline-block;
 }
 .edd_purchase_tax_rate {
-	display: block;
+	position: absolute;
 	color: #999;
 	font-size: 12px;
 	font-style: normal;
@@ -1569,7 +1585,6 @@ input[type="submit"].edd-submit {
 	margin-bottom: 10px;
 }
 .vendd-price-button-container .edd_download_purchase_form .edd_price_options li:first-child {
-	margin-top: -10px;
 	border-radius: 4px 4px 0 0;
 } 
 .edd_download_purchase_form .edd_price_options li:last-child {

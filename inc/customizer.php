@@ -606,7 +606,6 @@ function vendd_customizer_head_styles() {
 			input[type="button"],
 			button,
 			.more-link,
-			.product-price,
 			.by-post-author,
 			.main-navigation ul ul {
 				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
@@ -616,8 +615,8 @@ function vendd_customizer_head_styles() {
 			#edd_download_pagination .page-numbers:hover {
 				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}			
-			h1,
-			h2 {
+			h1, h2,
+			.vendd-price-button-container {
 				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}
 		<?php endif; ?>
