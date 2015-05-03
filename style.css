@@ -163,7 +163,7 @@ a img {
 #info-bar {
 	position: relative;
 	color: #999;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 10px 40px;
 	min-height: 39px;
 }
@@ -179,7 +179,7 @@ a img {
 
 /* primary content */
 #primary { float: left; padding-right: 40px; width: 68%; }
-#secondary { float: left; width: 32%; font-size: 13px; }
+#secondary { float: left; width: 32%; font-size: .87em; }
 .vendd-no-sidebar #primary { float: none; margin: 0 auto; }
 .vendd-store-front-template #primary,
 .post-type-archive-download #primary,
@@ -211,14 +211,14 @@ h1, h2, h3, h4, h5, h6,
 	margin-bottom: .4em;
 }
 h1, h2 {
-	font-size: 36px;
+	font-size: 2.4em;
 }
 h3, h4 {
-	font-size: 28px;
+	font-size: 1.87em;
 	border-color: #555;
 }
 h5, h6 {
-	font-size: 22px;
+	font-size: 1.4em;
 }
 h4, h6 {
 	color: #757575;
@@ -255,7 +255,7 @@ address {
 }
 pre {
 	background: #fafafa;
-	font-size: 13px;
+	font-size: .87em;
 	line-height: 1.6;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	padding: 10px;
@@ -272,7 +272,7 @@ kbd,
 tt,
 var {
 	color: #999;
-	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font: .87em Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 abbr,
 acronym {
@@ -450,7 +450,7 @@ a:focus {
 }
 .site-title {
 	color: #fff;
-	font: 400 40px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 400 2.67em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: 0;
 }
 .site-title a {
@@ -473,7 +473,6 @@ a:focus {
 	position: absolute;
 		right: 40px;
 		top: 10px;
-	font-size: 13px;
 }
 .main-navigation ul,
 .info-bar-navigation {
@@ -490,7 +489,7 @@ a:focus {
 .menu-toggle {
 	display: block;
 	color: #fff;
-	font: 300 15px/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 300 1em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-decoration: none;
 	padding: 20px;
 	-webkit-transition: all .2s;
@@ -527,7 +526,7 @@ a:focus {
 .main-navigation .sub-menu a {
 	background: rgba(0, 0, 0, .05);
 	color: #fff;
-	font: 400 13px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 400 .87em/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding: 10px;
 	width: 200px;
 }
@@ -550,16 +549,6 @@ a:focus {
 /* Small menu */
 .menu-toggle {
 	display: none;
-}
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -598,7 +587,7 @@ a:focus {
 }
 .post-nav-title {
 	display: block;
-	font-size: 20px;
+	font-size: 1.3em;
 }
 
 
@@ -623,7 +612,7 @@ a:focus {
 	clip: auto !important;
 	color: #21759b;
 	display: block;
-	font-size: 14px;
+	font-size: .87em;
 	font-weight: bold;
 	height: auto;
 	left: 5px;
@@ -710,7 +699,7 @@ a:focus {
 }
 .site-description {
 	color: rgba(255, 255, 255, .6);
-	font: 300 14px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 300 1em/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-style: italic;
 	margin-top: 3px;
 }
@@ -730,7 +719,7 @@ a:focus {
 	cursor: pointer;
 }
 .header-cart .fa {
-	font-size: 25px;
+	font-size: 1.67em;
 	margin-right: 6px;
 }
 .header-cart:hover {
@@ -750,8 +739,9 @@ a:focus {
 	padding: 30px 20px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.widget-title {
-	font-size: 22px;
+.widget-title,
+.widgettitle {
+	font-size: 1.5em;
 	display: block;
 }
 .widget ul {
@@ -808,7 +798,7 @@ a:focus {
 	margin-right: -20px;
 }
 .wp-caption .wp-caption-text {
-	font-size: 13px;
+	font-size: .87em;
 	font-style: italic;
 }
 /* Make sure select elements fit in widgets */
@@ -869,12 +859,12 @@ a:focus {
 	margin-bottom: 2em;
 }
 .page-title {
-	font-size: 15px;
+	font-size: 1em;
 	font-weight: 300;
 	font-style: italic;
 }
 .error-404 .page-title {
-	font-size: 36px;
+	font-size: 2.4em;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -896,10 +886,10 @@ a:focus {
 	display: block;
 }
 .hentry {
-	margin: 0 0 30px;
+	margin: 0 0 3em;
 }
 .hentry .entry-title {
-	font: 400 36px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 400 2.4em/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: .2em;
 }
 .hentry .entry-title a {
@@ -913,7 +903,7 @@ a:focus {
 	color: #666;
 }
 .entry-title .entry-subtitle {
-	font-size: 15px;
+	font-size: 1rem;
 	font-weight: 300;
 	font-style: italic;
 }
@@ -931,7 +921,7 @@ a:focus {
 .entry-meta,
 .entry-footer {
 	color: #999;
-	font-size: 12px;
+	font-size: .8em;
 }
 .entry-meta a,
 .entry-footer a {
@@ -978,7 +968,7 @@ a:focus {
 .more-link {
 	display: inline-block;
 	color: #fff;
-	font-size: 12px;
+	font-size: .8em;
 	text-decoration: none;
 	padding: 2px 6px;
 	border-radius: 4px;
@@ -994,7 +984,7 @@ a:focus {
 --------------------------------------------------------------*/
 .comments-title {
 	display: block;
-	font-size: 28px;
+	font-size: 1.8em;
 	font-weight: 400;
 	margin-bottom: 1em;
 }
@@ -1005,7 +995,7 @@ a:focus {
 	margin-left: 32px;
 }
 .comment-full {
-	font-size: 13px;
+	font-size: .87em;
 	margin-bottom: 40px;
 }
 #respond {
@@ -1046,11 +1036,14 @@ a:focus {
 .by-post-author {
 	display: inline-block;
 	color: #fff;
-	font-size: 11px;
+	font-size: .73em;
 	font-weight: 400;
 	text-transform: uppercase;
 	padding: 2px 6px;
 	border-radius: 3px;
+}
+.post-author-icon {
+	display: none;
 }
 .comment-meta .comment-date {
 	position: absolute;
@@ -1059,7 +1052,7 @@ a:focus {
 }
 .comment-meta .comment-date a {
 	color: #999;
-	font-size: 11px;
+	font-size: .73em;
 	text-decoration: none;
 }
 .comment-content a {
@@ -1074,7 +1067,7 @@ a:focus {
 }
 .pingback,
 .comment-full pre {
-	font-size: 13px;
+	font-size: .87em;
 }
 .pingback {
 	margin-bottom: 8px;
@@ -1084,7 +1077,7 @@ a:focus {
 }
 .no-comments {
 	background: #ffffe2;
-	font-size: 12px;
+	font-size: .8em;
 	text-align: center;
 	padding: 8px;
 	border: 1px solid rgba(0, 0, 0, 0.03);
@@ -1098,7 +1091,7 @@ a:focus {
 }
 #comments .required {
 	color: red;
-	font-size: 12px;
+	font-size: .8em;
 	margin-left: 3px;
 }
 .comment-form .form-allowed-tags {
@@ -1106,7 +1099,7 @@ a:focus {
 }
 .comment-form .form-allowed-tags code {
 	display: block;
-	font-size: 11px;
+	font-size: .73em;
 	margin-top: 6px;
 }
 
@@ -1116,7 +1109,7 @@ a:focus {
 --------------------------------------------------------------*/
 .site-footer {
 	color: #999;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 10px 40px;
 }
 .site-footer a {
@@ -1236,7 +1229,7 @@ object {
 	max-width: 722px;
 }
 .store-front-header .entry-title {
-	font: 400 40px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 400 2.67em/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: .4em;
 }
 #store-front,
@@ -1278,7 +1271,7 @@ object {
 }
 .edd_download_byline {
 	color: #999;
-	font-size: 12px;
+	font-size: .8em;
 	padding: 15px 0 10px;
 	border-bottom: 1px solid #f2f2f2;
 	margin: 0 20px;
@@ -1300,18 +1293,18 @@ object {
 	text-decoration: underline;
 }
 .edd_download_title {
-	font: 300 22px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 300 1.5em/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding: 15px 20px 0;
 	margin-bottom: 15px;
 }
 .entry-content .edd_download_title {
-	font-size: 18px;
+	font-size: 1.2em;
 	margin-bottom: 10px;
 }
 .edd_download_columns_4 .edd_download_title,
 .edd_download_columns_5 .edd_download_title,
 .edd_download_columns_6 .edd_download_title {
-	font-size: 18px;
+	font-size: 1.2em;
 	line-height: 1.4;
 }
 .edd_download_title a {
@@ -1321,7 +1314,7 @@ object {
 .edd_download_excerpt,
 .edd_download_full_content {
 	color: #757575;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 0 20px 15px;
 }
 .edd_download_full_content p:last-child,
@@ -1333,7 +1326,7 @@ object {
 		bottom: 0;
 	display: none;
 	background: #fff;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 20px;
 	border-top-style: solid;
 	border-top-width: 3px;
@@ -1345,7 +1338,7 @@ object {
 	z-index: 1;
 }
 .edd_download_buy_button {
-	font-size: 13px;
+	font-size: .87em;
 	padding: 20px;
 }
 .entry-content .edd_download_buy_button {
@@ -1354,11 +1347,11 @@ object {
 .entry-content .edd_download_inner #edd-purchase-button,
 .entry-content .edd_download_inner .edd-submit,
 .entry-content .edd_download_inner input[type="submit"].edd-submit {
-	font-size: 13px;
+	font-size: .87em;
 	padding: 4px 8px;
 }
 .entry-content .edd_download_inner input[type="number"] {
-	font-size: 13px;
+	font-size: .87em;
 	padding: 2px 8px;
 }
 .product-price-wrap,
@@ -1371,7 +1364,7 @@ object {
 	display: inline-block;
 	background: #f1f1f1;
 	color: #999;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 4px 8px;
 	border-radius: 3px;
 }
@@ -1381,7 +1374,7 @@ object {
 .entry-content .product-price {
 	background: none;
 	color: #999;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 0;
 }
 .entry-content .product-price:hover {
@@ -1390,7 +1383,7 @@ object {
 .edd_download_columns_5 .product-price,
 .edd_download_columns_6 .product-price {
 	display: block;
-	font-size: 11px;
+	font-size: .73em;
 	text-align: center;
 	padding: 4px;
 }
@@ -1410,7 +1403,7 @@ object {
 		right: -10px;
 		bottom: -10px;
 	color: #d5d5d5;
-	font-size: 20px;
+	font-size: 1.33em;
 	line-height: 1;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
@@ -1432,7 +1425,7 @@ object {
 	display: block;
 }
 #edd_download_pagination {
-	font-size: 13px;
+	font-size: .87em;
 	text-align: center;
 	padding: 20px;
 }
@@ -1476,7 +1469,7 @@ object {
 .vendd-download-terms {
 	display: block;
 	color: #757575;
-	font-size: 12px;
+	font-size: .8em;
 }
 .downloads-footer .fa {
 	margin-right: 4px;
@@ -1486,13 +1479,13 @@ object {
 #edd-purchase-button, 
 .edd-submit, 
 input[type="submit"].edd-submit {
-	font-size: 18px;
+	font-size: 1.2em;
 	border: none;
 	border-radius: 4px;
 	padding: 15px;
 }
 .vendd-price-button-container .vendd-price-button .edd-submit {
-	font-size: 13px;
+	font-size: .87em;
 	padding: 4px 8px;
 }
 #edd_purchase_submit #edd-purchase-button {
@@ -1545,7 +1538,7 @@ input[type="submit"].edd-submit {
 	width: 55px;
 }
 .edd-cart-added-alert {
-	font-size: 12px;
+	font-size: .8em;
 }
 .widget-area .edd-cart-added-alert {
 	right: 0;
@@ -1558,7 +1551,7 @@ input[type="submit"].edd-submit {
 .edd_purchase_tax_rate {
 	position: absolute;
 	color: #999;
-	font-size: 12px;
+	font-size: .8em;
 	font-style: normal;
 	margin-top: 2px;
 }
@@ -1628,7 +1621,7 @@ input[type="submit"].edd-submit {
 
 /* purchase form */
 .widget_edd_product_details .widget-title {
-	font-size: 28px;
+	font-size: 1.8em;
 }
 .widget_edd_product_details .download-title {
 	display: none;
@@ -1637,7 +1630,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 0;
 }
 .widget_edd_product_details .edd_download_purchase_form .edd-submit {
-	font-size: 15px;
+	font-size: 1rem;
 	padding: 10px;
 	border: none;
 	border-radius: 4px;
@@ -1707,7 +1700,7 @@ input[type="submit"].edd-submit {
 	margin-right: 6px;
 }
 .vendd-social-profile {
-	font-size: 20px;
+	font-size: 1.3em;
 	line-height: 1;
 }
 .vendd-twitter {
@@ -1803,7 +1796,7 @@ input[type="submit"].edd-submit {
 	display: none;
 }
 .vendd-checkout-template tbody tr {
-	font-size: 13px;
+	font-size: .87em;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
@@ -1850,11 +1843,11 @@ input[type="submit"].edd-submit {
 	border-right: none;
 }
 #edd_checkout_cart_wrap #edd_checkout_cart .edd-submit {
-	font-size: 13px;
+	font-size: .87em;
 	padding: 8px;
 }
 #edd_checkout_form_wrap #edd-discount-code-wrap input.edd-submit {
-	font-size: 13px;
+	font-size: .87em;
 	text-shadow: none;
 	padding: 7px;
 	border: none;
@@ -1937,7 +1930,7 @@ input[type="submit"].edd-submit {
 	background: none;
 }
 #edd_show_terms {
-	font-size: 13px;
+	font-size: .87em;
 	margin-bottom: 10px;
 }
 #edd_show_terms a {
@@ -1945,7 +1938,7 @@ input[type="submit"].edd-submit {
 }
 #edd_terms {
 	color: #757575;
-	font-size: 13px;
+	font-size: .87em;
 	margin-bottom: 10px;
 }
 
@@ -1977,7 +1970,7 @@ input[type="submit"].edd-submit {
 	border-radius: 50%;
 }
 .vendor-header .vendor-store-title {
-	font-size: 40px;
+	font-size: 2.67em;
 	line-height: 1.4;
 	font-weight: 400;
 	margin-bottom: 0;
@@ -1988,18 +1981,18 @@ input[type="submit"].edd-submit {
 .vendor-header .vendor-bio,
 .vendor-store-title .entry-subtitle {
 	display: block;
-	font-size: 15px;
+	font-size: 1em;
 	font-weight: 300;
 }
 .vendd-fes-template .fes-table {
-	font-size: 13px;
+	font-size: .87em;
 }
 
 /* FES dashboard menu */
 .vendd-fes-dashboard-template .fes-vendor-menu {
 	float: left;
 	background: #fafafa;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 30px 20px;
 	border-top: 1px solid #f2f2f2;
 	border-right: 1px dotted #f2f2f2;
@@ -2030,13 +2023,13 @@ input[type="submit"].edd-submit {
 /* FES dashboard - Dashboard */
 .vendd-fes-dashboard-template #fes-vendor-announcements {
 	background: #f7f7db;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 20px;
 	margin-bottom: 6px;
 }
 .vendd-fes-dashboard-template #fes-vendor-store-link {
 	color: #a3a3a3;
-	font-size: 11px;
+	font-size: .73em;
 	text-align: right;
 	padding-bottom: 20px;
 	border-bottom: 1px dotted #f2f2f2;
@@ -2045,7 +2038,7 @@ input[type="submit"].edd-submit {
 /* FES dashboard comments */
 .vendd-fes-template .fes-comments-wrap table,
 .vendd-fes-template #fes-comments-table {
-	font-size: 13px;
+	font-size: .87em;
 	border: none;
 }
 .vendd-fes-template #fes-comments-table th[class*="col-"],
@@ -2082,7 +2075,7 @@ input[type="submit"].edd-submit {
 	display: block;
 	background: #fafafa;
 	color: inherit;
-	font-size: 11px;
+	font-size: .73em;
 	text-align: left;
 	padding: 4px;
 	border: 1px solid #f2f2f2;
@@ -2099,7 +2092,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template #fes-comments-table #fes-product-name a,
 .vendd-fes-template #fes-comments-table #fes-view-comment {
 	display: block;
-	font-size: 11px;
+	font-size: .73em;
 	margin: 0;
 }
 .vendd-fes-template #fes-comments-table #fes-view-comment a {
@@ -2122,7 +2115,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form > span {
 	color: #a3a3a3;
-	font-size: 11px;
+	font-size: .73em;
 }
 .vendd-fes-template #fes-comments-table .fes-cmt-submit-form,
 .vendd-fes-template #fes-comments-table .fes-ignore {
@@ -2131,7 +2124,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template #fes-comments-table .fes-ignore {
 	background: none;
 	color: #a3a3a3;
-	font-size: 11px;
+	font-size: .73em;
 	padding: 0;
 	margin: 0;
 }
@@ -2144,7 +2137,7 @@ input[type="submit"].edd-submit {
 /* FES dashboard - Products */
 .fes-product-list-status-bar {
 	color: #a3a3a3;
-	font-size: 13px;
+	font-size: .87em;
 	margin-bottom: 6px;
 }
 .fes-product-list-status-bar a {
@@ -2155,17 +2148,17 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-template #fes-product-list .fes-product-list-td a[class*="-product-fes"] {
 	display: block;
-	font-size: 11px;
+	font-size: .73em;
 }
 
 /* FES dashboard - All Forms */
 .vendd-fes-template .fes-submission-form,
 .vendd-fes-template .fes-profile-form {
 	border: 1px solid #f2f2f2;
-	font-size: 13px;
+	font-size: .87em;
 }
 .vendd-fes-template .fes-label label {
-	font-size: 15px;
+	font-size: 1.2em;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -2212,7 +2205,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
 	background: #fafafa;
 	color: #aaa;
-	font-size: 18px;
+	font-size: 1.2em;
 	font-weight: bold;
 	text-decoration: none;
 	text-shadow: none;
@@ -2235,7 +2228,7 @@ input[type="submit"].edd-submit {
 	margin: -20px;
 }
 .vendd-fes-template div.fes-form fieldset .fes-section-title {
-	font-size: 24px;
+	font-size: 1.6em;
 }
 
 /* FES Vendor Template */
@@ -2343,7 +2336,7 @@ input[type="submit"].edd-submit {
 	position: static;
 	background: none;
 	color: inherit;
-	font-size: 13px;
+	font-size: .87em;
 	padding: 0;
 	border: none;
 	width: 100%;
@@ -2384,4 +2377,85 @@ input[type="submit"].edd-submit {
 }
 .vendd-notifications #notification-area #notice-icon {
 	display: none;
+}
+
+
+/*--------------------------------------------------------------
+>>> Responsive CSS
+--------------------------------------------------------------*/
+
+@media all and ( max-width: 840px ) {
+	#primary,
+	#secondary {
+		float: none;
+		padding-right: 0;
+		width: 100%;
+	}
+	#secondary {
+		margin-top: 40px;
+	}
+	#masthead,
+	#info-bar {
+		text-align: center;
+	}
+	.secondary-navigation {
+		position: static;
+		padding: 20px 0 10px;
+	}
+	.info-bar-navigation li {
+		float: none;
+		display: inline-block;
+	}
+	.info-bar-navigation li a {
+		background: rgba(0,0,0,.1);
+		padding: 6px 10px;
+		border-radius: 4px;
+	}
+	.site-branding {
+		display: block;
+		padding: 30px 20px 20px;
+	}
+	.header-cart {
+		position: static;
+		margin-bottom: 30px;
+	}
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		margin-left: -20px;
+	}
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+@media all and ( max-width: 600px ) {
+	#content {
+		padding: 20px;
+	}
+	.site-footer,
+	#info-bar {
+		padding: 10px 20px;
+	}
+	.main-navigation {
+		padding: 0 20px;
+	}
+	body,
+	button,
+	input,
+	select,
+	textarea,
+	#secondary,
+	.comment-full {
+		font-size: 14px;
+	}
+	.featured-img {
+		float: none;
+	}
+	.post-author-icon {
+		display: inline;
+	}
+	.post-author-label {
+		display: none;
+	}
 }

@@ -185,7 +185,7 @@ function vendd_comment_template( $comment, $args, $depth ) {
 								if ( 'post' == get_post_type() ) {
 									$post = get_post( get_the_ID() );
 									if ( $comment->user_id === $post->post_author ) {
-										echo '<span class="by-post-author">' . __( 'post author', 'vendd' ) . ' </span>';
+										echo '<span class="by-post-author"><span class="post-author-icon"><i class="fa fa-pencil"></i></span><span class="post-author-label">' . __( 'post author', 'vendd' ) . '</span></span>';
 									}
 								}
 							?>
