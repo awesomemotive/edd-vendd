@@ -2085,7 +2085,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-dashboard-template #fes-vendor-store-link {
 	color: #a3a3a3;
-	font-size: .73em;
+	font-size: .87em;
 	text-align: right;
 	padding-bottom: 20px;
 	border-bottom: 1px dotted #f2f2f2;
@@ -2131,7 +2131,7 @@ input[type="submit"].edd-submit {
 	display: block;
 	background: #fafafa;
 	color: inherit;
-	font-size: .73em;
+	font-size: .87em;
 	text-align: left;
 	padding: 4px;
 	border: 1px solid #f2f2f2;
@@ -2148,7 +2148,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template #fes-comments-table #fes-product-name a,
 .vendd-fes-template #fes-comments-table #fes-view-comment {
 	display: block;
-	font-size: .73em;
+	font-size: .87em;
 	margin: 0;
 }
 .vendd-fes-template #fes-comments-table #fes-view-comment a {
@@ -2171,7 +2171,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form > span {
 	color: #a3a3a3;
-	font-size: .73em;
+	font-size: .87em;
 }
 .vendd-fes-template #fes-comments-table .fes-cmt-submit-form,
 .vendd-fes-template #fes-comments-table .fes-ignore {
@@ -2180,7 +2180,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template #fes-comments-table .fes-ignore {
 	background: none;
 	color: #a3a3a3;
-	font-size: .73em;
+	font-size: .87em;
 	padding: 0;
 	margin: 0;
 }
@@ -2192,19 +2192,156 @@ input[type="submit"].edd-submit {
 
 /* FES dashboard - Products */
 .fes-product-list-status-bar {
-	color: #a3a3a3;
-	font-size: .87em;
-	margin-bottom: 6px;
+	color: transparent;
+	font-size: 13px;
+	margin-bottom: 20px;
 }
-.fes-product-list-status-bar a {
+.vendor-product {
+	border-bottom: 2px solid #f1f1f1;
+	margin-bottom: 26px;
+}
+.vendor-product-image,
+.vendor-product-info {
+	float: left;
+}
+.vendor-product-image {
+	width: 20%;
+}
+.vendor-product-info {
+	padding-left: 20px;
+	width: 80%;
+}
+.vendor-product-image img {
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+.vendor-product-status .download-status {
+	color: #fff;
+	font-size: .67em;
+	line-height: 1;
+	font-weight: 700;
+	padding: 3px 5px;
+	border-radius: 3px;
+	margin-right: 6px;
+	vertical-align: middle;
+}
+.vendor-product-status .published {
+	background: #38C238;
+}
+.vendor-product-status .pending-review {
+	background: #f08d3c;
+}
+.vendor-product-status .draft {
+	background: #39c;
+}
+.vendor-product-details,
+.vendor-product-actions {
+	font-size: .87em;
+	margin-bottom: 10px;
+}
+.vendor-product-info-group {
+	padding: 2px 0;
+	border-bottom: 1px dotted #f2f2f2;
+}
+.vendor-product-label {
+	display: inline-block;
+	width: 100px;
+}
+.vendor-product-price,
+.vendor-product-sales {
+	font-weight: 700;
+}
+.vendor-product-status-details abbr {
+	font-weight: 700;
+	margin-right: 10px;
+	border-bottom: none;
+}
+.vendor-product-status-details br {
+	display: none;
+}
+.fes-product-list-status-bar a,
+.vendor-product-action-links a {
+	color: #999;
 	text-decoration: none;
 }
-.vendd-fes-template #fes-product-list .fes-product-list-td img {
-	width: 50px;
+.vendor-product-action-links a:not(:last-child):after {
+	content: " \00b7";
+	color: #999 !important;
 }
-.vendd-fes-template #fes-product-list .fes-product-list-td a[class*="-product-fes"] {
-	display: block;
-	font-size: .73em;
+.fes-product-list-status-bar a:hover,
+.vendor-product-action-links a:hover {
+	color: #555;
+}
+
+/* FES dashboard - Commissions */
+#edd_user_commissions > div[id*="edd_user_commissions_"] {
+	margin-bottom: 30px;
+}
+#edd_commissions_export input[type="submit"].edd-submit {
+	font-size: .87em;
+	padding: 3px 6px;
+	border: none;
+	border-radius: 4px;
+}
+
+/* FES dashboard - Orders */
+.vendor-order {
+	display: inline-block;
+	padding: 0 0 20px;
+	border-bottom: 2px solid #f1f1f1;
+	width: 48%;
+	margin: 0 3% 16px 0;
+}
+.vendor-order:nth-child(even) {
+	margin-right: 0;
+}
+.vendor-order-info {
+	position: relative;
+	font-size: .87em;
+}
+.vendor-order-header {
+	margin-bottom: 4px;
+}
+.vendor-order-number {
+	font-weight: 700;
+}
+.vendor-order-status {
+	position: absolute;
+		top: 2px;
+		right: 0;
+	background: #f1f1f1;
+	font-size: .67em;
+	line-height: 1;
+	padding: 3px 5px;
+	border-radius: 3px;
+}
+.vendor-order-details,
+.vendor-order-actions {
+	margin-bottom: 10px;
+}
+.vendor-order-info-group {
+	padding: 2px 0;
+	border-bottom: 1px dotted #f2f2f2;
+}
+.vendor-order-label {
+	display: inline-block;
+	width: 100px;
+}
+.vendor-order-price,
+.vendor-order-customer,
+.vendor-order-status-details {
+	font-weight: 700;
+}
+.vendor-order-action-links a {
+	color: #999;
+	text-decoration: none;
+}
+.vendor-order-action-links a:not(:last-child):after {
+	content: " \00b7";
+	color: #999 !important;
+}
+.vendor-order-action-links a:hover {
+	color: #555;
 }
 
 /* FES dashboard - All Forms */
@@ -2476,6 +2613,9 @@ input[type="submit"].edd-submit {
 	.entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
 		font-size: 1em;
 	}
+	#fes-vendor-dashboard {
+		margin-top: 40px;
+	}
 	.vendd-fes-dashboard-template .fes-vendor-menu,
 	.vendd-fes-dashboard-template #fes-vendor-dashboard {
 		float: none;
@@ -2627,5 +2767,9 @@ input[type="submit"].edd-submit {
 		border: 1px solid #f2f2f2;
 		border-width: 0 0 1px !important;
 		width: 100%;
+	}
+	.vendor-order {
+		width: 100%;
+		margin: 0 0 16px;
 	}
 }
