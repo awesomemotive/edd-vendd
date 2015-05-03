@@ -14,7 +14,7 @@ if ( function_exists( 'fes_get_vendor' ) && false !== fes_get_vendor() ) {
 	$the_vendor = get_user_by( 'slug', $the_vendor );
 	
 	if ( ! $the_vendor ) {
-		$the_vendor = get_current_user_id();
+		$the_vendor = new WP_User( get_current_user_id() );
 		$is_vendor_profile = '';
 	}
 	
