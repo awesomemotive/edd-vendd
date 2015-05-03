@@ -15,7 +15,6 @@ if ( function_exists( 'fes_get_vendor' ) && false !== fes_get_vendor() ) {
 	
 	if ( ! $the_vendor ) {
 		$the_vendor = new WP_User( get_current_user_id() );
-		$is_vendor_profile = '';
 	}
 	
 	$vendor_avatar = get_avatar( $the_vendor->ID, 100 );
