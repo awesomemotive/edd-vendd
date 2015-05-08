@@ -187,6 +187,7 @@ a img {
 .post-type-archive-download #primary,
 .tax-download_category #primary,
 .tax-download_tag #primary { float: none; padding: 0; width: 100%; }
+.post-type-archive-download #primary .store-404 { margin: 0 auto; width: 68%; }
 
 
 /*--------------------------------------------------------------
@@ -812,11 +813,13 @@ a:focus {
 	display: none;
 }
 #secondary .widget_search input[type="search"],
-.error-404 input[type="search"] {
+.error-404 input[type="search"],
+.store-404 input[type="search"] {
 	background: #fff url('inc/images/sprite.png') no-repeat 13px 11px;
 	padding-left: 32px;
 }
-.error-404 input[type="search"] {
+.error-404 input[type="search"],
+.store-404 input[type="search"] {
 	background-position-y: 13px;
 }
 /* calendar widget */
@@ -865,15 +868,18 @@ a:focus {
 	font-weight: 300;
 	font-style: italic;
 }
-.error-404 .page-title {
+.error-404 .page-title,
+.store-404 .page-title {
 	font-size: 2.4em;
 	font-weight: 400;
 	font-style: normal;
 }
-.error-404 .page-content .widget {
+.error-404 .page-content .widget,
+.store-404 .page-content .widget {
 	background: #fafafa;
 }
-.error-404 .search-wrap {
+.error-404 .search-wrap,
+.store-404 .search-wrap {
 	margin-bottom: 40px;
 }
 .entry-footer .fa {
@@ -1484,7 +1490,9 @@ object {
 #edd_download_pagination {
 	font-size: .87em;
 	text-align: center;
-	padding: 20px 20px 40px;
+	padding: 40px 20px 40px;
+	margin-top: 30px;
+	border-top: 2px solid #f1f1f1;
 }
 #edd_download_pagination .page-numbers {
 	background: #fff;
@@ -1493,6 +1501,7 @@ object {
 	text-decoration: none;
 	padding: 6px 10px;
 	border-radius: 3px;
+	margin-right: 6px;
 }
 #edd_download_pagination .page-numbers.current,
 #edd_download_pagination .page-numbers:hover {
@@ -1502,7 +1511,9 @@ object {
 	text-align: center;
 }
 .store-pagination .page-numbers {
+	display: inline-block;
 	padding: 0 4px;
+	margin-right: 6px;
 }
 .store-pagination .prev.page-numbers {
 	padding: 0 20px 0 0;
@@ -2661,7 +2672,8 @@ input[type="submit"].edd-submit {
 
 @media all and ( max-width: 860px ) {
 	#primary,
-	#secondary {
+	#secondary,
+	.post-type-archive-download #primary .store-404 {
 		float: none;
 		padding-right: 0;
 		width: 100%;
@@ -2727,7 +2739,8 @@ input[type="submit"].edd-submit {
 	.hentry .entry-title,
 	.store-front-header .entry-title,
 	.vendor-header .vendor-store-title,
-	.error-404 .page-title {
+	.error-404 .page-title,
+	.store-404 .page-title {
 		font-size: 2em;
 	}
 	.entry-title-primary {
