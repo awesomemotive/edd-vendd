@@ -38,7 +38,9 @@ input[type="button"],
 button,
 .more-link,
 .by-post-author,
-.main-navigation ul ul {
+.main-navigation ul ul,
+#edd_download_pagination .page-numbers.current,
+#edd_download_pagination .page-numbers:hover {
 	background: #428bca;
 }
 a,
@@ -1225,7 +1227,7 @@ object {
 
 .store-front-header {
 	text-align: center;
-	margin: 0 auto 60px;
+	margin: 0 auto 5%;
 	max-width: 722px;
 }
 .store-front-header .entry-title {
@@ -1482,11 +1484,19 @@ object {
 #edd_download_pagination {
 	font-size: .87em;
 	text-align: center;
-	padding: 20px;
+	padding: 20px 20px 40px;
 }
 #edd_download_pagination .page-numbers {
+	background: #fff;
 	color: #555;
+	font-weight: 700;
 	text-decoration: none;
+	padding: 6px 10px;
+	border-radius: 3px;
+}
+#edd_download_pagination .page-numbers.current,
+#edd_download_pagination .page-numbers:hover {
+	color: #fff;
 }
 .store-pagination {
 	text-align: center;
@@ -2010,7 +2020,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-dashboard-template .fes-dashboard-header {
 	text-align: center;
-	margin: 0 auto 60px;
+	margin: 0 auto 5%;
 	max-width: 722px;
 }
 .vendd-fes-dashboard-template #fes-vendor-dashboard {
@@ -2216,6 +2226,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 20px;
 }
 .vendor-product-status .download-status {
+	background: #555;
 	color: #fff;
 	font-size: .67em;
 	line-height: 1;
@@ -2274,7 +2285,12 @@ input[type="submit"].edd-submit {
 }
 
 /* FES dashboard - Commissions */
+#fes-commissions-page-title {
+	display: none;
+}
 #edd_user_commissions > div[id*="edd_user_commissions_"] {
+	padding-bottom: 30px;
+	border-bottom: 2px solid #f1f1f1;
 	margin-bottom: 30px;
 }
 #edd_commissions_export input[type="submit"].edd-submit {
@@ -2289,8 +2305,8 @@ input[type="submit"].edd-submit {
 	display: inline-block;
 	padding: 0 0 20px;
 	border-bottom: 2px solid #f1f1f1;
-	width: 48%;
-	margin: 0 3% 16px 0;
+	width: 47%;
+	margin: 0 5% 16px 0;
 }
 .vendor-order:nth-child(even) {
 	margin-right: 0;
@@ -2347,7 +2363,6 @@ input[type="submit"].edd-submit {
 /* FES dashboard - All Forms */
 .vendd-fes-template .fes-submission-form,
 .vendd-fes-template .fes-profile-form {
-	border: 1px solid #f2f2f2;
 	font-size: .87em;
 }
 .vendd-fes-template .fes-label label {
@@ -2359,12 +2374,12 @@ input[type="submit"].edd-submit {
 	display: block;
 }
 .vendd-fes-template div.fes-form fieldset {
+	background: #fafafa;
 	padding: 20px;
-	border-bottom: 1px solid #f2f2f2;
-	margin-bottom: 0;
-}
-.vendd-fes-template div.fes-form fieldset:last-child {
-	border-bottom: none;
+	border-width: 1px;
+	border-style: solid dotted;
+	border-color: #f2f2f2;
+	margin-bottom: 2em;
 }
 .vendd-fes-template .fes-form fieldset .fes-label .fes-help {
 	color: #a3a3a3;
@@ -2380,7 +2395,8 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-form fieldset .fes-fields input[type=text],
 .vendd-fes-template .fes-form fieldset .fes-fields input[type=url],
 .vendd-fes-template .fes-form fieldset .fes-fields textarea {
-	border: 1px solid #e2e2e2;
+	background: #fff;
+	border: 1px solid #f2f2f2;
 	box-shadow: none;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields textarea[name="toc"] {
@@ -2432,7 +2448,7 @@ input[type="submit"].edd-submit {
 }
 .vendor-header {
 	text-align: center;
-	margin: 0 auto 60px;
+	margin: 0 auto 5%;
 	max-width: 722px;
 }
 #vendd-vendor {
@@ -2614,18 +2630,21 @@ input[type="submit"].edd-submit {
 		font-size: 1em;
 	}
 	#fes-vendor-dashboard {
-		margin-top: 40px;
+		max-width: 722px;
+		margin: 40px auto 0;
 	}
 	.vendd-fes-dashboard-template .fes-vendor-menu,
 	.vendd-fes-dashboard-template #fes-vendor-dashboard {
 		float: none;
 		width: 100%;
 	}
-	.vendd-fes-dashboard-template #fes-vendor-dashboard {
-		padding-left: 0;
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul {
+		display: flex;
+		flex-direction: row;
 	}
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
-		display: inline-block;
+		font-size: .87em;
+		flex-grow: 1;
 		border-right: 1px solid #f2f2f2;
 		width: auto;
 	}
@@ -2634,6 +2653,9 @@ input[type="submit"].edd-submit {
 	}
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a {
 		padding: 10px 15px;
+	}
+	.vendd-fes-dashboard-template #fes-vendor-dashboard {
+		padding-left: 0;
 	}
 }
 
@@ -2684,6 +2706,9 @@ input[type="submit"].edd-submit {
 	#wp-calendar td {
 		padding: 6px 10px;
 	}
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul {
+		display: block;
+	}
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
 		display: inline-block;
 		border-bottom: 1px solid #f2f2f2;
@@ -2697,6 +2722,17 @@ input[type="submit"].edd-submit {
 	}
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child:nth-child(odd) {
 		border-right: 1px solid #f2f2f2;
+	}
+	h1, h2,
+	.hentry .entry-title,
+	.store-front-header .entry-title,
+	.vendor-header .vendor-store-title,
+	.error-404 .page-title {
+		font-size: 2em;
+	}
+	.entry-title-primary {
+		display: inline-block;
+		margin-bottom: 10px;
 	}
 }
 
@@ -2763,10 +2799,11 @@ input[type="submit"].edd-submit {
 	#wp-calendar td {
 		padding: 3px 5px;
 	}
+	.vendd-fes-dashboard-template .fes-vendor-menu {
+		padding: 14px;
+	}
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
-		border: 1px solid #f2f2f2;
-		border-width: 0 0 1px !important;
-		width: 100%;
+		font-size: 1em;
 	}
 	.vendor-order {
 		width: 100%;

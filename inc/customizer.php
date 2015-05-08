@@ -607,7 +607,9 @@ function vendd_customizer_head_styles() {
 			button,
 			.more-link,
 			.by-post-author,
-			.main-navigation ul ul {
+			.main-navigation ul ul,
+			#edd_download_pagination .page-numbers.current,
+			#edd_download_pagination .page-numbers:hover {
 				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}			
 			a,
