@@ -113,17 +113,17 @@ function vendd_scripts() {
 	// Theme stylesheet
 	wp_enqueue_style( 'vendd-style', get_stylesheet_uri() );
 	// Font Awesome
-	wp_enqueue_style( 'vendd-fontawesome', get_stylesheet_directory_uri() . '/inc/fonts/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'vendd-fontawesome', get_template_directory_uri() . '/inc/fonts/font-awesome/css/font-awesome.min.css' );
 	// Responsive navigation
-	wp_enqueue_script( 'vendd-navigation', get_stylesheet_directory_uri() . '/inc/js/navigation.js', array(), VENDD_VERSION, true );
+	wp_enqueue_script( 'vendd-navigation', get_template_directory_uri() . '/inc/js/navigation.js', array(), VENDD_VERSION, true );
 	// Vendd scripts
-	wp_enqueue_script( 'vendd-scripts', get_stylesheet_directory_uri() . '/inc/js/vendd-scripts.js', array( 'jquery' ), VENDD_VERSION, true );
+	wp_enqueue_script( 'vendd-scripts', get_template_directory_uri() . '/inc/js/vendd-scripts.js', array( 'jquery' ), VENDD_VERSION, true );
 	// parallax background
 	if ( 1 == get_theme_mod( 'vendd_parallax_bg' ) ) :
-		wp_enqueue_script( 'vendd-parallax', get_stylesheet_directory_uri() . '/inc/js/parallax.js', array( 'jquery' ), VENDD_VERSION, true );
+		wp_enqueue_script( 'vendd-parallax', get_template_directory_uri() . '/inc/js/parallax.js', array( 'jquery' ), VENDD_VERSION, true );
 	endif;
 	// Skip link focus fix
-	wp_enqueue_script( 'vendd-skip-link-focus-fix', get_stylesheet_directory_uri() . '/inc/js/skip-link-focus-fix.js', array(), VENDD_VERSION, true );
+	wp_enqueue_script( 'vendd-skip-link-focus-fix', get_template_directory_uri() . '/inc/js/skip-link-focus-fix.js', array(), VENDD_VERSION, true );
 	// Comment reply behavior
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
