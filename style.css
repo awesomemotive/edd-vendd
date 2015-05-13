@@ -2256,7 +2256,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 20px;
 }
 .vendor-product-status .download-status {
-	background: #555;
+	background: #3d3d3d;
 	color: #fff;
 	font-size: .67em;
 	line-height: 1;
@@ -2528,7 +2528,7 @@ input[type="submit"].edd-submit {
 	display: none;
 }
 .comment-content .edd-reviews-voting-buttons a {
-	background: #555;
+	background: #3d3d3d;
 	padding: 4px 8px;
 	border-radius: 4px;
 	margin: 0 2px 0 0;
@@ -2732,7 +2732,7 @@ input[type="submit"].edd-submit {
 		position: absolute;
 			top: 20px;
 			right: 20px;
-		background: #555;
+		background: #3d3d3d;
 		margin-right: 0;
 	}
 	.main-navigation.toggled .nav-menu {
@@ -2743,7 +2743,7 @@ input[type="submit"].edd-submit {
 		margin-right: 0;
 	}
 	.menu-toggle + div[class*="menu-"] {
-		background: #555;
+		background: #3d3d3d;
 		margin: 0 -40px 0;
 	}
 	.main-navigation {
@@ -2789,7 +2789,7 @@ input[type="submit"].edd-submit {
 		float: none;
 	}
 	.main-navigation ul li:hover > ul {
-		background: #555;
+		background: #3d3d3d;
 	}
 	.main-navigation > div > .nav-menu > li:hover > ul {
 		display: block;
@@ -2868,12 +2868,12 @@ input[type="submit"].edd-submit {
 		position: static;
 	}
 	.menu-toggle + div[class*="menu-"] {
-		background: #555;
+		background: #3d3d3d;
 		margin: 30px -20px 0;
 	}
 	.main-navigation a,
 	.main-navigation .sub-menu a {
-		padding: 14px;
+		padding: 14px 20px;
 	}
 	.info-bar-navigation {
 		text-align: left;
