@@ -14,13 +14,13 @@
 	<?php
 		if ( '' != get_theme_mod( 'vendd_store_front_title' ) ) {
 			echo '<h1 class="entry-title">
-					<span class="entry-title-primary">' .
-						get_theme_mod( 'vendd_store_front_title' ) .
-					'</span>';
-					$subtitle = get_post_meta( get_the_ID(), '_subtitle', true );
-					if ( class_exists( 'Subtitles' ) && ! empty( $subtitle ) ) {
-						echo '<span class="entry-subtitle">' . $subtitle . '</span>';
-					}
+				<span class="entry-title-primary">' .
+					get_theme_mod( 'vendd_store_front_title' ) .
+				'</span>';
+				$subtitle = get_post_meta( get_the_ID(), '_subtitle', true );
+				if ( class_exists( 'Subtitles' ) && ! empty( $subtitle ) ) {
+					echo '<span class="entry-subtitle">' . $subtitle . '</span>';
+				}
 			echo '</h1>';
 		} else {
 			the_title( '<h1 class="entry-title">', '</h1>' );

@@ -38,14 +38,13 @@ input[type="button"],
 button,
 .more-link,
 .by-post-author,
-.main-navigation ul ul,
+.main-navigation ul li:hover > ul,
 #edd_download_pagination .page-numbers.current,
 #edd_download_pagination .page-numbers:hover {
 	background: #428bca;
 }
 a,
-.comment-full:hover > .reply > .comment-reply-link,
-#edd_download_pagination .page-numbers:hover {
+.comment-full:hover > .reply > .comment-reply-link {
 	color: #428bca;
 }
 h1, h2,
@@ -468,8 +467,7 @@ a:focus {
 .main-navigation {
 	clear: both;
 	display: block;
-	background: rgba(0, 0, 0, .05);
-	padding: 0 40px;
+	padding: 0 40px 15px;
 	width: 100%;
 }
 .secondary-navigation {
@@ -481,7 +479,11 @@ a:focus {
 .info-bar-navigation {
 	list-style: none;
 	padding-left: 0;
-	margin: 0 0 0 -20px;
+	margin: 0;
+}
+.main-navigation .nav-menu {
+	padding-top: 15px;
+	border-top: 1px solid rgba(0, 0, 0, .05);
 }
 .main-navigation li,
 .info-bar-navigation li {
@@ -490,14 +492,26 @@ a:focus {
 }
 .main-navigation a,
 .menu-toggle {
-	display: block;
+	display: inline-block;
 	color: #fff;
-	font: 300 1em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 700 .87em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-decoration: none;
-	padding: 20px;
+	padding: 8px 14px;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
+}
+.main-navigation .nav-menu > li > a,
+.menu-toggle {
+	background: rgba(0, 0, 0, .05);
+	border-radius: 4px;
+	margin-right: 15px;
+}
+.main-navigation .nav-menu > .menu-item-has-children > a:after {
+	color: rgba(255, 255, 255, .5);
+	content: "\f0d7";
+	font-family: "FontAwesome";
+	margin-left: 8px;
 }
 .secondary-navigation a {
 	color: #999;
@@ -507,9 +521,6 @@ a:focus {
 	-moz-transition: all .2s;
 	transition: all .2s;
 }
-.main-navigation a:hover {
-	color: rgba(255, 255, 255, .5);
-}
 .secondary-navigation a:hover {
 	color: #ddd;
 }
@@ -517,9 +528,8 @@ a:focus {
 	display: none;
 	float: left;
 	position: absolute;
-		top: 55px;
+	cursor: pointer;
 	z-index: 99999;
-	margin-left: 10px;
 }
 .main-navigation ul ul ul {
 	left: 100%;
@@ -527,11 +537,11 @@ a:focus {
 	margin-left: 0;
 }
 .main-navigation .sub-menu a {
-	background: rgba(0, 0, 0, .05);
-	color: #fff;
-	font: 400 .87em/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	padding: 10px;
+	padding: 10px 14px;
 	width: 200px;
+}
+.main-navigation .sub-menu a:hover {
+	background: rgba(0, 0, 0, .05);
 }
 .main-navigation ul ul li {
 
@@ -541,17 +551,26 @@ a:focus {
 .main-navigation ul ul :hover > a {
 }
 .main-navigation ul ul a:hover {
-	background: transparent;
 }
 .main-navigation ul li:hover > ul {
 	display: block;
 }
+.main-navigation > div > .nav-menu > li:hover > ul {
+	display: block;
+	padding: 15px 0 0;
+}
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
-/* Small menu */
 .menu-toggle {
 	display: none;
+	cursor: pointer;
+}
+.vendd-menu-toggle-text {
+	display: none;
+}
+.vendd-menu-icon {
+	font-size: 1.2em;
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -2706,14 +2725,80 @@ input[type="submit"].edd-submit {
 		position: static;
 		margin-bottom: 30px;
 	}
-	.menu-toggle,
+	
+	/* main navigation */
+	.menu-toggle {
+		display: inline-block;
+		position: absolute;
+			top: 20px;
+			right: 20px;
+		background: #555;
+		margin-right: 0;
+	}
 	.main-navigation.toggled .nav-menu {
 		display: block;
-		margin-left: -20px;
+		text-align: left;
+		padding: 20px 0 10px;
+		border: none;
+		margin-right: 0;
+	}
+	.menu-toggle + div[class*="menu-"] {
+		background: #555;
+		margin: 0 -40px 0;
+	}
+	.main-navigation {
+		padding-bottom: 5px;
 	}
 	.main-navigation ul {
 		display: none;
 	}
+	.main-navigation .nav-menu {
+		padding-top: 0;
+	}
+	.main-navigation li {
+		float: none;
+	}
+	.main-navigation a,
+	.main-navigation .sub-menu a {
+		font-size: 15px;
+		padding: 14px 40px;
+		border-bottom: 1px solid rgba(0,0,0,.03);
+	}
+	.main-navigation .sub-menu a:before {
+		content: "\2014\00a0\00a0";
+		font-weight: 400;
+	}
+	.main-navigation a:hover {
+		color: rgba(255,255,255,.5);
+	}
+	.main-navigation .nav-menu > li > a {
+		display: block;
+		background: none;
+		border-radius: 0;
+		margin-right: 0;
+	}
+	.main-navigation .nav-menu > .menu-item-has-children > a:after {
+		content: none;
+	}
+	.main-navigation .sub-menu a:hover {
+		background: none;
+	}
+	.main-navigation ul ul {
+		position: static;
+		display: block;
+		float: none;
+	}
+	.main-navigation ul li:hover > ul {
+		background: #555;
+	}
+	.main-navigation > div > .nav-menu > li:hover > ul {
+		display: block;
+		padding-top: 0;
+	}
+	.main-navigation .sub-menu a {
+		width: 100%;
+	}
+	
 	#wp-calendar th,
 	#wp-calendar td {
 		padding: 6px 10px;
@@ -2766,8 +2851,29 @@ input[type="submit"].edd-submit {
 	#info-bar {
 		padding: 10px 20px;
 	}
+	.vendd-menu-toggle-text {
+		display: inline-block;
+	}
+	.vendd-menu-icon {
+		font-size: 1em;
+		margin-left: 10px;
+	}
+	.main-navigation.toggled .nav-menu {
+		padding: 0;
+	}
 	.main-navigation {
-		padding: 0 20px;
+		padding: 0 20px 5px;
+	}
+	.menu-toggle {
+		position: static;
+	}
+	.menu-toggle + div[class*="menu-"] {
+		background: #555;
+		margin: 30px -20px 0;
+	}
+	.main-navigation a,
+	.main-navigation .sub-menu a {
+		padding: 14px;
 	}
 	.info-bar-navigation {
 		text-align: left;
@@ -2785,6 +2891,9 @@ input[type="submit"].edd-submit {
 		display: block;
 		text-align: center;
 		margin: 0 0 10px;
+	}
+	.header-cart {
+		padding: 15px 30px;
 	}
 	.featured-img {
 		float: none;

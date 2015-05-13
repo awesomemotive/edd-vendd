@@ -607,14 +607,13 @@ function vendd_customizer_head_styles() {
 			button,
 			.more-link,
 			.by-post-author,
-			.main-navigation ul ul,
+			.main-navigation ul li:hover > ul,
 			#edd_download_pagination .page-numbers.current,
 			#edd_download_pagination .page-numbers:hover {
 				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}			
 			a,
-			.comment-full:hover > .reply > .comment-reply-link,
-			#edd_download_pagination .page-numbers:hover {
+			.comment-full:hover > .reply > .comment-reply-link {
 				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}			
 			h1, h2,

@@ -54,8 +54,8 @@ function vendd_setup() {
 	 * Theme nav menus
 	 */
 	register_nav_menus( array(
+		'info_bar'	=> __( 'Information Bar Menu', 'vendd' ),
 		'main_menu'	=> __( 'Main Menu', 'vendd' ),
-		'info_bar'	=> __( 'Info Bar Menu', 'vendd' ),
 	) );
 	
 	/*

@@ -69,7 +69,7 @@
 
 		<?php if ( ! vendd_is_checkout() ) { ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<span class="menu-toggle"><?php _e( 'Navigation', 'vendd' ); ?></span>
+				<span class="menu-toggle"><span class="vendd-menu-toggle-text"><?php _e( 'Menu', 'vendd' ); ?></span><i class="fa fa-bars vendd-menu-icon"></i></span>
 				<?php
 					wp_nav_menu( array(
 						'theme_location'	=> 'main_menu',
