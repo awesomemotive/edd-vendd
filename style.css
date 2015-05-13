@@ -2076,7 +2076,7 @@ input[type="submit"].edd-submit {
 .vendor-header .vendor-bio,
 .vendor-store-title .entry-subtitle {
 	display: block;
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 300;
 }
 .vendd-fes-template .fes-table {
