@@ -114,23 +114,3 @@ function vendd_SL_is_activated() {
 		return false;
 	}
 }
-
-
-/*--------------------------------------------------------------
->>> Simple Notices and Simple Notices Pro
->>> https://pippinsplugins.com/simple-notices-plugin/
---------------------------------------------------------------*/
-
-/**
- * Are either of the Simple Notices extensions activated?
- *
- * @return bool
- */
-function vendd_simple_notices_is_activated() {
-	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-	if ( is_plugin_active( 'simple-notices/simple-notices.php' ) || is_plugin_active( 'simple-notices-pro/simple-notices.php' ) ) {
-		return true;
-	} else {
-		return false;
-	}
-}

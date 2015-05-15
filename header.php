@@ -84,10 +84,4 @@
 
 	</header><!-- #masthead -->
 
-	<?php
-		if ( vendd_simple_notices_is_activated() && ! vendd_is_checkout() ) {
-			get_template_part( 'content/content', 'announcement' );
-		}
-	?>
-
 	<div id="content" class="site-content">

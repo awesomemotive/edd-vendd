@@ -87,18 +87,6 @@ add_filter( 'theme_page_templates', 'vendd_page_template_conditions' );
 
 
 /**
- * Support for Simple Notices
- */
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-if ( is_plugin_active( 'simple-notices/simple-notices.php' ) || is_plugin_active( 'simple-notices-pro/simple-notices.php' ) ) {
-
-	// move the notice to a spot specific to Vendd
-	remove_action( 'wp_footer', 'pippin_display_notice' ); 
-	add_action( 'vendd_announcement_hook', 'pippin_display_notice' );
-}
-
-
-/**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.

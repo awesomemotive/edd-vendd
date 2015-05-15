@@ -143,30 +143,6 @@ function vendd_customize_register( $wp_customize ) {
 		'priority'	=> 20
 	) ) );
 	
-	// announcement background color	
-	$wp_customize->add_setting( 'vendd_announcement_background_color', array(
-		'default'		=> '#f7f7db',
-		'type'			=> 'option', 
-		'capability'	=> 'edit_theme_options',
-	) );		
-	$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_announcement_background_color', array(
-		'label'		=> __( 'Announcement Background Color', 'vendd' ), 
-		'section'	=> 'vendd_design',
-		'priority'	=> 30
-	) ) );
-	
-	// announcement text color	
-	$wp_customize->add_setting( 'vendd_announcement_text_color', array(
-		'default'		=> '#555555',
-		'type'			=> 'option', 
-		'capability'	=> 'edit_theme_options',
-	) );		
-	$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_announcement_text_color', array(
-		'label'		=> __( 'Announcement Text Color', 'vendd' ), 
-		'section'	=> 'vendd_design',
-		'priority'	=> 40
-	) ) );
-	
 	/**
 	 * restructure the default Colors section/control
 	 */
@@ -576,8 +552,6 @@ function vendd_customizer_head_styles() {
 	$design_color		= get_option( 'vendd_design_color' );
 	$bg_color			= get_option( 'vendd_background_color' );
 	$edd_button_color	= get_option( 'vendd_edd_button_color' );
-	$announcement_bg	= get_option( 'vendd_announcement_background_color' );
-	$announcement_text	= get_option( 'vendd_announcement_text_color' );
 	$edd_color_defaults	= array( '#404040', '#f1f1f1', '#E74C3C', '#2ECC71', '#F1C40F', '#E67E22', '#3d3d3d' );
 	?>
 
@@ -623,16 +597,6 @@ function vendd_customizer_head_styles() {
 			h1, h2,
 			.vendd-price-button-container {
 				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
-			}
-		<?php endif; ?>
-		<?php if ( '#f7f7db' != $announcement_bg && '' != $announcement_bg ) : // Has the announcement background color changed? ?>
-			.vendd-notifications {
-				background-color: <?php echo vendd_sanitize_hex_color( $announcement_bg ); ?>;
-			}
-		<?php endif; ?>
-		<?php if ( '#555555' != $announcement_text && '' != $announcement_text ) : // Has the announcement text color changed? ?>
-			.vendd-notifications {
-				color: <?php echo vendd_sanitize_hex_color( $announcement_text ); ?>;
 			}
 		<?php endif; ?>
 	</style>

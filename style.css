@@ -55,10 +55,6 @@ h1, h2,
 .vendd-price-button-container {
 	border-color: #428bca;
 }
-.vendd-notifications {
-	background-color: #f7f7db;
-	color: #555;
-}
 
 
 /*--------------------------------------------------------------
@@ -2584,63 +2580,6 @@ input[type="submit"].edd-submit {
 #secondary .widget_kol_email input[type="email"] {
 	background: #fff url('inc/images/sprite.png') no-repeat 13px -87px;
 	padding-left: 42px;
-}
-
-
-/*--------------------------------------------------------------
->>> Simple Notices
---------------------------------------------------------------*/
-.vendd-notifications {
-	position: relative;
-	padding: 15px 40px;
-}
-.vendd-notifications #notification-area,
-.vendd-notifications #notification-area #notice-content {
-	display: inline !important;
-	position: static;
-	background: none;
-	color: inherit;
-	font-size: .87em;
-	padding: 0;
-	border: none;
-	width: 100%;
-	text-shadow: none;
-}
-.vendd-notifications #notification-area h3 {
-	display: none;
-}
-.vendd-notifications #notification-area p,
-.vendd-notifications #notification-area #notice-content {
-	display: inline;
-	color: inherit;
-	text-shadow: none;
-	margin: 0;
-}
-.vendd-notifications-icon {
-	display: inline-block;
-	background: #fff;
-	color: rgba(0,0,0,.7);
-	padding: 7px;
-	margin-right: 10px;
-	border-radius: 50%;
-	-webkit-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
-	-moz-box-shadow: 0 0 0 3px rgba(0,0,0,.05);
-	box-shadow: 0 0 0 3px rgba(0,0,0,.05);
-}
-.vendd-notifications #notification-area #remove-notice {
-	position: absolute;
-		top: 18px;
-		right: 40px;
-	color: inherit;
-	border: none;
-	margin: 0;
-}
-.vendd-notifications #notification-area #remove-notice:hover {
-	background: none;
-	color: inherit;
-}
-.vendd-notifications #notification-area #notice-icon {
-	display: none;
 }
 
 
