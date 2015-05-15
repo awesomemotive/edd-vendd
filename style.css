@@ -938,12 +938,14 @@ a:focus {
 .hentry .entry-title a:hover {
 	color: #666;
 }
-.entry-title .entry-subtitle {
+.entry-title .entry-subtitle,
+.term-title .term-subtitle {
 	font-size: 1rem;
 	font-weight: 300;
 	font-style: italic;
 }
-.vendd-edd-template .entry-title .entry-subtitle {
+.vendd-edd-template .entry-title .entry-subtitle,
+.term-title .term-subtitle {
 	font-style: normal;
 }
 .edd_download_inner .edd_download_title .entry-subtitle {
@@ -1259,12 +1261,14 @@ object {
 >>> Easy Digital Downloads (and supporting extensions)
 --------------------------------------------------------------*/
 
-.store-front-header {
+.store-front-header,
+.download-term-header {
 	text-align: center;
 	margin: 0 auto 5%;
 	max-width: 722px;
 }
-.store-front-header .entry-title {
+.store-front-header .entry-title,
+.download-term-header .term-title {
 	font: 400 2.67em/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: .4em;
 }
@@ -2789,6 +2793,7 @@ input[type="submit"].edd-submit {
 	.hentry .entry-title,
 	.store-front-header .entry-title,
 	.vendor-header .vendor-store-title,
+	.download-term-header .term-title,
 	.error-404 .page-title,
 	.store-404 .page-title {
 		font-size: 2em;
