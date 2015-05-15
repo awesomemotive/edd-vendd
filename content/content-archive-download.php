@@ -8,7 +8,7 @@ if ( have_posts() ) : $i = 1;
 	<div id="store-front">
 		<div class="edd_downloads_list edd_download_columns_3">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div itemscope itemtype="http://schema.org/Product" class="edd_download" id="edd_download_<?php echo get_the_ID(); ?>">
+				<div itemscope itemtype="http://schema.org/Product" class="edd_download" id="edd_download_<?php echo get_the_ID(); ?>" style="width: 33.3%; float: left;">
 					<div class="edd_download_inner">
 						<?php
 							/**
