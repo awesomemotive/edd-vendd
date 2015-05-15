@@ -40,7 +40,11 @@ button,
 .by-post-author,
 .main-navigation ul li:hover > ul,
 #edd_download_pagination .page-numbers.current,
-#edd_download_pagination .page-numbers:hover {
+.edd_pagination .page-numbers.current,
+div[class*="fes-"] > .page-numbers.current,
+#edd_download_pagination .page-numbers:hover,
+.edd_pagination .page-numbers:hover,
+div[class*="fes-"] > .page-numbers:hover {
 	background: #428bca;
 }
 a,
@@ -510,6 +514,12 @@ a:focus {
 .main-navigation .nav-menu > .menu-item-has-children > a:after {
 	color: rgba(255, 255, 255, .5);
 	content: "\f0d7";
+	font-family: "FontAwesome";
+	margin-left: 8px;
+}
+.main-navigation .sub-menu > .menu-item-has-children > a:after {
+	color: rgba(255, 255, 255, .5);
+	content: "\f0da";
 	font-family: "FontAwesome";
 	margin-left: 8px;
 }
@@ -1506,14 +1516,18 @@ object {
 .vendd-price-button-container .edd_purchase_submit_wrapper {
 	display: block;
 }
-#edd_download_pagination {
+#edd_download_pagination,
+.edd_pagination,
+.fes-order-list-pagination-container,
+.fes-product-list-pagination-container {
 	font-size: .87em;
 	text-align: center;
-	padding: 40px 20px 40px;
+	padding: 0 20px 40px;
 	margin-top: 30px;
-	border-top: 2px solid #f1f1f1;
 }
-#edd_download_pagination .page-numbers {
+#edd_download_pagination .page-numbers,
+.edd_pagination .page-numbers,
+div[class*="fes-"] > .page-numbers {
 	background: #fff;
 	color: #555;
 	font-weight: 700;
@@ -1522,8 +1536,16 @@ object {
 	border-radius: 3px;
 	margin-right: 6px;
 }
+.edd_pagination .page-numbers,
+div[class*="fes-"] > .page-numbers {
+	background: #fafafa;
+}
 #edd_download_pagination .page-numbers.current,
-#edd_download_pagination .page-numbers:hover {
+.edd_pagination .page-numbers.current,
+div[class*="fes-"] > .page-numbers.current,
+#edd_download_pagination .page-numbers:hover,
+.edd_pagination .page-numbers:hover,
+div[class*="fes-"] > .page-numbers:hover {
 	color: #fff;
 }
 .store-pagination {
@@ -2765,7 +2787,8 @@ input[type="submit"].edd-submit {
 		border-bottom: 1px solid rgba(0,0,0,.03);
 	}
 	.main-navigation .sub-menu a:before {
-		content: "\2014\00a0\00a0";
+		content: "\f105\00a0\00a0\00a0";
+	font-family: "FontAwesome";
 		font-weight: 400;
 	}
 	.main-navigation a:hover {
@@ -2777,7 +2800,7 @@ input[type="submit"].edd-submit {
 		border-radius: 0;
 		margin-right: 0;
 	}
-	.main-navigation .nav-menu > .menu-item-has-children > a:after {
+	.main-navigation .nav-menu .menu-item-has-children a:after {
 		content: none;
 	}
 	.main-navigation .sub-menu a:hover {
