@@ -363,6 +363,41 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'		=> 50,
 			'description'	=> __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 		) ) );
+	
+		// Empty Cart Title
+		$wp_customize->add_setting( 'vendd_empty_cart_title', array(
+			'default'			=> null,
+			'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
+		) );
+		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_empty_cart_title', array(
+			'label'			=> __( 'Empty Cart Title', 'vendd' ),
+			'section'		=> 'vendd_edd_options',
+			'priority'		=> 60,
+			'description'	=> __( 'This is the title on the page that displays when the cart is empty. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+		) ) );
+	
+		// empty cart text
+		$wp_customize->add_setting( 'vendd_empty_cart_text', array(
+			'default'			=> null,
+			'sanitize_callback'	=> 'vendd_sanitize_textarea',
+		) );
+		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_empty_cart_text', array(
+			'label'			=> __( 'Empty Cart Text', 'vendd' ),
+			'section'		=> 'vendd_edd_options',
+			'priority'		=> 70,
+			'description'	=> __( 'Displays a custom message when the checkout cart is empty. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
+		) ) );
+
+		// store front item count
+		$wp_customize->add_setting( 'vendd_empty_cart_downloads_count', array(
+			'default'           => 4,
+			'sanitize_callback' => 'vendd_sanitize_integer'
+		) );
+		$wp_customize->add_control( 'vendd_empty_cart_downloads_count', array(
+		    'label'     => __( 'Empty Cart Downloads Count', 'quota' ),
+		    'section'   => 'vendd_edd_options',
+			'priority'  => 80,
+		) );
 	}
 	
 	
@@ -430,6 +465,14 @@ function vendd_sanitize_text( $input ) {
  */
 function vendd_sanitize_link_text( $input ) {
     return strip_tags( stripslashes( $input ), '<a>' );
+}
+
+
+/** ===============
+ * Sanitize integer input
+ */
+function vendd_sanitize_integer( $input ) {
+	return absint( $input );
 }
 
 

@@ -122,6 +122,11 @@ function vendd_body_classes( $classes ) {
 		endif;
 	}
 	
+	if ( vendd_edd_is_activated() && vendd_is_checkout() && false === edd_get_cart_contents() ) {
+		// Adds class based on empty EDD cart
+		$classes[] = 'vendd-empty-cart';
+	}
+	
 	if ( vendd_fes_is_activated() ) {
 		// Adds classes based on FES page template
 		if ( is_page_template( 'fes_templates/fes-dashboard.php' ) ) :

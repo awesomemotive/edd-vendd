@@ -1915,6 +1915,15 @@ input[type="submit"].edd-submit {
 .vendd-checkout-template .entry-header {
 	display: none;
 }
+.vendd-checkout-template .entry-content {
+	margin-top: 0;
+}
+.hentry .entry-title.empty-cart-title {
+	margin-bottom: 15px;
+}
+.vendd-empty-cart .edd_downloads_list {
+	margin-top: 30px;
+}
 .vendd-checkout-template tbody tr {
 	font-size: .87em;
 }
