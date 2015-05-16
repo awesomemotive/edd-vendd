@@ -1324,17 +1324,17 @@ object {
 	}
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image {
 		float: left;
-		width: 50%;
+		width: 55%;
 	}
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image img {
 		border-radius: 4px 0 0 4px;
 	}
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-download-information {
 		float: right;
-		width: 48%;
+		width: 44%;
 	}
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-price-button-container {
-		width: 48%;
+		width: 44%;
 	}
 }
 
