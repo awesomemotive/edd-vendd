@@ -2431,7 +2431,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .entry-content .fes-fields table th {
 	background: none;
 }
-.vendd-fes-template .entry-content table th {
+.vendd-fes-template .fes-form .entry-content table th {
 	padding: 0 0 4px;
 	border: none;
 }
