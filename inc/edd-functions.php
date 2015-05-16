@@ -11,7 +11,7 @@
  */
 function vendd_edd_add_comments_support( $supports ) {
 	$supports[] = 'comments';
-	return $supports;	
+	return $supports;
 }
 add_filter( 'edd_download_supports', 'vendd_edd_add_comments_support' );
 
@@ -21,7 +21,7 @@ add_filter( 'edd_download_supports', 'vendd_edd_add_comments_support' );
  */
 remove_action( 'edd_after_download_content', 'edd_append_purchase_link' );
 
-	
+
 /*
  * If Subtitles plugin is activated, add support for Downloads
  */
@@ -30,7 +30,7 @@ function vendd_subtitles() {
 }
 add_action( 'init', 'vendd_subtitles' );
 
-	
+
 /*
  * Add HTML to the [downloads] shortcode for structure/styling
  */
@@ -65,7 +65,7 @@ function vendd_empty_cart_content( $message ) {
 		echo $empty_cart_text;
 	}
 
-	if ( 0 != $empty_cart_downloads_qty ) {
+	if ( 0 != $empty_cart_downloads_qty && ( ! is_single() || ! is_page() || edd_is_checkout() ) ) {
 		echo do_shortcode( '[downloads columns="2" number="' . $empty_cart_downloads_qty . '"]' );
 	}
 
