@@ -1,6 +1,8 @@
 <?php
 /**
  * download archive template
+ *
+ * @package Vendd
  */
 
 // get information about the term being loaded	
@@ -56,10 +58,10 @@ if ( have_posts() ) : $i = 1;
 			<?php endwhile; ?>
 		</div>
 		<div style="clear:both;"></div>
-		<?php if ( $wp_query->max_num_pages > 1 ) : ?>		
+		<?php if ( $wp_query->max_num_pages > 1 ) : ?>	
 			<div id="edd_download_pagination" class="store-pagination navigation">
-				<?php 					
-					$big = 999999999; // need an unlikely integer					
+				<?php
+					$big = 999999999; // need an unlikely integer
 					echo paginate_links( array(
 						'base'		=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 						'format'	=> '?paged=%#%',

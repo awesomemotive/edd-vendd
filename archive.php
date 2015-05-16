@@ -2,8 +2,6 @@
 /**
  * The template for displaying archive pages.
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
  * @package Vendd
  */
 
@@ -35,33 +33,6 @@ get_header(); ?>
 						elseif ( is_year() ) :
 							printf( __( 'Year: %s', 'vendd' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'vendd' ) ) . '</span>' );
 
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'vendd' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'vendd' );
-
 						else :
 							_e( 'Archives', 'vendd' );
 
@@ -83,7 +54,8 @@ get_header(); ?>
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 * called content-___.php (where ___ is the Post Format name) and that
+					 * will be used instead.
 					 */
 					get_template_part( 'content/content', get_post_format() );
 				?>

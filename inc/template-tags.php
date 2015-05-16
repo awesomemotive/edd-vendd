@@ -2,8 +2,6 @@
 /**
  * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
  * @package Vendd
  */
 
@@ -35,6 +33,7 @@ function vendd_paging_nav() {
 }
 endif;
 
+
 if ( ! function_exists( 'vendd_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
@@ -60,6 +59,7 @@ function vendd_post_nav() {
 	<?php
 }
 endif;
+
 
 if ( ! function_exists( 'vendd_posted_on' ) ) :
 /**
@@ -102,6 +102,7 @@ function vendd_posted_on() {
 }
 endif;
 
+
 if ( ! function_exists( 'vendd_posted_in' ) ) :
 /**
  * Prints HTML with category/tag information for the current post-date/time and author.
@@ -137,7 +138,8 @@ function vendd_posted_in() { ?>
 }
 endif;
 
-if ( !function_exists( 'vendd_comment_template' ) ) :
+
+if ( ! function_exists( 'vendd_comment_template' ) ) :
 /**
  * Used as a custom callback by wp_list_comments() for displaying
  * the comments and pings.
@@ -162,7 +164,7 @@ function vendd_comment_template( $comment, $args, $depth ) {
 			<?php 
 			break;
 
-		// Comments format	
+		// Comments format
 		default : ?>
 			<div <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 				<article id="comment-<?php comment_ID(); ?>" class="comment-full">
@@ -217,6 +219,7 @@ function vendd_comment_template( $comment, $args, $depth ) {
 	}
 }
 endif;
+
 
 /**
  * Returns true if a blog has more than 1 category.

@@ -1,6 +1,8 @@
 <?php
 /**
  * The default template for download page content
+ *
+ * @package Vendd
  */
 ?>
 

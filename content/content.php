@@ -34,7 +34,7 @@
 			?>
 		</div><!-- .entry-summary -->
 	<?php else : ?>
-		<div class="entry-content">		
+		<div class="entry-content">	
 			<?php
 				// display featured image full
 				if ( has_post_thumbnail() && 1 == get_theme_mod( 'vendd_feed_featured_image' ) ) : ?>

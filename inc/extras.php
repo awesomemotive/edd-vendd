@@ -2,8 +2,6 @@
 /**
  * Custom functions that act independently of the theme templates
  *
- * Eventually, some of the functionality here could be replaced by core features
- *
  * @package Vendd
  */
 
@@ -64,7 +62,7 @@ add_filter( 'the_content_more_link', 'vendd_remove_more_tag_link_jump' );
 
 
 /**
- * Removes Page Templates from Add/Edit Page screen based on plugins
+ * Removes Page Templates from Add/Edit Page screen based on plugin activation
  *
  * @return array
  */
@@ -99,12 +97,12 @@ function vendd_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-	
+
 	// Adds classes based on template
 	if ( is_front_page() && ! is_home() ) {
 		$classes[] = 'front-page';
 	}
-	
+
 	if ( vendd_edd_is_activated() ) {
 		// Adds classes based on EDD page template
 		if ( is_page_template( 'edd_templates/edd-downloads-shortcode.php' ) ) {
@@ -132,7 +130,7 @@ function vendd_body_classes( $classes ) {
 		// Adds class based on empty EDD cart
 		$classes[] = 'vendd-empty-cart';
 	}
-	
+
 	if ( vendd_fes_is_activated() ) {
 		// Adds classes based on FES page template
 		if ( is_page_template( 'fes_templates/fes-dashboard.php' ) ) {
@@ -141,7 +139,7 @@ function vendd_body_classes( $classes ) {
 			$classes[] = 'vendd-fes-vendor-template vendd-edd-template';
 		}
 	}
-	
+
 	// Adds class based on whether or not is has a sidebar
 	if (	is_page_template( 'edd_templates/edd-checkout.php' ) ||
 			is_page_template( 'edd_templates/edd-confirmation.php' ) ||
@@ -163,12 +161,12 @@ add_filter( 'body_class', 'vendd_body_classes' );
  * Add Social Network URL Fields to User Profile
  */
 function vendd_add_social_profiles( $contactmethods ) {
-	
+
 	$contactmethods['twitter_profile']	= __( 'Twitter Profile URL', 'vendd' );
 	$contactmethods['facebook_profile']	= __( 'Facebook Profile URL', 'vendd' );
 	$contactmethods['gplus_profile']	= __( 'Google Plus Profile URL', 'vendd' );
 	$contactmethods['youtube_profile']	= __( 'YouTube Profile URL', 'vendd' );
-	
+
 	return $contactmethods;
 }
 add_filter( 'user_contactmethods', 'vendd_add_social_profiles', 10, 1 );

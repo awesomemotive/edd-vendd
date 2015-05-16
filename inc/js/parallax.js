@@ -1,3 +1,8 @@
+/**
+ * Adds parallax background effect
+ *
+ * @package Vendd
+ */
 jQuery( document ).ready( function( $ ) {
     $( 'body' ).css( 'background-attachment', 'fixed' );
     $( window ).scroll( function () {

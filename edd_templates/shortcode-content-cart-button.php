@@ -1,6 +1,8 @@
 <?php
 /**
  * hide purchase button behind a toggle button
+ *
+ * @package Vendd
  */
 ?>
 

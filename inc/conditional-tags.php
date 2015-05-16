@@ -23,6 +23,19 @@ function vendd_is_landing_page() {
 	}
 }
 
+/**
+ * Is it a full-width page template?
+ *
+ * @return bool
+ */
+function vendd_is_full_width_page() {
+	if ( is_page_template( 'page_templates/full-width.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 
 /*--------------------------------------------------------------
 >>> Easy Digital Downloads

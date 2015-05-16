@@ -1,6 +1,8 @@
 <?php
 /**
  * The template used for displaying the EDD purchase history
+ *
+ * @package Vendd
  */
 ?>
 

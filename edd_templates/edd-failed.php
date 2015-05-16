@@ -1,7 +1,10 @@
 <?php
 /*
  * Template Name: EDD Transaction Failed
+ *
+ * @package Vendd
  */
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

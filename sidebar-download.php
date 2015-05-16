@@ -124,7 +124,7 @@
 						<span class="vendd-detail-info"><?php echo $version ? $version : __( 'Unversioned', 'vendd' ); ?></span>
 					</li>
 				<?php }
-					
+
 					$categories = get_the_term_list( $post->ID, 'download_category', '', ', ', '' );
 					if ( '' != $categories ) {
 						?>
@@ -134,7 +134,7 @@
 						</li>
 						<?php
 					}
-					
+
 					$tags = get_the_term_list( $post->ID, 'download_tag', '', ', ', '' );
 					if ( '' != $tags ) {
 						?>
@@ -147,7 +147,7 @@
 				?>
 			</ul>
 		</div>
-		
+
 		<?php the_widget( 'edd_cart_widget' ); ?>
 
 	<?php endif; // end sidebar widget area ?>

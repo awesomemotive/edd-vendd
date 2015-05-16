@@ -1,7 +1,10 @@
 <?php
 /**
  * functions specific to Easy Digital Downloads
+ *
+ * @package Vendd
  */
+
 
 /**
  * Allow comments on downloads

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying page content in edd-store-front.php
+ * The template used for displaying page content in edd-downloads-shortcode.php
  *
  * If the Subtitles plugin is in use and a subtitle exists, it will display
  * below the store title whether it's the actual Page title or a custom

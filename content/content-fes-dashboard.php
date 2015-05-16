@@ -1,6 +1,8 @@
 <?php
 /**
  * The template used for displaying the FES dashboard
+ *
+ * @package Vendd
  */
 ?>
 

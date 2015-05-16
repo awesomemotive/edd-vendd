@@ -1,3 +1,8 @@
+/**
+ * Handles the [downloads] shortcode purchase button display
+ *
+ * @package Vendd
+ */
 ( function( $ ) {
 	$( ".vendd-show-button" ).on( "click", function(e){
 		var purchaseButton = $( this ).siblings( ".vendd-price-button-container" );

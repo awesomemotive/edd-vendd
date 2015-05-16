@@ -99,25 +99,25 @@ function vendd_customize_register( $wp_customize ) {
 	// logo uploader
 	$wp_customize->add_setting( 'vendd_logo', array( 'default' => null ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'vendd_logo', array(
-		'label'		=> __( 'Custom Site Logo (replaces title)', 'vendd' ),
-		'section'	=> 'title_tagline',
-		'settings'	=> 'vendd_logo',
-		'priority'	=> 20
+		'label'     => __( 'Custom Site Logo (replaces title)', 'vendd' ),
+		'section'   => 'title_tagline',
+		'settings'  => 'vendd_logo',
+		'priority'  => 20
 	) ) );
 
 	// site tagline
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';	
 	$wp_customize->get_control( 'blogdescription' )->priority = 30;
-	
+
 	// hide the tagline?
 	$wp_customize->add_setting( 'vendd_hide_tagline', array( 
 		'default'			=> 0,
-		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+		'sanitize_callback'	=> 'vendd_sanitize_checkbox'
 	) );
 	$wp_customize->add_control( 'vendd_hide_tagline', array(
-		'label'		=> __( 'Hide Tagline', 'vendd' ),
-		'section'	=> 'title_tagline',
-		'priority'	=> 40,
+		'label'     => __( 'Hide Tagline', 'vendd' ),
+		'section'   => 'title_tagline',
+		'priority'  => 40,
 		'type'      => 'checkbox',
 	) );
 
@@ -126,23 +126,23 @@ function vendd_customize_register( $wp_customize ) {
 	 * Design Options
 	 */
 	$wp_customize->add_section( 'vendd_design', array(
-    	'title'       	=> __( 'Vendd Design', 'vendd' ),
-		'description' 	=> __( 'Control the primary design color of your site.', 'vendd' ),
-		'priority'   	=> 20,
+		'title'         => __( 'Vendd Design', 'vendd' ),
+		'description'   => __( 'Control the primary design color of your site.', 'vendd' ),
+		'priority'      => 20,
 	) );
-	
+
 	// design color	
 	$wp_customize->add_setting( 'vendd_design_color', array(
-		'default'		=> '#428bca',
-		'type'			=> 'option', 
-		'capability'	=> 'edit_theme_options',
-	) );		
+		'default'       => '#428bca',
+		'type'          => 'option',
+		'capability'    => 'edit_theme_options',
+	) );
 	$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_design_color', array(
-		'label'		=> __( 'Primary Design Color', 'vendd' ), 
-		'section'	=> 'vendd_design',
-		'priority'	=> 20
+		'label'     => __( 'Primary Design Color', 'vendd' ), 
+		'section'   => 'vendd_design',
+		'priority'  => 20
 	) ) );
-	
+
 	/**
 	 * restructure the default Colors section/control
 	 */
@@ -154,7 +154,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->get_control( 'background_color' )->label = __( 'Full Site Background Color', 'vendd' );
 		// put Colors option in a logical spot
 		$wp_customize->get_control( 'background_color' )->priority = 50;
-		
+
 	/**
 	 * restructure the default Background Image section
 	 */
@@ -166,16 +166,16 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->get_control( 'background_image' )->label = __( 'Full Site Background Image', 'vendd' );
 		// put Background Image uploader in a logical spot
 		$wp_customize->get_control( 'background_image' )->priority = 60;
-		
+
 	// parallax background image
 	$wp_customize->add_setting( 'vendd_parallax_bg', array( 
-		'default'			=> 0,
-		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+		'default'           => 0,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
 	$wp_customize->add_control( 'vendd_parallax_bg', array(
-		'label'		=> __( 'Enable Parallax Background Effect', 'vendd' ),
-		'section'	=> 'vendd_design',
-		'priority'	=> 70,
+		'label'     => __( 'Enable Parallax Background Effect', 'vendd' ),
+		'section'   => 'vendd_design',
+		'priority'  => 70,
 		'type'      => 'checkbox',
 	) );
 
@@ -184,130 +184,130 @@ function vendd_customize_register( $wp_customize ) {
 	 * Content Options
 	 */
 	$wp_customize->add_section( 'vendd_content_section', array(
-    	'title'       	=> __( 'Content Options', 'vendd' ),
-		'description' 	=> __( 'Adjust the display of content on your website. All options have a default value that can be left as-is but you are free to customize.', 'vendd' ),
-		'priority'   	=> 30,
+    	'title'         => __( 'Content Options', 'vendd' ),
+		'description'   => __( 'Adjust the display of content on your website. All options have a default value that can be left as-is but you are free to customize.', 'vendd' ),
+		'priority'      => 30,
 	) );
-	
+
 	// post content
 	$wp_customize->add_setting( 'vendd_post_content', array( 
-		'default'			=> 1,
-		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+		'default'           => 1,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
 	$wp_customize->add_control( 'vendd_post_content', array(
-		'label'		=> __( 'Display Post Excerpts', 'vendd' ),
-		'section'	=> 'vendd_content_section',
-		'priority'	=> 10,
+		'label'     => __( 'Display Post Excerpts', 'vendd' ),
+		'section'   => 'vendd_content_section',
+		'priority'  => 10,
 		'type'      => 'checkbox',
 	) );
-	
+
 	// read more link
 	$wp_customize->add_setting( 'vendd_read_more', array( 
-		'default'			=> __( 'Continue reading', 'vendd' ),
-		'sanitize_callback'	=> 'vendd_sanitize_text' 
-	) );		
+		'default'           => __( 'Continue reading', 'vendd' ),
+		'sanitize_callback' => 'vendd_sanitize_text'
+	) );
 	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_read_more', array(
-	    'label' 	=> __( 'Excerpt & More Link Text', 'vendd' ),
-	    'section' 	=> 'vendd_content_section',
-		'priority'	=> 20,
+	    'label'     => __( 'Excerpt & More Link Text', 'vendd' ),
+	    'section'   => 'vendd_content_section',
+		'priority'  => 20,
 	) ) );
-	
+
 	// show featured images on feed?
 	$wp_customize->add_setting( 'vendd_feed_featured_image', array( 
-		'default'			=> 1,
-		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+		'default'           => 1,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
 	$wp_customize->add_control( 'vendd_feed_featured_image', array(
-		'label'		=> __( 'Show Featured Images in Post Listings', 'vendd' ),
-		'section'	=> 'vendd_content_section',
-		'priority'	=> 30,
+		'label'     => __( 'Show Featured Images in Post Listings', 'vendd' ),
+		'section'   => 'vendd_content_section',
+		'priority'  => 30,
 		'type'      => 'checkbox',
 	) );
-	
+
 	// show featured images on posts?
 	$wp_customize->add_setting( 'vendd_single_featured_image', array( 
-		'default'			=> 1,
-		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+		'default'           => 1,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
 	$wp_customize->add_control( 'vendd_single_featured_image', array(
-		'label'		=> __( 'Show Featured Images on Single Posts', 'vendd' ),
-		'section'	=> 'vendd_content_section',
-		'priority'	=> 40,
+		'label'     => __( 'Show Featured Images on Single Posts', 'vendd' ),
+		'section'   => 'vendd_content_section',
+		'priority'  => 40,
 		'type'      => 'checkbox',
 	) );
-	
+
 	// comments on pages?
 	$wp_customize->add_setting( 'vendd_page_comments', array( 
-		'default'			=> 0,
-		'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+		'default'           => 0,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
 	$wp_customize->add_control( 'vendd_page_comments', array(
-		'label'		=> __( 'Enable Comments on Standard Pages', 'vendd' ),
-		'section'	=> 'vendd_content_section',
-		'priority'	=> 50,
+		'label'     => __( 'Enable Comments on Standard Pages', 'vendd' ),
+		'section'   => 'vendd_content_section',
+		'priority'  => 50,
 		'type'      => 'checkbox',
 	) );
-	
+
 	// Information Bar text
 	$wp_customize->add_setting( 'vendd_info_bar', array(
-		'default'			=> null,
-		'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
+		'default'           => null,
+		'sanitize_callback' => 'vendd_sanitize_textarea_lite',
 	) );
 	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_info_bar', array(
-		'label'			=> __( 'Information Bar Text', 'vendd' ),
-		'section'		=> 'vendd_content_section',
-		'priority'		=> 60,
-		'description'	=> __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+		'label'         => __( 'Information Bar Text', 'vendd' ),
+		'section'       => 'vendd_content_section',
+		'priority'      => 60,
+		'description'   => __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 	) ) );
-	
+
 	// credits & copyright
 	$wp_customize->add_setting( 'vendd_credits_copyright', array(
-		'default'			=> null,
-		'sanitize_callback'	=> 'vendd_sanitize_textarea',
+		'default'           => null,
+		'sanitize_callback' => 'vendd_sanitize_textarea',
 	) );
 	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_credits_copyright', array(
-		'label'			=> __( 'Footer Credits & Copyright', 'vendd' ),
-		'section'		=> 'vendd_content_section',
-		'priority'		=> 90,
-		'description'	=> __( 'Displays site title, tagline, copyright, and year by default. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
+		'label'         => __( 'Footer Credits & Copyright', 'vendd' ),
+		'section'       => 'vendd_content_section',
+		'priority'      => 90,
+		'description'   => __( 'Displays site title, tagline, copyright, and year by default. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
 	) ) );
-	
-	
+
+
 	/** ===============
 	 * Easy Digital Downloads Options
 	 */
 	// only if EDD is activated
 	if ( vendd_edd_is_activated() ) {
 		$wp_customize->add_section( 'vendd_edd_options', array(
-	    	'title'       	=> __( 'Easy Digital Downloads', 'vendd' ),
-			'description' 	=> __( 'All other EDD options are under Dashboard => Downloads. If you deactivate EDD, these options will no longer appear.', 'vendd' ),
-			'priority'   	=> 40,
+			'title'         => __( 'Easy Digital Downloads', 'vendd' ),
+			'description'   => __( 'All other EDD options are under Dashboard => Downloads. If you deactivate EDD, these options will no longer appear.', 'vendd' ),
+			'priority'      => 40,
 		) );
-		
+
 		// show comments on downloads?
 		$wp_customize->add_setting( 'vendd_download_comments', array( 
-			'default'			=> 0,
-			'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+			'default'           => 0,
+			'sanitize_callback' => 'vendd_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'vendd_download_comments', array(
-			'label'		=> __( 'Show Comments on Downloads', 'vendd' ),
-			'section'	=> 'vendd_edd_options',
-			'priority'	=> 10,
+			'label'     => __( 'Show Comments on Downloads', 'vendd' ),
+			'section'   => 'vendd_edd_options',
+			'priority'  => 10,
 			'type'      => 'checkbox',
 		) );
-		
+
 		// show categories/tags on [downloads] shortcode?
 		$wp_customize->add_setting( 'vendd_downloads_taxonomies', array( 
-			'default'			=> 0,
-			'sanitize_callback'	=> 'vendd_sanitize_checkbox'  
+			'default'           => 0,
+			'sanitize_callback' => 'vendd_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'vendd_downloads_taxonomies', array(
-			'label'		=> __( 'Show Categories/Tags on Downloads grid', 'vendd' ),
-			'section'	=> 'vendd_edd_options',
-			'priority'	=> 20,
+			'label'     => __( 'Show Categories/Tags on Downloads grid', 'vendd' ),
+			'section'   => 'vendd_edd_options',
+			'priority'  => 20,
 			'type'      => 'checkbox',
 		) );
-		
+
 		/**
 		 * EDD button color
 		 *
@@ -341,51 +341,51 @@ function vendd_customize_register( $wp_customize ) {
 				break;
 		}
 		$wp_customize->add_setting( 'vendd_edd_button_color', array(
-			'default'		=> $edd_button_color_hex,
-			'type'			=> 'option', 
-			'capability'	=> 'edit_theme_options',
-		) );		
+			'default'     => $edd_button_color_hex,
+			'type'        => 'option',
+			'capability'  => 'edit_theme_options',
+		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_edd_button_color', array(
-			'label'			=> __( 'EDD Button Color', 'vendd' ), 
-			'section'		=> 'vendd_edd_options',
-			'description'	=> __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Clear the color field back to default to revert back to the EDD setting.', 'vendd' ),
-			'priority'		=> 40
+			'label'        => __( 'EDD Button Color', 'vendd' ),
+			'section'      => 'vendd_edd_options',
+			'description'  => __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Clear the color field back to default to revert back to the EDD setting.', 'vendd' ),
+			'priority'     => 40,
 		) ) );
-	
+
 		// Store Front Title
 		$wp_customize->add_setting( 'vendd_store_front_title', array(
-			'default'			=> null,
-			'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
+			'default'           => null,
+			'sanitize_callback' => 'vendd_sanitize_textarea_lite',
 		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_store_front_title', array(
-			'label'			=> __( 'Store Front Title', 'vendd' ),
-			'section'		=> 'vendd_edd_options',
-			'priority'		=> 50,
-			'description'	=> __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'label'         => __( 'Store Front Title', 'vendd' ),
+			'section'       => 'vendd_edd_options',
+			'priority'      => 50,
+			'description'   => __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 		) ) );
-	
+
 		// Empty Cart Title
 		$wp_customize->add_setting( 'vendd_empty_cart_title', array(
-			'default'			=> null,
-			'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
+			'default'           => null,
+			'sanitize_callback' => 'vendd_sanitize_textarea_lite',
 		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_empty_cart_title', array(
-			'label'			=> __( 'Empty Cart Title', 'vendd' ),
-			'section'		=> 'vendd_edd_options',
-			'priority'		=> 60,
-			'description'	=> __( 'This is the title on the page that displays when the cart is empty. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'label'         => __( 'Empty Cart Title', 'vendd' ),
+			'section'       => 'vendd_edd_options',
+			'priority'      => 60,
+			'description'   => __( 'This is the title on the page that displays when the cart is empty. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 		) ) );
-	
+
 		// empty cart text
 		$wp_customize->add_setting( 'vendd_empty_cart_text', array(
-			'default'			=> null,
-			'sanitize_callback'	=> 'vendd_sanitize_textarea',
+			'default'           => null,
+			'sanitize_callback' => 'vendd_sanitize_textarea',
 		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_empty_cart_text', array(
-			'label'			=> __( 'Empty Cart Text', 'vendd' ),
-			'section'		=> 'vendd_edd_options',
-			'priority'		=> 70,
-			'description'	=> __( 'Displays a custom message when the checkout cart is empty. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
+			'label'        => __( 'Empty Cart Text', 'vendd' ),
+			'section'      => 'vendd_edd_options',
+			'priority'     => 70,
+			'description'  => __( 'Displays a custom message when the checkout cart is empty. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
 		) ) );
 
 		// store front item count
@@ -399,32 +399,32 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'  => 80,
 		) );
 	}
-	
-	
+
+
 	/** ===============
 	 * EDD Frontend Submissions Options
 	 */
 	// only if FES is activated
 	if ( vendd_fes_is_activated() && vendd_edd_is_activated() ) {
 		$wp_customize->add_section( 'vendd_fes_options', array(
-	    	'title'       	=> __( 'EDD Frontend Submissions', 'vendd' ),
-			'description' 	=> __( 'All other FES options are under Dashboard => EDD FES. If you deactivate EDD or FES, these options will no longer appear.', 'vendd' ),
-			'priority'   	=> 41,
+	    	'title'         => __( 'EDD Frontend Submissions', 'vendd' ),
+			'description'   => __( 'All other FES options are under Dashboard => EDD FES. If you deactivate EDD or FES, these options will no longer appear.', 'vendd' ),
+			'priority'      => 41,
 		) );
-	
+
 		// FES Dashboard Title
 		$wp_customize->add_setting( 'vendd_fes_dashboard_title', array(
-			'default'			=> null,
-			'sanitize_callback'	=> 'vendd_sanitize_textarea_lite',
+			'default'           => null,
+			'sanitize_callback' => 'vendd_sanitize_textarea_lite',
 		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_fes_dashboard_title', array(
-			'label'			=> __( 'FES Dashboard Title', 'vendd' ),
-			'section'		=> 'vendd_fes_options',
-			'priority'		=> 40,
-			'description'	=> __( 'This optional field allows you to replace the title of your FES Dashboard. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
-		) ) );	
+			'label'         => __( 'FES Dashboard Title', 'vendd' ),
+			'section'       => 'vendd_fes_options',
+			'priority'      => 40,
+			'description'   => __( 'This optional field allows you to replace the title of your FES Dashboard. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+		) ) );
 	}
-	
+
 
 	/** ===============
 	 * Navigation Menus
@@ -432,8 +432,7 @@ function vendd_customize_register( $wp_customize ) {
 	// section adjustments
 	$wp_customize->get_section( 'nav' )->title = __( 'Navigation Menus', 'vendd' );
 	$wp_customize->get_section( 'nav' )->priority = 50;
-	
-	
+
 
 	/** ===============
 	 * Static Front Page
@@ -448,7 +447,7 @@ add_action( 'customize_register', 'vendd_customize_register' );
  * Sanitize checkbox options
  */
 function vendd_sanitize_checkbox( $input ) {
-    return 1 == $input ? 1 : 0;
+	return 1 == $input ? 1 : 0;
 }
 
 
@@ -456,7 +455,7 @@ function vendd_sanitize_checkbox( $input ) {
  * Sanitize text input
  */
 function vendd_sanitize_text( $input ) {
-    return strip_tags( stripslashes( $input ) );
+	return strip_tags( stripslashes( $input ) );
 }
 
 
@@ -464,7 +463,7 @@ function vendd_sanitize_text( $input ) {
  * Sanitize text input to allow anchors
  */
 function vendd_sanitize_link_text( $input ) {
-    return strip_tags( stripslashes( $input ), '<a>' );
+	return strip_tags( stripslashes( $input ), '<a>' );
 }
 
 
@@ -481,69 +480,69 @@ function vendd_sanitize_integer( $input ) {
  */
 function vendd_sanitize_textarea( $input ) {
 	$allowed = array(
-		's'			=> array(),
-		'br'		=> array(),
-		'em'		=> array(),
-		'i'			=> array(),
-		'strong'	=> array(),
-		'b'			=> array(),
-		'a'			=> array(
-			'href'			=> array(),
-			'title'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		's'         => array(),
+		'br'        => array(),
+		'em'        => array(),
+		'i'         => array(),
+		'strong'    => array(),
+		'b'         => array(),
+		'a'         => array(
+			'href'          => array(),
+			'title'         => array(),
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
 		),
-		'form'		=> array(
-			'id'			=> array(),
-			'class'			=> array(),
-			'action'		=> array(),
-			'method'		=> array(),
-			'autocomplete'	=> array(),
-			'style'			=> array(),
+		'form'      => array(
+			'id'            => array(),
+			'class'         => array(),
+			'action'        => array(),
+			'method'        => array(),
+			'autocomplete'  => array(),
+			'style'         => array(),
 		),
-		'input'		=> array(
-			'type'			=> array(),
-			'name'			=> array(),
-			'class' 		=> array(),
-			'id'			=> array(),
-			'value'			=> array(),
-			'placeholder'	=> array(),
-			'tabindex'		=> array(),
-			'style'			=> array(),
+		'input'     => array(
+			'type'          => array(),
+			'name'          => array(),
+			'class'         => array(),
+			'id'            => array(),
+			'value'         => array(),
+			'placeholder'   => array(),
+			'tabindex'      => array(),
+			'style'         => array(),
 		),
-		'img'		=> array(
-			'src'			=> array(),
-			'alt'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
-			'height'		=> array(),
-			'width'			=> array(),
+		'img'       => array(
+			'src'           => array(),
+			'alt'           => array(),
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
+			'height'        => array(),
+			'width'         => array(),
 		),
-		'span'		=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'span'      => array(
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
 		),
-		'p'			=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'p'         => array(
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
 		),
-		'div'		=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'div'       => array(
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
 		),
 		'blockquote' => array(
-			'cite'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+			'cite'          => array(),
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
 		),
 	);
-    return wp_kses( $input, $allowed );
+	return wp_kses( $input, $allowed );
 }
 
 
@@ -552,22 +551,22 @@ function vendd_sanitize_textarea( $input ) {
  */
 function vendd_sanitize_textarea_lite( $input ) {
 	$allowed = array(
-		'em'		=> array(),
-		'strong'	=> array(),
-		'a'			=> array(
-			'href'			=> array(),
-			'title'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'em'        => array(),
+		'strong'    => array(),
+		'a'         => array(
+			'href'          => array(),
+			'title'         => array(),
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
 		),
-		'span'		=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'span'      => array(
+			'class'         => array(),
+			'id'            => array(),
+			'style'         => array(),
 		),
 	);
-    return wp_kses( $input, $allowed );
+	return wp_kses( $input, $allowed );
 }
 
 
@@ -577,12 +576,12 @@ function vendd_sanitize_textarea_lite( $input ) {
 function vendd_sanitize_hex_color( $color ) {
 	if ( '' === $color ) :
 		return '';
-    endif;
+	endif;
 
 	// 3 or 6 hex digits, or the empty string.
-	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) :
+	if ( preg_match( '|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) :
 		return $color;
-    endif;
+	endif;
 
 	return null;
 }
@@ -592,10 +591,10 @@ function vendd_sanitize_hex_color( $color ) {
  * Add Customizer theme styles to <head>
  */
 function vendd_customizer_head_styles() {
-	$design_color		= get_option( 'vendd_design_color' );
-	$bg_color			= get_option( 'vendd_background_color' );
-	$edd_button_color	= get_option( 'vendd_edd_button_color' );
-	$edd_color_defaults	= array( '#404040', '#f1f1f1', '#E74C3C', '#2ECC71', '#F1C40F', '#E67E22', '#3d3d3d' );
+	$design_color       = get_option( 'vendd_design_color' );
+	$bg_color           = get_option( 'vendd_background_color' );
+	$edd_button_color   = get_option( 'vendd_edd_button_color' );
+	$edd_color_defaults = array( '#404040', '#f1f1f1', '#E74C3C', '#2ECC71', '#F1C40F', '#E67E22', '#3d3d3d' );
 	?>
 
 	<style type="text/css">
@@ -633,11 +632,11 @@ function vendd_customizer_head_styles() {
 			.edd_pagination .page-numbers:hover,
 			div[class*="fes-"] > .page-numbers:hover {
 				background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
-			}			
+			}
 			a,
 			.comment-full:hover > .reply > .comment-reply-link {
 				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
-			}			
+			}
 			h1, h2,
 			.vendd-price-button-container {
 				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;

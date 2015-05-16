@@ -1,7 +1,7 @@
 /**
- * navigation.js
- *
  * Handles toggling the navigation menu for small screens.
+ *
+ * @package Vendd
  */
 ( function() {
 	var container, button, menu;

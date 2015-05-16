@@ -40,4 +40,4 @@ if ( function_exists( 'fes_get_vendor' ) && false !== fes_get_vendor() ) {
 </div><!-- .vendor-header -->
 <div id="vendd-vendor" <?php post_class(); ?>>
 	<?php the_content(); ?>
-</div><!-- #post-## -->
+</div><!-- .post-## -->

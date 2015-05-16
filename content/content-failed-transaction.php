@@ -1,6 +1,8 @@
 <?php
 /**
  * The template used for displaying the EDD transaction failed message
+ *
+ * @package Vendd
  */
 ?>
 

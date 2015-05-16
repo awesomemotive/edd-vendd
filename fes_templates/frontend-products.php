@@ -1,6 +1,8 @@
 <?php
 /**
  * The "Products" tab for the FES Vendor Dashboard
+ *
+ * @package Vendd
  */
 global $products;
 
@@ -10,7 +12,7 @@ if ( count( $products ) > 0 ) {
 	?>
 		<div class="vendor-product clear">
 			<div class="vendor-product-image">
-				<?php echo get_the_post_thumbnail( $product->ID, array(150,150)); ?>
+				<?php echo get_the_post_thumbnail( $product->ID, array( 150, 150 ) ); ?>
 			</div>
 			<div class="vendor-product-info">
 				<h5 class="vendor-product-title">
@@ -20,42 +22,43 @@ if ( count( $products ) > 0 ) {
 				<div class="vendor-product-details">
 					<div class="vendor-product-info-group">
 						<span class="vendor-product-label">
-							<?php echo __( 'Price', 'vendd' ) . ': '; ?>
+							<?php echo _x( 'Price', 'FES vendor dashboard Product display', 'vendd' ) . ': '; ?>
 						</span>
 						<span class="vendor-product-price">
-							<?php echo EDD_FES()->dashboard->product_list_price($product->ID); ?>
+							<?php echo EDD_FES()->dashboard->product_list_price( $product->ID ); ?>
 						</span>
 					</div>
 					<div class="vendor-product-info-group">
 						<span class="vendor-product-label">
-							<?php echo __( 'Purchases', 'vendd' ) . ': '; ?>
+							<?php echo _x( 'Purchases', 'FES vendor dashboard Product display', 'vendd' ) . ': '; ?>
 						</span>
 						<span class="vendor-product-sales">
-							<?php echo EDD_FES()->dashboard->product_list_sales_esc($product->ID); ?>
+							<?php echo EDD_FES()->dashboard->product_list_sales_esc( $product->ID) ; ?>
 						</span>
 					</div>
 					<div class="vendor-product-info-group">
 						<span class="vendor-product-label">
-							<?php echo __( 'Details', 'vendd' ) . ': '; ?>
+							<?php echo _x( 'Details', 'FES vendor dashboard Product display', 'vendd' ) . ': '; ?>
 						</span>
 						<span class="vendor-product-status-details">
-							<?php echo EDD_FES()->dashboard->product_list_date($product->ID); ?>
+							<?php echo EDD_FES()->dashboard->product_list_date( $product->ID ); ?>
 						</span>
 					</div>
 				</div>
 				<div class="vendor-product-actions">
 					<span class="vendor-product-action-links">
-						<?php EDD_FES()->dashboard->product_list_actions($product->ID); ?>
+						<?php EDD_FES()->dashboard->product_list_actions( $product->ID ); ?>
 					</span>
 				</div>
 			</div>
 		</div>
 		<?php
-	do_action('fes-product-table-column-value');
+	do_action( 'fes-product-table-column-value' );
 	endforeach;
 } else {
-	echo sprintf( __('No %s found','vendd'),
-		EDD_FES()->vendors->get_product_constant_name( $plural = true, $uppercase = false ) );
+	echo sprintf( __( 'No %s found','vendd' ),
+		EDD_FES()->vendors->get_product_constant_name( $plural = true, $uppercase = false )
+	);
 }
 
 EDD_FES()->dashboard->product_list_pagination();
