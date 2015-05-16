@@ -50,9 +50,11 @@ button,
 #edd_download_pagination .page-numbers.current,
 .edd_pagination .page-numbers.current,
 div[class*="fes-"] > .page-numbers.current,
+div[id*="edd_commissions_"] .page-numbers.current,
 #edd_download_pagination .page-numbers:hover,
 .edd_pagination .page-numbers:hover,
-div[class*="fes-"] > .page-numbers:hover {
+div[class*="fes-"] > .page-numbers:hover,
+div[id*="edd_commissions_"] .page-numbers:hover {
 	background: #428bca;
 }
 a,
@@ -1473,7 +1475,8 @@ object {
 #edd_download_pagination,
 .edd_pagination,
 .fes-order-list-pagination-container,
-.fes-product-list-pagination-container {
+.fes-product-list-pagination-container,
+div[id*="edd_commissions_"] {
 	font-size: .87em;
 	text-align: center;
 	padding: 0 20px 40px;
@@ -1481,7 +1484,8 @@ object {
 }
 #edd_download_pagination .page-numbers,
 .edd_pagination .page-numbers,
-div[class*="fes-"] > .page-numbers {
+div[class*="fes-"] > .page-numbers,
+div[id*="edd_commissions_"] .page-numbers {
 	background: #fff;
 	color: #555;
 	font-weight: 700;
@@ -1491,15 +1495,18 @@ div[class*="fes-"] > .page-numbers {
 	margin-right: 6px;
 }
 .edd_pagination .page-numbers,
-div[class*="fes-"] > .page-numbers {
+div[class*="fes-"] > .page-numbers,
+div[id*="edd_commissions_"] .page-numbers {
 	background: #fafafa;
 }
 #edd_download_pagination .page-numbers.current,
 .edd_pagination .page-numbers.current,
 div[class*="fes-"] > .page-numbers.current,
+div[id*="edd_commissions_"] .page-numbers.current,
 #edd_download_pagination .page-numbers:hover,
 .edd_pagination .page-numbers:hover,
-div[class*="fes-"] > .page-numbers:hover {
+div[class*="fes-"] > .page-numbers:hover,
+div[id*="edd_commissions_"] .page-numbers:hover {
 	color: #fff;
 }
 .store-pagination {
