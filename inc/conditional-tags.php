@@ -7,6 +7,24 @@
 
 
 /*--------------------------------------------------------------
+>>> General Vendd
+--------------------------------------------------------------*/
+
+/**
+ * Is it a landing page template?
+ *
+ * @return bool
+ */
+function vendd_is_landing_page() {
+	if ( is_page_template( 'page_templates/landing.php' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+/*--------------------------------------------------------------
 >>> Easy Digital Downloads
 >>> https://easydigitaldownloads.com/
 --------------------------------------------------------------*/

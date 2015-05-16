@@ -22,7 +22,7 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'vendd' ); ?></a>
 
-	<?php if ( ! vendd_is_checkout() ) { ?>
+	<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() ) { ?>
 		<div id="info-bar" class="info-bar">
 			<?php if ( '' != get_theme_mod( 'vendd_info_bar' ) ) : ?>
 				<span class="info-bar-text"><?php echo get_theme_mod( 'vendd_info_bar' ); ?></span>
@@ -59,7 +59,7 @@
 			<?php endif; ?>
 		</div>
 
-		<?php if ( vendd_edd_is_activated() && ! vendd_is_checkout() ) : ?>
+		<?php if ( vendd_edd_is_activated() && ! vendd_is_checkout() && ! vendd_is_landing_page() ) : ?>
 			<a href="<?php echo edd_get_checkout_uri(); ?>" class="header-cart">
 				<i class="fa fa-shopping-cart"></i>
 				<?php
@@ -69,7 +69,7 @@
 			</a>
 		<?php endif; ?>
 
-		<?php if ( ! vendd_is_checkout() && has_nav_menu( 'main_menu' ) ) { ?>
+		<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() && has_nav_menu( 'main_menu' ) ) { ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<span class="menu-toggle"><span class="vendd-menu-toggle-text"><?php _e( 'Menu', 'vendd' ); ?></span><i class="fa fa-bars vendd-menu-icon"></i></span>
 				<?php

@@ -1,22 +1,22 @@
 <?php
 /**
- * Template name: Front Page
+ * Template name: Landing Page
  *
- * An optional front page template
+ * A single column landing page template page template
  *
  * @package Vendd
  */
 
 get_header(); ?>
 
-	<div id="front-page-content" class="front-page-site-content">
+	<div id="landing-page">
 
-		<div id="front-page-primary" class="front-page-content-area">
-			<main id="front-page-main" class="front-page-site-main" role="main">
+		<div id="landing-page-primary" class="landing-page-content-area">
+			<main id="landing-page-main" class="landing-page-site-main" role="main">
 	
 				<?php while ( have_posts() ) : the_post(); ?>
 	
-					<section class="front-page-section">
+					<section class="landing-page-section">
 						<header class="entry-header">
 							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						</header><!-- .entry-header -->
@@ -33,21 +33,9 @@ get_header(); ?>
 					</section><!-- #post-## -->
 	
 				<?php endwhile; // end of the loop. ?>
-				
-				<section class="front-page-section">
-					Testing
-				</section>
-				
-				<section class="front-page-section">
-					Testing 2
-				</section>
-				
-				<section class="front-page-section">
-					Testing 3
-				</section>
 	
-			</main><!-- #main -->
-		</div><!-- #primary -->
+			</main><!-- #landing-page-main -->
+		</div><!-- #landing-page-primary -->
 
 	</div>
 

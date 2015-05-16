@@ -508,6 +508,9 @@ a:focus {
 	border-radius: 4px;
 	margin-right: 15px;
 }
+.main-navigation .nav-menu > li > a:hover {
+	background: rgba(0, 0, 0, .1);
+}
 .main-navigation .nav-menu > .menu-item-has-children > a:after {
 	color: rgba(255, 255, 255, .5);
 	content: "\f0d7";
@@ -566,9 +569,6 @@ a:focus {
 	display: block;
 	padding: 15px 0 0;
 }
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
-}
 .menu-toggle {
 	display: none;
 	cursor: pointer;
@@ -618,9 +618,7 @@ a:focus {
 	display: block;
 	font-size: 1.3em;
 }
-.menu-highlight {
-	
-}
+
 
 
 /*--------------------------------------------------------------
@@ -755,7 +753,8 @@ a:focus {
 	margin-right: 6px;
 }
 .header-cart:hover {
-	color: rgba(255, 255, 255, .5);
+	background: rgba(0, 0, 0, .1);
+	color: #fff;
 }
 
 
@@ -1091,7 +1090,7 @@ a:focus {
 }
 .comment-meta .comment-date a {
 	color: #999;
-	font-size: .73em;
+	font-size: .87em;
 	text-decoration: none;
 }
 .comment-content a {
@@ -1915,10 +1914,12 @@ input[type="submit"].edd-submit {
 #edd_purchase_receipt_products th {
 	border: 1px solid #f2f2f2;
 }
-.vendd-checkout-template #masthead {
+.vendd-checkout-template #masthead,
+.vendd-landing-page-template #masthead {
 	text-align: center;
 }
-.vendd-checkout-template #page {
+.vendd-checkout-template #page,
+.vendd-landing-page-template #page {
 	width: 100%;
 	max-width: 800px;
 }
@@ -2828,7 +2829,7 @@ input[type="submit"].edd-submit {
 	}
 	.main-navigation .sub-menu a:before {
 		content: "\f105\00a0\00a0\00a0";
-	font-family: "FontAwesome";
+		font-family: "FontAwesome";
 		font-weight: 400;
 	}
 	.main-navigation a:hover {

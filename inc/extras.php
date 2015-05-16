@@ -107,21 +107,27 @@ function vendd_body_classes( $classes ) {
 	
 	if ( vendd_edd_is_activated() ) {
 		// Adds classes based on EDD page template
-		if ( is_page_template( 'edd_templates/edd-downloads-shortcode.php' ) ) :		
+		if ( is_page_template( 'edd_templates/edd-downloads-shortcode.php' ) ) {
 			$classes[] = 'vendd-downloads-template vendd-edd-template';
-		elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) :		
+		} elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) {
 			$classes[] = 'vendd-checkout-template vendd-edd-template';	
-		elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) :		
+		} elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) {
 			$classes[] = 'vendd-confirmation-template vendd-edd-template';
-		elseif ( is_page_template( 'edd_templates/edd-history.php' ) ) :		
+		} elseif ( is_page_template( 'edd_templates/edd-history.php' ) ) {
 			$classes[] = 'vendd-history-template vendd-edd-template';
-		elseif ( is_page_template( 'edd_templates/edd-members.php' ) ) :		
+		} elseif ( is_page_template( 'edd_templates/edd-members.php' ) ) {
 			$classes[] = 'vendd-members-template vendd-edd-template';
-		elseif ( is_page_template( 'edd_templates/edd-failed.php' ) ) :		
+		} elseif ( is_page_template( 'edd_templates/edd-failed.php' ) ) {
 			$classes[] = 'vendd-failed-template vendd-edd-template';
-		endif;
+		}
 	}
-	
+
+	if ( is_page_template( 'page_templates/landing.php' ) ) {
+		$classes[] = 'vendd-landing-page-template';
+	} elseif ( is_page_template( 'page_templates/full-width.php' ) ) {
+		$classes[] = 'vendd-full-width-page-template';
+	}
+
 	if ( vendd_edd_is_activated() && false === edd_get_cart_contents() ) {
 		// Adds class based on empty EDD cart
 		$classes[] = 'vendd-empty-cart';
@@ -129,11 +135,11 @@ function vendd_body_classes( $classes ) {
 	
 	if ( vendd_fes_is_activated() ) {
 		// Adds classes based on FES page template
-		if ( is_page_template( 'fes_templates/fes-dashboard.php' ) ) :
+		if ( is_page_template( 'fes_templates/fes-dashboard.php' ) ) {
 			$classes[] = 'vendd-fes-dashboard-template vendd-edd-template vendd-fes-template';
-		elseif ( is_page_template( 'fes_templates/fes-vendor.php' ) ) :
+		} elseif ( is_page_template( 'fes_templates/fes-vendor.php' ) ) {
 			$classes[] = 'vendd-fes-vendor-template vendd-edd-template';
-		endif;
+		}
 	}
 	
 	// Adds class based on whether or not is has a sidebar
@@ -191,7 +197,7 @@ function vendd_wp_title( $title, $sep ) {
 		$title .= " $sep $site_description";
 	}
 
-	// Add a page number if necessary:
+	// Add a page number if necessary
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
 		$title .= " $sep " . sprintf( __( 'Page %s', 'vendd' ), max( $paged, $page ) );
 	}
