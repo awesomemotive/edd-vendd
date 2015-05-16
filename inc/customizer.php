@@ -314,7 +314,7 @@ function vendd_customize_register( $wp_customize ) {
 		 * Respect and reflect the EDD button color setting by default and
 		 * only change the EDD button color if changes in the customizer.
 		 */
-		switch ( $edd_options['checkout_color'] ){
+		switch ( edd_get_option( 'checkout_color' ) ) {
 			case 'white':
 				$edd_button_color_hex = '#404040';
 				break;
@@ -322,6 +322,7 @@ function vendd_customize_register( $wp_customize ) {
 				$edd_button_color_hex = '#f1f1f1';
 				break;
 			case 'blue':
+			default:
 				$edd_button_color_hex = '#428bca';
 				break;
 			case 'red':
