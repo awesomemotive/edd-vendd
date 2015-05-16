@@ -295,7 +295,8 @@ Template: vendd
 		$api_params = array(
 			'edd_action' => 'activate_license',
 			'license'    => $license,
-			'item_name'  => urlencode( $this->item_name )
+			'item_name'  => urlencode( $this->item_name ),
+			'url'        => home_url()
 		);
 
 		$license_data = $this->get_api_response( $api_params );
@@ -322,7 +323,8 @@ Template: vendd
 		$api_params = array(
 			'edd_action' => 'deactivate_license',
 			'license'    => $license,
-			'item_name'  => urlencode( $this->item_name )
+			'item_name'  => urlencode( $this->item_name ),
+			'url'        => home_url()
 		);
 
 		$license_data = $this->get_api_response( $api_params );
