@@ -664,6 +664,7 @@ function vendd_customizer_styles() { ?>
 		.customize-control-text + .customize-control-checkbox,
 		.customize-control-customtext + .customize-control-checkbox,
 		.customize-control-image + .customize-control-checkbox { margin-top: 12px; }
+		#customize-control-vendd_empty_cart_downloads_count input { width: 50px; }
 	</style>
 <?php }
 add_action( 'customize_controls_print_styles', 'vendd_customizer_styles' );
