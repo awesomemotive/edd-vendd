@@ -2734,9 +2734,11 @@ input[type="submit"].edd-submit {
 		display: inline-block;
 	}
 	.info-bar-navigation li a {
+		display: inline-block;
 		background: rgba(0,0,0,.1);
 		padding: 6px 10px;
 		border-radius: 4px;
+		margin-bottom: 10px;
 	}
 	.site-branding {
 		display: block;
