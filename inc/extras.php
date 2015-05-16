@@ -122,7 +122,7 @@ function vendd_body_classes( $classes ) {
 		endif;
 	}
 	
-	if ( vendd_edd_is_activated() && vendd_is_checkout() && false === edd_get_cart_contents() ) {
+	if ( vendd_edd_is_activated() && false === edd_get_cart_contents() ) {
 		// Adds class based on empty EDD cart
 		$classes[] = 'vendd-empty-cart';
 	}
