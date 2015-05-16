@@ -17,11 +17,7 @@
  * @return bool
  */
 function vendd_edd_is_activated() {
-	if ( class_exists( 'Easy_Digital_Downloads' ) ) {
-		return true;
-	} else {
-		return false;
-	}
+	return class_exists( 'Easy_Digital_Downloads' );
 }
 
 /**
@@ -62,11 +58,7 @@ function vendd_is_store_front() {
  * @return bool
  */
 function vendd_fes_is_activated() {
-	if ( class_exists( 'EDD_Front_End_Submissions' ) ) {
-		return true;
-	} else {
-		return false;
-	}
+	return class_exists( 'EDD_Front_End_Submissions' );
 }
 
 /**
