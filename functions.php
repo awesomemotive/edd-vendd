@@ -140,6 +140,15 @@ add_action( 'wp_enqueue_scripts', 'vendd_scripts' );
 
 
 /**
+ * Admin page
+ */
+function vendd_updater() {
+	require( get_template_directory() . '/inc/admin/updater/theme-updater.php' );
+}
+add_action( 'after_setup_theme', 'vendd_updater' );
+
+
+/**
  * Custom conditional tags
  */
 require get_template_directory() . '/inc/conditional-tags.php';

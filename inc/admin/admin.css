@@ -1,0 +1,76 @@
+.license-wrap,
+.child-theme-wrap {
+	background: #fff;
+	padding: 30px;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+	margin: 30px 10px 30px 0 !important;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+	max-width: 780px
+}
+.license-wrap .license-key-label {
+	margin: 0 0 6px;
+}
+.license-wrap p:not(:last-child),
+.child-theme-wrap ol {
+	font-size: 14px;
+	line-height: 1.6;
+	margin-bottom: 25px;
+	max-width: 650px;
+}
+#vendd_license_key {
+	background: #F1F1F1;
+	padding: 8px;
+	border-radius: 3px;
+}
+.license-wrap .submit,
+.license-wrap input[type="submit"] {
+	display: block;
+	padding: 0;;
+	margin-top: 0;
+	min-width: 200px;
+}
+.license-wrap input[type="submit"].button-secondary {
+	margin: 0 0 10px;
+}
+.child-theme-wrap li {
+	margin-bottom: 15px;
+}
+.vendd-pre {
+	background: #F1F1F1;
+	padding: 15px;
+	border-radius: 3px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
+	margin-bottom: 30px;
+	display: block;
+	overflow-x: scroll;
+}
+.cta-button {
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #3EBD3E;
+	padding: 10px 15px;
+	display: inline-block;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(255, 255, 255, 0.5) inset;
+	border: 1px solid #259425;
+	font-size: 18px;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+.cta-button:hover {
+	background: #2A9B2A;
+	color: #fff;
+}
+.screenshot {
+	margin: 2.5em 0 1.5em;
+}
+.vendd-screenshot {
+	padding: 6px;
+	background: #F2F3F5;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+	max-width: 97%;
+	height: auto;
+}
