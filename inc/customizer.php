@@ -621,6 +621,7 @@ function vendd_customizer_head_styles() {
 			#masthead,
 			input[type="submit"],
 			input[type="button"],
+			.vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
 			button,
 			.more-link,
 			.by-post-author,

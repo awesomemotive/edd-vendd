@@ -35,6 +35,7 @@ Vendd is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, 
 #masthead,
 input[type="submit"],
 input[type="button"],
+.vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
 button,
 .more-link,
 .by-post-author,
@@ -163,7 +164,7 @@ a img {
 
 #info-bar {
 	position: relative;
-	color: #999;
+	color: #fff;
 	font-size: .87em;
 	padding: 10px 40px;
 	min-height: 39px;
@@ -1608,6 +1609,10 @@ input[type="submit"].edd-submit {
 	font-size: .87em;
 	padding: 4px 8px;
 }
+#edd-add-license-renewal {
+	font-size: .87em;
+	padding: 8px 10px;
+}
 #edd_purchase_submit #edd-purchase-button {
 	display: block;
 	width: 100%;
@@ -2116,6 +2121,12 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-table {
 	font-size: .87em;
 }
+.vendd-fes-dashboard-template .fes-form .fes-submit input[type=submit] {
+	font-size: 1rem;
+	border: none;
+	padding: 8px 10px;
+	height: auto;
+}
 
 /* FES dashboard menu */
 .vendd-fes-dashboard-template .fes-vendor-menu {
@@ -2429,29 +2440,47 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-profile-form {
 	font-size: .87em;
 }
+.vendd-fes-template .fes-headers {
+	display: none;
+}
 .vendd-fes-template .fes-label label {
-	font-size: 1.2em;
-	font-weight: 700;
-	text-transform: uppercase;
+	display: inline-block;
+	font-size: 2em;
+	margin-bottom: 4px;
 }
 .vendd-fes-template .fes-fields label {
 	display: block;
 }
 .vendd-fes-template div.fes-form fieldset {
-	background: #fafafa;
-	padding: 20px;
-	border-width: 1px;
-	border-style: solid dotted;
-	border-color: #f2f2f2;
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 }
 .vendd-fes-template .fes-form fieldset .fes-label .fes-help {
 	color: #a3a3a3;
+	font-size: .87rem;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #f1f1f1;
+	margin-bottom: 15px;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields textarea {
 	padding: 6px;
 	height: 170px;
 	width: 100%;
+}
+.vendd-fes-template .entry-content .fes-fields table th {
+	background: none;
+}
+.vendd-fes-template .entry-content table th {
+	padding: 0 0 4px;
+	border: none;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields select {
+	height: 40px;
+	border: 1px solid #f2f2f2;
+	border-radius: 0;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields select[multiple] {
+	background: #fafafa;
+	padding: 0;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields input[type=email],
 .vendd-fes-template .fes-form fieldset .fes-fields input[type=number],
@@ -2459,9 +2488,27 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-form fieldset .fes-fields input[type=text],
 .vendd-fes-template .fes-form fieldset .fes-fields input[type=url],
 .vendd-fes-template .fes-form fieldset .fes-fields textarea {
-	background: #fff;
+	background: #fafafa;
 	border: 1px solid #f2f2f2;
+	border-width: 1px 1px 4px;
 	box-shadow: none;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields table,
+.vendd-fes-template .fes-form fieldset .fes-fields td {
+	padding-right: 6px;
+}
+.vendd-fes-template .fes-form .fes-el.repeat .fes-fields td {
+	vertical-align: middle;
+}
+.vendd-fes-template .fes-form fieldset #wp-post_content-wrap {
+	border: none;
+}
+.vendd-fes-template #wp-post_content-editor-container {
+	border: 2px solid #f2f2f2;
+	border-width: 2px 1px 4px
+}
+.vendd-fes-template .wp-media-buttons .insert-media {
+	margin-bottom: 10px;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields textarea[name="toc"] {
 	margin-bottom: 10px;
@@ -2473,6 +2520,9 @@ input[type="submit"].edd-submit {
 	border-radius: 4px;
 	margin: 0;
 	max-width: 100%;
+}
+.vendd-fes-template .fes-fields .fes-feat-image-upload .instruction-inside {
+	border: 4px dashed rgba(0,0,0,.1);
 }
 .vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
@@ -2494,14 +2544,39 @@ input[type="submit"].edd-submit {
 	padding: 0;
 	border: none;
 }
-.vendd-fes-template div.fes-form fieldset .fes-section-wrap {
-	background: #fafafa;
-	padding: 15px 20px;
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-name-row,
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-url-row {
+	width: 38%;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-price-row {
+	width: 17%;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a,
+.vendd-fes-template .fes-delete-row a {
+	color: #ccc;
+	font-weight: 700;
+	font-size: 1rem;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a:hover,
+.vendd-fes-template .fes-delete-row a:hover {
+	color: red;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-url-choose-row a,
+.vendd-fes-template .insert-file-row,
+.vendd-fes-template .upload_file_button {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.vendd-fes-template .fes-form fieldset .fes-section-wrap {
 	border: none;
-	margin: -20px;
+	margin: 0;
 }
 .vendd-fes-template div.fes-form fieldset .fes-section-title {
-	font-size: 1.6em;
+	font-size: 2.4em;
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 2px solid  #f1f1f1;
+	margin-bottom: 30px;
 }
 
 /* FES Vendor Template */
