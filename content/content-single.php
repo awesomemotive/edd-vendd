@@ -18,7 +18,7 @@
 	<div class="entry-content">
 		<?php 
 			// display featured image?
-			if ( has_post_thumbnail() && 1 == get_theme_mod( 'vendd_single_featured_image' ) ) :
+			if ( has_post_thumbnail() && 1 == get_theme_mod( 'vendd_single_featured_image', 1 ) ) :
 				the_post_thumbnail( 'vendd_featured_image', array( 'class' => 'featured-img' ) );
 			endif;
 
