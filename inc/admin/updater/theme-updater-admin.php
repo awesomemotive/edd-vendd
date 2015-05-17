@@ -71,7 +71,7 @@ class Vendd_Updater_Admin {
 	/**
 	 * Enqueue the admin styles
 	 */
-	function admin_styles() {	
+	function admin_styles() {
 		wp_enqueue_style( 'vendd-admin-style', get_template_directory_uri() . '/inc/admin/admin.css' );
 	}
 
@@ -148,7 +148,7 @@ class Vendd_Updater_Admin {
 		<div class="wrap license-wrap">
 			<h2 class="headline"><?php echo sprintf( __( 'Activate Your %s License Key', 'vendd' ), VENDD_NAME ); ?></h2>
 			<p>
-				<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will still work properly but you will not receive automatic updates.', 'vendd' ) ); 
+				<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will still work properly but you will not receive automatic updates.', 'vendd' ) );
 				?>
 			</p>
 			<form method="post" action="options.php">
@@ -197,8 +197,8 @@ class Vendd_Updater_Admin {
 <pre class="vendd-pre">
 /*
 Theme Name: Vendd Child
-Author: 
-Author URI: 
+Author:
+Author URI:
 Description: Child theme for Vendd
 Template: vendd
 */
@@ -268,7 +268,7 @@ Template: vendd
 
 		 // Call the custom API.
 		$response = wp_remote_get(
-			esc_url( add_query_arg( $api_params, $this->remote_api_url ) ),
+			esc_url_raw( add_query_arg( $api_params, $this->remote_api_url ) ),
 			array( 'timeout' => 15, 'sslverify' => false )
 		);
 
