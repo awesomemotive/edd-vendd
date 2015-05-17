@@ -9,7 +9,7 @@
 
 		$('.vendd-show-button').on('click', function(e){
 			e.preventDefault();
-			$(this).siblings('.vendd-price-button-container').slideToggle().toggleClass('vendd-price-button-displayed');
+			$(this).toggleClass('vendd-price-button-displayed').siblings('.vendd-price-button-container').slideToggle();
 		});
 
 		var header_cart_total = $('.header-cart-total');
