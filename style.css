@@ -2548,6 +2548,38 @@ input[type="submit"].edd-submit {
 	margin-bottom: 30px;
 }
 
+/* FES Login/Register Duo */
+.vendd-fes-dashboard-template .fes-dashboard-content > table {
+	border: none;
+	margin: 0 auto;
+	max-width: 800px;
+}
+.vendd-fes-dashboard-template [id*="fes_login_registration_"] {
+	padding: 30px;
+}
+.vendd-fes-dashboard-template #fes_login_registration_form_row_left {
+	margin-right: 10%;
+	width: 40% !important;
+}
+.vendd-fes-dashboard-template #fes_login_registration_form_row_right {
+	background: #fafafa;
+	border-radius: 4px;
+	width: 50% !important;
+}
+.vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-headers {
+	display: block;
+}
+.vendd-fes-dashboard-template [id*="fes_login_registration_"] div.fes-form fieldset {
+	margin-bottom: 1em;
+}
+.vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-label label {
+	font-size: 1.4em;
+}
+.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-form fieldset .fes-fields input,
+.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-form fieldset .fes-fields textarea {
+	background: #fff;
+}
+
 /* FES Vendor Template */
 .vendd-fes-vendor-template #primary {
 	float: none;
@@ -2842,6 +2874,17 @@ input[type="submit"].edd-submit {
 	}
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child:nth-child(odd) {
 		border-right: 1px solid #f2f2f2;
+	}
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_right,
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left {
+		background: #fafafa;
+		padding: 20px;
+		border-radius: 0;
+		width: 100% !important;
+	}
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-form fieldset .fes-fields input,
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-form fieldset .fes-fields textarea {
+		background: #fff;
 	}
 	h1, h2,
 	.hentry .entry-title,

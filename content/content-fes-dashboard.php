@@ -24,7 +24,7 @@
 			}
 		?>
 	</header><!-- .fes-dashboard-header -->
-	<div class="entry-content">
+	<div class="entry-content fes-dashboard-content">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
