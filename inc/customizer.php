@@ -395,8 +395,8 @@ function vendd_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'vendd_sanitize_integer'
 		) );
 		$wp_customize->add_control( 'vendd_empty_cart_downloads_count', array(
-		    'label'        => __( 'Empty Cart Downloads Count', 'quota' ),
-		    'section'      => 'vendd_edd_options',
+			'label'        => __( 'Empty Cart Downloads Count', 'quota' ),
+			'section'      => 'vendd_edd_options',
 			'priority'     => 80,
 			'description'  => __( 'Enter the number of downloads you would like to display on the checkout page when the cart is empty. Additional downloads are available through pagination.', 'vendd' ),
 		) );
