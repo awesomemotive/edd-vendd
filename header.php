@@ -61,10 +61,7 @@
 		<?php if ( vendd_edd_is_activated() && ! vendd_is_checkout() && ! vendd_is_landing_page() ) : ?>
 			<a href="<?php echo edd_get_checkout_uri(); ?>" class="header-cart">
 				<i class="fa fa-shopping-cart"></i>
-				<?php
-					echo __( 'Cart total:', 'vendd' ) . ' ';
-					edd_cart_total();
-				?>
+				<?php printf( __( 'Cart total: %s', 'vendd' ), '<span class="header-cart-total">' . edd_currency_filter( edd_format_amount( edd_get_cart_total() ) ) . '</span>' ); ?>
 			</a>
 		<?php endif; ?>
 
