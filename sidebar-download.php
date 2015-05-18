@@ -35,60 +35,73 @@
 						<span class="vendd-detail-name"><?php _e( 'Author since:', 'vendd' ); ?></span>
 						<span class="vendd-detail-info"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $user->user_registered ) ); ?></span>
 					</li>
-					<?php 
+					<?php
+						$website  = get_the_author_meta( 'user_url', get_current_user_id() );
+						$twitter  = get_the_author_meta( 'twitter_profile', get_current_user_id() );
+						$gplus    = get_the_author_meta( 'gplus_profile', get_current_user_id() );
+						$facebook = get_the_author_meta( 'facebook_profile', get_current_user_id() );
+						$youtube  = get_the_author_meta( 'youtube_profile', get_current_user_id() );
 						$social_profiles = array(
 							'twitter'	=> array(
 								'name'	=> 'twitter',
-								'data'	=> get_the_author_meta( 'twitter_profile', get_current_user_id() ),
+								'data'	=> $twitter,
 								'icon'	=> '<i class="fa fa-twitter-square"></i>',
 							),
 							'gplus'	=> array(
 								'name'	=> 'google-plus',
-								'data'	=> get_the_author_meta( 'gplus_profile', get_current_user_id() ),
+								'data'	=> $gplus,
 								'icon'	=> '<i class="fa fa-google-plus-square"></i>',
 							),
 							'facebook'	=> array(
 								'name'	=> 'facebook',
-								'data'	=> get_the_author_meta( 'facebook_profile', get_current_user_id() ),
+								'data'	=> $facebook,
 								'icon'	=> '<i class="fa fa-facebook-square"></i>',
 							),
 							'youtube'	=> array(
 								'name'	=> 'youtube',
-								'data'	=> get_the_author_meta( 'youtube_profile', get_current_user_id() ),
+								'data'	=> $youtube,
 								'icon'	=> '<i class="fa fa-youtube-square"></i>',
 							),
 						);
-					?>
-					<?php if ( '' != $social_profiles ) { ?>
-						<li class="vendd-details-list-item vendd-author-details">
-							<div class="vendd-author-contact">
-								<?php
-									foreach ( $social_profiles as $profile ) {
-										if ( '' != $profile['data'] ) {
-											?>
-											<span class="vendd-contact-method">
-												<?php
-													printf( '<a href="%1$s" class="vendd-social-profile vendd-%2$s" target="_blank">%3$s</a>',
-														$profile['data'],
-														$profile['name'],
-														$profile['icon']
-													);
+
+						if (
+							! empty( $website ) ||
+							! empty( $twitter ) ||
+							! empty( $gplus ) ||
+							! empty( $facebook ) ||
+							! empty( $youtube ) ) {
+							?>
+							<li class="vendd-details-list-item vendd-author-details">
+								<div class="vendd-author-contact clear">
+									<?php
+										foreach ( $social_profiles as $profile ) {
+											if ( '' != $profile['data'] ) {
 												?>
-											</span>
-											<?php
+												<span class="vendd-contact-method">
+													<?php
+														printf( '<a href="%1$s" class="vendd-social-profile vendd-%2$s" target="_blank">%3$s</a>',
+															$profile['data'],
+															$profile['name'],
+															$profile['icon']
+														);
+													?>
+												</span>
+												<?php
+											}
 										}
-									}
-								?>
-								<?php if ( '' != $user->user_url ) { ?>
-									<span class="vendd-contact-method vendd-author-website">
-										<a href="<?php echo $user->user_url; ?>" class="vendd-social-profile vendd-website" target="_blank">
-											<i class="fa fa-home"></i>
-										</a>
-									</span>
-								<?php } ?>
-							</div>
-						</li>
-					<?php } ?>
+									?>
+									<?php if ( ! empty( $website ) ) { ?>
+										<span class="vendd-contact-method vendd-author-website">
+											<a href="<?php echo $website; ?>" title="<?php echo $user->display_name; echo _x( '\'s website', 'title attribute of the FES vendor\'s website link', 'vendd' ); ?>" class="vendd-social-profile vendd-website" target="_blank">
+												<i class="fa fa-home"></i>
+											</a>
+										</span>
+									<?php } ?>
+								</div>
+							</li>
+							<?php
+						}
+					?>
 				</ul>
 			</div>
 		<?php } ?>
