@@ -63,7 +63,7 @@ function vendd_empty_cart_content( $message ) {
 	if ( '' != $empty_cart_title ) {
 		echo '<h3 class="entry-title empty-cart-title">' . $empty_cart_title . '</h3>';
 	} else {
-		echo '<h3 class="entry-title empty-cart-title">' . __( 'Your cart is empty.', 'vendd' ) . '</h3>';
+		echo '<h3 class="entry-title empty-cart-title">' . _x( 'Your cart is empty.', 'default title output on checkout page when there are no items in the cart', 'vendd' ) . '</h3>';
 	}
 
 	if ( '' != $empty_cart_text ) {
