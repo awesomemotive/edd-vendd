@@ -2984,6 +2984,14 @@ input[type="submit"].edd-submit {
 	#wp-calendar td {
 		padding: 3px 5px;
 	}
+	.comment-list [class*="depth-"] [class*="depth-"] {
+		margin-left: 10px;
+	}
+	.comment-meta .comment-date {
+		position: static;
+		display: block;
+		text-align: right;
+	}
 	.vendd-fes-dashboard-template .fes-vendor-menu {
 		padding: 14px;
 	}
