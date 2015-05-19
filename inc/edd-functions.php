@@ -11,7 +11,7 @@
  */
 function vendd_edd_add_comments_support( $supports ) {
 	$supports[] = 'comments';
-	return $supports;	
+	return $supports;
 }
 add_filter( 'edd_download_supports', 'vendd_edd_add_comments_support' );
 
@@ -21,7 +21,7 @@ add_filter( 'edd_download_supports', 'vendd_edd_add_comments_support' );
  */
 remove_action( 'edd_after_download_content', 'edd_append_purchase_link' );
 
-	
+
 /*
  * If Subtitles plugin is activated, add support for Downloads
  */
@@ -30,7 +30,7 @@ function vendd_subtitles() {
 }
 add_action( 'init', 'vendd_subtitles' );
 
-	
+
 /*
  * Add HTML to the [downloads] shortcode for structure/styling
  */
@@ -52,13 +52,18 @@ function vendd_empty_cart_content( $message ) {
 	$empty_cart_title         = get_theme_mod( 'vendd_empty_cart_title' );
 	$empty_cart_text          = wpautop( get_theme_mod( 'vendd_empty_cart_text' ) );
 	$empty_cart_downloads_qty = intval( get_theme_mod( 'vendd_empty_cart_downloads_count', 6 ) );
+	
+	if ( vendd_edd_is_activated() && ! edd_is_checkout() ) {
+		$message = '<span>' . _x( 'Your cart is empty.', 'cart widget output when there are no items in the cart', 'vendd' ) . '</span>';
+		return $message;
+	}
 
 	ob_start();
 
 	if ( '' != $empty_cart_title ) {
 		echo '<h3 class="entry-title empty-cart-title">' . $empty_cart_title . '</h3>';
 	} else {
-		echo '<h3 class="entry-title empty-cart-title">' . __( 'Your cart is empty.', 'vendd' ) . '</h3>';
+		echo '<h3 class="entry-title empty-cart-title">' . _x( 'Your cart is empty.', 'default title output on checkout page when there are no items in the cart', 'vendd' ) . '</h3>';
 	}
 
 	if ( '' != $empty_cart_text ) {

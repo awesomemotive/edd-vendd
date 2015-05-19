@@ -1769,10 +1769,6 @@ input[type="submit"].edd-submit {
 	font-size: 1.2em;
 	margin-bottom: 0;
 }
-.vendd-empty-cart .widget_edd_cart_widget .cart_item.empty > p,
-.vendd-empty-cart .widget_edd_cart_widget .edd_downloads_list {
-	display: none;
-}
 
 /* Author & Download Details */
 .vendd-download-author {
