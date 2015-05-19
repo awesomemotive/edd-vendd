@@ -347,31 +347,31 @@ img {
 figure {
 	margin: 0;
 }
-.entry-content table {
+.site-main table {
 	border: 1px solid #f2f2f2;
 	border-width: 4px 1px 1px;
 	border-radius: 0 0 4px 4px;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-.entry-content table th {
+.site-main table th {
 	background: #fafafa;
 	font-weight: bold;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.entry-content table td {
+.site-main table td {
 	background: #fff;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.entry-content table tr:last-child td {
+.site-main table tr:last-child td {
 	border: none;
 }
-.entry-content table tr:last-child td:first-child {
+.site-main table tr:last-child td:first-child {
 	border-radius: 0 0 0 4px;
 }
-.entry-content table tr:last-child td:last-child {
+.site-main table tr:last-child td:last-child {
 	border-radius: 0 0 4px 0;
 }
 
