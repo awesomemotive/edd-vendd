@@ -20,8 +20,15 @@ function vendd_customize_register( $wp_customize ) {
 		public function render_content() { ?>
 	
 		<label>
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<div class="control-description"><?php echo esc_html( $this->description ); ?></div>
+			<span class="customize-control-title">
+				<?php echo esc_html( $this->label ) . ' '; ?>
+				<span class="vendd-toggle-wrap">
+					<?php if ( ! empty( $this->description ) ) { ?>
+						<a href="#" class="vendd-toggle-description">?</a>
+					<?php } ?>
+				</span>
+			</span>
+			<div class="control-description vendd-control-description"><?php echo esc_html( $this->description ); ?></div>
 			<textarea rows="5" style="width:98%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
 		</label>
 	
@@ -37,52 +44,19 @@ function vendd_customize_register( $wp_customize ) {
 		public function render_content() { ?>
 		
 		<label>
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<div class="control-description"><?php echo esc_html( $this->description ); ?></div>
+			<span class="customize-control-title">
+				<?php echo esc_html( $this->label ) . ' '; ?>
+				<span class="vendd-toggle-wrap">
+					<?php if ( ! empty( $this->description ) ) { ?>
+						<a href="#" class="vendd-toggle-description">?</a>
+					<?php } ?>
+				</span>
+			</span>
+			<div class="control-description vendd-control-description"><?php echo esc_html( $this->description ); ?></div>
 			<input type="text" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> />
 		</label>
 		
 		<?php }
-	}
-
-	/** ===============
-	 * Extends controls class to add descriptions to color picker controls
-	 */
-	class Vendd_WP_Customize_Color_Control extends WP_Customize_Control {
-		public $type = 'color';
-		public $description = '';
-		public $statuses;
-		public function __construct( $manager, $id, $args = array() ) {
-			$this->statuses = array( '' => __('Default') );
-			parent::__construct( $manager, $id, $args );
-		}
-		public function enqueue() {
-			wp_enqueue_script( 'wp-color-picker' );
-			wp_enqueue_style( 'wp-color-picker' );
-		}
-		public function to_json() {
-			parent::to_json();
-			$this->json['statuses'] = $this->statuses;
-		}
-		public function render_content() {
-			$this_default = $this->setting->default;
-			$default_attr = '';
-			if ( $this_default ) {
-				if ( false === strpos( $this_default, '#' ) )
-					$this_default = '#' . $this_default;
-				$default_attr = ' data-default-color="' . esc_attr( $this_default ) . '"';
-			}
-			// The input's value gets set by JS. Don't fill it.
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<div class="control-description"><?php echo esc_html( $this->description ); ?></div>
-				<div class="customize-control-content">
-					<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value' ); ?>"<?php echo $default_attr; ?> />
-				</div>
-			</label>
-			<?php
-		}
 	}
 
 	/** ===============
@@ -137,7 +111,7 @@ function vendd_customize_register( $wp_customize ) {
 		'type'          => 'option',
 		'capability'    => 'edit_theme_options',
 	) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_design_color', array(
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'vendd_design_color', array(
 		'label'     => __( 'Primary Design Color', 'vendd' ), 
 		'section'   => 'vendd_design',
 		'priority'  => 20
@@ -209,6 +183,7 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_read_more', array(
 	    'label'     => __( 'Excerpt & More Link Text', 'vendd' ),
 	    'section'   => 'vendd_content_section',
+		'description'   => __( 'This is the link text displayed at the end of blog post excerpts and content truncated with the "more tag." No HTML allowed.', 'vendd' ),
 		'priority'  => 20,
 	) ) );
 
@@ -256,8 +231,8 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_info_bar', array(
 		'label'         => __( 'Information Bar Text', 'vendd' ),
 		'section'       => 'vendd_content_section',
-		'priority'      => 60,
 		'description'   => __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+		'priority'      => 60,
 	) ) );
 
 	// credits & copyright
@@ -268,8 +243,8 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_credits_copyright', array(
 		'label'         => __( 'Footer Credits & Copyright', 'vendd' ),
 		'section'       => 'vendd_content_section',
-		'priority'      => 90,
 		'description'   => __( 'Displays site title, tagline, copyright, and year by default. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
+		'priority'      => 90,
 	) ) );
 
 
@@ -346,7 +321,7 @@ function vendd_customize_register( $wp_customize ) {
 			'type'        => 'option',
 			'capability'  => 'edit_theme_options',
 		) );
-		$wp_customize->add_control( new Vendd_WP_Customize_Color_Control( $wp_customize, 'vendd_edd_button_color', array(
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'vendd_edd_button_color', array(
 			'label'        => __( 'EDD Button Color', 'vendd' ),
 			'section'      => 'vendd_edd_options',
 			'description'  => __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Clear the color field back to default to revert back to the EDD setting.', 'vendd' ),
@@ -361,8 +336,8 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_store_front_title', array(
 			'label'         => __( 'Store Front Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
-			'priority'      => 50,
 			'description'   => __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'priority'      => 50,
 		) ) );
 
 		// Empty Cart Title
@@ -373,8 +348,8 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_empty_cart_title', array(
 			'label'         => __( 'Empty Cart Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
-			'priority'      => 60,
 			'description'   => __( 'This is the title on the page that displays when the cart is empty. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'priority'      => 60,
 		) ) );
 
 		// empty cart text
@@ -385,8 +360,8 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_empty_cart_text', array(
 			'label'        => __( 'Empty Cart Text', 'vendd' ),
 			'section'      => 'vendd_edd_options',
-			'priority'     => 70,
 			'description'  => __( 'Displays a custom message when the checkout cart is empty. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
+			'priority'     => 70,
 		) ) );
 
 		// store front item count
@@ -394,12 +369,12 @@ function vendd_customize_register( $wp_customize ) {
 			'default'           => 4,
 			'sanitize_callback' => 'vendd_sanitize_integer'
 		) );
-		$wp_customize->add_control( 'vendd_empty_cart_downloads_count', array(
+		$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_empty_cart_downloads_count', array(
 			'label'        => __( 'Empty Cart Downloads Count', 'quota' ),
 			'section'      => 'vendd_edd_options',
-			'priority'     => 80,
 			'description'  => __( 'Enter the number of downloads you would like to display on the checkout page when the cart is empty. Additional downloads are available through pagination.', 'vendd' ),
-		) );
+			'priority'     => 80,
+		) ) );
 	}
 
 
@@ -422,8 +397,8 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_fes_dashboard_title', array(
 			'label'         => __( 'FES Dashboard Title', 'vendd' ),
 			'section'       => 'vendd_fes_options',
-			'priority'      => 40,
 			'description'   => __( 'This optional field allows you to replace the title of your FES Dashboard. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'priority'      => 40,
 		) ) );
 	}
 
@@ -652,6 +627,24 @@ function vendd_customizer_head_styles() {
 add_action( 'wp_head', 'vendd_customizer_head_styles' );
 
 
+/**
+ * Enqueue script for custom customize control.
+ */
+function vendd_custom_customizer_enqueue() {
+	wp_enqueue_script( 'vendd_custom_customizer', get_template_directory_uri() . '/inc/js/custom-customizer.js', array( 'jquery', 'customize-controls' ), VENDD_VERSION, true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'vendd_custom_customizer_enqueue' );
+
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function vendd_customize_preview_js() {
+	wp_enqueue_script( 'vendd_customizer', get_template_directory_uri() . '/inc/js/customizer.js', array( 'customize-preview' ), VENDD_VERSION, true );
+}
+add_action( 'customize_preview_init', 'vendd_customize_preview_js' );
+
+
 /** 
  * Add Customizer UI styles to the <head> only on Customizer page
  */
@@ -663,7 +656,12 @@ function vendd_customizer_styles() { ?>
 		.customize-control-title { font-size: 13px !important; margin: 5px 0 3px !important; }
 		.customize-control label { font-size: 12px !important; }
 		.customize-control { margin-bottom: 10px; }
+		.vendd-toggle-wrap { display: inline-block; line-height: 1; margin-left: 2px; }
+		.vendd-toggle-wrap a { display: block; background: #eee; color: #555; padding: 2px 6px; border-radius: 3px; }
+		.vendd-toggle-wrap a:hover,
+		.vendd-toggle-wrap .vendd-description-opened { background: #555; color: #fff; }
 		.control-description { color: #999; font-style: italic; margin-bottom: 6px; }
+		.vendd-control-description { display: none; }
 		.customize-control-text + .customize-control-checkbox,
 		.customize-control-customtext + .customize-control-checkbox,
 		.customize-control-image + .customize-control-checkbox { margin-top: 12px; }
@@ -671,12 +669,3 @@ function vendd_customizer_styles() { ?>
 	</style>
 <?php }
 add_action( 'customize_controls_print_styles', 'vendd_customizer_styles' );
-
-
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function vendd_customize_preview_js() {
-	wp_enqueue_script( 'vendd_customizer', get_template_directory_uri() . '/inc/js/customizer.js', array( 'customize-preview' ), VENDD_VERSION, true );
-}
-add_action( 'customize_preview_init', 'vendd_customize_preview_js' );
