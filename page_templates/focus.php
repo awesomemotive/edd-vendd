@@ -1,22 +1,22 @@
 <?php
 /**
- * Template name: Landing Page
+ * Template name: Focus Page
  *
- * A single column landing page template page template
+ * A full-width page template with a narrow, centered content column
  *
  * @package Vendd
  */
 
 get_header(); ?>
 
-	<div id="landing-page">
+	<div id="focus-page">
 
-		<div id="landing-page-primary" class="landing-page-content-area">
-			<main id="landing-page-main" class="landing-page-site-main" role="main">
+		<div id="focus-page-primary" class="focus-page-content-area">
+			<main id="focus-page-main" class="focus-page-site-main" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<section <?php post_class( 'landing-page-section' ); ?>>
+					<section <?php post_class( 'focus-page-section' ); ?>>
 						<header class="entry-header">
 							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						</header><!-- .entry-header -->
@@ -34,8 +34,8 @@ get_header(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
-			</main><!-- #landing-page-main -->
-		</div><!-- #landing-page-primary -->
+			</main><!-- #focus-page-main -->
+		</div><!-- #focus-page-primary -->
 
 	</div>
 

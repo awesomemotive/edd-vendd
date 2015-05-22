@@ -46,6 +46,25 @@ add_action( 'edd_download_after', 'vendd_downloads_shortcode_wrap_close' );
 
 
 /**
+ * check for EDD shortcodes and add post classes
+ */
+function vendd_edd_shortcodes_classes( $classes ) {
+	global $post;
+
+	if ( is_a( $post, 'WP_Post' ) &&
+		has_shortcode( $post->post_content, 'edd_login' ) ||
+		has_shortcode( $post->post_content, 'edd_register' ) ||
+		has_shortcode( $post->post_content, 'edd_profile_editor' )
+	) {
+		$classes[] = 'vendd-edd-fes-shortcode';
+	}
+
+	return $classes;
+}
+add_filter( 'post_class', 'vendd_edd_shortcodes_classes' );
+
+
+/**
  * Add downloads display to the empty cart
  */
 function vendd_empty_cart_content( $message ) {

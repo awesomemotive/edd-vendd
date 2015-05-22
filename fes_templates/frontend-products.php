@@ -9,11 +9,14 @@ global $products;
 if ( count( $products ) > 0 ) {
 	echo EDD_FES()->dashboard->product_list_status_bar();
 	foreach ( $products as $product ) :
+	$product_thumb = get_the_post_thumbnail( $product->ID, array( 150, 150 ) );
 	?>
 		<div class="vendor-product clear">
-			<div class="vendor-product-image">
-				<?php echo get_the_post_thumbnail( $product->ID, array( 150, 150 ) ); ?>
-			</div>
+			<?php if ( ! empty( $product_thumb ) ) { ?>
+				<div class="vendor-product-image">
+					<?php echo $product_thumb; ?>
+				</div>
+			<?php } ?>
 			<div class="vendor-product-info">
 				<h5 class="vendor-product-title">
 					<span class="vendor-product-status"><?php echo EDD_FES()->dashboard->product_list_status($product->ID); ?> </span>
