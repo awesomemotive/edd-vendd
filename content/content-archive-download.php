@@ -5,27 +5,29 @@
  * @package Vendd
  */
 
-// get information about the term being loaded	
-$download_term = $wp_query->get_queried_object();
-
-// change the download archive page title based on the taxonomy
-if ( 'download_category' === $download_term->taxonomy ) {
-	$term_type = _x( 'Category', 'download category archive page title', 'vendd' ) . ': ';
-} elseif ( 'download_tag' === $download_term->taxonomy ) {
-	$term_type = _x( 'Tag', 'download tag archive page title', 'vendd' ) . ': ';
+// if download taxonomy archive, output information about the term
+if ( is_tax( 'download_category' ) || is_tax( 'download_tag' ) ) {
+	$download_term = $wp_query->get_queried_object();
+	
+	// change the download archive page title based on the taxonomy
+	if ( 'download_category' === $download_term->taxonomy ) {
+		$term_type = _x( 'Category', 'download category archive page title', 'vendd' ) . ': ';
+	} elseif ( 'download_tag' === $download_term->taxonomy ) {
+		$term_type = _x( 'Tag', 'download tag archive page title', 'vendd' ) . ': ';
+	}
+	?>
+	
+	<?php if ( ! empty( $term_type ) ) { ?>
+		<div class="download-term-header">
+			<h1 class="term-title">
+				<span class="term-title-primary"><?php echo $term_type; ?><strong><?php echo $download_term->name; ?></strong>
+				<?php if ( ! empty( $download_term->description ) ) { ?>
+					<p class="term-subtitle"><?php echo $download_term->description; ?></p>
+				<?php } ?>
+			</h1>
+		</div>
+	<?php }
 }
-?>
-
-<?php if ( ! empty( $term_type ) ) { ?>
-	<div class="download-term-header">
-		<h1 class="term-title">
-			<span class="term-title-primary"><?php echo $term_type; ?><strong><?php echo $download_term->name; ?></strong>
-			<?php if ( ! empty( $download_term->description ) ) { ?>
-				<p class="term-subtitle"><?php echo $download_term->description; ?></p>
-			<?php } ?>
-		</h1>
-	</div>
-<?php }
 
 if ( have_posts() ) : $i = 1;
 	?>
