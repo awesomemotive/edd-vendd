@@ -43,6 +43,7 @@ Font Awesome Licenses:
 input[type="submit"],
 input[type="button"],
 .vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
+.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"],
 button,
 .more-link,
 .by-post-author,
@@ -182,6 +183,7 @@ a img {
 .tax-download_category #primary,
 .tax-download_tag #primary { float: none; padding: 0; width: 100%; }
 .post-type-archive-download #primary .store-404 { margin: 0 auto; width: 68%; }
+.vendd-focus-page-template #focus-page-primary { float: none; padding-right: 0; margin: 0 auto; max-width: 722px; }
 
 
 /*--------------------------------------------------------------
@@ -347,31 +349,31 @@ img {
 figure {
 	margin: 0;
 }
-.site-main table {
+.entry-content table {
 	border: 1px solid #f2f2f2;
 	border-width: 4px 1px 1px;
 	border-radius: 0 0 4px 4px;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-.site-main table th {
+.entry-content table th {
 	background: #fafafa;
 	font-weight: bold;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.site-main table td {
+.entry-content table td {
 	background: #fff;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.site-main table tr:last-child td {
+.entry-content table tr:last-child td {
 	border: none;
 }
-.site-main table tr:last-child td:first-child {
+.entry-content table tr:last-child td:first-child {
 	border-radius: 0 0 0 4px;
 }
-.site-main table tr:last-child td:last-child {
+.entry-content table tr:last-child td:last-child {
 	border-radius: 0 0 4px 0;
 }
 
@@ -416,7 +418,9 @@ button {
 }
 input[type="submit"]:hover,
 input[type="button"]:hover,
-button:hover {
+button:hover,
+.vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"]:hover,
+.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"]:hover {
 	background: #3d3d3d;
 }
 
@@ -660,7 +664,11 @@ a:focus {
 .site-footer:before,
 .site-footer:after,
 .entry-summary:before,
-.entry-summary:after {
+.entry-summary:after,
+.fes-vendor-menu:before,
+.fes-vendor-menu:after,
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul:before,
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after {
 	content: '';
 	display: table;
 }
@@ -671,7 +679,9 @@ a:focus {
 .site-content:after,
 .site-footer:after,
 .entry-summary:before,
-.entry-summary:after {
+.entry-summary:after,
+.fes-vendor-menu:after,
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after {
 	clear: both;
 }
 
@@ -1769,6 +1779,10 @@ input[type="submit"].edd-submit {
 	font-size: 1.2em;
 	margin-bottom: 0;
 }
+.vendd-empty-cart .widget_edd_cart_widget .cart_item.empty > p,
+.vendd-empty-cart .widget_edd_cart_widget .edd_downloads_list {
+	display: none;
+}
 
 /* Author & Download Details */
 .vendd-download-author {
@@ -1854,11 +1868,9 @@ input[type="submit"].edd-submit {
 #edd_checkout_form_wrap #edd_final_total_wrap, 
 #edd_checkout_form_wrap #edd_show_discount,
 #edd_checkout_form_wrap fieldset,
-#edd_login_form,
 #edd_purchase_receipt,
 #edd_user_history,
 #edd_purchase_receipt_products,
-#edd_profile_editor_form,
 .vendd-confirmation-template #edd_purchase_receipt thead th:first-child, 
 .vendd-confirmation-template #edd_purchase_receipt tbody td:first-child,
 .vendd-confirmation-template #edd_purchase_receipt thead th:last-child, 
@@ -1997,24 +2009,48 @@ input[type="submit"].edd-submit {
 }
 #edd_profile_editor_form {
 	background: #fafafa;
-	padding: 16px 10px;
+	padding: 30px;
 }
-#edd_profile_editor_form legend {
+.vendd-edd-fes-shortcode .edd_form input[type="text"],
+.vendd-edd-fes-shortcode .edd_form input[type="email"],
+.vendd-edd-fes-shortcode .edd_form input[type="url"],
+.vendd-edd-fes-shortcode .edd_form input[type="password"],
+.vendd-edd-fes-shortcode .edd_form input[type="search"],
+.vendd-edd-fes-shortcode .edd_form input[type="number"],
+.vendd-edd-fes-shortcode .edd_form textarea {
+	border-width: 1px 1px 4px;
+	border-radius: 0;
+	width: 300px;
+}
+.vendd-edd-fes-shortcode .edd_form select {
+	background: #fff;
+	border: 1px solid #f2f2f2;
+	border-radius: 0;
+	height: 40px;
+	width: 300px;
+}
+#edd_profile_editor_form legend,
+#edd_login_form legend,
+#edd_register_form legend {
 	display: block;
+	font-size: 1.2em;
 	font-weight: bold;
 	margin-bottom: 10px;
+}
+#edd_login_form p,
+#edd_register_form p {
+	margin-bottom: 12px;
 }
 #edd_profile_editor_form p > input:not([type="submit"]),
 #edd_profile_editor_form p > select, 
 #edd_profile_editor_form p {
 	margin-bottom: 1em;
 }
-#edd_login_form {
-	padding: 16px;
+#edd_login_form,
+#edd_register_form {
+	background: #fafafa;
+	padding: 30px;
 	margin-top: 32px;
-}
-#edd_login_form legend {
-	margin-bottom: 1.5em;
 }
 #edd_login_form label {
 	display: inline-block;
@@ -2039,6 +2075,9 @@ input[type="submit"].edd-submit {
 	font-size: .87em;
 	margin-bottom: 10px;
 }
+.edd-lost-password {
+	margin-bottom: 0;
+}
 
 
 /*--------------------------------------------------------------
@@ -2052,10 +2091,14 @@ input[type="submit"].edd-submit {
 	width: 100%;
 	padding-right: 0;
 }
-.vendd-fes-dashboard-template .fes-dashboard-header {
+.vendd-fes-dashboard-template .fes-dashboard-header,
+.vendd-edd-fes-shortcode .entry-header {
 	text-align: center;
 	margin: 0 auto 5%;
 	max-width: 722px;
+}
+.vendd-edd-fes-shortcode .entry-header {
+	margin-bottom: 7%;
 }
 .vendd-fes-dashboard-template #fes-vendor-dashboard {
 	float: right;
@@ -2083,13 +2126,16 @@ input[type="submit"].edd-submit {
 	font-size: 1rem;
 	font-weight: 300;
 }
-.vendd-fes-template .fes-table {
+.vendd-fes-template .fes-table,
+.vendd-edd-fes-shortcode .fes-table {
 	font-size: .87em;
 }
-.vendd-fes-dashboard-template .fes-form .fes-submit input[type=submit] {
+.vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
+.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"] {
 	font-size: 1rem;
 	border: none;
 	padding: 8px 10px;
+	box-shadow: none;
 	height: auto;
 }
 
@@ -2103,7 +2149,16 @@ input[type="submit"].edd-submit {
 	border-right: 1px dotted #f2f2f2;
 	width: 32%;
 }
-.vendd-fes-dashboard-template .fes-vendor-menu > ul {
+.vendd-edd-fes-shortcode .fes-vendor-menu {
+	background: #fafafa;
+	font-size: .87em;
+	padding: 30px 20px;
+	border-top: 1px solid #f2f2f2;
+	border-right: 1px dotted #f2f2f2;
+	margin-bottom: 30px;
+}
+.vendd-fes-dashboard-template .fes-vendor-menu > ul,
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul {
 	background: #fafafa;
 	list-style: none;
 	border: 1px solid #f2f2f2;
@@ -2116,68 +2171,103 @@ input[type="submit"].edd-submit {
 	border-bottom: 1px solid #f2f2f2;
 	width: 100%;
 }
-.vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a {
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li {
+	float: left;
+	border-bottom: 1px solid #f2f2f2;
+	width: 50%;
+}
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li:nth-child(odd) {
+	border-right: 1px solid #f2f2f2;
+}
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li:last-child:nth-child(odd) {
+	border-right: 1px solid #f2f2f2;
+}
+.vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a,
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li > a {
+	display: block;
 	background: #fff;
 	letter-spacing: normal;
 	padding: 10px 20px;
 }
 .vendd-fes-dashboard-template .fes-vendor-menu > ul > li > a:hover,
-.vendd-fes-dashboard-template .fes-vendor-menu > ul > li.active > a {
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li > a:hover,
+.vendd-fes-dashboard-template .fes-vendor-menu > ul > li.active > a,
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li.active > a {
+	display: block;
 	background: #fafafa;
 }
 
 /* FES dashboard - Dashboard */
-.vendd-fes-dashboard-template #fes-vendor-announcements {
+.vendd-fes-dashboard-template #fes-vendor-announcements,
+.vendd-edd-fes-shortcode #fes-vendor-announcements {
 	background: #f7f7db;
 	font-size: .87em;
 	padding: 20px;
 	margin-bottom: 6px;
 }
-.vendd-fes-dashboard-template #fes-vendor-store-link {
+.vendd-fes-dashboard-template #fes-vendor-store-link,
+.vendd-edd-fes-shortcode #fes-vendor-store-link {
 	color: #a3a3a3;
 	font-size: .87em;
 	text-align: right;
 	padding-bottom: 20px;
 	border-bottom: 1px dotted #f2f2f2;
 }
+.vendd-edd-fes-shortcode #fes-vendor-store-link {
+	border: none;
+}
 
 /* FES dashboard comments */
 .vendd-fes-template .fes-comments-wrap table,
-.vendd-fes-template #fes-comments-table {
+.vendd-edd-fes-shortcode .fes-comments-wrap table,
+.vendd-fes-template #fes-comments-table,
+.vendd-edd-fes-shortcode #fes-comments-table {
 	font-size: .87em;
 	border: none;
 }
 .vendd-fes-template #fes-comments-table th[class*="col-"],
-.vendd-fes-template #fes-comments-table td[class*="col-"] {
+.vendd-edd-fes-shortcode #fes-comments-table th[class*="col-"],
+.vendd-fes-template #fes-comments-table td[class*="col-"],
+.vendd-edd-fes-shortcode #fes-comments-table td[class*="col-"] {
 	background: none;
 	padding: 0;
 	border: none;
 }
 .vendd-fes-template #fes-comments-table th.col-author,
+.vendd-edd-fes-shortcode #fes-comments-table th.col-author,
 .vendd-fes-template #fes-comments-table th.col-content,
+.vendd-edd-fes-shortcode #fes-comments-table th.col-content,
 .vendd-fes-template #fes-comments-table br,
-.vendd-fes-template #fes-comments-table hr {
+.vendd-edd-fes-shortcode #fes-comments-table br,
+.vendd-fes-template #fes-comments-table hr,
+.vendd-edd-fes-shortcode #fes-comments-table hr {
 	display: none;
 }
-.vendd-fes-template #fes-comments-table .fes-author-img {
+.vendd-fes-template #fes-comments-table .fes-author-img,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-author-img {
 	float: none;
 	text-align: center;
 	padding: 0;
 	margin: 0 0 4px;
 }
-.vendd-fes-template #fes-comments-table .fes-author-img img {
+.vendd-fes-template #fes-comments-table .fes-author-img img,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-author-img img {
 	width: auto;
 	vertical-align: bottom;
 }
-.vendd-fes-template #fes-comments-table #fes-comment-author {
+.vendd-fes-template #fes-comments-table #fes-comment-author,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-comment-author {
 	display: block;
 	font-weight: 700;
 	text-align: center;
 	margin: 0 0 10px;
 }
 .vendd-fes-template #fes-comments-table .fes-light-green,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-light-green,
 .vendd-fes-template #fes-comments-table .fes-light-red,
-.vendd-fes-template #fes-comments-table #fes-comment-date {
+.vendd-edd-fes-shortcode #fes-comments-table .fes-light-red,
+.vendd-fes-template #fes-comments-table #fes-comment-date,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-comment-date {
 	display: block;
 	background: #fafafa;
 	color: inherit;
@@ -2188,53 +2278,66 @@ input[type="submit"].edd-submit {
 	border-width: 1px 1px 0;
 	margin: 0;
 }
-.vendd-fes-template #fes-comments-table #fes-comment-date {
+.vendd-fes-template #fes-comments-table #fes-comment-date,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-comment-date {
 	border-bottom: 1px solid #f2f2f2;
 	margin-bottom: 10px;
 }
-.vendd-fes-template #fes-comments-table td.col-content {
+.vendd-fes-template #fes-comments-table td.col-content,
+.vendd-edd-fes-shortcode #fes-comments-table td.col-content {
 	padding: 0 0 0 20px;
 }
 .vendd-fes-template #fes-comments-table #fes-product-name a,
-.vendd-fes-template #fes-comments-table #fes-view-comment {
+.vendd-edd-fes-shortcode #fes-comments-table #fes-product-name a,
+.vendd-fes-template #fes-comments-table #fes-view-comment,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-view-comment {
 	display: block;
 	font-size: .87em;
 	margin: 0;
 }
-.vendd-fes-template #fes-comments-table #fes-view-comment a {
+.vendd-fes-template #fes-comments-table #fes-view-comment a,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-view-comment a {
 	color: #a3a3a3;
 	text-decoration: none;
 }
-.vendd-fes-template #fes-comments-table #fes-view-comment a:after {
+.vendd-fes-template #fes-comments-table #fes-view-comment a:after,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-view-comment a:after {
 	color: #a3a3a3;
 	font-family: "FontAwesome";
 	content: "\f0c1";
 	text-decoration: none;
 	padding-left: 6px;
 }
-.vendd-fes-template #fes-comments-table .fes-comments-content {
+.vendd-fes-template #fes-comments-table .fes-comments-content,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-comments-content {
 	margin-bottom: 20px;
 }
-.vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form {
+.vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-vendor-comment-respond-form {
 	border-bottom: 1px dotted #f2f2f2;
 	margin-bottom: 25px;
 }
-.vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form > span {
+.vendd-fes-template #fes-comments-table .fes-vendor-comment-respond-form > span,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-vendor-comment-respond-form > span {
 	color: #a3a3a3;
 	font-size: .87em;
 }
 .vendd-fes-template #fes-comments-table .fes-cmt-submit-form,
-.vendd-fes-template #fes-comments-table .fes-ignore {
+.vendd-edd-fes-shortcode #fes-comments-table .fes-cmt-submit-form,
+.vendd-fes-template #fes-comments-table .fes-ignore,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-ignore {
 	display: inline-block;
 }
-.vendd-fes-template #fes-comments-table .fes-ignore {
+.vendd-fes-template #fes-comments-table .fes-ignore,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-ignore {
 	background: none;
 	color: #a3a3a3;
 	font-size: .87em;
 	padding: 0;
 	margin: 0;
 }
-.vendd-fes-template #fes-comments-table .fes-ignore:after {
+.vendd-fes-template #fes-comments-table .fes-ignore:after,
+.vendd-edd-fes-shortcode #fes-comments-table .fes-ignore:after {
 	font-family: "FontAwesome";
 	content: "\f00d";
 	padding-left: 4px;
@@ -2255,11 +2358,11 @@ input[type="submit"].edd-submit {
 	float: left;
 }
 .vendor-product-image {
-	width: 20%;
+	width: 22%;
+	padding-right: 3%;
 }
 .vendor-product-info {
-	padding-left: 20px;
-	width: 80%;
+	width: 75%;
 }
 .vendor-product-image img {
 	border-radius: 4px;
@@ -2288,7 +2391,7 @@ input[type="submit"].edd-submit {
 .vendor-product-details,
 .vendor-product-actions {
 	font-size: .87em;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 .vendor-product-info-group {
 	padding: 2px 0;
@@ -2402,48 +2505,60 @@ input[type="submit"].edd-submit {
 
 /* FES dashboard - All Forms */
 .vendd-fes-template .fes-submission-form,
-.vendd-fes-template .fes-profile-form {
+.vendd-edd-fes-shortcode .fes-submission-form,
+.vendd-fes-template .fes-profile-form,
+.vendd-edd-fes-shortcode .fes-profile-form {
 	font-size: .87em;
 }
-.vendd-fes-template .fes-headers {
+.vendd-fes-template .fes-headers,
+.vendd-edd-fes-shortcode .fes-headers {
 	display: none;
 }
-.vendd-fes-template .fes-label label {
+.vendd-fes-template .fes-label label,
+.vendd-edd-fes-shortcode .fes-label label {
 	display: inline-block;
 	font-size: 2em;
 	margin-bottom: 4px;
 }
-.vendd-fes-template .fes-fields label {
+.vendd-fes-template .fes-fields label,
+.vendd-edd-fes-shortcode .fes-fields label {
 	display: block;
 }
-.vendd-fes-template div.fes-form fieldset {
+.vendd-fes-template div.fes-form fieldset,
+.vendd-edd-fes-shortcode div.fes-form fieldset {
 	margin-bottom: 4em;
 }
-.vendd-fes-template .fes-form fieldset .fes-label .fes-help {
+.vendd-fes-template .fes-form fieldset .fes-label .fes-help,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-label .fes-help {
 	color: #a3a3a3;
 	font-size: .87rem;
 	padding-bottom: 6px;
 	border-bottom: 1px solid #f1f1f1;
 	margin-bottom: 15px;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields textarea {
+.vendd-fes-template .fes-form fieldset .fes-fields textarea,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields textarea {
 	padding: 6px;
 	height: 170px;
 	width: 100%;
 }
-.vendd-fes-template .entry-content .fes-fields table th {
+.vendd-fes-template .entry-content .fes-fields table th,
+.vendd-edd-fes-shortcode .entry-content .fes-fields table th {
 	background: none;
 }
-.vendd-fes-template .fes-form .entry-content table th {
+.vendd-fes-template .fes-form .entry-content table th,
+.vendd-edd-fes-shortcode .fes-form .entry-content table th {
 	padding: 0 0 4px;
 	border: none;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields select {
+.vendd-fes-template .fes-form fieldset .fes-fields select,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select {
 	height: 40px;
 	border: 1px solid #f2f2f2;
 	border-radius: 0;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields select[multiple] {
+.vendd-fes-template .fes-form fieldset .fes-fields select[multiple],
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select[multiple] {
 	background: #fafafa;
 	padding: 0;
 }
@@ -2459,38 +2574,50 @@ input[type="submit"].edd-submit {
 	box-shadow: none;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields table,
-.vendd-fes-template .fes-form fieldset .fes-fields td {
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields table,
+.vendd-fes-template .fes-form fieldset .fes-fields td,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields td {
 	padding-right: 6px;
 }
-.vendd-fes-template .fes-form .fes-el.repeat .fes-fields td {
+.vendd-fes-template .fes-form .fes-el.repeat .fes-fields td,
+.vendd-edd-fes-shortcode .fes-form .fes-el.repeat .fes-fields td {
 	vertical-align: middle;
 }
-.vendd-fes-template .fes-form fieldset #wp-post_content-wrap {
+.vendd-fes-template .fes-form fieldset #wp-post_content-wrap,
+.vendd-edd-fes-shortcode .fes-form fieldset #wp-post_content-wrap {
 	border: none;
 }
-.vendd-fes-template #wp-post_content-editor-container {
+.vendd-fes-template #wp-post_content-editor-container,
+.vendd-edd-fes-shortcode #wp-post_content-editor-container {
 	border: 2px solid #f2f2f2;
 	border-width: 2px 1px 4px
 }
-.vendd-fes-template .wp-media-buttons .insert-media {
+.vendd-fes-template .wp-media-buttons .insert-media,
+.vendd-edd-fes-shortcode .wp-media-buttons .insert-media {
 	margin-bottom: 10px;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields textarea[name="toc"] {
+.vendd-fes-template .fes-form fieldset .fes-fields textarea[name="toc"],
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields textarea[name="toc"] {
 	margin-bottom: 10px;
 }
 .vendd-fes-template .fes-fields .fes-feat-image-upload,
-.vendd-fes-template .fes-fields .fes-avatar-image-upload {
+.vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload,
+.vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload {
 	background: #fafafa;
 	border: none;
 	border-radius: 4px;
 	margin: 0;
 	max-width: 100%;
 }
-.vendd-fes-template .fes-fields .fes-feat-image-upload .instruction-inside {
+.vendd-fes-template .fes-fields .fes-feat-image-upload .instruction-inside,
+.vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload .instruction-inside {
 	border: 4px dashed rgba(0,0,0,.1);
 }
 .vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
-.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
+.vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
+.vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
 	background: #fafafa;
 	color: #aaa;
 	font-size: 1.2em;
@@ -2499,44 +2626,59 @@ input[type="submit"].edd-submit {
 	text-shadow: none;
 }
 .vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
-.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover {
+.vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover,
+.vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover {
 	background: #d5d5d5;
 	color: #fff;
 	text-shadow: none;
 }
-.vendd-fes-template .multiple .fes-fields .multiple th {
+.vendd-fes-template .multiple .fes-fields .multiple th,
+.vendd-edd-fes-shortcode .multiple .fes-fields .multiple th {
 	background: none;
 	padding: 0;
 	border: none;
 }
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-name-row,
-.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-url-row {
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-name-row,
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-url-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-url-row {
 	width: 38%;
 }
-.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-price-row {
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-price-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-price-row {
 	width: 17%;
 }
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a,
-.vendd-fes-template .fes-delete-row a {
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a,
+.vendd-fes-template .fes-delete-row a,
+.vendd-edd-fes-shortcode .fes-delete-row a {
 	color: #ccc;
 	font-weight: 700;
 	font-size: 1rem;
 }
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a:hover,
-.vendd-fes-template .fes-delete-row a:hover {
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a:hover,
+.vendd-fes-template .fes-delete-row a:hover,
+.vendd-edd-fes-shortcode .fes-delete-row a:hover {
 	color: red;
 }
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-url-choose-row a,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-url-choose-row a,
 .vendd-fes-template .insert-file-row,
-.vendd-fes-template .upload_file_button {
+.vendd-edd-fes-shortcode .insert-file-row,
+.vendd-fes-template .upload_file_button,
+.vendd-edd-fes-shortcode .upload_file_button {
 	font-weight: 700;
 	text-transform: uppercase;
 }
-.vendd-fes-template .fes-form fieldset .fes-section-wrap {
+.vendd-fes-template .fes-form fieldset .fes-section-wrap,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-section-wrap {
 	border: none;
 	margin: 0;
 }
-.vendd-fes-template div.fes-form fieldset .fes-section-title {
+.vendd-fes-template div.fes-form fieldset .fes-section-title,
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-section-title {
 	font-size: 2.4em;
 	text-align: center;
 	padding-bottom: 10px;
@@ -2544,36 +2686,68 @@ input[type="submit"].edd-submit {
 	margin-bottom: 30px;
 }
 
-/* FES Login/Register Duo */
-.vendd-fes-dashboard-template .fes-dashboard-content > table {
+/* FES Login / Register */
+.vendd-fes-dashboard-template .fes-dashboard-content > table,
+.vendd-edd-fes-shortcode table {
 	border: none;
 	margin: 0 auto;
 	max-width: 800px;
 }
-.vendd-fes-dashboard-template [id*="fes_login_registration_"] {
+.vendd-edd-fes-shortcode [id*="fes_login_registration_"] {
+	padding: 0;
+}
+.vendd-fes-dashboard-template [id*="fes_login_registration_"],
+.vendd-edd-fes-shortcode [class*="fes-form-"] {
+	background: #fafafa;
 	padding: 30px;
 }
-.vendd-fes-dashboard-template #fes_login_registration_form_row_left {
+.vendd-fes-dashboard-template #fes_login_registration_form_row_left [id*="fes_login_registration_"],
+.vendd-edd-fes-shortcode #fes_login_registration_form_row_left [class*="fes-form-"] {
+	background: #fff;
+	padding-left: 0;
+}
+.vendd-fes-dashboard-template #fes_login_registration_form_row_left,
+.vendd-edd-fes-shortcode #fes_login_registration_form_row_left {
 	margin-right: 10%;
 	width: 40% !important;
 }
-.vendd-fes-dashboard-template #fes_login_registration_form_row_right {
+.vendd-fes-dashboard-template #fes_login_registration_form_row_right,
+.vendd-edd-fes-shortcode #fes_login_registration_form_row_right {
 	background: #fafafa;
 	border-radius: 4px;
 	width: 50% !important;
 }
-.vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-headers {
+.vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-headers,
+.vendd-edd-fes-shortcode [id*="fes_login_registration_"] .fes-headers,
+.vendd-edd-fes-shortcode [class*="fes-form-"] .fes-headers {
 	display: block;
 }
-.vendd-fes-dashboard-template [id*="fes_login_registration_"] div.fes-form fieldset {
+.vendd-fes-dashboard-template [id*="fes_login_registration_"] div.fes-form fieldset,
+.vendd-edd-fes-shortcode [id*="fes_login_registration_"] div.fes-form fieldset,
+.vendd-edd-fes-shortcode [class*="fes-form-"] div.fes-form fieldset {
 	margin-bottom: 1em;
 }
-.vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-label label {
+.vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-label label,
+.vendd-edd-fes-shortcode [id*="fes_login_registration_"] .fes-label label,
+.vendd-edd-fes-shortcode [class*="fes-form-"] .fes-label label {
 	font-size: 1.4em;
 }
-.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-form fieldset .fes-fields input,
-.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-form fieldset .fes-fields textarea {
+.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-fields input,
+.vendd-edd-fes-shortcode #fes_login_registration_form_row_right .fes-fields input,
+.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-fields textarea,
+.vendd-edd-fes-shortcode #fes_login_registration_form_row_right .fes-fields textarea {
 	background: #fff;
+}
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=email],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=number],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=password],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=text],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=url],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields textarea {
+	background: #fff;
+	border: 1px solid #f2f2f2;
+	border-width: 1px 1px 4px;
+	box-shadow: none;
 }
 
 /* FES Vendor Template */
@@ -2854,15 +3028,18 @@ input[type="submit"].edd-submit {
 	#wp-calendar td {
 		padding: 6px 10px;
 	}
-	.vendd-fes-dashboard-template .fes-vendor-menu > ul {
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul,
+	.vendd-edd-fes-shortcode .fes-vendor-menu > ul {
 		display: block;
 	}
-	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li,
+	.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li {
 		display: inline-block;
 		border-bottom: 1px solid #f2f2f2;
 		width: 50%;
 	}
-	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child {
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child,
+	.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li:last-child {
 		margin-right: 0;
 	}
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:nth-child(odd) {
@@ -2872,14 +3049,30 @@ input[type="submit"].edd-submit {
 		border-right: 1px solid #f2f2f2;
 	}
 	.vendd-fes-dashboard-template #fes_login_registration_form_row_right,
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left {
+	.vendd-edd-fes-shortcode #fes_login_registration_form_row_right,
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left,
+	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left,
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left [id*="fes_login_registration_"],
+	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left [class*="fes-form-"],
+	.vendd-edd-fes-shortcode [class*="fes-form-"] {
 		background: #fafafa;
 		padding: 20px;
 		border-radius: 0;
 		width: 100% !important;
 	}
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-form fieldset .fes-fields input,
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-form fieldset .fes-fields textarea {
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left {
+		margin-right: 0;
+	}
+	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left [class*="fes-form-"],
+	.vendd-edd-fes-shortcode #fes_login_registration_form_row_right [class*="fes-form-"] {
+		padding: 0;
+	}
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-fields input,
+	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left .fes-fields input,
+	.vendd-edd-fes-shortcode [class*="fes-form-"] div.fes-form fieldset .fes-fields input,
+	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-fields textarea,
+	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left .fes-fields textarea,
+	.vendd-edd-fes-shortcode [class*="fes-form-"] div.fes-form fieldset .fes-fields textarea {
 		background: #fff;
 	}
 	h1, h2,
@@ -2967,6 +3160,16 @@ input[type="submit"].edd-submit {
 	.post-author-label {
 		display: none;
 	}
+	.vendd-edd-fes-shortcode .edd_form input[type="text"],
+	.vendd-edd-fes-shortcode .edd_form input[type="email"],
+	.vendd-edd-fes-shortcode .edd_form input[type="url"],
+	.vendd-edd-fes-shortcode .edd_form input[type="password"],
+	.vendd-edd-fes-shortcode .edd_form input[type="search"],
+	.vendd-edd-fes-shortcode .edd_form input[type="number"],
+	.vendd-edd-fes-shortcode .edd_form textarea,
+	.vendd-edd-fes-shortcode .edd_form select {
+		width: 100%;
+	}
 	.edd_downloads_list[class*="edd_download_columns_"] .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
@@ -2984,18 +3187,12 @@ input[type="submit"].edd-submit {
 	#wp-calendar td {
 		padding: 3px 5px;
 	}
-	.comment-list [class*="depth-"] [class*="depth-"] {
-		margin-left: 10px;
-	}
-	.comment-meta .comment-date {
-		position: static;
-		display: block;
-		text-align: right;
-	}
-	.vendd-fes-dashboard-template .fes-vendor-menu {
+	.vendd-fes-dashboard-template .fes-vendor-menu,
+	.vendd-edd-fes-shortcode .fes-vendor-menu {
 		padding: 14px;
 	}
-	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li {
+	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li,
+	.vendd-edd-fes-shortcode .fes-vendor-menu > ul > li {
 		font-size: 1em;
 	}
 	.vendor-order {

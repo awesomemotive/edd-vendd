@@ -124,6 +124,8 @@ function vendd_body_classes( $classes ) {
 		$classes[] = 'vendd-landing-page-template';
 	} elseif ( is_page_template( 'page_templates/full-width.php' ) ) {
 		$classes[] = 'vendd-full-width-page-template';
+	} elseif ( is_page_template( 'page_templates/focus.php' ) ) {
+		$classes[] = 'vendd-focus-page-template';
 	}
 
 	if ( vendd_edd_is_activated() && false === edd_get_cart_contents() ) {
