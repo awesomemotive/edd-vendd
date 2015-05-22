@@ -2690,8 +2690,8 @@ input[type="submit"].edd-submit {
 .vendd-fes-dashboard-template .fes-dashboard-content > table,
 .vendd-edd-fes-shortcode table {
 	border: none;
-	margin: 0 auto;
-	max-width: 800px;
+	margin: 0 auto 30px;
+	max-width: 722px;
 }
 .vendd-edd-fes-shortcode [id*="fes_login_registration_"] {
 	padding: 0;
@@ -2701,6 +2701,7 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	padding: 30px;
 }
+.vendd-fes-dashboard-template #fes_login_registration_form_row_left,
 .vendd-fes-dashboard-template #fes_login_registration_form_row_left [id*="fes_login_registration_"],
 .vendd-edd-fes-shortcode #fes_login_registration_form_row_left [class*="fes-form-"] {
 	background: #fff;
@@ -2738,11 +2739,11 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode #fes_login_registration_form_row_right .fes-fields textarea {
 	background: #fff;
 }
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=email],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=number],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=password],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=text],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type=url],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="email"],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="number"],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="password"],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="text"],
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="url"],
 .vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields textarea {
 	background: #fff;
 	border: 1px solid #f2f2f2;
@@ -3137,8 +3138,8 @@ input[type="submit"].edd-submit {
 	}
 	.info-bar-navigation li {
 		display: inline-block;
-		width: 47.5%;
-		margin-right: 4%;
+		width: 47%;
+		margin-right: 4.3%;
 	}
 	.info-bar-navigation li:nth-child(even) {
 		margin-right: 0;
