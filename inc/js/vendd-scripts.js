@@ -8,6 +8,7 @@
 		$('.vendd-show-button').on('click',function(e){
 			e.preventDefault();
 			$(this).toggleClass('vendd-price-button-displayed').siblings('.vendd-price-button-container').slideToggle();
+			$(this).parents('.edd_download').siblings().find('.vendd-price-button-container').slideUp().prev('.vendd-show-button').toggleClass('vendd-price-button-displayed');
 		});
 		var body = $(document.body);
 		var header_cart_total = $('.header-cart-total');
