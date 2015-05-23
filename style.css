@@ -3,7 +3,7 @@ Theme Name: Vendd
 Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: Sean Davis
 Author URI: http://sdavismedia.com/
-Description: Vendd is a full-featured Marketplace Theme for Easy Digital Downloads and Supporting Extensions.
+Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Vendd is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Vendd is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Font Awesome http://fortawesome.github.io/Font-Awesome/license/
 Font Awesome Licenses:
@@ -44,6 +44,7 @@ input[type="submit"],
 input[type="button"],
 .vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
 .vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"],
+.vendd-vendor-contact .fes-form .fes-submit input[type="submit"],
 button,
 .more-link,
 .by-post-author,
@@ -2802,6 +2803,40 @@ input[type="submit"].edd-submit {
 #vendd-vendor {
 	background: #fafafa;
 	border-radius: 4px;
+}
+.vendd-vendor-contact .fes-form-vendor-contact-form {
+	border-radius: 4px;
+	margin: 0 auto;
+	max-width: 722px;
+}
+.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset {
+	margin-bottom: 14px;
+}
+.vendd-vendor-contact .fes-form-vendor-contact-form .fes-label label {
+	font-size: 1.4em;
+}
+.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="email"],
+.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="number"],
+.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="password"],
+.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="text"],
+.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="url"],
+.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields textarea {
+	background: #fafafa;
+	border-width: 1px 1px 4px;
+	border-style: solid;
+	border-color: #f2f2f2;
+	box-shadow: none;
+	width: 100%;
+}
+.vendd-vendor-contact .fes-form .fes-submit input[type="submit"] {
+	font-size: 1rem;
+	border: none;
+	padding: 8px 10px;
+	box-shadow: none;
+	height: auto;
+}
+.vendd-vendor-contact .fes-form .fes-submit input[type="submit"]:hover {
+	background: #3d3d3d;
 }
 
 

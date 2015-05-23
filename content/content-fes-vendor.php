@@ -41,3 +41,14 @@ if ( function_exists( 'fes_get_vendor' ) && false !== fes_get_vendor() ) {
 <div id="vendd-vendor" <?php post_class(); ?>>
 	<?php the_content(); ?>
 </div><!-- .post-## -->
+<?php
+	if ( get_theme_mod( 'vendd_vendor_contact_form' ) ) {
+		if ( function_exists( 'fes_get_vendor' ) && false !== fes_get_vendor() && $the_vendor ) {
+			?>
+			<div class="vendd-vendor-contact">
+				<?php echo do_shortcode( '[fes_vendor_contact_form id=' . $the_vendor->ID . ']' ); ?>
+			</div><!-- .vendd-vendor-contact -->
+			<?php
+		}
+	}
+?>
