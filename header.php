@@ -21,13 +21,13 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'vendd' ); ?></a>
 
-	<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() ) { ?>
+	<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() ) : ?>
 		<div id="info-bar" class="info-bar">
 			<?php if ( '' != get_theme_mod( 'vendd_info_bar' ) ) : ?>
 				<span class="info-bar-text"><?php echo get_theme_mod( 'vendd_info_bar' ); ?></span>
 			<?php endif; ?>
 
-			<?php if ( has_nav_menu( 'info_bar' ) ) { ?>
+			<?php if ( has_nav_menu( 'info_bar' ) ) : ?>
 				<div id="info-bar-navigation" class="secondary-navigation" role="navigation">
 					<?php
 						wp_nav_menu( array(
@@ -38,20 +38,32 @@
 						) );
 					?>
 				</div><!-- #info-bar-navigation -->
-			<?php } ?>
+			<?php endif; ?>
 		</div>
-	<?php } ?>
+	<?php endif; ?>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<span class="site-title">
-				<?php echo ! vendd_is_checkout() || false === edd_get_cart_contents() ? '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' : ''; ?>
-					<?php if ( get_theme_mod( 'vendd_logo' ) ) : ?>
-							<img src="<?php echo get_theme_mod( 'vendd_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-					<?php else : ?>
-							<?php bloginfo( 'name' ); ?>
-					<?php endif; ?>
-				<?php echo ! vendd_is_checkout() || false === edd_get_cart_contents() ? '</a>' : ''; ?>
+				<?php
+					if ( ! vendd_is_checkout() || ( vendd_edd_is_activated() && false === edd_get_cart_contents() ) ) :
+						?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php
+					endif;
+					if ( get_theme_mod( 'vendd_logo' ) ) :
+						?>
+						<img src="<?php echo get_theme_mod( 'vendd_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+						<?php
+					else :
+						bloginfo( 'name' );
+					endif;
+					if ( ! vendd_is_checkout() || ( vendd_edd_is_activated() && false === edd_get_cart_contents() ) ) :
+						?>
+						</a>
+						<?php
+					endif;
+				?>
 			</span>
 			<?php if ( 1 != get_theme_mod( 'vendd_hide_tagline' ) ) : ?>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -65,7 +77,7 @@
 			</a>
 		<?php endif; ?>
 
-		<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() && has_nav_menu( 'main_menu' ) ) { ?>
+		<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() && has_nav_menu( 'main_menu' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<span class="menu-toggle"><span class="vendd-menu-toggle-text"><?php _e( 'Menu', 'vendd' ); ?></span><i class="fa fa-bars vendd-menu-icon"></i></span>
 				<?php
@@ -76,7 +88,7 @@
 					) );
 				?>
 			</nav><!-- #site-navigation -->
-		<?php } ?>
+		<?php endif ?>
 
 	</header><!-- #masthead -->
 
