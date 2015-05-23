@@ -30,7 +30,7 @@ Font Awesome Licenses:
  *
  * If you would like to override theme styles, use a child theme or a
  * custom CSS plugin that allows you to safely override styles that will
- * not be erased on updates.
+ * not be erased during theme updates.
  *
  * Example: https://wordpress.org/plugins/reaktiv-css-builder/
 --------------------------------------------------------------*/
@@ -161,7 +161,7 @@ a img {
 }
 #info-bar {
 	position: relative;
-	color: #fff;
+	color: #ddd;
 	font-size: .87em;
 	padding: 10px 40px;
 	min-height: 39px;
@@ -175,15 +175,38 @@ a img {
 }
 
 /* primary content */
-#primary { float: left; padding-right: 40px; width: 68%; }
-#secondary { float: left; width: 32%; font-size: .87em; }
-.vendd-no-sidebar #primary { float: none; margin: 0 auto; }
+#primary {
+	float: left;
+	padding-right: 40px;
+	width: 68%;
+}
+#secondary {
+	float: left;
+	width: 32%;
+	font-size: .87em;
+}
+.vendd-no-sidebar #primary {
+	float: none;
+	margin: 0 auto;
+}
 .vendd-downloads-template #primary,
 .post-type-archive-download #primary,
 .tax-download_category #primary,
-.tax-download_tag #primary { float: none; padding: 0; width: 100%; }
-.post-type-archive-download #primary .store-404 { margin: 0 auto; width: 68%; }
-.vendd-focus-page-template #focus-page-primary { float: none; padding-right: 0; margin: 0 auto; max-width: 722px; }
+.tax-download_tag #primary {
+	float: none;
+	padding: 0;
+	width: 100%;
+}
+.post-type-archive-download #primary .store-404 {
+	margin: 0 auto;
+	width: 68%;
+}
+.vendd-focus-page-template #focus-page-primary {
+	float: none;
+	padding-right: 0;
+	margin: 0 auto;
+	max-width: 722px;
+}
 
 
 /*--------------------------------------------------------------
@@ -214,7 +237,6 @@ h1, h2 {
 }
 h3, h4 {
 	font-size: 1.87em;
-	border-color: #555;
 }
 h5, h6 {
 	font-size: 1.4em;
@@ -349,31 +371,37 @@ img {
 figure {
 	margin: 0;
 }
-.entry-content table {
+.entry-content table,
+.comment-content table {
 	border: 1px solid #f2f2f2;
 	border-width: 4px 1px 1px;
 	border-radius: 0 0 4px 4px;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-.entry-content table th {
+.entry-content table th,
+.comment-content table th {
 	background: #fafafa;
 	font-weight: bold;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.entry-content table td {
+.entry-content table td,
+.comment-content table td {
 	background: #fff;
 	padding: 10px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.entry-content table tr:last-child td {
+.entry-content table tr:last-child td,
+.comment-content table tr:last-child td {
 	border: none;
 }
-.entry-content table tr:last-child td:first-child {
+.entry-content table tr:last-child td:first-child,
+.comment-content table tr:last-child td:first-child {
 	border-radius: 0 0 0 4px;
 }
-.entry-content table tr:last-child td:last-child {
+.entry-content table tr:last-child td:last-child,
+.comment-content table tr:last-child td:last-child {
 	border-radius: 0 0 4px 0;
 }
 
@@ -407,20 +435,18 @@ textarea {
 	vertical-align: top;
 	width: 100%;
 }
+button,
 input[type="submit"],
-input[type="button"],
-button {
+input[type="button"] {
 	color: #fff;
 	padding: 8px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
 }
-input[type="submit"]:hover,
-input[type="button"]:hover,
 button:hover,
-.vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"]:hover,
-.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"]:hover {
+input[type="submit"]:hover,
+input[type="button"]:hover {
 	background: #3d3d3d;
 }
 
@@ -434,15 +460,6 @@ a:hover {
 a:focus {
 	border: none;
 	outline: none;
-}
-.site-title {
-	color: #fff;
-	font: 400 2.67em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	margin-bottom: 0;
-}
-.site-title a {
-	color: #fff;
-	text-decoration: none;
 }
 
 
@@ -544,12 +561,10 @@ a:focus {
 	display: block;
 	padding: 15px 0 0;
 }
-.menu-toggle {
-	display: none;
-	cursor: pointer;
-}
+.menu-toggle,
 .vendd-menu-toggle-text {
 	display: none;
+	cursor: pointer;
 }
 .vendd-menu-icon {
 	font-size: 1.2em;
@@ -564,6 +579,10 @@ a:focus {
 .site-main .paging-navigation a {
 	color: #999;
 	text-decoration: none;
+}
+.site-main .comment-navigation a:hover,
+.site-main .paging-navigation a:hover {
+	color: #555;
 }
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous {
@@ -611,7 +630,7 @@ a:focus {
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
 	clip: auto !important;
 	color: #21759b;
 	display: block;
@@ -690,18 +709,34 @@ a:focus {
 >>> Header
 --------------------------------------------------------------*/
 .info-bar-text a {
-	color: #ddd;
+	color: #999;
 	text-decoration: none;
+	border-bottom: 1px dotted #666;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
 }
 .info-bar-text a:hover {
-	color: #fff;
+	color: #ddd;
 }
 .site-branding {
 	display: inline-block;
 	padding: 40px;
+}
+.site-title {
+	color: #fff;
+	font: 400 2.67em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin-bottom: 0;
+}
+.site-title a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s;
+}
+.site-title a:hover {
+	color: rgba(255, 255, 255, .6);
 }
 .site-description {
 	color: rgba(255, 255, 255, .6);
@@ -722,7 +757,6 @@ a:focus {
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
-	cursor: pointer;
 }
 .header-cart .fa {
 	font-size: 1.67em;
@@ -869,6 +903,7 @@ a:focus {
 >>> Content
 --------------------------------------------------------------*/
 .featured-img {
+	border-radius: 4px;
 	margin-bottom: 2em;
 }
 .page-title {
@@ -905,7 +940,6 @@ a:focus {
 	margin: 0 0 3em;
 }
 .hentry .entry-title {
-	font: 400 2.4em/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-bottom: .2em;
 }
 .hentry .entry-title a {
@@ -1098,7 +1132,7 @@ a:focus {
 	font-size: .8em;
 	text-align: center;
 	padding: 8px;
-	border: 1px solid rgba(0, 0, 0, 0.03);
+	border: 1px solid rgba(0, 0, 0, .03);
 	border-radius: 4px;
 }
 
@@ -1131,14 +1165,14 @@ a:focus {
 	padding: 10px 40px;
 }
 .site-footer a {
-	color: #fff;
+	color: #ddd;
 	text-decoration: none;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
 }
 .site-footer a:hover {
-	color: #ddd;
+	color: #fff;
 }
 
 
@@ -1223,7 +1257,6 @@ object {
 /*--------------------------------------------------------------
 >>> Easy Digital Downloads (and supporting extensions)
 --------------------------------------------------------------*/
-
 .store-front-header,
 .download-term-header {
 	text-align: center;
@@ -1345,7 +1378,7 @@ object {
 	transition: all .3s;
 }
 .edd_download .edd_download_inner:hover {
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 0 30px rgba(0, 0, 0, .08);
 }
 .edd_download_image img {
 	border-radius: 4px 4px 0 0;
@@ -1374,7 +1407,7 @@ object {
 	text-decoration: underline;
 }
 .edd_download_title {
-	font: 300 1.5em/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font: 300 1.5em/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding: 15px 20px 0;
 	margin-bottom: 15px;
 }
@@ -1416,7 +1449,7 @@ object {
 	width: 100%;
 	max-height: 375px;
 	overflow-y: scroll;
-	box-shadow: 0px -2px 12px 0px rgba(21,21,21,.06);
+	box-shadow: 0px -2px 12px 0px rgba(21, 21, 21, .06);
 	z-index: 1;
 }
 .edd_download_buy_button {
@@ -2138,6 +2171,10 @@ input[type="submit"].edd-submit {
 	box-shadow: none;
 	height: auto;
 }
+.vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"]:hover,
+.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"]:hover {
+	background: #3d3d3d;
+}
 
 /* FES dashboard menu */
 .vendd-fes-dashboard-template .fes-vendor-menu {
@@ -2562,11 +2599,11 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	padding: 0;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields input[type=email],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type=number],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type=password],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type=text],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type=url],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type="email"],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type="number"],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type="password"],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type="text"],
+.vendd-fes-template .fes-form fieldset .fes-fields input[type="url"],
 .vendd-fes-template .fes-form fieldset .fes-fields textarea {
 	background: #fafafa;
 	border: 1px solid #f2f2f2;
@@ -2612,7 +2649,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-template .fes-fields .fes-feat-image-upload .instruction-inside,
 .vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload .instruction-inside {
-	border: 4px dashed rgba(0,0,0,.1);
+	border: 4px dashed rgba(0, 0, 0, .1);
 }
 .vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
 .vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
@@ -2820,6 +2857,54 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+>>> Cross-sell & Upsell
+>>> https://easydigitaldownloads.com/extensions/cross-sell-and-upsell/
+--------------------------------------------------------------*/
+.edd-csau-products {
+	background: #fafafa;
+	clear: both;
+	padding: 20px 20px 0;
+	border-width: 1px;
+	border-left-style: dotted;
+	border-right-style: dotted;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: #f2f2f2;
+	margin: 50px 0 30px;
+}
+.edd-csau-products[class*="col-"] .edd_download {
+	padding: 0 10px 30px;
+	margin: 0 auto;
+	max-width: 500px !important;
+}
+.entry-content .edd-csau-products h2,
+.edd-csau-products h2 {
+	text-align: center;
+	margin: 0 0 .6em;
+}
+.edd-csau-products .edd_download_title {
+	font-size: 1.2em;
+}
+.edd-csau-products .downloads-footer {
+	display: none;
+}
+.edd-csau-products .product-price,
+.edd-csau-products .edd_download_excerpt,
+.edd-csau-products .edd_download_full_content {
+	font-size: .8em;
+}
+.edd-csau-products .product-price {
+	padding: 2px 6px;
+}
+.entry-content .edd-csau-products .edd_download_buy_button {
+	display: none;
+}
+.edd-csau-products .edd_download_inner .edd-cart-added-alert {
+	padding: 0 0 10px 10px;
+}
+
+
+/*--------------------------------------------------------------
 >>> Kolakube Email Forms
 >>> https://wordpress.org/plugins/kolakube-email-forms/
 --------------------------------------------------------------*/
@@ -2938,7 +3023,7 @@ input[type="submit"].edd-submit {
 	}
 	.info-bar-navigation li a {
 		display: inline-block;
-		background: rgba(0,0,0,.1);
+		background: rgba(0, 0, 0, .1);
 		padding: 6px 10px;
 		border-radius: 4px;
 		margin-bottom: 10px;
@@ -2951,8 +3036,6 @@ input[type="submit"].edd-submit {
 		position: static;
 		margin-bottom: 30px;
 	}
-	
-	/* main navigation */
 	.menu-toggle {
 		display: inline-block;
 		position: absolute;
@@ -2988,7 +3071,7 @@ input[type="submit"].edd-submit {
 	.main-navigation .sub-menu a {
 		font-size: 15px;
 		padding: 14px 40px;
-		border-bottom: 1px solid rgba(0,0,0,.03);
+		border-bottom: 1px solid rgba(0, 0, 0, .03);
 	}
 	.main-navigation .sub-menu a:before {
 		content: "\f105\00a0\00a0\00a0";
@@ -2996,7 +3079,7 @@ input[type="submit"].edd-submit {
 		font-weight: 400;
 	}
 	.main-navigation a:hover {
-		color: rgba(255,255,255,.5);
+		color: rgba(255, 255, 255, .5);
 	}
 	.main-navigation .nav-menu > li > a {
 		display: block;
@@ -3187,6 +3270,14 @@ input[type="submit"].edd-submit {
 	#wp-calendar th,
 	#wp-calendar td {
 		padding: 3px 5px;
+	}
+	.comment-list [class*="depth-"] [class*="depth-"] {
+		margin-left: 10px;
+	}
+	.comment-meta .comment-date {
+		position: static;
+		display: block;
+		text-align: right;
 	}
 	.vendd-fes-dashboard-template .fes-vendor-menu,
 	.vendd-edd-fes-shortcode .fes-vendor-menu {
