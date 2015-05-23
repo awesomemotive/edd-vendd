@@ -398,8 +398,20 @@ function vendd_customize_register( $wp_customize ) {
 			'label'         => __( 'FES Dashboard Title', 'vendd' ),
 			'section'       => 'vendd_fes_options',
 			'description'   => __( 'This optional field allows you to replace the title of your FES Dashboard. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
-			'priority'      => 40,
+			'priority'      => 10,
 		) ) );
+
+		// contact form on Vendor pages
+		$wp_customize->add_setting( 'vendd_vendor_contact_form', array( 
+			'default'           => 0,
+			'sanitize_callback' => 'vendd_sanitize_checkbox'
+		) );
+		$wp_customize->add_control( 'vendd_vendor_contact_form', array(
+			'label'     => __( 'Show contact form on Vendor template', 'vendd' ),
+			'section'   => 'vendd_fes_options',
+			'priority'  => 20,
+			'type'      => 'checkbox',
+		) );
 	}
 
 
@@ -599,6 +611,7 @@ function vendd_customizer_head_styles() {
 			input[type="button"],
 			.vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
 			.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"],
+			.vendd-vendor-contact .fes-form .fes-submit input[type="submit"],
 			button,
 			.more-link,
 			.by-post-author,
