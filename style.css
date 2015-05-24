@@ -2900,10 +2900,7 @@ input[type="submit"].edd-submit {
 	clear: both;
 	padding: 20px 20px 0;
 	border-width: 1px;
-	border-left-style: dotted;
-	border-right-style: dotted;
-	border-top-style: solid;
-	border-bottom-style: solid;
+	border-style: solid dotted;
 	border-color: #f2f2f2;
 	margin: 50px 0 30px;
 }
@@ -2960,6 +2957,79 @@ input[type="submit"].edd-submit {
 #secondary .widget_kol_email input[type="email"] {
 	background: #fff url('inc/images/sprite.png') no-repeat 13px -87px;
 	padding-left: 42px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Ninja Forms
+>>> https://ninjaforms.com/
+--------------------------------------------------------------*/
+[class*="ninja-forms-all-"] .ninja-forms-required-items {
+	background: #fafafa;
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid dotted;
+	border-color: #f2f2f2;
+	margin-bottom: 1.5em;
+}
+[class*="ninja-forms-all-"] .field-wrap {
+	padding-bottom: 30px;
+	border-bottom: 1px dotted #f2f2f2;
+	margin-bottom: 30px;
+}
+[class*="ninja-forms-all-"] .ninja-forms-field-description,
+[class*="ninja-forms-all-"] .input-counter {
+	color: #999;
+	font-size: .87em;
+}
+[class*="ninja-forms-all-"] input[type="text"],
+[class*="ninja-forms-all-"] input[type="email"],
+[class*="ninja-forms-all-"] input[type="url"],
+[class*="ninja-forms-all-"] input[type="password"],
+[class*="ninja-forms-all-"] input[type="search"],
+[class*="ninja-forms-all-"] input[type="number"],
+[class*="ninja-forms-all-"] textarea {
+	background: #fafafa;
+	border: 1px solid #f2f2f2;
+	border-width: 1px 1px 4px;
+	box-shadow: none;
+}
+[class*="ninja-forms-all-"] input:disabled,
+[class*="ninja-forms-all-"] textarea:disabled {
+	color: #999;
+	font-style: italic;
+}
+[class*="ninja-forms-all-"] .label-above label {
+	font-size: 1.4em;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+[class*="ninja-forms-all-"] .textarea-wrap textarea {
+	border-top: none;
+	border-radius: 0 0 4px 4px;
+}
+[class*="ninja-forms-all-"] .textarea-wrap .html-active .quicktags-toolbar,
+[class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-toolbar-grp {
+	border: 1px solid #e8e8e8;
+}
+[class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-edit-area {
+	border-width: 0 1px !important;
+	border-style: solid;
+	border-color: #f2f2f2;
+}
+[class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-statusbar {
+	border-width: 1px 1px 4px !important;
+	border-style: solid;
+	border-color: #f2f2f2;
+	border-radius: 0 0 4px 4px;
+}
+[class*="ninja-forms-all-"] .textarea-wrap .wp-editor-tools {
+	margin-bottom: 6px;
+}
+[class*="ninja-forms-all-"] .list-dropdown-wrap select,
+[class*="ninja-forms-all-"] .country-wrap select {
+	border: 1px solid #f2f2f2;
+	height: 40px;
 }
 
 
