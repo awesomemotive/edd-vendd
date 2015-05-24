@@ -615,7 +615,7 @@ function vendd_customizer_head_styles() {
 			button,
 			.more-link,
 			.by-post-author,
-			.main-navigation ul li:hover > ul,
+			.main-navigation:not(.toggled) ul li:hover > ul,
 			#edd_download_pagination .page-numbers.current,
 			.edd_pagination .page-numbers.current,
 			div[class*="fes-"] > .page-numbers.current,
