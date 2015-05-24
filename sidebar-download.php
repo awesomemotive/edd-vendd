@@ -122,11 +122,13 @@
 					<span class="vendd-detail-name"><?php _e( 'Published:', 'vendd' ); ?></span>
 					<span class="vendd-detail-info"><?php echo $time_string; ?></span>
 				</li>
-				<li class="vendd-details-list-item">
-					<?php $sales = edd_get_download_sales_stats( $post->ID ); ?>
-					<span class="vendd-detail-name"><?php _e( 'Sales:', 'vendd' ); ?></span>
-					<span class="vendd-detail-info"><?php echo $sales; ?></span>
-				</li>
+				<?php if ( vendd_fes_is_activated() ) { ?>
+					<li class="vendd-details-list-item">
+						<?php $sales = edd_get_download_sales_stats( $post->ID ); ?>
+						<span class="vendd-detail-name"><?php _e( 'Sales:', 'vendd' ); ?></span>
+						<span class="vendd-detail-info"><?php echo $sales; ?></span>
+					</li>
+				<?php } ?>
 				<?php if ( vendd_SL_is_activated() ) { ?>
 					<li class="vendd-details-list-item vendd-license-details">
 						<?php $licensed = get_post_meta( get_the_ID(), '_edd_sl_enabled', true ); ?>
