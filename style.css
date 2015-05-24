@@ -2583,6 +2583,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .entry-content .fes-fields table th,
 .vendd-edd-fes-shortcode .entry-content .fes-fields table th {
 	background: none;
+	border-bottom: none;
 }
 .vendd-fes-template .fes-form .entry-content table th,
 .vendd-edd-fes-shortcode .fes-form .entry-content table th {
