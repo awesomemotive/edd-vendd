@@ -131,7 +131,10 @@ function vendd_is_fes_vendor_template() {
  */
 function vendd_SL_is_activated() {
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-	if ( is_plugin_active( 'edd-software-licensing/edd-software-licenses.php' ) ) {
+	if (
+		is_plugin_active( 'edd-software-licensing/edd-software-licenses.php' ) ||
+		is_plugin_active( 'EDD-Software-Licensing/edd-software-licenses.php' )
+	) {
 		return true;
 	} else {
 		return false;
