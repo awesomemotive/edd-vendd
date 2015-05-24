@@ -1986,17 +1986,29 @@ input[type="submit"].edd-submit {
 	border-bottom: none;
 	border-right: none;
 }
+#edd_checkout_form_wrap .edd-cart-adjustment input.edd-input,
+#edd_checkout_form_wrap .edd-cart-adjustment input.edd-submit {
+	max-width: 400px;
+}
+#edd-cancel-license-renewal {
+	color: #999;
+	font-size: .87em;
+}
+#edd-cancel-license-renewal:hover {
+	color: red;
+}
 #edd_checkout_cart_wrap #edd_checkout_cart .edd-submit {
 	font-size: .87em;
 	padding: 8px;
 }
 #edd_checkout_form_wrap #edd-discount-code-wrap input.edd-submit {
+	display: block;
 	font-size: .87em;
 	text-shadow: none;
 	padding: 7px;
 	border: none;
-	margin-top: -2px;
-	min-width: 60px;
+	margin-top: 5px;
+	min-width: 158px;
 }
 #edd_checkout_form_wrap #edd-discount-code-wrap input.edd-submit:hover {
 	background: #3D3D3D;
