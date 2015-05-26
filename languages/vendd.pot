@@ -1,297 +1,776 @@
-# Copyright (C) 2014 Automattic
-# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2014-06-03 14:02:16+00:00\n"
+"Project-Id-Version: Vendd\n"
+"POT-Creation-Date: 2015-05-25 22:59-0600\n"
+"PO-Revision-Date: 2015-05-25 23:01-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:19 content/content-archive-download.php:88
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:27
+#: 404.php:27 content/content-archive-download.php:96
 msgid "Most Used Categories"
 msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: archive.php:27
+#: archive.php:25
+#, php-format
 msgid "Author: %s"
 msgstr ""
 
-#: archive.php:30
+#: archive.php:28
+#, php-format
 msgid "Day: %s"
 msgstr ""
 
-#: archive.php:33
+#: archive.php:31
+#, php-format
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:33
+#: archive.php:31
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: archive.php:36
+#: archive.php:34
+#, php-format
 msgid "Year: %s"
 msgstr ""
 
-#: archive.php:36
+#: archive.php:34
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: archive.php:39
-msgid "Asides"
-msgstr ""
-
-#: archive.php:42
-msgid "Galleries"
-msgstr ""
-
-#: archive.php:45
-msgid "Images"
-msgstr ""
-
-#: archive.php:48
-msgid "Videos"
-msgstr ""
-
-#: archive.php:51
-msgid "Quotes"
-msgstr ""
-
-#: archive.php:54
-msgid "Links"
-msgstr ""
-
-#: archive.php:57
-msgid "Statuses"
-msgstr ""
-
-#: archive.php:60
-msgid "Audios"
-msgstr ""
-
-#: archive.php:63
-msgid "Chats"
-msgstr ""
-
-#: archive.php:66 sidebar.php:16
+#: archive.php:37 sidebar.php:14
 msgid "Archives"
 msgstr ""
 
 #: comments.php:28
+#, php-format
 msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgid "One response... "
+msgid_plural "%1$s responses... "
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:35 comments.php:52
+#: comments.php:33
+msgid "add one"
+msgstr ""
+
+#: comments.php:39 comments.php:56
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
-msgid "&larr; Older Comments"
+#: comments.php:40 comments.php:57
+msgid "Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
-msgid "Newer Comments &rarr;"
+#: comments.php:41 comments.php:58
+msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:68
 msgid "Comments are closed."
 msgstr ""
 
-#: content-none.php:13
+#: content/content-archive-download.php:14
+msgctxt "download category archive page title"
+msgid "Category"
+msgstr ""
+
+#: content/content-archive-download.php:16
+msgctxt "download tag archive page title"
+msgid "Tag"
+msgstr ""
+
+#: content/content-archive-download.php:72
+msgid "&laquo; Previous"
+msgstr ""
+
+#: content/content-archive-download.php:73
+msgid "Next  &raquo;"
+msgstr ""
+
+#: content/content-archive-download.php:84
+msgid "Oops! There's nothing to see here."
+msgstr ""
+
+#: content/content-none.php:11
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:19
+#: content/content-none.php:17
+#, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:23
+#: content/content-none.php:21
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: content-none.php:28
+#: content/content-none.php:26
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:27
+#: content/content-page.php:18 content/content-single.php:28
+#: content/content.php:50 page_templates/focus.php:28
+#: page_templates/full-width.php:28 page_templates/landing.php:28
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:24 content-single.php:60 content.php:61
-msgid "Edit"
-msgstr ""
-
 #. translators: used between list items, there is a space after the comma
-#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
+#: content/content-single.php:37 content/content-single.php:40
+#: inc/template-tags.php:116 inc/template-tags.php:127
 msgid ", "
 msgstr ""
 
-#: content-single.php:37
+#: content/content-single.php:46
+#, php-format
 msgid ""
 "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
 "\">permalink</a>."
 msgstr ""
 
-#: content-single.php:39
+#: content/content-single.php:48
+#, php-format
 msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: content-single.php:45
+#: content/content-single.php:53
+#, php-format
 msgid ""
 "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
 "rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: content-single.php:47
+#: content/content-single.php:55
+#, php-format
 msgid ""
 "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
 "\">permalink</a>."
 msgstr ""
 
-#: content.php:24
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+#: content/content.php:47 inc/customizer.php:180 inc/extras.php:31
+msgid "Continue reading"
 msgstr ""
 
-#: content.php:42
-msgid "Posted in %1$s"
+#: edd_templates/shortcode-content-price.php:2
+msgid "Starting at: "
 msgstr ""
 
-#: content.php:52
-msgid "Tagged %1$s"
+#: edd_templates/shortcode-content-price.php:4
+msgid "Price: "
 msgstr ""
 
-#: content.php:58
-msgid "Leave a comment"
+#: edd_templates/shortcode-content-price.php:6
+msgid "Free Download"
 msgstr ""
 
-#: content.php:58
-msgid "1 Comment"
+#: edd_templates/shortcode-content-title.php:4
+msgid "by"
 msgstr ""
 
-#: content.php:58
-msgid "% Comments"
+#: fes_templates/frontend-orders.php:25
+msgctxt "FES vendor dashboard Order display"
+msgid "Price"
 msgstr ""
 
-#: footer.php:15
-msgid "http://wordpress.org/"
+#: fes_templates/frontend-orders.php:33
+msgctxt "FES vendor dashboard Order display"
+msgid "Customer"
 msgstr ""
 
-#: footer.php:15
-msgid "Proudly powered by %s"
+#: fes_templates/frontend-orders.php:41
+msgctxt "FES vendor dashboard Order display"
+msgid "Details"
 msgstr ""
 
-#: footer.php:17
-msgid "Theme: %1$s by %2$s."
+#: fes_templates/frontend-orders.php:59
+msgid "No orders found"
 msgstr ""
 
-#: functions.php:45 header.php:32
-msgid "Primary Menu"
+#: fes_templates/frontend-products.php:28
+msgctxt "FES vendor dashboard Product display"
+msgid "Price"
 msgstr ""
 
-#: functions.php:80
-msgid "Sidebar"
+#: fes_templates/frontend-products.php:36
+msgctxt "FES vendor dashboard Product display"
+msgid "Purchases"
 msgstr ""
 
-#: header.php:23
+#: fes_templates/frontend-products.php:44
+msgctxt "FES vendor dashboard Product display"
+msgid "Details"
+msgstr ""
+
+#: fes_templates/frontend-products.php:62
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: functions.php:57
+msgid "Information Bar Menu"
+msgstr ""
+
+#: functions.php:58
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:85
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:96
+msgid "Download Sidebar"
+msgstr ""
+
+#: header.php:22
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:63
+#: header.php:76
+#, php-format
+msgid "Cart total: %s"
+msgstr ""
+
+#: header.php:82
+msgid "Menu"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:149
+#, php-format
+msgid "Activate Your %s License Key"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:151
+msgid ""
+"Your license key grants you access to theme updates and support. If your "
+"license key is deactivated or expired, your theme will still work properly "
+"but you will not receive automatic updates."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:191
+#, php-format
+msgid "How to Create a Child Theme for %1$s"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:193
+msgid ""
+"Through FTP, navigate to <code>your_website/wp-content/themes/</code> and in "
+"that directory, create a new folder as the name of your child theme. "
+"Something like <code>vendd-child</code> is perfect."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:194
+msgid ""
+"Inside of your new folder, create a file called <code>style.css</code> (the "
+"name is NOT optional)."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:195
+msgid "Inside of your new <code>style.css</code> file, add the following CSS:"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:211
+msgid ""
+"You may edit all of what you pasted EXCEPT for the <code>Template</code> "
+"line as well as the <code>@import</code> line. Leave those two lines alone "
+"or the child theme will not work properly."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:212
+msgid ""
+"With your new child theme folder in place and the above CSS pasted inside of "
+"your <code>style.css</code> file, go back to your WordPress dashboard and "
+"navigate to \"Appearance -> Themes\" and locate your new theme (you'll see "
+"the name you chose). Activate your theme."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:213
+msgid ""
+"With your child theme activated, you can edit its stylesheet all you like. "
+"You may also create a <code>functions.php</code> file in the root of your "
+"child theme to add custom PHP."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:214
+msgid "Enjoy!"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:218
+#, php-format
+msgid "You are currently using a child theme for %s."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:29
+msgctxt "part of the WordPress dashboard Vendd menu title"
+msgid " License"
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:30
+msgid "Enter your theme license key."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:31
+msgid "License Key"
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:32
+msgid "License Action"
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:33
+msgid "Deactivate License"
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:34
+msgid "Activate License"
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:35
+#: inc/admin/updater/theme-updater.php:47
+msgid "License status is unknown."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:36
+msgid "Renew?"
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:37
+msgid "unlimited"
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:38
+msgid "License key is active."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:39
+#, php-format
+msgid "Expires %s."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:40
+#, php-format
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:41
+#, php-format
+msgid "License key expired %s."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:42
+msgid "License key has expired."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:43
+msgid "License keys do not match."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:44
+msgid "License is inactive."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:45
+msgid "License key is disabled."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:46
+msgid "Site is inactive."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:48
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:49
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
+"a>."
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Site Title (Logo) & Tagline"
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "Custom Site Logo (replaces title)"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "Hide Tagline"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "Vendd Design"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "Control the primary design color of your site."
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "Primary Design Color"
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "Full Site Background Color"
+msgstr ""
+
+#: inc/customizer.php:140
+msgid "Full Site Background Image"
+msgstr ""
+
+#: inc/customizer.php:150
+msgid "Enable Parallax Background Effect"
+msgstr ""
+
+#: inc/customizer.php:161
+msgid "Content Options"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid ""
+"Adjust the display of content on your website. All options have a default "
+"value that can be left as-is but you are free to customize."
+msgstr ""
+
+#: inc/customizer.php:172
+msgid "Display Post Excerpts"
+msgstr ""
+
+#: inc/customizer.php:184
+msgid "Excerpt & More Link Text"
+msgstr ""
+
+#: inc/customizer.php:186
+msgid ""
+"This is the link text displayed at the end of blog post excerpts and content "
+"truncated with the \"more tag.\" No HTML allowed."
+msgstr ""
+
+#: inc/customizer.php:196
+msgid "Show Featured Images in Post Listings"
+msgstr ""
+
+#: inc/customizer.php:208
+msgid "Show Featured Images on Single Posts"
+msgstr ""
+
+#: inc/customizer.php:220
+msgid "Enable Comments on Standard Pages"
+msgstr ""
+
+#: inc/customizer.php:232
+msgid "Information Bar Text"
+msgstr ""
+
+#: inc/customizer.php:234
+msgid ""
+"This text appears at the very top of your site aligned to the left. Allowed "
+"tags:"
+msgstr ""
+
+#: inc/customizer.php:244
+msgid "Footer Credits & Copyright"
+msgstr ""
+
+#: inc/customizer.php:246
+msgid ""
+"Displays site title, tagline, copyright, and year by default. Allowed tags: "
+msgstr ""
+
+#: inc/customizer.php:257
+msgid "Easy Digital Downloads"
+msgstr ""
+
+#: inc/customizer.php:258
+msgid ""
+"All other EDD options are under Dashboard => Downloads. If you deactivate "
+"EDD, these options will no longer appear."
+msgstr ""
+
+#: inc/customizer.php:268
+msgid "Show Comments on Downloads"
+msgstr ""
+
+#: inc/customizer.php:280
+msgid "Show Categories/Tags on Downloads grid"
+msgstr ""
+
+#: inc/customizer.php:325
+msgid "EDD Button Color"
+msgstr ""
+
+#: inc/customizer.php:327
+msgid ""
+"By default, this will match what you set in the EDD Style Settings. "
+"Selecting another color here will override the EDD setting. Clear the color "
+"field back to default to revert back to the EDD setting."
+msgstr ""
+
+#: inc/customizer.php:337
+msgid "Store Front Title"
+msgstr ""
+
+#: inc/customizer.php:339
+msgid ""
+"This optional field allows you to replace the title of your Store Front (EDD "
+"Store Front page template). If left blank, the title of the page will show "
+"instead. Allowed tags:"
+msgstr ""
+
+#: inc/customizer.php:349
+msgid "Empty Cart Title"
+msgstr ""
+
+#: inc/customizer.php:351
+msgid ""
+"This is the title on the page that displays when the cart is empty. Allowed "
+"tags:"
+msgstr ""
+
+#: inc/customizer.php:361
+msgid "Empty Cart Text"
+msgstr ""
+
+#: inc/customizer.php:363
+msgid ""
+"Displays a custom message when the checkout cart is empty. Allowed tags: "
+msgstr ""
+
+#: inc/customizer.php:373
+msgid "Empty Cart Downloads Count"
+msgstr ""
+
+#: inc/customizer.php:375
+msgid ""
+"Enter the number of downloads you would like to display on the checkout page "
+"when the cart is empty. Additional downloads are available through "
+"pagination."
+msgstr ""
+
+#: inc/customizer.php:387
+msgid "EDD Frontend Submissions"
+msgstr ""
+
+#: inc/customizer.php:388
+msgid ""
+"All other FES options are under Dashboard => EDD FES. If you deactivate EDD "
+"or FES, these options will no longer appear."
+msgstr ""
+
+#: inc/customizer.php:398
+msgid "FES Dashboard Title"
+msgstr ""
+
+#: inc/customizer.php:400
+msgid ""
+"This optional field allows you to replace the title of your FES Dashboard. "
+"If left blank, the title of the page will show instead. Allowed tags:"
+msgstr ""
+
+#: inc/customizer.php:410
+msgid "Show contact form on Vendor template"
+msgstr ""
+
+#: inc/customizer.php:422
+msgid "Navigation Menus"
+msgstr ""
+
+#: inc/edd-functions.php:76
+msgctxt "cart widget output when there are no items in the cart"
+msgid "Your cart is empty."
+msgstr ""
+
+#: inc/edd-functions.php:85
+msgctxt ""
+"default title output on checkout page when there are no items in the cart"
+msgid "Your cart is empty."
+msgstr ""
+
+#: inc/extras.php:167
+msgid "Twitter Profile URL"
+msgstr ""
+
+#: inc/extras.php:168
+msgid "Facebook Profile URL"
+msgstr ""
+
+#: inc/extras.php:169
+msgid "Google Plus Profile URL"
+msgstr ""
+
+#: inc/extras.php:170
+msgid "YouTube Profile URL"
+msgstr ""
+
+#: inc/extras.php:202
+#, php-format
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:21
+#: inc/template-tags.php:19
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:25
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+#: inc/template-tags.php:23
+msgid "Older posts"
 msgstr ""
 
-#: inc/template-tags.php:29
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+#: inc/template-tags.php:27
+msgid "Newer posts"
 msgstr ""
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:51
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:55
+#: inc/template-tags.php:54
 msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgid "%title"
 msgstr ""
 
-#: inc/template-tags.php:56
+#: inc/template-tags.php:55
 msgctxt "Next post link"
-msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgid "%title"
 msgstr ""
 
-#: inc/template-tags.php:82
-msgctxt "post date"
-msgid "Posted on %s"
+#: inc/template-tags.php:100
+msgid "Comments"
 msgstr ""
 
-#: inc/template-tags.php:87
-msgctxt "post author"
+#: inc/template-tags.php:100
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:100
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:159
+msgid "Pingback: "
+msgstr ""
+
+#: inc/template-tags.php:161
+msgid " (Edit) "
+msgstr ""
+
+#: inc/template-tags.php:179
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:184
+#, php-format
 msgid "by %s"
 msgstr ""
 
+#: inc/template-tags.php:190
+msgid "post author"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: inc/template-tags.php:198
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-tags.php:209
+msgid "Reply"
+msgstr ""
+
 #: search.php:16
+#, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: sidebar.php:23
+#: searchform.php:8
+msgid "Search for:"
+msgstr ""
+
+#: sidebar-download.php:31
+msgid "Author:"
+msgstr ""
+
+#: sidebar-download.php:35
+msgid "Author since:"
+msgstr ""
+
+#: sidebar-download.php:95
+msgctxt "title attribute of the FES vendor's website link"
+msgid "'s website"
+msgstr ""
+
+#: sidebar-download.php:110
+msgid "Download Details"
+msgstr ""
+
+#: sidebar-download.php:122
+msgid "Published:"
+msgstr ""
+
+#: sidebar-download.php:128
+msgid "Sales:"
+msgstr ""
+
+#: sidebar-download.php:135
+msgid "Licensed:"
+msgstr ""
+
+#: sidebar-download.php:136
+msgid "Yes"
+msgstr ""
+
+#: sidebar-download.php:136
+msgid "No"
+msgstr ""
+
+#: sidebar-download.php:140
+msgid "Current Version:"
+msgstr ""
+
+#: sidebar-download.php:141
+msgid "Unversioned"
+msgstr ""
+
+#: sidebar-download.php:149
+msgid "Categories:"
+msgstr ""
+
+#: sidebar-download.php:159
+msgid "Tags:"
+msgstr ""
+
+#: sidebar.php:25
 msgid "Meta"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "_s"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Automattic"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://automattic.com/"
 msgstr ""
