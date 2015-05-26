@@ -630,8 +630,7 @@ function vendd_customizer_head_styles() {
 			.comment-full:hover > .reply > .comment-reply-link {
 				color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}
-			h1, h2,
-			.vendd-price-button-container {
+			h1, h2 {
 				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}
 		<?php endif; ?>

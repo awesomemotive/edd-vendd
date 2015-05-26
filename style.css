@@ -63,8 +63,7 @@ a,
 .comment-full:hover > .reply > .comment-reply-link {
 	color: #428bca;
 }
-h1, h2,
-.vendd-price-button-container {
+h1, h2 {
 	border-color: #428bca;
 }
 
@@ -1444,8 +1443,7 @@ object {
 	background: #fff;
 	font-size: .87em;
 	padding: 20px;
-	border-top-style: solid;
-	border-top-width: 3px;
+	border-top: 3px solid #d5d5d5;
 	border-radius: 0 0 4px 4px;
 	width: 100%;
 	max-height: 375px;
