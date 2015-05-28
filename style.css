@@ -1447,7 +1447,7 @@ object {
 	border-radius: 0 0 4px 4px;
 	width: 100%;
 	max-height: 375px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	box-shadow: 0px -2px 12px 0px rgba(21, 21, 21, .06);
 	z-index: 1;
 }
