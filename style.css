@@ -331,10 +331,10 @@ big {
 >>> Elements
 --------------------------------------------------------------*/
 hr {
-	background-color: #ccc;
+	background-color: #f2f2f2;
 	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	height: 4px;
+	margin-bottom: 3em;
 }
 ul,
 ol {
