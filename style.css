@@ -3300,6 +3300,12 @@ input[type="submit"].edd-submit {
 	.comment-full {
 		font-size: 14px;
 	}
+	.entry-content .alignright,
+	.entry-content .alignleft {
+		display: block;
+		float: none;
+		margin: 0 0 1.5em;
+	}
 	#content {
 		padding: 20px;
 	}
