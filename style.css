@@ -1336,12 +1336,12 @@ object {
 
 /* 2 column [downloads] */
 .edd_downloads_list.edd_download_columns_2 .edd_download {
-	width: 49.59% !important;
+	width: 49.6% !important;
 }
 
 /* 3 column [downloads] */
 .edd_downloads_list.edd_download_columns_3 .edd_download {
-	width: 32.89% !important;
+	width: 33.03% !important;
 }
 .entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
 	font-size: .93em;
@@ -1363,7 +1363,7 @@ object {
 .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
 .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 	padding: 20px;
-	width: 49.59% !important;
+	width: 49.6% !important;
 }
 
 /* general [downloads] styles */
@@ -3079,7 +3079,7 @@ input[type="submit"].edd-submit {
 	.edd_downloads_list.edd_download_columns_6 .edd_download {
 		display: inline-block;
 		padding: 20px;
-		width: 49.59% !important;
+		width: 49.6% !important;
 	}
 	.entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
 		font-size: 1em;
