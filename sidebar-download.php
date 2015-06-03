@@ -122,7 +122,7 @@
 					<span class="vendd-detail-name"><?php _e( 'Published:', 'vendd' ); ?></span>
 					<span class="vendd-detail-info"><?php echo $time_string; ?></span>
 				</li>
-				<?php if ( vendd_fes_is_activated() ) { ?>
+				<?php if ( vendd_fes_is_activated() || apply_filters( 'vendd_show_sales_in_sidebar', false, $post ) ) { ?>
 					<li class="vendd-details-list-item">
 						<?php $sales = edd_get_download_sales_stats( $post->ID ); ?>
 						<span class="vendd-detail-name"><?php _e( 'Sales:', 'vendd' ); ?></span>
@@ -131,12 +131,12 @@
 				<?php } ?>
 				<?php if ( vendd_SL_is_activated() ) { ?>
 					<li class="vendd-details-list-item vendd-license-details">
-						<?php $licensed = get_post_meta( get_the_ID(), '_edd_sl_enabled', true ); ?>
+						<?php $licensed = apply_filters( 'vendd_download_is_licensed', get_post_meta( get_the_ID(), '_edd_sl_enabled', true ), $post ); ?>
 						<span class="vendd-detail-name"><?php _e( 'Licensed:', 'vendd' ); ?></span>
 						<span class="vendd-detail-info"><?php echo $licensed ? __( 'Yes', 'vendd' ) : __( 'No', 'vendd' ); ?></span>
 					</li>
 					<li class="vendd-details-list-item vendd-license-details">
-						<?php $version = get_post_meta( get_the_ID(), '_edd_sl_version', true ); ?>
+						<?php $version = apply_filters( 'vendd_download_version', get_post_meta( get_the_ID(), '_edd_sl_version', true ), $post ); ?>
 						<span class="vendd-detail-name"><?php _e( 'Current Version:', 'vendd' ); ?></span>
 						<span class="vendd-detail-info"><?php echo $version ? $version : __( 'Unversioned', 'vendd' ); ?></span>
 					</li>
