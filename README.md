@@ -4,6 +4,10 @@ Vendd is a full-featured marketplace theme designed for use with [Easy Digital D
 
 Vendd was built by [Sean Davis](https://github.com/SDavisMedia) and the EDD Team.
 
+Demo: [https://easydigitaldownloads.com/vendd/](https://easydigitaldownloads.com/vendd/)
+
+Documentation: [http://docs.easydigitaldownloads.com/article/863-vendd-getting-started-guide](http://docs.easydigitaldownloads.com/article/863-vendd-getting-started-guide)
+
 ### Contributing
 ---
 
