@@ -124,7 +124,7 @@
 				</li>
 				<?php if ( vendd_fes_is_activated() || apply_filters( 'vendd_show_sales_in_sidebar', false, $post ) ) { ?>
 					<li class="vendd-details-list-item">
-						<?php $sales = edd_get_download_sales_stats( $post->ID ); ?>
+						<?php $sales = apply_filters( 'vendd_download_sales_count', edd_get_download_sales_stats( $post->ID ), $post ); ?>
 						<span class="vendd-detail-name"><?php _e( 'Sales:', 'vendd' ); ?></span>
 						<span class="vendd-detail-info"><?php echo $sales; ?></span>
 					</li>
