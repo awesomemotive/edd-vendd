@@ -481,6 +481,7 @@ function vendd_sanitize_textarea( $input ) {
 			'class'         => array(),
 			'id'            => array(),
 			'style'         => array(),
+			'target'        => array(),
 		),
 		'form'      => array(
 			'id'            => array(),
@@ -548,6 +549,7 @@ function vendd_sanitize_textarea_lite( $input ) {
 			'class'         => array(),
 			'id'            => array(),
 			'style'         => array(),
+			'target'        => array(),
 		),
 		'span'      => array(
 			'class'         => array(),
