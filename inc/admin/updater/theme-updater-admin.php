@@ -412,7 +412,7 @@ Template: vendd
 
 		// Get expire date
 		$expires = false;
-		if ( isset( $license_data->expires ) ) {
+		if ( isset( $license_data->expires ) && $license_data->expires !== 'lifetime' ) {
 			$expires = date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires ) );
 			$renew_link = '<a href="' . esc_url( $this->get_renewal_link() ) . '" target="_blank">' . $strings['renew'] . '</a>';
 		}
@@ -427,13 +427,19 @@ Template: vendd
 		}
 
 		if ( $license_data->license == 'valid' ) {
+
 			$message = $strings['license-key-is-active'] . ' ';
-			if ( $expires ) {
+
+			if ( false === $expires ) {
+				$message .= sprintf( $strings['lifetime'] ) . ' ';
+			} else {
 				$message .= sprintf( $strings['expires%s'], $expires ) . ' ';
 			}
+
 			if ( $site_count && $license_limit ) {
 				$message .= sprintf( $strings['%1$s/%2$-sites'], $site_count, $license_limit );
 			}
+
 		} else if ( $license_data->license == 'expired' ) {
 			if ( $expires ) {
 				$message = sprintf( $strings['license-key-expired-%s'], $expires );
