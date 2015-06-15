@@ -1958,6 +1958,12 @@ input[type="submit"].edd-submit {
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
 	border-bottom-width: 0;
 }
+.vendd-confirmation-template .entry-content #edd_purchase_receipt li {
+	list-style-position: inside;
+}
+.vendd-confirmation-template .entry-content #edd_purchase_receipt li:only-child {
+	list-style: none;
+}
 .entry-content #edd_checkout_cart,
 .entry-content #edd_user_history,
 .entry-content #edd_purchase_receipt,
