@@ -37,7 +37,7 @@ add_action( 'init', 'vendd_subtitles' );
 function vendd_downloads_shortcode_wrap_open() {
 	echo '<div class="vendd-download-information">';
 }
-add_action( 'edd_download_after_thumbnail', 'vendd_downloads_shortcode_wrap_open' );
+add_action( 'edd_download_before', 'vendd_downloads_shortcode_wrap_open' );
 
 function vendd_downloads_shortcode_wrap_close() {
 	echo '</div>';
