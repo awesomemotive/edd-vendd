@@ -71,10 +71,12 @@
 		</div>
 
 		<?php if ( vendd_edd_is_activated() && ! vendd_is_checkout() && ! vendd_is_landing_page() ) : ?>
-			<a href="<?php echo edd_get_checkout_uri(); ?>" class="header-cart">
-				<i class="fa fa-shopping-cart"></i>
-				<?php printf( __( 'Cart total: %s', 'vendd' ), '<span class="header-cart-total">' . edd_currency_filter( edd_format_amount( edd_get_cart_total() ) ) . '</span>' ); ?>
-			</a>
+			<?php if ( apply_filters( 'vendd_show_header_cart_info', true, $post ) ) : ?>
+				<a href="<?php echo edd_get_checkout_uri(); ?>" class="header-cart">
+					<i class="fa fa-shopping-cart"></i>
+					<?php printf( __( 'Cart total: %s', 'vendd' ), '<span class="header-cart-total">' . edd_currency_filter( edd_format_amount( edd_get_cart_total() ) ) . '</span>' ); ?>
+				</a>
+			<?php endif; ?>
 		<?php endif; ?>
 
 		<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() && has_nav_menu( 'main_menu' ) ) : ?>
