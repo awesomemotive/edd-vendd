@@ -78,6 +78,18 @@ add_action( 'after_setup_theme', 'vendd_setup' );
 
 
 /**
+ * Add search to main menu
+ */
+function vendd_main_menu_search_form( $items, $location ) {
+	if ( 'main_menu' == $location->theme_location ) {
+		$items .= '<li class="nav-search-form-list-item"><span class="nav-search-form">' . get_search_form( false ) . '</span></li>';
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'vendd_main_menu_search_form', 10, 2 );
+
+
+/**
  * Register widget area
  */
 function vendd_widgets_init() {

@@ -484,7 +484,7 @@ a:focus {
 	margin: 0;
 }
 .main-navigation .nav-menu {
-	padding-top: 15px;
+	position: relative;
 	border-top: 1px solid rgba(0, 0, 0, .05);
 }
 .main-navigation li,
@@ -765,6 +765,44 @@ a:focus {
 .header-cart:hover {
 	background: rgba(0, 0, 0, .1);
 	color: #fff;
+}
+.nav-search-form input[type="search"] {
+	background: rgba(0, 0, 0, .05) url('inc/images/sprite.png') no-repeat 13px -143px;
+	color: #ddd;
+	font-size: .87em;
+	padding: 5px 5px 5px 37px;
+	border: none;
+	width: 35px;
+	-webkit-transition: all .4s;
+	-moz-transition: all .4s;
+	transition: all .4s;
+	cursor: pointer;
+}
+.nav-search-form input[type="search"]:focus,
+.search-results .nav-search-form input[type="search"] {
+	background: #3d3d3d url('inc/images/sprite.png') no-repeat 13px -143px;
+	padding: 5px 15px 5px 40px;
+	width: 160px;
+	cursor: default;
+}
+.search-results .nav-search-form input[type="search"] {
+	background-color: rgba(0, 0, 0, .05);
+	color: #fff;
+}
+.search-results .nav-search-form input[type="search"]:focus {
+	background-color: #3d3d3d;
+}
+.nav-search-form input[type="search"]::-webkit-input-placeholder {
+	color: #ddd;
+}
+.nav-search-form input[type="search"]:-moz-placeholder {
+	color: #ddd;
+}
+.nav-search-form input[type="search"]::-moz-placeholder {
+	color: #ddd;
+}
+.nav-search-form input[type="search"]:-ms-input-placeholder {
+	color: #ddd;
 }
 
 
@@ -3126,6 +3164,12 @@ input[type="submit"].edd-submit {
 	}
 }
 
+@media all and ( min-width: 860px ) {
+	.main-navigation li {
+		margin-top: 15px;
+	}
+}
+
 @media all and ( max-width: 860px ) {
 	#primary,
 	#secondary,
@@ -3234,6 +3278,18 @@ input[type="submit"].edd-submit {
 		padding-top: 0;
 	}
 	.main-navigation .sub-menu a {
+		width: 100%;
+	}
+	.nav-search-form-list-item {
+		padding: 15px 40px 5px;
+	}
+	.nav-search-form input[type="search"],
+	.search-results .nav-search-form input[type="search"],
+	.nav-search-form input[type="search"]:focus {
+		background-color: rgba(0, 0, 0, .1);
+		background-position-x: 16px;
+		background-position-y: -138px;
+		padding: 10px 35px 10px 40px;
 		width: 100%;
 	}
 	#wp-calendar th,
@@ -3348,6 +3404,9 @@ input[type="submit"].edd-submit {
 	.main-navigation a,
 	.main-navigation .sub-menu a {
 		padding: 14px 20px;
+	}
+	.nav-search-form-list-item {
+		padding: 15px 20px;
 	}
 	.info-bar-navigation {
 		text-align: left;
