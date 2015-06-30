@@ -422,16 +422,19 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
-input[type="number"],
-textarea {
+input[type="number"] {
 	padding: 8px;
 	border: 1px solid #f2f2f2;
 	border-radius: 4px;
 	box-shadow: none;
+	-webkit-appearance: textfield;
 }
 textarea {
 	overflow: auto;
-	padding-left: 3px;
+	padding: 8px;
+	border: 1px solid #f2f2f2;
+	border-radius: 4px;
+	box-shadow: none;
 	vertical-align: top;
 	width: 100%;
 }
@@ -770,18 +773,18 @@ a:focus {
 	background: rgba(0, 0, 0, .05) url('inc/images/sprite.png') no-repeat 13px -143px;
 	color: #ddd;
 	font-size: .87em;
-	padding: 5px 5px 5px 37px;
-	border: none;
+	padding: 5px 5px 4px 37px;
+	border: 0;
 	width: 35px;
 	-webkit-transition: all .4s;
 	-moz-transition: all .4s;
 	transition: all .4s;
 	cursor: pointer;
+	-webkit-appearance: textfield;
 }
 .nav-search-form input[type="search"]:focus,
 .search-results .nav-search-form input[type="search"] {
 	background: #3d3d3d url('inc/images/sprite.png') no-repeat 13px -143px;
-	padding: 5px 15px 5px 40px;
 	width: 160px;
 	cursor: default;
 }
