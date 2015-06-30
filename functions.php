@@ -81,7 +81,7 @@ add_action( 'after_setup_theme', 'vendd_setup' );
  * Add search to main menu
  */
 function vendd_main_menu_search_form( $items, $location ) {
-	if ( 'main_menu' == $location->theme_location ) {
+	if ( 'main_menu' == $location->theme_location && 1 == get_theme_mod( 'vendd_menu_seacrh' ) ) {
 		$items .= '<li class="nav-search-form-list-item"><span class="nav-search-form">' . get_search_form( false ) . '</span></li>';
 	}
 	return $items;
