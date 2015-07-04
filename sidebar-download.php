@@ -32,7 +32,17 @@
 					<?php if ( apply_filters( 'vendd_show_single_download_author_name', true, $post ) ) { ?>
 						<li class="vendd-details-list-item vendd-author-details">
 							<span class="vendd-detail-name"><?php _e( 'Author:', 'vendd' ); ?></span>
-							<span class="vendd-detail-info"><?php echo $user->display_name; ?></span>
+							<span class="vendd-detail-info">
+								<?php if ( vendd_fes_is_activated() ) {
+									$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $post->post_author ) );
+									?>
+									<a class="vendor-url" href="<?php echo $vendor_url; ?>">
+										<?php echo $user->display_name; ?>
+									</a>
+								<?php } else { ?>
+									<?php echo $user->display_name; ?>
+								<?php } ?>
+							</span>
 						</li>
 					<?php } ?>
 					<?php if ( apply_filters( 'vendd_show_single_download_author_since', true, $post ) ) { ?>

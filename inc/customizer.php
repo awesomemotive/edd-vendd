@@ -422,6 +422,18 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'nav' )->title = __( 'Navigation Menus', 'vendd' );
 	$wp_customize->get_section( 'nav' )->priority = 50;
 
+	// show search form in main menu?
+	$wp_customize->add_setting( 'vendd_menu_seacrh', array(
+		'default'			=> 0,
+		'sanitize_callback'	=> 'vendd_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'vendd_menu_seacrh', array(
+		'label'     => __( 'Show search in Main Menu', 'vendd' ),
+		'section'   => 'nav',
+		'priority'  => 1,
+		'type'      => 'checkbox',
+	) );
+
 
 	/** ===============
 	 * Static Front Page
