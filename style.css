@@ -3141,7 +3141,7 @@ input[type="submit"].edd-submit {
 }
 
 @media all and ( min-width: 860px ) {
-	.main-navigation li {
+	.main-navigation > div > .nav-menu > li {
 		margin-top: 15px;
 	}
 }
