@@ -1344,35 +1344,13 @@ object {
 }
 
 /* 1 column [downloads] */
-.edd_downloads_list.edd_download_columns_1 .edd_download {
-	font-size: 1em;
+.edd_downloads_list.edd_download_columns_1 {
+	max-width: 720px;
+	margin: 0 auto;
 }
 
-@media all and ( min-width: 1041px ) {
-	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_byline {
-		padding-top: 20px;
-	}
-	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_excerpt,
-	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_full_content {
-		font-size: 1em;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download {
-		margin-bottom: 20px;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image {
-		float: left;
-		width: 55%;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image img {
-		border-radius: 4px 0 0 4px;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-download-information {
-		float: right;
-		width: 44%;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-price-button-container {
-		width: 44%;
-	}
+.edd_downloads_list.edd_download_columns_1 .edd_download {
+	font-size: 1em;
 }
 
 /* 2 column [downloads] */
@@ -3112,11 +3090,6 @@ input[type="submit"].edd-submit {
 }
 
 @media all and ( max-width: 1040px ) {
-	.edd_downloads_list.edd_download_columns_1 .edd_download {
-		display: block;
-		margin: 0 auto;
-		max-width: 722px !important;
-	}
 	#wp-calendar th,
 	#wp-calendar td {
 		padding: 3px 5px;
