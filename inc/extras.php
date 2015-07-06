@@ -34,18 +34,6 @@ add_filter( 'excerpt_more', 'vendd_excerpt_more' );
 
 
 /**
- * Only show regular posts in search results. Also account for the bbPress search form.
- */
-function vendd_search_filter( $query ) {
-	if ( $query->is_search && ! is_admin() && ( class_exists( 'bbPress' ) && ! is_bbpress() ) ) {
-		$query->set( 'post_type', 'post' );
-	}
-	return $query;
-}
-add_filter( 'pre_get_posts','vendd_search_filter' );
-
-
-/**
  * stupid skip link thing with the more tag -- remove it -- NOW
  */
 function vendd_remove_more_tag_link_jump( $link ) {
@@ -101,6 +89,11 @@ function vendd_body_classes( $classes ) {
 	// Adds classes based on template
 	if ( is_front_page() && ! is_home() ) {
 		$classes[] = 'front-page';
+	}
+
+	if ( is_search() && 1 == get_theme_mod( 'vendd_advanced_search_results', 0 ) ) {
+		// Adds class based on empty EDD cart
+		$classes[] = 'vendd-advanced-search-results';
 	}
 
 	if ( vendd_edd_is_activated() ) {
@@ -172,6 +165,32 @@ function vendd_add_social_profiles( $contactmethods ) {
 	return $contactmethods;
 }
 add_filter( 'user_contactmethods', 'vendd_add_social_profiles', 10, 1 );
+
+
+/**
+ * Filters posts_orderby to display advanced search results
+ */
+function vendd_advanced_search_results( $orderby, $query ) {
+	global $wpdb;
+
+	if ( $query->is_search ) {
+		return $wpdb->posts . '.post_type ASC';
+	}
+	return $orderby;
+}
+add_filter( 'posts_orderby', 'vendd_advanced_search_results', 10, 2 );
+
+
+/**
+ * Number of search results to show
+ */
+function vendd_search_filter( $query ) {
+	if ( $query->is_search && ! is_admin() ) {
+		$query->set( 'posts_per_page', 99999 );
+	}
+	return $query;
+}
+add_filter( 'pre_get_posts', 'vendd_search_filter' );
 
 
 /**

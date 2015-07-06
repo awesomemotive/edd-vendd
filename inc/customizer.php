@@ -223,6 +223,18 @@ function vendd_customize_register( $wp_customize ) {
 		'type'      => 'checkbox',
 	) );
 
+	// advanced search results
+	$wp_customize->add_setting( 'vendd_advanced_search_results', array( 
+		'default'           => 1,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'vendd_advanced_search_results', array(
+		'label'     => __( 'Use Advanced Search Results', 'vendd' ),
+		'section'   => 'vendd_content_section',
+		'priority'  => 60,
+		'type'      => 'checkbox',
+	) );
+
 	// Information Bar text
 	$wp_customize->add_setting( 'vendd_info_bar', array(
 		'default'           => null,
@@ -423,11 +435,11 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'nav' )->priority = 50;
 
 	// show search form in main menu?
-	$wp_customize->add_setting( 'vendd_menu_seacrh', array(
+	$wp_customize->add_setting( 'vendd_menu_search', array(
 		'default'			=> 0,
 		'sanitize_callback'	=> 'vendd_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'vendd_menu_seacrh', array(
+	$wp_customize->add_control( 'vendd_menu_search', array(
 		'label'     => __( 'Show search in Main Menu', 'vendd' ),
 		'section'   => 'nav',
 		'priority'  => 1,
