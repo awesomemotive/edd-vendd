@@ -27,7 +27,7 @@ while ( have_posts() ) : the_post();
 				?>
 				<div class="vendd-post-search-results vendd-search-results-container">
 					<span class="vendd-search-results-title">
-						<?php echo ucfirst( $last_type ) . ' ' . __( 'Results:', 'vendd' ); ?>
+						<?php printf( _x( '%s Results', 'post search results title', 'vendd' ), ucfirst( $last_type ) ); ?>
 					</span>
 					<ul class="vendd-search-results-list">
 				<?php
@@ -36,7 +36,7 @@ while ( have_posts() ) : the_post();
 				?>
 				<div class="vendd-page-search-results vendd-search-results-container">
 					<span class="vendd-search-results-title">
-						<?php echo ucfirst( $last_type ) . ' ' . __( 'Results:', 'vendd' ); ?>
+						<?php printf( _x( '%s Results', 'page search results title', 'vendd' ), ucfirst( $last_type ) ); ?>
 					</span>
 					<ul class="vendd-search-results-list">
 				<?php
