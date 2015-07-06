@@ -1306,6 +1306,10 @@ object {
 /*--------------------------------------------------------------
 >>> Search Results
 --------------------------------------------------------------*/
+#store-front.vendd-download-search-results {
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+}
 .vendd-search-results-container {
 	background: #fafafa;
 	float: left;
@@ -1314,10 +1318,10 @@ object {
 	border-right: 1px dotted #f2f2f2;
 	border-bottom: 1px solid #f2f2f2;
 	border-left: 1px dotted #f2f2f2;
-	width: 31.33%;
-	margin-right: 3%;
+	width: 48%;
+	margin-right: 4%;
 }
-.vendd-search-results-container:last-child {
+.vendd-post-search-results {
 	margin-right: 0;
 }
 .vendd-search-results-list {
@@ -1418,7 +1422,8 @@ object {
 	width: 32.89% !important;
 }
 .vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
-.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download {
+.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download {
 	width: 33.03% !important;
 }
 .entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
@@ -3155,6 +3160,7 @@ input[type="submit"].edd-submit {
 	.edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.edd_downloads_list.edd_download_columns_4 .edd_download,
 	.edd_downloads_list.edd_download_columns_5 .edd_download,
 	.edd_downloads_list.edd_download_columns_6 .edd_download {
@@ -3323,6 +3329,10 @@ input[type="submit"].edd-submit {
 		padding: 10px 35px 10px 40px;
 		width: 100%;
 	}
+	.vendd-search-results-container {
+		width: 100% !important;
+		margin: 0 0 40px;
+	}
 	#wp-calendar th,
 	#wp-calendar td {
 		padding: 6px 10px;
@@ -3482,6 +3492,7 @@ input[type="submit"].edd-submit {
 	.edd_downloads_list[class*="edd_download_columns_"] .edd_download,
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {

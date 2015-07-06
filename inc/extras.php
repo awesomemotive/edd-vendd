@@ -174,7 +174,7 @@ function vendd_advanced_search_results( $orderby, $query ) {
 	global $wpdb;
 
 	if ( $query->is_search ) {
-		return $wpdb->posts . '.post_type';
+		return $wpdb->posts . '.post_type ASC';
 	}
 	return $orderby;
 }
@@ -182,7 +182,7 @@ add_filter( 'posts_orderby', 'vendd_advanced_search_results', 10, 2 );
 
 
 /**
- * number of search results to show
+ * Number of search results to show
  */
 function vendd_search_filter( $query ) {
 	if ( $query->is_search && ! is_admin() ) {
@@ -190,7 +190,7 @@ function vendd_search_filter( $query ) {
 	}
 	return $query;
 }
-add_filter( 'pre_get_posts','vendd_search_filter' );
+add_filter( 'pre_get_posts', 'vendd_search_filter' );
 
 
 /**
