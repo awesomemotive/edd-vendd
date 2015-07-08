@@ -237,7 +237,7 @@ function vendd_customize_register( $wp_customize ) {
 
 	// advanced search results
 	$wp_customize->add_setting( 'vendd_advanced_search_results', array( 
-		'default'           => 1,
+		'default'           => 0,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
 	$wp_customize->add_control( 'vendd_advanced_search_results', array(
