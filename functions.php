@@ -11,7 +11,7 @@
  */
 define( 'VENDD_NAME', 'Vendd' );
 define( 'VENDD_AUTHOR', 'Sean Davis' );
-define( 'VENDD_VERSION', '1.1.1' );
+define( 'VENDD_VERSION', '1.1.2' );
 define( 'VENDD_HOME', 'https://easydigitaldownloads.com/downloads/vendd' );
 
 
@@ -81,7 +81,7 @@ add_action( 'after_setup_theme', 'vendd_setup' );
  * Add search to main menu
  */
 function vendd_main_menu_search_form( $items, $location ) {
-	if ( 'main_menu' == $location->theme_location && 1 == get_theme_mod( 'vendd_menu_seacrh' ) ) {
+	if ( 'main_menu' == $location->theme_location && 1 == get_theme_mod( 'vendd_menu_search' ) ) {
 		$items .= '<li class="nav-search-form-list-item"><span class="nav-search-form">' . get_search_form( false ) . '</span></li>';
 	}
 	return $items;
@@ -129,9 +129,6 @@ function vendd_scripts() {
 	// Font Awesome
 	wp_enqueue_style( 'vendd-fontawesome', get_template_directory_uri() . '/inc/fonts/font-awesome/css/font-awesome.min.css' );
 
-	// Responsive navigation
-	wp_enqueue_script( 'vendd-navigation', get_template_directory_uri() . '/inc/js/navigation.js', array(), VENDD_VERSION, true );
-
 	// Vendd scripts
 	wp_enqueue_script( 'vendd-scripts', get_template_directory_uri() . '/inc/js/vendd-scripts.js', array( 'jquery' ), VENDD_VERSION, true );
 
@@ -139,9 +136,6 @@ function vendd_scripts() {
 	if ( 1 == get_theme_mod( 'vendd_parallax_bg' ) ) :
 		wp_enqueue_script( 'vendd-parallax', get_template_directory_uri() . '/inc/js/parallax.js', array( 'jquery' ), VENDD_VERSION, true );
 	endif;
-
-	// Skip link focus fix
-	wp_enqueue_script( 'vendd-skip-link-focus-fix', get_template_directory_uri() . '/inc/js/skip-link-focus-fix.js', array(), VENDD_VERSION, true );
 
 	// Comment reply behavior
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

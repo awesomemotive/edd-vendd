@@ -4,7 +4,7 @@ Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: Sean Davis
 Author URI: http://sdavismedia.com/
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -192,7 +192,8 @@ a img {
 .vendd-downloads-template #primary,
 .post-type-archive-download #primary,
 .tax-download_category #primary,
-.tax-download_tag #primary {
+.tax-download_tag #primary,
+.vendd-advanced-search-results #primary {
 	float: none;
 	padding: 0;
 	width: 100%;
@@ -947,10 +948,17 @@ a:focus {
 	border-radius: 4px;
 	margin-bottom: 2em;
 }
-.page-title {
+body:not(.vendd-advanced-search-results) .page-title {
 	font-size: 1em;
 	font-weight: 300;
 	font-style: italic;
+}
+.vendd-advanced-search-results .page-header {
+	text-align: center;
+}
+.vendd-advanced-search-results .page-title {
+	font: 400 2.67em/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin-bottom: 1.2em;
 }
 .error-404 .page-title,
 .store-404 .page-title {
@@ -1296,6 +1304,57 @@ object {
 
 
 /*--------------------------------------------------------------
+>>> Search Results
+--------------------------------------------------------------*/
+#store-front.vendd-download-search-results {
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+}
+.vendd-search-results-container {
+	background: #fafafa;
+	float: left;
+	padding: 30px 20px;
+	border-top: 1px solid #f2f2f2;
+	border-right: 1px dotted #f2f2f2;
+	border-bottom: 1px solid #f2f2f2;
+	border-left: 1px dotted #f2f2f2;
+	width: 48%;
+	margin-right: 4%;
+}
+.vendd-post-search-results {
+	margin-right: 0;
+}
+.vendd-search-results-list {
+	background: #fff;
+	list-style: none;
+	border: 1px solid #f2f2f2;
+	border-radius: 4px;
+	margin: 0;
+}
+.vendd-search-result-item {
+	padding: 10px 20px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.vendd-search-result-item:before {
+	color: #ddd;
+	font-family: "FontAwesome";
+	content: "\f0da";
+	margin-right: 10px;
+}
+.vendd-search-results-title {
+	display: block;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.5em;
+	line-height: 1.4;
+	font-weight: 400;
+	margin-bottom: .4em;
+}
+.vendd-search-result .entry-subtitle {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
 >>> Easy Digital Downloads (and supporting extensions)
 --------------------------------------------------------------*/
 .store-front-header,
@@ -1344,35 +1403,13 @@ object {
 }
 
 /* 1 column [downloads] */
-.edd_downloads_list.edd_download_columns_1 .edd_download {
-	font-size: 1em;
+.edd_downloads_list.edd_download_columns_1 {
+	max-width: 720px;
+	margin: 0 auto;
 }
 
-@media all and ( min-width: 1041px ) {
-	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_byline {
-		padding-top: 20px;
-	}
-	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_excerpt,
-	.edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_full_content {
-		font-size: 1em;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download {
-		margin-bottom: 20px;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image {
-		float: left;
-		width: 55%;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .edd_download_image img {
-		border-radius: 4px 0 0 4px;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-download-information {
-		float: right;
-		width: 44%;
-	}
-	.vendd-downloads-template .edd_downloads_list.edd_download_columns_1 .edd_download .vendd-price-button-container {
-		width: 44%;
-	}
+.edd_downloads_list.edd_download_columns_1 .edd_download {
+	font-size: 1em;
 }
 
 /* 2 column [downloads] */
@@ -1385,7 +1422,8 @@ object {
 	width: 32.89% !important;
 }
 .vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
-.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download {
+.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download {
 	width: 33.03% !important;
 }
 .entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
@@ -3112,11 +3150,6 @@ input[type="submit"].edd-submit {
 }
 
 @media all and ( max-width: 1040px ) {
-	.edd_downloads_list.edd_download_columns_1 .edd_download {
-		display: block;
-		margin: 0 auto;
-		max-width: 722px !important;
-	}
 	#wp-calendar th,
 	#wp-calendar td {
 		padding: 3px 5px;
@@ -3127,6 +3160,7 @@ input[type="submit"].edd-submit {
 	.edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.edd_downloads_list.edd_download_columns_4 .edd_download,
 	.edd_downloads_list.edd_download_columns_5 .edd_download,
 	.edd_downloads_list.edd_download_columns_6 .edd_download {
@@ -3168,7 +3202,7 @@ input[type="submit"].edd-submit {
 }
 
 @media all and ( min-width: 860px ) {
-	.main-navigation li {
+	.main-navigation > div > .nav-menu > li {
 		margin-top: 15px;
 	}
 }
@@ -3295,6 +3329,10 @@ input[type="submit"].edd-submit {
 		padding: 10px 35px 10px 40px;
 		width: 100%;
 	}
+	.vendd-search-results-container {
+		width: 100% !important;
+		margin: 0 0 40px;
+	}
 	#wp-calendar th,
 	#wp-calendar td {
 		padding: 6px 10px;
@@ -3351,6 +3389,7 @@ input[type="submit"].edd-submit {
 	.store-front-header .entry-title,
 	.vendor-header .vendor-store-title,
 	.download-term-header .term-title,
+	.vendd-advanced-search-results .page-title,
 	.error-404 .page-title,
 	.store-404 .page-title {
 		font-size: 2em;
@@ -3453,6 +3492,7 @@ input[type="submit"].edd-submit {
 	.edd_downloads_list[class*="edd_download_columns_"] .edd_download,
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
 	.entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {

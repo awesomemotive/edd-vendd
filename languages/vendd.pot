@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vendd\n"
-"POT-Creation-Date: 2015-05-25 22:59-0600\n"
-"PO-Revision-Date: 2015-05-25 23:01-0600\n"
+"POT-Creation-Date: 2015-07-08 10:20-0600\n"
+"PO-Revision-Date: 2015-07-08 10:20-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -92,6 +92,18 @@ msgstr ""
 
 #: comments.php:68
 msgid "Comments are closed."
+msgstr ""
+
+#: content/content-advanced-search.php:30
+#, php-format
+msgctxt "post search results title"
+msgid "%s Results"
+msgstr ""
+
+#: content/content-advanced-search.php:39
+#, php-format
+msgctxt "page search results title"
+msgid "%s Results"
 msgstr ""
 
 #: content/content-archive-download.php:14
@@ -243,11 +255,11 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:85
+#: functions.php:97
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:108
 msgid "Download Sidebar"
 msgstr ""
 
@@ -255,12 +267,12 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:76
+#: header.php:77
 #, php-format
 msgid "Cart total: %s"
 msgstr ""
 
-#: header.php:82
+#: header.php:84
 msgid "Menu"
 msgstr ""
 
@@ -355,7 +367,7 @@ msgid "Activate License"
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:35
-#: inc/admin/updater/theme-updater.php:47
+#: inc/admin/updater/theme-updater.php:48
 msgid "License status is unknown."
 msgstr ""
 
@@ -377,42 +389,46 @@ msgid "Expires %s."
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:40
-#, php-format
-msgid "You have %1$s / %2$s sites activated."
+msgid "Lifetime License."
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:41
 #, php-format
-msgid "License key expired %s."
+msgid "You have %1$s / %2$s sites activated."
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:42
-msgid "License key has expired."
+#, php-format
+msgid "License key expired %s."
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:43
-msgid "License keys do not match."
+msgid "License key has expired."
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:44
-msgid "License is inactive."
+msgid "License keys do not match."
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:45
-msgid "License key is disabled."
+msgid "License is inactive."
 msgstr ""
 
 #: inc/admin/updater/theme-updater.php:46
+msgid "License key is disabled."
+msgstr ""
+
+#: inc/admin/updater/theme-updater.php:47
 msgid "Site is inactive."
 msgstr ""
 
-#: inc/admin/updater/theme-updater.php:48
+#: inc/admin/updater/theme-updater.php:49
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
 msgstr ""
 
-#: inc/admin/updater/theme-updater.php:49
+#: inc/admin/updater/theme-updater.php:50
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
@@ -493,120 +509,124 @@ msgid "Enable Comments on Standard Pages"
 msgstr ""
 
 #: inc/customizer.php:232
+msgid "Show search in Main Menu"
+msgstr ""
+
+#: inc/customizer.php:244
+msgid "Use Advanced Search Results"
+msgstr ""
+
+#: inc/customizer.php:256
 msgid "Information Bar Text"
 msgstr ""
 
-#: inc/customizer.php:234
+#: inc/customizer.php:258
 msgid ""
 "This text appears at the very top of your site aligned to the left. Allowed "
 "tags:"
 msgstr ""
 
-#: inc/customizer.php:244
+#: inc/customizer.php:268
 msgid "Footer Credits & Copyright"
 msgstr ""
 
-#: inc/customizer.php:246
+#: inc/customizer.php:270
 msgid ""
 "Displays site title, tagline, copyright, and year by default. Allowed tags: "
 msgstr ""
 
-#: inc/customizer.php:257
+#: inc/customizer.php:281
 msgid "Easy Digital Downloads"
 msgstr ""
 
-#: inc/customizer.php:258
+#: inc/customizer.php:282
 msgid ""
 "All other EDD options are under Dashboard => Downloads. If you deactivate "
 "EDD, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:268
+#: inc/customizer.php:292
 msgid "Show Comments on Downloads"
 msgstr ""
 
-#: inc/customizer.php:280
+#: inc/customizer.php:304
 msgid "Show Categories/Tags on Downloads grid"
 msgstr ""
 
-#: inc/customizer.php:325
+#: inc/customizer.php:349
 msgid "EDD Button Color"
 msgstr ""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:351
 msgid ""
 "By default, this will match what you set in the EDD Style Settings. "
 "Selecting another color here will override the EDD setting. Clear the color "
 "field back to default to revert back to the EDD setting."
 msgstr ""
 
-#: inc/customizer.php:337
+#: inc/customizer.php:361
 msgid "Store Front Title"
 msgstr ""
 
-#: inc/customizer.php:339
+#: inc/customizer.php:363
 msgid ""
 "This optional field allows you to replace the title of your Store Front (EDD "
 "Store Front page template). If left blank, the title of the page will show "
 "instead. Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:349
+#: inc/customizer.php:373
 msgid "Empty Cart Title"
 msgstr ""
 
-#: inc/customizer.php:351
+#: inc/customizer.php:375
 msgid ""
 "This is the title on the page that displays when the cart is empty. Allowed "
 "tags:"
 msgstr ""
 
-#: inc/customizer.php:361
+#: inc/customizer.php:385
 msgid "Empty Cart Text"
 msgstr ""
 
-#: inc/customizer.php:363
+#: inc/customizer.php:387
 msgid ""
 "Displays a custom message when the checkout cart is empty. Allowed tags: "
 msgstr ""
 
-#: inc/customizer.php:373
+#: inc/customizer.php:397
 msgid "Empty Cart Downloads Count"
 msgstr ""
 
-#: inc/customizer.php:375
+#: inc/customizer.php:399
 msgid ""
 "Enter the number of downloads you would like to display on the checkout page "
 "when the cart is empty. Additional downloads are available through "
 "pagination."
 msgstr ""
 
-#: inc/customizer.php:387
+#: inc/customizer.php:411
 msgid "EDD Frontend Submissions"
 msgstr ""
 
-#: inc/customizer.php:388
+#: inc/customizer.php:412
 msgid ""
 "All other FES options are under Dashboard => EDD FES. If you deactivate EDD "
 "or FES, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:398
+#: inc/customizer.php:422
 msgid "FES Dashboard Title"
 msgstr ""
 
-#: inc/customizer.php:400
+#: inc/customizer.php:424
 msgid ""
 "This optional field allows you to replace the title of your FES Dashboard. "
 "If left blank, the title of the page will show instead. Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:410
+#: inc/customizer.php:434
 msgid "Show contact form on Vendor template"
-msgstr ""
-
-#: inc/customizer.php:422
-msgid "Navigation Menus"
 msgstr ""
 
 #: inc/edd-functions.php:76
@@ -620,23 +640,23 @@ msgctxt ""
 msgid "Your cart is empty."
 msgstr ""
 
-#: inc/extras.php:167
+#: inc/extras.php:160
 msgid "Twitter Profile URL"
 msgstr ""
 
-#: inc/extras.php:168
+#: inc/extras.php:161
 msgid "Facebook Profile URL"
 msgstr ""
 
-#: inc/extras.php:169
+#: inc/extras.php:162
 msgid "Google Plus Profile URL"
 msgstr ""
 
-#: inc/extras.php:170
+#: inc/extras.php:163
 msgid "YouTube Profile URL"
 msgstr ""
 
-#: inc/extras.php:202
+#: inc/extras.php:221
 #, php-format
 msgid "Page %s"
 msgstr ""
@@ -711,63 +731,63 @@ msgstr ""
 
 #: search.php:16
 #, php-format
-msgid "Search Results for: %s"
+msgid "Search results for: %s"
 msgstr ""
 
 #: searchform.php:8
 msgid "Search for:"
 msgstr ""
 
-#: sidebar-download.php:31
+#: sidebar-download.php:34
 msgid "Author:"
 msgstr ""
 
-#: sidebar-download.php:35
+#: sidebar-download.php:50
 msgid "Author since:"
 msgstr ""
 
-#: sidebar-download.php:95
+#: sidebar-download.php:112
 msgctxt "title attribute of the FES vendor's website link"
 msgid "'s website"
 msgstr ""
 
-#: sidebar-download.php:110
+#: sidebar-download.php:128
 msgid "Download Details"
 msgstr ""
 
-#: sidebar-download.php:122
+#: sidebar-download.php:140
 msgid "Published:"
 msgstr ""
 
-#: sidebar-download.php:128
+#: sidebar-download.php:146
 msgid "Sales:"
 msgstr ""
 
-#: sidebar-download.php:135
+#: sidebar-download.php:153
 msgid "Licensed:"
 msgstr ""
 
-#: sidebar-download.php:136
+#: sidebar-download.php:154
 msgid "Yes"
 msgstr ""
 
-#: sidebar-download.php:136
+#: sidebar-download.php:154
 msgid "No"
 msgstr ""
 
-#: sidebar-download.php:140
+#: sidebar-download.php:158
 msgid "Current Version:"
 msgstr ""
 
-#: sidebar-download.php:141
+#: sidebar-download.php:159
 msgid "Unversioned"
 msgstr ""
 
-#: sidebar-download.php:149
+#: sidebar-download.php:167
 msgid "Categories:"
 msgstr ""
 
-#: sidebar-download.php:159
+#: sidebar-download.php:177
 msgid "Tags:"
 msgstr ""
 
