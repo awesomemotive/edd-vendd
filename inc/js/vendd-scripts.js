@@ -20,6 +20,15 @@
 		}
 
 		/**
+		 * EDD [downloads] shortcode button behavior
+		 */
+		$('.vendd-show-button').on('click',function(e){
+			e.preventDefault();
+			$(this).toggleClass('vendd-price-button-displayed').siblings('.vendd-price-button-container').slideToggle();
+			$(this).parents('.edd_download').siblings().find('.vendd-price-button-container').slideUp().prev('.vendd-show-button').removeClass('vendd-price-button-displayed');
+		});
+
+		/**
 		 * EDD cart information in the header
 		 */
 		var body = $(document.body);
@@ -58,14 +67,5 @@
 				container.className += ' toggled';
 			}
 		};
-
-		/**
-		 * EDD [downloads] shortcode button behavior
-		 */
-		$('.vendd-show-button').on('click',function(e){
-			e.preventDefault();
-			$(this).toggleClass('vendd-price-button-displayed').siblings('.vendd-price-button-container').slideToggle();
-			$(this).parents('.edd_download').siblings().find('.vendd-price-button-container').slideUp().prev('.vendd-show-button').removeClass('vendd-price-button-displayed');
-		});
 	});
 })(jQuery);
