@@ -43,8 +43,10 @@ function vendd_setup() {
 	 * Enable support for Post Thumbnails on posts and pages.
 	 */
 	add_theme_support( 'post-thumbnails' );
-	// add a hard cropped (for uniformity) image size for singulars
+	// add a hard cropped (for uniformity) image size for posts & some pages
 	add_image_size( 'vendd_featured_image', 722, 361, true );
+	// add a hard cropped (for uniformity) image size for full width pages
+	add_image_size( 'vendd_featured_image_full_width', 1120, 361, true );
 	// add a hard cropped (for uniformity) image size for content lists
 	add_image_size( 'vendd_featured_image_thumb', 200, 200, true );
 	// add a hard cropped (for uniformity) image size for the product grid
