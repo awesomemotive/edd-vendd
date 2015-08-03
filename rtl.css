@@ -140,7 +140,15 @@ body {
 }
 
 .downloads-footer .fa {
-    margin: 0 0 0 4px;
+	margin: 0 0 0 4px;
+}
+
+#edd_checkout_wrap #edd_checkout_form_wrap #edd-payment-mode-wrap label {
+	margin: 0 0 0 20px;
+}
+
+#edd_checkout_wrap #edd_checkout_form_wrap input[type="radio"] {
+	margin: 0 0 0 5px;
 }
 
 
