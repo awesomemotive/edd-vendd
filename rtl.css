@@ -1,16 +1,55 @@
 /*
 Theme Name: Vendd
-
-Adding support for language written in a Right To Left (RTL) direction is easy -
-it's just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
-
 http://codex.wordpress.org/Right_to_Left_Language_Support
 */
 
-/*
+
+/*--------------------------------------------------------------
+>>> Structure Elements
+--------------------------------------------------------------*/
 body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
-*/
+
+
+/*--------------------------------------------------------------
+>>> Menus
+--------------------------------------------------------------*/
+.secondary-navigation {
+	right: auto;
+	left: 40px;
+}
+
+.secondary-navigation a {
+	margin: 0 15px 0 0;
+}
+
+.main-navigation li {
+	float: right;
+}
+
+.main-navigation .nav-menu > li > a {
+	margin: 0 0 0 15px;
+}
+
+.main-navigation .nav-menu > .menu-item-has-children > a::after {
+	content: "\f0d7";
+}
+
+.main-navigation .nav-menu > .menu-item-has-children > a::before {
+	content: ;
+	margin: 0 0 0 8px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Header
+--------------------------------------------------------------*/
+.header-cart {
+	position: static;
+}
+
+.header-cart .fa {
+	margin: 0 0 0 6px;
+}
