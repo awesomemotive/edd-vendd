@@ -425,7 +425,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"] {
 	padding: 8px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 4px;
 	box-shadow: none;
 	-webkit-appearance: textfield;
@@ -433,7 +433,7 @@ input[type="number"] {
 textarea {
 	overflow: auto;
 	padding: 8px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 4px;
 	box-shadow: none;
 	vertical-align: top;
@@ -2153,7 +2153,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-edd-fes-shortcode .edd_form select {
 	background: #fff;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 0;
 	height: 40px;
 	width: 300px;
@@ -2688,7 +2688,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-form fieldset .fes-fields select,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select {
 	height: 40px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 0;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields select[multiple],
@@ -2703,7 +2703,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-form fieldset .fes-fields input[type="url"],
 .vendd-fes-template .fes-form fieldset .fes-fields textarea {
 	background: #fafafa;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
@@ -2880,7 +2880,7 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="url"],
 .vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields textarea {
 	background: #fff;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
@@ -2920,7 +2920,7 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	border-width: 1px 1px 4px;
 	border-style: solid;
-	border-color: #f2f2f2;
+	border-color: #e4e4e4;
 	box-shadow: none;
 	width: 100%;
 }
@@ -3098,7 +3098,7 @@ input[type="submit"].edd-submit {
 [class*="ninja-forms-all-"] input[type="number"],
 [class*="ninja-forms-all-"] textarea {
 	background: #fafafa;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
@@ -3123,12 +3123,12 @@ input[type="submit"].edd-submit {
 [class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-edit-area {
 	border-width: 0 1px !important;
 	border-style: solid;
-	border-color: #f2f2f2;
+	border-color: ##e4e4e4;
 }
 [class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-statusbar {
 	border-width: 1px 1px 4px !important;
 	border-style: solid;
-	border-color: #f2f2f2;
+	border-color: #e4e4e4;
 	border-radius: 0 0 4px 4px;
 }
 [class*="ninja-forms-all-"] .textarea-wrap .wp-editor-tools {
@@ -3136,7 +3136,7 @@ input[type="submit"].edd-submit {
 }
 [class*="ninja-forms-all-"] .list-dropdown-wrap select,
 [class*="ninja-forms-all-"] .country-wrap select {
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	height: 40px;
 }
 
