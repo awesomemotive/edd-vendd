@@ -1691,10 +1691,6 @@ input[type="submit"].edd-submit {
 	font-size: .87em;
 	padding: 4px 8px;
 }
-#edd-add-license-renewal {
-	font-size: .87em;
-	padding: 8px 10px;
-}
 #edd_purchase_submit #edd-purchase-button {
 	display: block;
 	width: 100%;
@@ -3033,6 +3029,18 @@ input[type="submit"].edd-submit {
 }
 .edd-csau-products .edd_download_inner .edd-cart-added-alert {
 	padding: 0 0 10px 10px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Software Licensing
+>>> https://easydigitaldownloads.com/downloads/software-licensing/
+--------------------------------------------------------------*/
+#edd-add-license-renewal,
+#edd_sl_cancel_renewal_form input[value*="Cancel"] {
+	color: #fff;
+	font-size: .87em;
+	padding: 8px 10px;
 }
 
 
