@@ -180,6 +180,11 @@ if ( vendd_fes_is_activated() ) {
 }
 
 /**
+ * Vendd's widgets
+ */
+require get_template_directory() . '/inc/admin/widgets.php';
+
+/**
  * Custom template tags
  */
 require get_template_directory() . '/inc/template-tags.php';
