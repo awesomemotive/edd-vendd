@@ -51,8 +51,8 @@ function vendd_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'vendd' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous"><span class="post-nav-title">Previous Post:</span> %link</div>', _x( '%title', 'Previous post link', 'vendd' ) );
-				next_post_link( '<div class="nav-next"><span class="post-nav-title">Next Post:</span> %link</div>', _x( '%title', 'Next post link',     'vendd' ) );
+				previous_post_link( '<div class="nav-previous"><span class="post-nav-title">' . __( 'Previous Post', 'vendd' ) . ':</span> %link</div>', _x( '%title', 'Previous post link', 'vendd' ) );
+				next_post_link( '<div class="nav-next"><span class="post-nav-title">' . __( 'Next Post', 'vendd' ) . ':</span> %link</div>', _x( '%title', 'Next post link',     'vendd' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
