@@ -182,7 +182,9 @@ if ( vendd_fes_is_activated() ) {
 /**
  * Vendd's widgets
  */
-require get_template_directory() . '/inc/admin/widgets.php';
+if ( vendd_edd_is_activated() ) {
+	require get_template_directory() . '/inc/admin/widgets.php';
+}
 
 /**
  * Custom template tags
