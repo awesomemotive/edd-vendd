@@ -211,6 +211,18 @@ function vendd_customize_register( $wp_customize ) {
 		'type'      => 'checkbox',
 	) );
 
+	// show featured images on pages?
+	$wp_customize->add_setting( 'vendd_page_featured_image', array( 
+		'default'           => 0,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'vendd_page_featured_image', array(
+		'label'     => __( 'Show Featured Images on Pages', 'vendd' ),
+		'section'   => 'vendd_content_section',
+		'priority'  => 45,
+		'type'      => 'checkbox',
+	) );
+
 	// comments on pages?
 	$wp_customize->add_setting( 'vendd_page_comments', array( 
 		'default'           => 0,

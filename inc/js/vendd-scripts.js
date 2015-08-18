@@ -32,6 +32,15 @@
 		});
 
 		/**
+		 * EDD [downloads] shortcode button behavior
+		 */
+		$('.vendd-show-button').on('click',function(e){
+			e.preventDefault();
+			$(this).toggleClass('vendd-price-button-displayed').siblings('.vendd-price-button-container').slideToggle();
+			$(this).parents('.edd_download').siblings().find('.vendd-price-button-container').slideUp().prev('.vendd-show-button').removeClass('vendd-price-button-displayed');
+		});
+
+		/**
 		 * responsive menu behavior
 		 */
 		var container, button, menu;
@@ -58,14 +67,5 @@
 				container.className += ' toggled';
 			}
 		};
-
-		/**
-		 * EDD [downloads] shortcode button behavior
-		 */
-		$('.vendd-show-button').on('click',function(e){
-			e.preventDefault();
-			$(this).toggleClass('vendd-price-button-displayed').siblings('.vendd-price-button-container').slideToggle();
-			$(this).parents('.edd_download').siblings().find('.vendd-price-button-container').slideUp().prev('.vendd-show-button').removeClass('vendd-price-button-displayed');
-		});
 	});
 })(jQuery);

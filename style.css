@@ -4,7 +4,7 @@ Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: Sean Davis
 Author URI: http://sdavismedia.com/
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.2
+Version: 1.1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -425,7 +425,7 @@ input[type="password"],
 input[type="search"],
 input[type="number"] {
 	padding: 8px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 4px;
 	box-shadow: none;
 	-webkit-appearance: textfield;
@@ -433,7 +433,7 @@ input[type="number"] {
 textarea {
 	overflow: auto;
 	padding: 8px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 4px;
 	box-shadow: none;
 	vertical-align: top;
@@ -1687,13 +1687,12 @@ input[type="submit"].edd-submit {
 	border-radius: 4px;
 	padding: 15px;
 }
-.vendd-price-button-container .vendd-price-button .edd-submit {
+.content-area .vendd-price-button-container .vendd-price-button .edd-submit {
 	font-size: .87em;
 	padding: 4px 8px;
 }
-#edd-add-license-renewal {
-	font-size: .87em;
-	padding: 8px 10px;
+.content-area .vendd-price-button-container .edd_download_purchase_form {
+	margin-bottom: 0;
 }
 #edd_purchase_submit #edd-purchase-button {
 	display: block;
@@ -1836,12 +1835,19 @@ input[type="submit"].edd-submit {
 .single-download .widget_edd_product_details .edd_download_purchase_form {
 	margin-bottom: 0;
 }
-.widget_edd_product_details .edd_download_purchase_form .edd-submit {
+.widget_edd_product_details .edd_download_purchase_form .edd-submit,
+.content-area .edd_download_purchase_form .edd-submit {
 	font-size: 1rem;
 	padding: 10px;
 	border: none;
 	border-radius: 4px;
 	width: 100%;
+}
+.content-area .edd_download_purchase_form .edd-submit {
+	width: auto;
+}
+.content-area .edd_download_purchase_form {
+	margin-bottom: 1.5em;
 }
 .site-content .edd_download_purchase_form input[type="number"] {
 	padding: 2px 8px;
@@ -2157,7 +2163,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-edd-fes-shortcode .edd_form select {
 	background: #fff;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 0;
 	height: 40px;
 	width: 300px;
@@ -2692,7 +2698,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-form fieldset .fes-fields select,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select {
 	height: 40px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-radius: 0;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields select[multiple],
@@ -2707,7 +2713,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-form fieldset .fes-fields input[type="url"],
 .vendd-fes-template .fes-form fieldset .fes-fields textarea {
 	background: #fafafa;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
@@ -2884,7 +2890,7 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="url"],
 .vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields textarea {
 	background: #fff;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
@@ -2924,7 +2930,7 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	border-width: 1px 1px 4px;
 	border-style: solid;
-	border-color: #f2f2f2;
+	border-color: #e4e4e4;
 	box-shadow: none;
 	width: 100%;
 }
@@ -3037,6 +3043,18 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+>>> Software Licensing
+>>> https://easydigitaldownloads.com/downloads/software-licensing/
+--------------------------------------------------------------*/
+#edd-add-license-renewal,
+#edd_sl_cancel_renewal_form input[value*="Cancel"] {
+	color: #fff;
+	font-size: .87em;
+	padding: 8px 10px;
+}
+
+
+/*--------------------------------------------------------------
 >>> Kolakube Email Forms
 >>> https://wordpress.org/plugins/kolakube-email-forms/
 --------------------------------------------------------------*/
@@ -3090,7 +3108,7 @@ input[type="submit"].edd-submit {
 [class*="ninja-forms-all-"] input[type="number"],
 [class*="ninja-forms-all-"] textarea {
 	background: #fafafa;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
@@ -3115,12 +3133,12 @@ input[type="submit"].edd-submit {
 [class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-edit-area {
 	border-width: 0 1px !important;
 	border-style: solid;
-	border-color: #f2f2f2;
+	border-color: ##e4e4e4;
 }
 [class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-statusbar {
 	border-width: 1px 1px 4px !important;
 	border-style: solid;
-	border-color: #f2f2f2;
+	border-color: #e4e4e4;
 	border-radius: 0 0 4px 4px;
 }
 [class*="ninja-forms-all-"] .textarea-wrap .wp-editor-tools {
@@ -3128,7 +3146,7 @@ input[type="submit"].edd-submit {
 }
 [class*="ninja-forms-all-"] .list-dropdown-wrap select,
 [class*="ninja-forms-all-"] .country-wrap select {
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e4e4e4;
 	height: 40px;
 }
 

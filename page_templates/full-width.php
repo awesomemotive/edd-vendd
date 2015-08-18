@@ -22,8 +22,14 @@ get_header(); ?>
 						</header><!-- .entry-header -->
 
 						<div class="entry-content">
-							<?php the_content(); ?>
 							<?php
+								// display featured image?
+								if ( has_post_thumbnail() && 1 == get_theme_mod( 'vendd_page_featured_image', 0 ) ) :
+									the_post_thumbnail( 'vendd_featured_image_full_width', array( 'class' => 'featured-img featured-img-full-width' ) );
+								endif;
+
+								the_content();
+
 								wp_link_pages( array(
 									'before' => '<div class="page-links">' . __( 'Pages:', 'vendd' ),
 									'after'  => '</div>',

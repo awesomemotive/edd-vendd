@@ -1,16 +1,187 @@
 /*
 Theme Name: Vendd
-
-Adding support for language written in a Right To Left (RTL) direction is easy -
-it's just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
-
 http://codex.wordpress.org/Right_to_Left_Language_Support
 */
 
-/*
+
+/*--------------------------------------------------------------
+>>> Structure Elements
+--------------------------------------------------------------*/
 body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
-*/
+
+
+/*--------------------------------------------------------------
+>>> Menus
+--------------------------------------------------------------*/
+.secondary-navigation {
+	right: auto;
+	left: 40px;
+}
+
+.secondary-navigation a {
+	margin: 0 15px 0 0;
+}
+
+@media all and ( min-width: 861px ) {
+	.main-navigation li {
+		float: right;
+	}
+	.main-navigation .nav-menu > li > a {
+		margin: 0 0 0 15px;
+	}
+	.main-navigation .nav-menu > .menu-item-has-children > a:before,
+	.main-navigation .sub-menu > .menu-item-has-children > a:before {
+		content: "\f0d7";
+		font-family: "FontAwesome";
+		margin: 0 8px 0 0;
+	}
+	.main-navigation .sub-menu > .menu-item-has-children > a:before {
+		content: "\f0d9";
+		font-family: "FontAwesome";
+		margin: 0 8px 0 0;
+	}
+	.main-navigation .nav-menu > .menu-item-has-children > a:after,
+	.main-navigation .sub-menu > .menu-item-has-children > a:after {
+		content: "";
+		margin: 0;
+	}
+	.main-navigation ul ul ul {
+		right: 100%;
+		left: auto;
+	}
+}
+
+
+/*--------------------------------------------------------------
+>>> Header
+--------------------------------------------------------------*/
+.header-cart {
+	right: auto;
+	left: 40px;
+}
+
+.header-cart .fa {
+	margin: 0 0 0 6px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Content
+--------------------------------------------------------------*/
+.byline-item {
+	margin: 0 0 0 20px;
+}
+
+.entry-footer .fa {
+	margin: 0 0 0 4px;
+}
+
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous {
+	float: right;
+}
+
+.comment-navigation .nav-next,
+.paging-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+
+.nav-previous .fa,
+.nav-next .fa,
+.byline-item .fa {
+	display: none;
+}
+
+.featured-img.alignleft {
+	float: right;
+	margin: 0 0 0 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+>>> Widgets
+--------------------------------------------------------------*/
+.widget ul.children,
+.widget ul.sub-menu {
+	margin-right: 20px;
+}
+
+.widget li:before,
+.widget li.page_item_has_children:before,
+.widget li.menu-item-has-children:before,
+.widget .children li:before,
+.widget .sub-menu li:before {
+	content: "";
+	margin-right: 0;
+}
+
+#wp-calendar caption:before {
+	content: "";
+	margin: 0 10px 0 6px;
+}
+
+#wp-calendar caption:after {
+	font-family: "FontAwesome";
+	content: "\f073";
+	margin: 0 6px 0 10px;
+}
+
+
+/*--------------------------------------------------------------
+>>> EDD
+--------------------------------------------------------------*/
+.edd_byline_author_avatar img {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+.downloads-footer .fa {
+	margin: 0 0 0 4px;
+}
+
+#edd_checkout_wrap #edd_checkout_form_wrap #edd-payment-mode-wrap label {
+	margin: 0 0 0 20px;
+}
+
+#edd_checkout_wrap #edd_checkout_form_wrap input[type="radio"] {
+	margin: 0 0 0 5px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Responsive
+--------------------------------------------------------------*/
+@media all and ( max-width: 860px ) {
+	.main-navigation li {
+		float: none;
+		text-align: right;
+	}
+	.main-navigation .sub-menu a:before {
+		content: "";
+	}
+	.main-navigation .sub-menu a:after {
+		content: "\f105\00a0\00a0\00a0";
+		font-family: "FontAwesome";
+		font-weight: 400;
+	}
+	.nav-search-form input[type="search"],
+	.nav-search-form input[type="search"]:focus {
+		background-image: none;
+	}
+}
+
+@media all and ( max-width: 600px ) {
+	.info-bar-navigation li:nth-child(odd) {
+		margin-right: 0;
+	}
+	.info-bar-navigation li:nth-child(even) {
+		margin-right: 4.3%;
+	}
+	.vendd-menu-icon {
+		margin: 0 10px 0 0;
+	}
+}
