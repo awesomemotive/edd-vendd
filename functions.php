@@ -11,7 +11,7 @@
  */
 define( 'VENDD_NAME', 'Vendd' );
 define( 'VENDD_AUTHOR', 'Sean Davis' );
-define( 'VENDD_VERSION', '1.1.2' );
+define( 'VENDD_VERSION', '1.1.3' );
 define( 'VENDD_HOME', 'https://easydigitaldownloads.com/downloads/vendd' );
 
 
