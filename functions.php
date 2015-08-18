@@ -11,7 +11,7 @@
  */
 define( 'VENDD_NAME', 'Vendd' );
 define( 'VENDD_AUTHOR', 'Sean Davis' );
-define( 'VENDD_VERSION', '1.1.2' );
+define( 'VENDD_VERSION', '1.1.3' );
 define( 'VENDD_HOME', 'https://easydigitaldownloads.com/downloads/vendd' );
 
 
@@ -43,8 +43,10 @@ function vendd_setup() {
 	 * Enable support for Post Thumbnails on posts and pages.
 	 */
 	add_theme_support( 'post-thumbnails' );
-	// add a hard cropped (for uniformity) image size for singulars
+	// add a hard cropped (for uniformity) image size for posts & some pages
 	add_image_size( 'vendd_featured_image', 722, 361, true );
+	// add a hard cropped (for uniformity) image size for full width pages
+	add_image_size( 'vendd_featured_image_full_width', 1120, 361, true );
 	// add a hard cropped (for uniformity) image size for content lists
 	add_image_size( 'vendd_featured_image_thumb', 200, 200, true );
 	// add a hard cropped (for uniformity) image size for the product grid
@@ -176,6 +178,11 @@ if ( vendd_edd_is_activated() ) {
 if ( vendd_fes_is_activated() ) {
 	require get_template_directory() . '/inc/fes-functions.php';
 }
+
+/**
+ * Vendd's widgets
+ */
+require get_template_directory() . '/inc/admin/widgets.php';
 
 /**
  * Custom template tags
