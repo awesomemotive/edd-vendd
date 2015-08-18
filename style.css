@@ -1687,9 +1687,12 @@ input[type="submit"].edd-submit {
 	border-radius: 4px;
 	padding: 15px;
 }
-.vendd-price-button-container .vendd-price-button .edd-submit {
+.content-area .vendd-price-button-container .vendd-price-button .edd-submit {
 	font-size: .87em;
 	padding: 4px 8px;
+}
+.content-area .vendd-price-button-container .edd_download_purchase_form {
+	margin-bottom: 0;
 }
 #edd_purchase_submit #edd-purchase-button {
 	display: block;
