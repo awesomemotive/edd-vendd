@@ -64,7 +64,7 @@ class Vendd_Author_Details extends WP_Widget {
 						<?php if ( vendd_fes_is_activated() ) {
 							$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $author->post_author ) );
 							?>
-							<a class="vendor-url" href="<?php echo $vendor_url; ?>">
+							<a class="vendor-url" href="<?php echo esc_url( $vendor_url ); ?>">
 								<?php echo $author->display_name; ?>
 							</a>
 						<?php } else { ?>
@@ -108,7 +108,7 @@ class Vendd_Author_Details extends WP_Widget {
 							'icon'	=> '<i class="fa fa-youtube-square"></i>',
 						),
 					);
-	
+
 					if (
 						! empty( $website ) ||
 						! empty( $twitter ) ||
@@ -125,7 +125,7 @@ class Vendd_Author_Details extends WP_Widget {
 											<span class="vendd-contact-method">
 												<?php
 													printf( '<a href="%1$s" class="vendd-social-profile vendd-%2$s" target="_blank">%3$s</a>',
-														$profile['data'],
+														esc_url( $profile['data'] ),
 														$profile['name'],
 														$profile['icon']
 													);
@@ -137,7 +137,7 @@ class Vendd_Author_Details extends WP_Widget {
 								?>
 								<?php if ( ! empty( $website ) ) { ?>
 									<span class="vendd-contact-method vendd-author-website">
-										<a href="<?php echo $website; ?>" title="<?php echo $author->display_name; echo _x( '\'s website', 'title attribute of the FES vendor\'s website link', 'vendd' ); ?>" class="vendd-social-profile vendd-website" target="_blank">
+										<a href="<?php echo esc_url( $website ); ?>" title="<?php echo esc_attr( $author->display_name ); echo _x( '\'s website', 'title attribute of the FES vendor\'s website link', 'vendd' ); ?>" class="vendd-social-profile vendd-website" target="_blank">
 											<i class="fa fa-home"></i>
 										</a>
 									</span>
@@ -175,8 +175,8 @@ class Vendd_Author_Details extends WP_Widget {
 		$links       = isset( $instance['links'] )       ? (bool) $instance['links']       : true;
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'vendd' ); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" placeholder="<?php esc_attr_e( 'Leave empty for no title (recommended)', 'vendd' ); ?>">
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'vendd' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" placeholder="<?php esc_attr_e( 'Leave empty for no title (recommended)', 'vendd' ); ?>">
 		</p>
 		<p>
 			<input <?php checked( $avatar ); ?> id="<?php echo esc_attr( $this->get_field_id( 'avatar' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'avatar' ) ); ?>" type="checkbox" />
@@ -356,8 +356,8 @@ class Vendd_Download_Details extends WP_Widget {
 		$tags       = isset( $instance['tags'] )       ? (bool) $instance['tags']       : true;
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'vendd' ); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'vendd' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
 			<input <?php checked( $published ); ?> id="<?php echo esc_attr( $this->get_field_id( 'published' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'published' ) ); ?>" type="checkbox" />
