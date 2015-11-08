@@ -173,7 +173,7 @@ add_filter( 'user_contactmethods', 'vendd_add_social_profiles', 10, 1 );
 function vendd_advanced_search_results( $orderby, $query ) {
 	global $wpdb;
 
-	if ( $query->is_search ) {
+	if ( $query->is_search && ( class_exists( 'bbPress' ) && ! is_bbpress() ) ) {
 		return $wpdb->posts . '.post_type ASC';
 	}
 	return $orderby;
@@ -185,7 +185,7 @@ add_filter( 'posts_orderby', 'vendd_advanced_search_results', 10, 2 );
  * Number of search results to show
  */
 function vendd_search_filter( $query ) {
-	if ( $query->is_search && ! is_admin() ) {
+	if ( $query->is_search && ! is_admin() && ( class_exists( 'bbPress' ) && ! is_bbpress() ) ) {
 		$query->set( 'posts_per_page', 99999 );
 	}
 	return $query;
