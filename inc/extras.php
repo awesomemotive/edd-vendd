@@ -37,15 +37,15 @@ add_filter( 'excerpt_more', 'vendd_excerpt_more' );
  * stupid skip link thing with the more tag -- remove it -- NOW
  */
 function vendd_remove_more_tag_link_jump( $link ) {
-	$offset = strpos( $link, '#more-' );	
+	$offset = strpos( $link, '#more-' );
 	if ( $offset ) {
 		$end = strpos( $link, '"', $offset );
-	}	
+	}
 	if ( $end ) {
 		$link = substr_replace( $link, '', $offset, $end-$offset );
 	}
 	return $link;
-} 
+}
 add_filter( 'the_content_more_link', 'vendd_remove_more_tag_link_jump' );
 
 
@@ -101,7 +101,7 @@ function vendd_body_classes( $classes ) {
 		if ( is_page_template( 'edd_templates/edd-downloads-shortcode.php' ) ) {
 			$classes[] = 'vendd-downloads-template vendd-edd-template';
 		} elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) {
-			$classes[] = 'vendd-checkout-template vendd-edd-template';	
+			$classes[] = 'vendd-checkout-template vendd-edd-template';
 		} elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) {
 			$classes[] = 'vendd-confirmation-template vendd-edd-template';
 		} elseif ( is_page_template( 'edd_templates/edd-history.php' ) ) {
