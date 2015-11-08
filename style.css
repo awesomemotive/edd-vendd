@@ -1741,7 +1741,7 @@ input[type="submit"].edd-submit {
 	color: #555;
 }
 .edd_download_inner .edd_download_purchase_form .edd_download_quantity_wrapper .edd-item-quantity {
-	width: 55px;
+	width: 65px;
 }
 .edd-cart-added-alert {
 	font-size: .8em;
@@ -2943,6 +2943,20 @@ input[type="submit"].edd-submit {
 }
 .vendd-vendor-contact .fes-form .fes-submit input[type="submit"]:hover {
 	background: #3d3d3d;
+}
+
+
+/*--------------------------------------------------------------
+>>> EDD Custom Prices
+>>> https://easydigitaldownloads.com/downloads/custom-prices/
+--------------------------------------------------------------*/
+.site-content .edd_download_purchase_form input.edd_cp_price {
+	padding: 2px 8px;
+	margin-left: 13px;
+	width: 75px !important;
+}
+.edd_download_inner .edd_download_purchase_form input.edd_cp_price {
+	width: 65px !important;
 }
 
 
