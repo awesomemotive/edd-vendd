@@ -18,8 +18,8 @@ Vendd is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, 
 
 Font Awesome http://fortawesome.github.io/Font-Awesome/license/
 Font Awesome Licenses:
-	SIL Open Font License http://scripts.sil.org/OFL 
-	MIT License http://opensource.org/licenses/mit-license.html 
+	SIL Open Font License http://scripts.sil.org/OFL
+	MIT License http://opensource.org/licenses/mit-license.html
 	CC BY 3.0 License – http://creativecommons.org/licenses/by/3.0/
 	Copyright: Dave Gandy, http://fontawesome.io
 */
@@ -1679,8 +1679,8 @@ div[id*="edd_commissions_"] .page-numbers:hover {
 }
 
 /* EDD button styles */
-#edd-purchase-button, 
-.edd-submit, 
+#edd-purchase-button,
+.edd-submit,
 input[type="submit"].edd-submit {
 	font-size: 1.2em;
 	border: none;
@@ -1785,7 +1785,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-price-button-container .edd_download_purchase_form .edd_price_options li:first-child {
 	border-radius: 4px 4px 0 0;
-} 
+}
 .edd_download_purchase_form .edd_price_options li:last-child {
 	border-bottom: none;
 	border-radius: 0 0 4px 4px;
@@ -1891,8 +1891,8 @@ input[type="submit"].edd-submit {
 	content: none;
 	margin: 0;
 }
-.edd_cart_item_image {
-	display: none;
+.edd_cart_item_image img {
+	border-radius: 3px;
 }
 .vendd-empty-cart .widget_edd_cart_widget {
 }
@@ -1983,18 +1983,18 @@ input[type="submit"].edd-submit {
 	margin: 0 auto;
 	max-width: 722px;
 }
-#edd_checkout_form_wrap #edd-discount-code-wrap, 
-#edd_checkout_form_wrap #edd-login-account-wrap, 
-#edd_checkout_form_wrap #edd-new-account-wrap, 
-#edd_checkout_form_wrap #edd_final_total_wrap, 
+#edd_checkout_form_wrap #edd-discount-code-wrap,
+#edd_checkout_form_wrap #edd-login-account-wrap,
+#edd_checkout_form_wrap #edd-new-account-wrap,
+#edd_checkout_form_wrap #edd_final_total_wrap,
 #edd_checkout_form_wrap #edd_show_discount,
 #edd_checkout_form_wrap fieldset,
 #edd_purchase_receipt,
 #edd_user_history,
 #edd_purchase_receipt_products,
-.vendd-confirmation-template #edd_purchase_receipt thead th:first-child, 
+.vendd-confirmation-template #edd_purchase_receipt thead th:first-child,
 .vendd-confirmation-template #edd_purchase_receipt tbody td:first-child,
-.vendd-confirmation-template #edd_purchase_receipt thead th:last-child, 
+.vendd-confirmation-template #edd_purchase_receipt thead th:last-child,
 .vendd-confirmation-template #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products tbody td,
 #edd_purchase_receipt_products th {
@@ -2029,20 +2029,20 @@ input[type="submit"].edd-submit {
 .vendd-checkout-template tbody tr {
 	font-size: .87em;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
-	padding: 15px 10px; 
-	border-width: 0 1px 0 0; 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child {
+	padding: 15px 10px;
+	border-width: 0 1px 0 0;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products th {
-	padding: 15px 10px; 
-	border-width: 0 0 1px; 
+	padding: 15px 10px;
+	border-width: 0 0 1px;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
 	border-bottom-width: 0;
@@ -2107,44 +2107,44 @@ input[type="submit"].edd-submit {
 	background: #3D3D3D;
 	color: #FFF;
 }
-#edd_user_history td, 
+#edd_user_history td,
 #edd_user_history th {
 	padding: 10px;
 }
 #edd_purchase_receipt,
-#edd_user_history { 
-	margin-bottom: 2em; 
+#edd_user_history {
+	margin-bottom: 2em;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
-	padding: 15px 10px; 
-	border-width: 0 1px 0 0; 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child {
+	padding: 15px 10px;
+	border-width: 0 1px 0 0;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child { 
-	padding: 15px 10px; 
-	border-width: 0 0 1px; 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child {
+	padding: 15px 10px;
+	border-width: 0 0 1px;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt_products tbody tr:last-child td {
 	border-bottom-width: 0;
 }
-#edd_purchase_receipt_products { 
-	margin-bottom: 3em; 
+#edd_purchase_receipt_products {
+	margin-bottom: 3em;
 }
-#edd_purchase_receipt_products th { 
-	font-weight: bold; 
-	padding: 15px 10px; 
+#edd_purchase_receipt_products th {
+	font-weight: bold;
+	padding: 15px 10px;
 }
-.entry-content #edd_purchase_receipt_products tbody td { 
-	border-width: 0 0 1px; 
+.entry-content #edd_purchase_receipt_products tbody td {
+	border-width: 0 0 1px;
 }
-#edd_purchase_receipt_products td { 
-	padding: 15px 10px; 
+#edd_purchase_receipt_products td {
+	padding: 15px 10px;
 }
 #edd_profile_editor_form {
 	background: #fafafa;
@@ -2181,7 +2181,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 12px;
 }
 #edd_profile_editor_form p > input:not([type="submit"]),
-#edd_profile_editor_form p > select, 
+#edd_profile_editor_form p > select,
 #edd_profile_editor_form p {
 	margin-bottom: 1em;
 }
