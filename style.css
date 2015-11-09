@@ -2403,7 +2403,12 @@ input[type="submit"].edd-submit {
 	display: block;
 	font-weight: 700;
 	text-align: center;
-	margin: 0 0 10px;
+	margin: 0;
+}
+.vendd-fes-template #fes-comments-table #fes-comment-author .fes-comment-author-name,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-comment-author .fes-comment-author-name {
+	display: block;
+	margin-bottom: 5px;
 }
 .vendd-fes-template #fes-comments-table .fes-light-green,
 .vendd-edd-fes-shortcode #fes-comments-table .fes-light-green,
