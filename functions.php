@@ -74,6 +74,11 @@ function vendd_setup() {
 		'default-color' => 'f1f1f1',
 		'default-image' => /* get_template_directory_uri() . '/inc/images/your_image.png' */ '',
 	) ) );
+
+	/*
+	 * Add theme support for title tag
+	 */
+	add_theme_support( 'title-tag' );
 }
 endif; // vendd_setup
 add_action( 'after_setup_theme', 'vendd_setup' );
