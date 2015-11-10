@@ -2827,6 +2827,10 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .insert-file-row {
 
 }
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple td,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple td {
+	vertical-align: middle;
+}
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple + tfoot th,
 .vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple + tfoot th {
 	padding: 0;
@@ -2843,6 +2847,9 @@ input[type="submit"].edd-submit {
 	padding-bottom: 10px;
 	border-bottom: 2px solid  #f1f1f1;
 	margin-bottom: 30px;
+}
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields .fes-file-validation {
+	display: none;
 }
 
 /* FES Login / Register */
