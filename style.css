@@ -2403,7 +2403,12 @@ input[type="submit"].edd-submit {
 	display: block;
 	font-weight: 700;
 	text-align: center;
-	margin: 0 0 10px;
+	margin: 0;
+}
+.vendd-fes-template #fes-comments-table #fes-comment-author .fes-comment-author-name,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-comment-author .fes-comment-author-name {
+	display: block;
+	margin-bottom: 5px;
 }
 .vendd-fes-template #fes-comments-table .fes-light-green,
 .vendd-edd-fes-shortcode #fes-comments-table .fes-light-green,
@@ -2580,6 +2585,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 30px;
 }
 #edd_commissions_export input[type="submit"].edd-submit {
+	color: #fff;
 	font-size: .87em;
 	padding: 3px 6px;
 	border: none;
@@ -2763,7 +2769,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
 .vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
 	background: #fafafa;
-	color: #aaa;
+	color: #fff;
 	font-size: 1.2em;
 	font-weight: bold;
 	text-decoration: none;
@@ -2798,6 +2804,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-delete-row a,
 .vendd-edd-fes-shortcode .fes-delete-row a {
 	color: #ccc;
+	text-decoration: none;
 	font-weight: 700;
 	font-size: 1rem;
 }
@@ -2813,8 +2820,21 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .insert-file-row,
 .vendd-fes-template .upload_file_button,
 .vendd-edd-fes-shortcode .upload_file_button {
-	font-weight: 700;
-	text-transform: uppercase;
+	color: #fff !important;
+	text-decoration: none;
+	padding: 9px;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .insert-file-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .insert-file-row {
+
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple td,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple td {
+	vertical-align: middle;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple + tfoot th,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple + tfoot th {
+	padding: 0;
 }
 .vendd-fes-template .fes-form fieldset .fes-section-wrap,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-section-wrap {
@@ -2828,6 +2848,9 @@ input[type="submit"].edd-submit {
 	padding-bottom: 10px;
 	border-bottom: 2px solid  #f1f1f1;
 	margin-bottom: 30px;
+}
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields .fes-file-validation {
+	display: none;
 }
 
 /* FES Login / Register */
