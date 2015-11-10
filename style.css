@@ -2585,6 +2585,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 30px;
 }
 #edd_commissions_export input[type="submit"].edd-submit {
+	color: #fff;
 	font-size: .87em;
 	padding: 3px 6px;
 	border: none;
