@@ -74,7 +74,7 @@
 	max-width: 97%;
 	height: auto;
 }
-div:not(#sidebar-main) .vendd-widget-usage {
+div:not(#sidebar-download) .vendd-widget-usage {
 	background: #fbe3e3;
 	padding: 10px;
 	border-radius: 4px;
