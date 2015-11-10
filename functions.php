@@ -74,9 +74,26 @@ function vendd_setup() {
 		'default-color' => 'f1f1f1',
 		'default-image' => /* get_template_directory_uri() . '/inc/images/your_image.png' */ '',
 	) ) );
+
+	/*
+	 * Add theme support for title tag
+	 */
+	add_theme_support( 'title-tag' );
 }
 endif; // vendd_setup
 add_action( 'after_setup_theme', 'vendd_setup' );
+
+/**
+ * Title tag back compat
+ */
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+    function vendd_render_title() {
+        ?>
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <?php
+    }
+    add_action( 'wp_head', 'vendd_render_title' );
+}
 
 
 /**
