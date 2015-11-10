@@ -1997,8 +1997,14 @@ input[type="submit"].edd-submit {
 .vendd-confirmation-template #edd_purchase_receipt thead th:last-child,
 .vendd-confirmation-template #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products tbody td,
-#edd_purchase_receipt_products th {
+#edd_purchase_receipt_products th,
+#edd_purchase_form_wrap select {
 	border: 1px solid #f2f2f2;
+}
+#edd_purchase_form_wrap select {
+	background: #fff;
+	border: 1px solid #e4e4e4;
+	height: 40px;
 }
 .vendd-checkout-template #masthead,
 .vendd-landing-page-template #masthead {
