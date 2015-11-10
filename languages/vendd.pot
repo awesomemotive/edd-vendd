@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vendd\n"
-"POT-Creation-Date: 2015-08-17 16:53-0600\n"
-"PO-Revision-Date: 2015-08-17 16:53-0600\n"
+"POT-Creation-Date: 2015-11-10 15:49-0800\n"
+"PO-Revision-Date: 2015-11-10 15:49-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -243,8 +243,7 @@ msgid "Details"
 msgstr ""
 
 #: fes_templates/frontend-products.php:62
-#, php-format
-msgid "No %s found"
+msgid "No items found"
 msgstr ""
 
 #: functions.php:59
@@ -255,15 +254,15 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:104
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:115
 msgid "Download Sidebar"
 msgstr ""
 
-#: header.php:22
+#: header.php:21
 msgid "Skip to content"
 msgstr ""
 
@@ -446,108 +445,112 @@ msgid ""
 "networking links."
 msgstr ""
 
-#: inc/admin/widgets.php:57 sidebar-download.php:34
+#: inc/admin/widgets.php:67 sidebar-download.php:34
 msgid "Author:"
 msgstr ""
 
-#: inc/admin/widgets.php:73 sidebar-download.php:50
+#: inc/admin/widgets.php:83 sidebar-download.php:50
 msgid "Author since:"
 msgstr ""
 
-#: inc/admin/widgets.php:135 sidebar-download.php:112
+#: inc/admin/widgets.php:145 sidebar-download.php:112
 msgctxt "title attribute of the FES vendor's website link"
 msgid "'s website"
 msgstr ""
 
-#: inc/admin/widgets.php:169 inc/admin/widgets.php:337
+#: inc/admin/widgets.php:182 inc/admin/widgets.php:369
+msgid "Only for use in Download Sidebar"
+msgstr ""
+
+#: inc/admin/widgets.php:184 inc/admin/widgets.php:371
 msgid "Title:"
 msgstr ""
 
-#: inc/admin/widgets.php:170
+#: inc/admin/widgets.php:185
 msgid "Leave empty for no title (recommended)"
 msgstr ""
 
-#: inc/admin/widgets.php:174
+#: inc/admin/widgets.php:189
 msgid "Show Author Avatar"
 msgstr ""
 
-#: inc/admin/widgets.php:178
+#: inc/admin/widgets.php:193
 msgid "Show Author Name"
 msgstr ""
 
-#: inc/admin/widgets.php:182
+#: inc/admin/widgets.php:197
 msgid "Show Author Sign-up Date"
 msgstr ""
 
-#: inc/admin/widgets.php:186
+#: inc/admin/widgets.php:201
 msgid "Show Author Social Links"
 msgstr ""
 
-#: inc/admin/widgets.php:229 sidebar-download.php:128
+#: inc/admin/widgets.php:244 sidebar-download.php:128
 msgid "Download Details"
 msgstr ""
 
-#: inc/admin/widgets.php:231
+#: inc/admin/widgets.php:246
 msgid "Display the download details such as date published and total sales."
 msgstr ""
 
-#: inc/admin/widgets.php:262 sidebar-download.php:140
+#: inc/admin/widgets.php:289 sidebar-download.php:140
 msgid "Published:"
 msgstr ""
 
-#: inc/admin/widgets.php:269 sidebar-download.php:146
+#: inc/admin/widgets.php:296 sidebar-download.php:146
 msgid "Sales:"
 msgstr ""
 
-#: inc/admin/widgets.php:277 sidebar-download.php:153
+#: inc/admin/widgets.php:304 sidebar-download.php:153
 msgid "Licensed:"
 msgstr ""
 
-#: inc/admin/widgets.php:278 sidebar-download.php:154
+#: inc/admin/widgets.php:305 sidebar-download.php:154
 msgid "Yes"
 msgstr ""
 
-#: inc/admin/widgets.php:278 sidebar-download.php:154
+#: inc/admin/widgets.php:305 sidebar-download.php:154
 msgid "No"
 msgstr ""
 
-#: inc/admin/widgets.php:284 sidebar-download.php:158
+#: inc/admin/widgets.php:311 sidebar-download.php:158
 msgid "Current Version:"
 msgstr ""
 
-#: inc/admin/widgets.php:285 sidebar-download.php:159
+#: inc/admin/widgets.php:312 sidebar-download.php:159
 msgid "Unversioned"
 msgstr ""
 
-#: inc/admin/widgets.php:294 sidebar-download.php:167
+#: inc/admin/widgets.php:321 sidebar-download.php:167
 msgid "Categories:"
 msgstr ""
 
-#: inc/admin/widgets.php:305 sidebar-download.php:177
+#: inc/admin/widgets.php:332 sidebar-download.php:177
 msgid "Tags:"
 msgstr ""
 
-#: inc/admin/widgets.php:342
+#: inc/admin/widgets.php:376
 msgid "Show Published Date"
 msgstr ""
 
-#: inc/admin/widgets.php:346
+#: inc/admin/widgets.php:380
 msgid "Show Sales Total"
 msgstr ""
 
-#: inc/admin/widgets.php:351
+#: inc/admin/widgets.php:385
 msgid "Show License Status"
 msgstr ""
 
-#: inc/admin/widgets.php:355
+#: inc/admin/widgets.php:389
 msgid "Show Version Number"
 msgstr ""
 
-#: inc/admin/widgets.php:360
+#: inc/admin/widgets.php:394
 msgid "Show Categories"
 msgstr ""
 
-#: inc/admin/widgets.php:364
+#: inc/admin/widgets.php:398
 msgid "Show Tags"
 msgstr ""
 
@@ -773,11 +776,6 @@ msgstr ""
 
 #: inc/extras.php:163
 msgid "YouTube Profile URL"
-msgstr ""
-
-#: inc/extras.php:221
-#, php-format
-msgid "Page %s"
 msgstr ""
 
 #: inc/template-tags.php:19
