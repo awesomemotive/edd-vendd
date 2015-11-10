@@ -10,7 +10,6 @@ if ( count( $products ) > 0 ) {
 	echo EDD_FES()->dashboard->product_list_status_bar();
 	foreach ( $products as $product ) :
 	$product_thumb = get_the_post_thumbnail( $product->ID, array( 150, 150 ) );
-	?>
 		<div class="vendor-product clear">
 			<?php if ( ! empty( $product_thumb ) ) { ?>
 				<div class="vendor-product-image">
@@ -19,8 +18,8 @@ if ( count( $products ) > 0 ) {
 			<?php } ?>
 			<div class="vendor-product-info">
 				<h5 class="vendor-product-title">
-					<span class="vendor-product-status"><?php echo EDD_FES()->dashboard->product_list_status($product->ID); ?> </span>
-					<?php echo EDD_FES()->dashboard->product_list_title($product->ID); ?>
+					<span class="vendor-product-status"><?php echo EDD_FES()->dashboard->product_list_status( $product->ID ); ?> </span>
+					<?php echo EDD_FES()->dashboard->product_list_title( $product->ID ); ?>
 				</h5>
 				<div class="vendor-product-details">
 					<div class="vendor-product-info-group">
@@ -59,9 +58,7 @@ if ( count( $products ) > 0 ) {
 	do_action( 'fes-product-table-column-value' );
 	endforeach;
 } else {
-	echo sprintf( __( 'No %s found','vendd' ),
-		EDD_FES()->vendors->get_product_constant_name( $plural = true, $uppercase = false )
-	);
+	_e( 'No items found','vendd' );
 }
 
 EDD_FES()->dashboard->product_list_pagination();
