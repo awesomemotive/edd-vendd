@@ -4,7 +4,7 @@ Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: Sean Davis
 Author URI: http://sdavismedia.com/
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.3
+Version: 1.1.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -18,8 +18,8 @@ Vendd is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, 
 
 Font Awesome http://fortawesome.github.io/Font-Awesome/license/
 Font Awesome Licenses:
-	SIL Open Font License http://scripts.sil.org/OFL 
-	MIT License http://opensource.org/licenses/mit-license.html 
+	SIL Open Font License http://scripts.sil.org/OFL
+	MIT License http://opensource.org/licenses/mit-license.html
 	CC BY 3.0 License – http://creativecommons.org/licenses/by/3.0/
 	Copyright: Dave Gandy, http://fontawesome.io
 */
@@ -691,7 +691,9 @@ a:focus {
 .fes-vendor-menu:before,
 .fes-vendor-menu:after,
 .vendd-edd-fes-shortcode .fes-vendor-menu > ul:before,
-.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after {
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after,
+aside[class*="widget_edd_"] .widget-download-with-thumbnail:after,
+aside[class*="widget_edd_"] .widget-download-with-thumbnail:before {
 	content: '';
 	display: table;
 }
@@ -704,7 +706,8 @@ a:focus {
 .entry-summary:before,
 .entry-summary:after,
 .fes-vendor-menu:after,
-.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after {
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after,
+aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	clear: both;
 }
 
@@ -1679,8 +1682,8 @@ div[id*="edd_commissions_"] .page-numbers:hover {
 }
 
 /* EDD button styles */
-#edd-purchase-button, 
-.edd-submit, 
+#edd-purchase-button,
+.edd-submit,
 input[type="submit"].edd-submit {
 	font-size: 1.2em;
 	border: none;
@@ -1741,7 +1744,7 @@ input[type="submit"].edd-submit {
 	color: #555;
 }
 .edd_download_inner .edd_download_purchase_form .edd_download_quantity_wrapper .edd-item-quantity {
-	width: 55px;
+	width: 65px;
 }
 .edd-cart-added-alert {
 	font-size: .8em;
@@ -1785,7 +1788,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-price-button-container .edd_download_purchase_form .edd_price_options li:first-child {
 	border-radius: 4px 4px 0 0;
-} 
+}
 .edd_download_purchase_form .edd_price_options li:last-child {
 	border-bottom: none;
 	border-radius: 0 0 4px 4px;
@@ -1891,8 +1894,8 @@ input[type="submit"].edd-submit {
 	content: none;
 	margin: 0;
 }
-.edd_cart_item_image {
-	display: none;
+.edd_cart_item_image img {
+	border-radius: 3px;
 }
 .vendd-empty-cart .widget_edd_cart_widget {
 }
@@ -1983,22 +1986,28 @@ input[type="submit"].edd-submit {
 	margin: 0 auto;
 	max-width: 722px;
 }
-#edd_checkout_form_wrap #edd-discount-code-wrap, 
-#edd_checkout_form_wrap #edd-login-account-wrap, 
-#edd_checkout_form_wrap #edd-new-account-wrap, 
-#edd_checkout_form_wrap #edd_final_total_wrap, 
+#edd_checkout_form_wrap #edd-discount-code-wrap,
+#edd_checkout_form_wrap #edd-login-account-wrap,
+#edd_checkout_form_wrap #edd-new-account-wrap,
+#edd_checkout_form_wrap #edd_final_total_wrap,
 #edd_checkout_form_wrap #edd_show_discount,
 #edd_checkout_form_wrap fieldset,
 #edd_purchase_receipt,
 #edd_user_history,
 #edd_purchase_receipt_products,
-.vendd-confirmation-template #edd_purchase_receipt thead th:first-child, 
+.vendd-confirmation-template #edd_purchase_receipt thead th:first-child,
 .vendd-confirmation-template #edd_purchase_receipt tbody td:first-child,
-.vendd-confirmation-template #edd_purchase_receipt thead th:last-child, 
+.vendd-confirmation-template #edd_purchase_receipt thead th:last-child,
 .vendd-confirmation-template #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products tbody td,
-#edd_purchase_receipt_products th {
+#edd_purchase_receipt_products th,
+#edd_purchase_form_wrap select {
 	border: 1px solid #f2f2f2;
+}
+#edd_purchase_form_wrap select {
+	background: #fff;
+	border: 1px solid #e4e4e4;
+	height: 40px;
 }
 .vendd-checkout-template #masthead,
 .vendd-landing-page-template #masthead {
@@ -2029,20 +2038,20 @@ input[type="submit"].edd-submit {
 .vendd-checkout-template tbody tr {
 	font-size: .87em;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
-	padding: 15px 10px; 
-	border-width: 0 1px 0 0; 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child {
+	padding: 15px 10px;
+	border-width: 0 1px 0 0;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products th {
-	padding: 15px 10px; 
-	border-width: 0 0 1px; 
+	padding: 15px 10px;
+	border-width: 0 0 1px;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
 	border-bottom-width: 0;
@@ -2107,44 +2116,44 @@ input[type="submit"].edd-submit {
 	background: #3D3D3D;
 	color: #FFF;
 }
-#edd_user_history td, 
+#edd_user_history td,
 #edd_user_history th {
 	padding: 10px;
 }
 #edd_purchase_receipt,
-#edd_user_history { 
-	margin-bottom: 2em; 
+#edd_user_history {
+	margin-bottom: 2em;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child, 
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child { 
-	padding: 15px 10px; 
-	border-width: 0 1px 0 0; 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child {
+	padding: 15px 10px;
+	border-width: 0 1px 0 0;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child, 
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child { 
-	padding: 15px 10px; 
-	border-width: 0 0 1px; 
+.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child,
+.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child {
+	padding: 15px 10px;
+	border-width: 0 0 1px;
 }
 .vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td,
 .vendd-confirmation-template .entry-content #edd_purchase_receipt_products tbody tr:last-child td {
 	border-bottom-width: 0;
 }
-#edd_purchase_receipt_products { 
-	margin-bottom: 3em; 
+#edd_purchase_receipt_products {
+	margin-bottom: 3em;
 }
-#edd_purchase_receipt_products th { 
-	font-weight: bold; 
-	padding: 15px 10px; 
+#edd_purchase_receipt_products th {
+	font-weight: bold;
+	padding: 15px 10px;
 }
-.entry-content #edd_purchase_receipt_products tbody td { 
-	border-width: 0 0 1px; 
+.entry-content #edd_purchase_receipt_products tbody td {
+	border-width: 0 0 1px;
 }
-#edd_purchase_receipt_products td { 
-	padding: 15px 10px; 
+#edd_purchase_receipt_products td {
+	padding: 15px 10px;
 }
 #edd_profile_editor_form {
 	background: #fafafa;
@@ -2181,7 +2190,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 12px;
 }
 #edd_profile_editor_form p > input:not([type="submit"]),
-#edd_profile_editor_form p > select, 
+#edd_profile_editor_form p > select,
 #edd_profile_editor_form p {
 	margin-bottom: 1em;
 }
@@ -2217,6 +2226,11 @@ input[type="submit"].edd-submit {
 .edd-lost-password {
 	margin-bottom: 0;
 }
+
+
+/*--------------------------------------------------------------
+ *********************** Plugin Support ***********************
+--------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -2403,7 +2417,12 @@ input[type="submit"].edd-submit {
 	display: block;
 	font-weight: 700;
 	text-align: center;
-	margin: 0 0 10px;
+	margin: 0;
+}
+.vendd-fes-template #fes-comments-table #fes-comment-author .fes-comment-author-name,
+.vendd-edd-fes-shortcode #fes-comments-table #fes-comment-author .fes-comment-author-name {
+	display: block;
+	margin-bottom: 5px;
 }
 .vendd-fes-template #fes-comments-table .fes-light-green,
 .vendd-edd-fes-shortcode #fes-comments-table .fes-light-green,
@@ -2580,6 +2599,7 @@ input[type="submit"].edd-submit {
 	margin-bottom: 30px;
 }
 #edd_commissions_export input[type="submit"].edd-submit {
+	color: #fff;
 	font-size: .87em;
 	padding: 3px 6px;
 	border: none;
@@ -2763,7 +2783,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
 .vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
 	background: #fafafa;
-	color: #aaa;
+	color: #fff;
 	font-size: 1.2em;
 	font-weight: bold;
 	text-decoration: none;
@@ -2798,6 +2818,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-delete-row a,
 .vendd-edd-fes-shortcode .fes-delete-row a {
 	color: #ccc;
+	text-decoration: none;
 	font-weight: 700;
 	font-size: 1rem;
 }
@@ -2813,8 +2834,21 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .insert-file-row,
 .vendd-fes-template .upload_file_button,
 .vendd-edd-fes-shortcode .upload_file_button {
-	font-weight: 700;
-	text-transform: uppercase;
+	color: #fff !important;
+	text-decoration: none;
+	padding: 9px;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .insert-file-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .insert-file-row {
+
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple td,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple td {
+	vertical-align: middle;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple + tfoot th,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple + tfoot th {
+	padding: 0;
 }
 .vendd-fes-template .fes-form fieldset .fes-section-wrap,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-section-wrap {
@@ -2828,6 +2862,9 @@ input[type="submit"].edd-submit {
 	padding-bottom: 10px;
 	border-bottom: 2px solid  #f1f1f1;
 	margin-bottom: 30px;
+}
+.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields .fes-file-validation {
+	display: none;
 }
 
 /* FES Login / Register */
@@ -2947,6 +2984,33 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+>>> Checkout Fields Manager
+>>> https://easydigitaldownloads.com/downloads/checkout-fields-manager/
+--------------------------------------------------------------*/
+.ui-timepicker-div dl,
+.ui-timepicker-div dd,
+.ui-timepicker-div dt {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+
+/*--------------------------------------------------------------
+>>> EDD Custom Prices
+>>> https://easydigitaldownloads.com/downloads/custom-prices/
+--------------------------------------------------------------*/
+.site-content .edd_download_purchase_form input.edd_cp_price {
+	padding: 2px 8px;
+	margin-left: 13px;
+	width: 75px !important;
+}
+.edd_download_inner .edd_download_purchase_form input.edd_cp_price {
+	width: 65px !important;
+}
+
+
+/*--------------------------------------------------------------
 >>> EDD Product Reviews
 >>> https://easydigitaldownloads.com/extensions/product-reviews/
 --------------------------------------------------------------*/
@@ -3051,6 +3115,45 @@ input[type="submit"].edd-submit {
 	color: #fff;
 	font-size: .87em;
 	padding: 8px 10px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Widgets Pack
+>>> https://easydigitaldownloads.com/downloads/widgets-bundle/
+--------------------------------------------------------------*/
+
+/* calendar widget */
+.widget_edd_downloads_calendar #wp-calendar {
+	background: #fff;
+	border: 1px solid #f2f2f2;
+	border-radius: 0 0 4px 4px;
+}
+.widget_edd_downloads_calendar #wp-calendar caption {
+	background: #fff;
+	border: 1px solid #f2f2f2;
+	border-bottom: none;
+	border-radius: 4px 4px 0 0;
+}
+
+/* Featured Download */
+aside[class*="widget_edd_"] li:before {
+	display: none;
+}
+aside[class*="widget_edd_"] .widget-download-thumb {
+	float: left;
+	text-decoration: none;
+}
+aside[class*="widget_edd_"] img {
+	border-radius: 4px;
+	margin-right: 20px;
+}
+aside[class*="widget_edd_"] .widget-download-title {
+	display: block;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1rem;
+	vertical-align: top;
 }
 
 

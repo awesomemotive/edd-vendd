@@ -46,6 +46,11 @@ class Vendd_Author_Details extends WP_Widget {
 		$signup_date = isset( $instance['signup_date'] ) ? $instance['signup_date'] : 1;
 		$links       = isset( $instance['links'] )       ? $instance['links']       : 1;
 
+		// return early if not a single download
+		if ( 'download' != get_post_type( $post ) ) {
+			return;
+		}
+
 		echo $args['before_widget'];
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
@@ -174,6 +179,7 @@ class Vendd_Author_Details extends WP_Widget {
 		$signup_date = isset( $instance['signup_date'] ) ? (bool) $instance['signup_date'] : true;
 		$links       = isset( $instance['links'] )       ? (bool) $instance['links']       : true;
 		?>
+		<p class="vendd-widget-usage"><em><?php _e( 'Only for use in Download Sidebar', 'vendd' ); ?></em></p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'vendd' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" placeholder="<?php esc_attr_e( 'Leave empty for no title (recommended)', 'vendd' ); ?>">
@@ -257,6 +263,11 @@ class Vendd_Download_Details extends WP_Widget {
 		$version         = isset( $instance['version'] )    ? $instance['version']    : 1;
 		$show_categories = isset( $instance['categories'] ) ? $instance['categories'] : 1;
 		$show_tags       = isset( $instance['tags'] )       ? $instance['tags']       : 1;
+
+		// return early if not a single download
+		if ( 'download' != get_post_type( $post ) ) {
+			return;
+		}
 
 		echo $args['before_widget'];
 		if ( ! empty( $instance['title'] ) ) {
@@ -355,6 +366,7 @@ class Vendd_Download_Details extends WP_Widget {
 		$categories = isset( $instance['categories'] ) ? (bool) $instance['categories'] : true;
 		$tags       = isset( $instance['tags'] )       ? (bool) $instance['tags']       : true;
 		?>
+		<p class="vendd-widget-usage"><em><?php _e( 'Only for use in Download Sidebar', 'vendd' ); ?></em></p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( 'Title:', 'vendd' ); ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">

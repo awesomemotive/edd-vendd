@@ -45,7 +45,8 @@
 		<div class="site-branding">
 			<span class="site-title">
 				<?php
-					if ( ! vendd_is_checkout() || ( vendd_edd_is_activated() && false === edd_get_cart_contents() ) ) :
+					$cart_contents = edd_get_cart_contents();
+					if ( ! vendd_is_checkout() || ( vendd_edd_is_activated() && empty( $cart_contents ) ) ) :
 						?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php
@@ -57,7 +58,7 @@
 					else :
 						bloginfo( 'name' );
 					endif;
-					if ( ! vendd_is_checkout() || ( vendd_edd_is_activated() && false === edd_get_cart_contents() ) ) :
+					if ( ! vendd_is_checkout() || ( vendd_edd_is_activated() && empty( $cart_contents ) ) ) :
 						?>
 						</a>
 						<?php
