@@ -29,17 +29,17 @@ function vendd_setup() {
 		$content_width = 722; /* pixels */
 	}
 
-	/*
+	/**
 	 * Make theme available for translation
 	 */
 	load_theme_textdomain( 'vendd', get_template_directory() . '/languages' );
 
-	/*
+	/**
 	 * Add default posts and comments RSS feed links to head.
 	 */
 	add_theme_support( 'automatic-feed-links' );
 
-	/*
+	/**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 */
 	add_theme_support( 'post-thumbnails' );
@@ -52,7 +52,7 @@ function vendd_setup() {
 	// add a hard cropped (for uniformity) image size for the product grid
 	add_image_size( 'vendd_product_image', 722, 361, true );
 
-	/*
+	/**
 	 * Theme nav menus
 	 */
 	register_nav_menus( array(
@@ -60,14 +60,14 @@ function vendd_setup() {
 		'main_menu'	=> __( 'Main Menu', 'vendd' ),
 	) );
 
-	/*
+	/**
 	 * Switch default core markup to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
 
-	/*
+	/**
 	 * Setup the WordPress core custom background feature.
 	 */
 	add_theme_support( 'custom-background', apply_filters( 'vendd_custom_background_args', array(
@@ -75,25 +75,13 @@ function vendd_setup() {
 		'default-image' => /* get_template_directory_uri() . '/inc/images/your_image.png' */ '',
 	) ) );
 
-	/*
+	/**
 	 * Add theme support for title tag
 	 */
 	add_theme_support( 'title-tag' );
 }
 endif; // vendd_setup
 add_action( 'after_setup_theme', 'vendd_setup' );
-
-/**
- * Title tag back compat
- */
-if ( ! function_exists( '_wp_render_title_tag' ) ) {
-    function vendd_render_title() {
-        ?>
-        <title><?php wp_title( '|', true, 'right' ); ?></title>
-        <?php
-    }
-    add_action( 'wp_head', 'vendd_render_title' );
-}
 
 
 /**

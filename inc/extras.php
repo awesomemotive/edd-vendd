@@ -37,15 +37,15 @@ add_filter( 'excerpt_more', 'vendd_excerpt_more' );
  * stupid skip link thing with the more tag -- remove it -- NOW
  */
 function vendd_remove_more_tag_link_jump( $link ) {
-	$offset = strpos( $link, '#more-' );	
+	$offset = strpos( $link, '#more-' );
 	if ( $offset ) {
 		$end = strpos( $link, '"', $offset );
-	}	
+	}
 	if ( $end ) {
 		$link = substr_replace( $link, '', $offset, $end-$offset );
 	}
 	return $link;
-} 
+}
 add_filter( 'the_content_more_link', 'vendd_remove_more_tag_link_jump' );
 
 
@@ -101,7 +101,7 @@ function vendd_body_classes( $classes ) {
 		if ( is_page_template( 'edd_templates/edd-downloads-shortcode.php' ) ) {
 			$classes[] = 'vendd-downloads-template vendd-edd-template';
 		} elseif ( is_page_template( 'edd_templates/edd-checkout.php' ) ) {
-			$classes[] = 'vendd-checkout-template vendd-edd-template';	
+			$classes[] = 'vendd-checkout-template vendd-edd-template';
 		} elseif ( is_page_template( 'edd_templates/edd-confirmation.php' ) ) {
 			$classes[] = 'vendd-confirmation-template vendd-edd-template';
 		} elseif ( is_page_template( 'edd_templates/edd-history.php' ) ) {
@@ -194,36 +194,19 @@ add_filter( 'pre_get_posts', 'vendd_search_filter' );
 
 
 /**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ * Render document title for backwards compatibility
  *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string The filtered title.
+ * @resource https://make.wordpress.org/core/2015/10/20/document-title-in-4-4/
+ * @since 1.1.4
  */
-function vendd_wp_title( $title, $sep ) {
-	if ( is_feed() ) {
-		return $title;
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+	function vendd_render_title() {
+		?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php
 	}
-
-	global $page, $paged;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name', 'display' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title .= " $sep $site_description";
-	}
-
-	// Add a page number if necessary
-	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'vendd' ), max( $paged, $page ) );
-	}
-
-	return $title;
+	add_action( 'wp_head', 'vendd_render_title' );
 }
-add_filter( 'wp_title', 'vendd_wp_title', 10, 2 );
 
 
 /**
