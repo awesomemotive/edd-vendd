@@ -691,7 +691,9 @@ a:focus {
 .fes-vendor-menu:before,
 .fes-vendor-menu:after,
 .vendd-edd-fes-shortcode .fes-vendor-menu > ul:before,
-.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after {
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after,
+aside[class*="widget_edd_"] .widget-download-with-thumbnail:after,
+aside[class*="widget_edd_"] .widget-download-with-thumbnail:before {
 	content: '';
 	display: table;
 }
@@ -704,7 +706,8 @@ a:focus {
 .entry-summary:before,
 .entry-summary:after,
 .fes-vendor-menu:after,
-.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after {
+.vendd-edd-fes-shortcode .fes-vendor-menu > ul:after,
+aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	clear: both;
 }
 
@@ -3094,6 +3097,45 @@ input[type="submit"].edd-submit {
 	color: #fff;
 	font-size: .87em;
 	padding: 8px 10px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Widgets Pack
+>>> https://easydigitaldownloads.com/downloads/widgets-bundle/
+--------------------------------------------------------------*/
+
+/* calendar widget */
+.widget_edd_downloads_calendar #wp-calendar {
+	background: #fff;
+	border: 1px solid #f2f2f2;
+	border-radius: 0 0 4px 4px;
+}
+.widget_edd_downloads_calendar #wp-calendar caption {
+	background: #fff;
+	border: 1px solid #f2f2f2;
+	border-bottom: none;
+	border-radius: 4px 4px 0 0;
+}
+
+/* Featured Download */
+aside[class*="widget_edd_"] li:before {
+	display: none;
+}
+aside[class*="widget_edd_"] .widget-download-thumb {
+	float: left;
+	text-decoration: none;
+}
+aside[class*="widget_edd_"] img {
+	border-radius: 4px;
+	margin-right: 20px;
+}
+aside[class*="widget_edd_"] .widget-download-title {
+	display: block;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1rem;
+	vertical-align: top;
 }
 
 
