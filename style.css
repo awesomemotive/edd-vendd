@@ -2229,6 +2229,11 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+ *********************** Plugin Support ***********************
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
 >>> Frontend Submissions
 >>> https://easydigitaldownloads.com/extensions/frontend-submissions/
 --------------------------------------------------------------*/
@@ -2975,6 +2980,19 @@ input[type="submit"].edd-submit {
 }
 .vendd-vendor-contact .fes-form .fes-submit input[type="submit"]:hover {
 	background: #3d3d3d;
+}
+
+
+/*--------------------------------------------------------------
+>>> Checkout Fields Manager
+>>> https://easydigitaldownloads.com/downloads/checkout-fields-manager/
+--------------------------------------------------------------*/
+.ui-timepicker-div dl,
+.ui-timepicker-div dd,
+.ui-timepicker-div dt {
+	padding: 0;
+	margin: 0;
+	border: none;
 }
 
 
