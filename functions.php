@@ -83,6 +83,18 @@ function vendd_setup() {
 endif; // vendd_setup
 add_action( 'after_setup_theme', 'vendd_setup' );
 
+/**
+ * Title tag back compat
+ */
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+    function vendd_render_title() {
+        ?>
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <?php
+    }
+    add_action( 'wp_head', 'vendd_render_title' );
+}
+
 
 /**
  * Add search to main menu
