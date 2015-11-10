@@ -2768,7 +2768,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
 .vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
 	background: #fafafa;
-	color: #aaa;
+	color: #fff;
 	font-size: 1.2em;
 	font-weight: bold;
 	text-decoration: none;
@@ -2803,6 +2803,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-delete-row a,
 .vendd-edd-fes-shortcode .fes-delete-row a {
 	color: #ccc;
+	text-decoration: none;
 	font-weight: 700;
 	font-size: 1rem;
 }
@@ -2818,8 +2819,17 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .insert-file-row,
 .vendd-fes-template .upload_file_button,
 .vendd-edd-fes-shortcode .upload_file_button {
-	font-weight: 700;
-	text-transform: uppercase;
+	color: #fff !important;
+	text-decoration: none;
+	padding: 9px;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .insert-file-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .insert-file-row {
+
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple + tfoot th,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple + tfoot th {
+	padding: 0;
 }
 .vendd-fes-template .fes-form fieldset .fes-section-wrap,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-section-wrap {
