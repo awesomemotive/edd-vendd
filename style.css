@@ -503,9 +503,9 @@ a:focus {
 	font: 700 .87em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-decoration: none;
 	padding: 8px 14px;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
+	-webkit-transition: background .2s;
+	-moz-transition: background .2s;
+	transition: background .2s;
 }
 .main-navigation .nav-menu > li > a,
 .menu-toggle {
@@ -761,9 +761,9 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	text-decoration: none;
 	padding: 20px 40px;
 	border-radius: 4px;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
+	-webkit-transition: background .2s;
+	-moz-transition: background .2s;
+	transition: background .2s;
 }
 .header-cart .fa {
 	font-size: 1.67em;
