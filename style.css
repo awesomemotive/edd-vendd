@@ -2947,23 +2947,23 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	border-radius: 4px;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form {
+.vendd-vendor-contact {
 	border-radius: 4px;
 	margin: 0 auto;
 	max-width: 722px;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset {
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset {
 	margin-bottom: 14px;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form .fes-label label {
+.vendd-vendor-contact .fes-vendor-contact-form .fes-label label {
 	font-size: 1.4em;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="email"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="number"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="password"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="text"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="url"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields textarea {
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="email"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="number"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="password"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="text"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="url"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields textarea {
 	background: #fafafa;
 	border-width: 1px 1px 4px;
 	border-style: solid;
