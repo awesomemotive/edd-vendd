@@ -2715,6 +2715,17 @@ input[type="submit"].edd-submit {
 	padding: 0 0 4px;
 	border: none;
 }
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-checkbox-checklist,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-checkbox-checklist,
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-category-checklist,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-category-checklist {
+	list-style: none;
+	margin-left: 0;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-category-checklist .children,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-category-checklist .children {
+	list-style: none;
+}
 .vendd-fes-template .fes-form fieldset .fes-fields select,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select {
 	height: 40px;
