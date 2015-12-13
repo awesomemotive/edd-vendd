@@ -18,7 +18,7 @@ function vendd_customize_register( $wp_customize ) {
 		public $type = 'textarea';
 		public $description = '';
 		public function render_content() { ?>
-	
+
 		<label>
 			<span class="customize-control-title">
 				<?php echo esc_html( $this->label ) . ' '; ?>
@@ -31,7 +31,7 @@ function vendd_customize_register( $wp_customize ) {
 			<div class="control-description vendd-control-description"><?php echo esc_html( $this->description ); ?></div>
 			<textarea rows="5" style="width:98%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
 		</label>
-	
+
 		<?php }
 	}
 
@@ -42,7 +42,7 @@ function vendd_customize_register( $wp_customize ) {
 		public $type = 'customtext';
 		public $description = '';
 		public function render_content() { ?>
-		
+
 		<label>
 			<span class="customize-control-title">
 				<?php echo esc_html( $this->label ) . ' '; ?>
@@ -55,7 +55,7 @@ function vendd_customize_register( $wp_customize ) {
 			<div class="control-description vendd-control-description"><?php echo esc_html( $this->description ); ?></div>
 			<input type="text" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> />
 		</label>
-		
+
 		<?php }
 	}
 
@@ -80,11 +80,11 @@ function vendd_customize_register( $wp_customize ) {
 	) ) );
 
 	// site tagline
-	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';	
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	$wp_customize->get_control( 'blogdescription' )->priority = 30;
 
 	// hide the tagline?
-	$wp_customize->add_setting( 'vendd_hide_tagline', array( 
+	$wp_customize->add_setting( 'vendd_hide_tagline', array(
 		'default'			=> 0,
 		'sanitize_callback'	=> 'vendd_sanitize_checkbox'
 	) );
@@ -105,14 +105,14 @@ function vendd_customize_register( $wp_customize ) {
 		'priority'      => 20,
 	) );
 
-	// design color	
+	// design color
 	$wp_customize->add_setting( 'vendd_design_color', array(
 		'default'       => '#428bca',
 		'type'          => 'option',
 		'capability'    => 'edit_theme_options',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'vendd_design_color', array(
-		'label'     => __( 'Primary Design Color', 'vendd' ), 
+		'label'     => __( 'Primary Design Color', 'vendd' ),
 		'section'   => 'vendd_design',
 		'priority'  => 20
 	) ) );
@@ -142,7 +142,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->get_control( 'background_image' )->priority = 60;
 
 	// parallax background image
-	$wp_customize->add_setting( 'vendd_parallax_bg', array( 
+	$wp_customize->add_setting( 'vendd_parallax_bg', array(
 		'default'           => 0,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
@@ -158,13 +158,13 @@ function vendd_customize_register( $wp_customize ) {
 	 * Content Options
 	 */
 	$wp_customize->add_section( 'vendd_content_section', array(
-    	'title'         => __( 'Content Options', 'vendd' ),
+		'title'         => __( 'Content Options', 'vendd' ),
 		'description'   => __( 'Adjust the display of content on your website. All options have a default value that can be left as-is but you are free to customize.', 'vendd' ),
 		'priority'      => 30,
 	) );
 
 	// post content
-	$wp_customize->add_setting( 'vendd_post_content', array( 
+	$wp_customize->add_setting( 'vendd_post_content', array(
 		'default'           => 1,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
@@ -176,7 +176,7 @@ function vendd_customize_register( $wp_customize ) {
 	) );
 
 	// read more link
-	$wp_customize->add_setting( 'vendd_read_more', array( 
+	$wp_customize->add_setting( 'vendd_read_more', array(
 		'default'           => __( 'Continue reading', 'vendd' ),
 		'sanitize_callback' => 'vendd_sanitize_text'
 	) );
@@ -188,7 +188,7 @@ function vendd_customize_register( $wp_customize ) {
 	) ) );
 
 	// show featured images on feed?
-	$wp_customize->add_setting( 'vendd_feed_featured_image', array( 
+	$wp_customize->add_setting( 'vendd_feed_featured_image', array(
 		'default'           => 1,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
@@ -200,7 +200,7 @@ function vendd_customize_register( $wp_customize ) {
 	) );
 
 	// show featured images on posts?
-	$wp_customize->add_setting( 'vendd_single_featured_image', array( 
+	$wp_customize->add_setting( 'vendd_single_featured_image', array(
 		'default'           => 1,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
@@ -212,7 +212,7 @@ function vendd_customize_register( $wp_customize ) {
 	) );
 
 	// show featured images on pages?
-	$wp_customize->add_setting( 'vendd_page_featured_image', array( 
+	$wp_customize->add_setting( 'vendd_page_featured_image', array(
 		'default'           => 0,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
@@ -224,7 +224,7 @@ function vendd_customize_register( $wp_customize ) {
 	) );
 
 	// comments on pages?
-	$wp_customize->add_setting( 'vendd_page_comments', array( 
+	$wp_customize->add_setting( 'vendd_page_comments', array(
 		'default'           => 0,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
@@ -248,7 +248,7 @@ function vendd_customize_register( $wp_customize ) {
 	) );
 
 	// advanced search results
-	$wp_customize->add_setting( 'vendd_advanced_search_results', array( 
+	$wp_customize->add_setting( 'vendd_advanced_search_results', array(
 		'default'           => 0,
 		'sanitize_callback' => 'vendd_sanitize_checkbox'
 	) );
@@ -285,6 +285,102 @@ function vendd_customize_register( $wp_customize ) {
 
 
 	/** ===============
+	 * Social Profiles
+	 */
+	$wp_customize->add_section( 'vendd_social_profiles_section', array(
+		'title'         => __( 'Social Profiles', 'vendd' ),
+		'description'   => __( 'Enter the <strong>full URLs</strong> for your social profiles. They will display in various areas around the theme.', 'vendd' ),
+		'priority'      => 40,
+	) );
+
+	// show social profiles in Information Bar?
+	$wp_customize->add_setting( 'vendd_info_bar_social_profiles', array(
+		'default'           => 0,
+		'sanitize_callback'	=> 'vendd_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'vendd_info_bar_social_profiles', array(
+		'label'     => __( 'Show social profiles in Information Bar?', 'vendd' ),
+		'section'   => 'vendd_social_profiles_section',
+		'priority'  => 10,
+		'type'      => 'checkbox',
+	) );
+
+	/**
+	 * all supported social profiles
+	 *
+	 * Any time a new profile is added to the array, do the following:
+	 *
+	 * 1. create a new add_control() below for the new profile
+	 * 2. update vendd_social_profiles() function in inc/extras.php
+	 */
+	$profiles = array(
+		'twitter',
+		'facebook',
+		'googleplus',
+		'github',
+		'instagram',
+		'tumblr',
+		'linkedin',
+		'youtube',
+		'pinterest',
+		'dribbble',
+		'wordpress',
+	);
+	foreach ( $profiles as $profile ) {
+		$wp_customize->add_setting( 'vendd_' . $profile, array(
+			'default'           => null,
+			'sanitize_callback' => 'vendd_sanitize_text'
+		) );
+	}
+
+	// full add_control() list to respect brand names (capitalization, symbols, etc.)
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_twitter', array(
+		'label'     => 'Twitter',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_facebook', array(
+		'label'     => 'Facebook',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_googleplus', array(
+		'label'     => 'Google+',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_github', array(
+		'label'     => 'GitHub',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_instagram', array(
+		'label'     => 'Instagram',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_tumblr', array(
+		'label'     => 'Tumblr',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_linkedin', array(
+		'label'     => 'LinkedIn',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_youtube', array(
+		'label'     => 'YouTube',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_pinterest', array(
+		'label'     => 'Pinterest',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_dribbble', array(
+		'label'     => 'Dribbble',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_wordpress', array(
+		'label'     => 'WordPress',
+		'section'   => 'vendd_social_profiles_section'
+	) ) );
+
+
+	/** ===============
 	 * Easy Digital Downloads Options
 	 */
 	// only if EDD is activated
@@ -292,11 +388,11 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'vendd_edd_options', array(
 			'title'         => __( 'Easy Digital Downloads', 'vendd' ),
 			'description'   => __( 'All other EDD options are under Dashboard => Downloads. If you deactivate EDD, these options will no longer appear.', 'vendd' ),
-			'priority'      => 40,
+			'priority'      => 50,
 		) );
 
 		// show comments on downloads?
-		$wp_customize->add_setting( 'vendd_download_comments', array( 
+		$wp_customize->add_setting( 'vendd_download_comments', array(
 			'default'           => 0,
 			'sanitize_callback' => 'vendd_sanitize_checkbox'
 		) );
@@ -308,7 +404,7 @@ function vendd_customize_register( $wp_customize ) {
 		) );
 
 		// show categories/tags on [downloads] shortcode?
-		$wp_customize->add_setting( 'vendd_downloads_taxonomies', array( 
+		$wp_customize->add_setting( 'vendd_downloads_taxonomies', array(
 			'default'           => 0,
 			'sanitize_callback' => 'vendd_sanitize_checkbox'
 		) );
@@ -422,7 +518,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'vendd_fes_options', array(
 	    	'title'         => __( 'EDD Frontend Submissions', 'vendd' ),
 			'description'   => __( 'All other FES options are under Dashboard => EDD FES. If you deactivate EDD or FES, these options will no longer appear.', 'vendd' ),
-			'priority'      => 41,
+			'priority'      => 51,
 		) );
 
 		// FES Dashboard Title
@@ -438,7 +534,7 @@ function vendd_customize_register( $wp_customize ) {
 		) ) );
 
 		// contact form on Vendor pages
-		$wp_customize->add_setting( 'vendd_vendor_contact_form', array( 
+		$wp_customize->add_setting( 'vendd_vendor_contact_form', array(
 			'default'           => 0,
 			'sanitize_callback' => 'vendd_sanitize_checkbox'
 		) );
@@ -460,7 +556,7 @@ function vendd_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'vendd_customize_register' );
 
 
-/** 
+/**
  * Sanitize checkbox options
  */
 function vendd_sanitize_checkbox( $input ) {
@@ -630,7 +726,7 @@ function vendd_customizer_head_styles() {
 		<?php if ( '' != $edd_button_color && ! in_array( $edd_button_color, $edd_color_defaults ) ) : ?>
 			.edd-submit.button {
 				background: <?php echo vendd_sanitize_hex_color( $edd_button_color ); ?> !important;
-			}			
+			}
 			.edd-submit.button:hover {
 				background: #3d3d3d !important; color: #fff;
 			}
@@ -688,7 +784,7 @@ function vendd_customize_preview_js() {
 add_action( 'customize_preview_init', 'vendd_customize_preview_js' );
 
 
-/** 
+/**
  * Add Customizer UI styles to the <head> only on Customizer page
  */
 function vendd_customizer_styles() { ?>

@@ -194,6 +194,96 @@ add_filter( 'pre_get_posts', 'vendd_search_filter' );
 
 
 /**
+ * social profiles
+ *
+ * @since 1.1.5
+ */
+function vendd_social_profiles() {
+	if ( get_theme_mod( 'vendd_twitter' ) ||
+		 get_theme_mod( 'vendd_facebook' ) ||
+		 get_theme_mod( 'vendd_googleplus' ) ||
+		 get_theme_mod( 'vendd_github' ) ||
+		 get_theme_mod( 'vendd_instagram' ) ||
+		 get_theme_mod( 'vendd_tumblr' ) ||
+		 get_theme_mod( 'vendd_linkedin' ) ||
+		 get_theme_mod( 'vendd_youtube' ) ||
+		 get_theme_mod( 'vendd_pinterest' ) ||
+		 get_theme_mod( 'vendd_dribbble' ) ||
+		 get_theme_mod( 'vendd_wordpress' ) ) :
+	?>
+		<span class="social-links">
+			<?php
+				$social_profiles = array(
+					'twitter'    => array(
+						'class'  => 'vendd-twitter',
+						'icon'   => '<i class="fa fa-twitter-square"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_twitter' ) )
+					),
+					'facebook'   => array(
+						'class'  => 'vendd-facebook',
+						'icon'   => '<i class="fa fa-facebook-square"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_facebook' ) )
+					),
+					'googleplus' => array(
+						'class'  => 'vendd-googleplus',
+						'icon'   => '<i class="fa fa-google-plus-square"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_googleplus' ) )
+					),
+					'github'     => array(
+						'class'  => 'vendd-github',
+						'icon'   => '<i class="fa fa-github-square"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_github' ) )
+					),
+					'instagram'  => array(
+						'class'  => 'vendd-instagram',
+						'icon'   => '<i class="fa fa-instagram"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_instagram' ) )
+					),
+					'tumblr'     => array(
+						'class'  => 'vendd-tumblr',
+						'icon'   => '<i class="fa fa-tumblr-square"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_tumblr' ) )
+					),
+					'linkedin'   => array(
+						'class'  => 'vendd-linkedin',
+						'icon'   => '<i class="fa fa-linkedin-square"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_linkedin' ) )
+					),
+					'youtube'    => array(
+						'class'  => 'vendd-youtube',
+						'icon'   => '<i class="fa fa-youtube"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_youtube' ) )
+					),
+					'pinterest'  => array(
+						'class'  => 'vendd-pinterest',
+						'icon'   => '<i class="fa fa-pinterest-square"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_pinterest' ) )
+					),
+					'dribbble'   => array(
+						'class'  => 'vendd-dribbble',
+						'icon'   => '<i class="fa fa-dribbble"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_dribbble' ) )
+					),
+					'wordpress'  => array(
+						'class'  => 'vendd-wordpress',
+						'icon'   => '<i class="fa fa-wordpress"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_wordpress' ) )
+					),
+				);
+				foreach ( $social_profiles as $profile ) {
+					if ( '' != $profile[ 'option' ] ) :
+						echo '<a class="', $profile[ 'class' ], '" href="', $profile[ 'option' ], '">', $profile[ 'icon' ], '</a>';
+					endif;
+				}
+			?>
+		</span>
+	<?php
+	endif; // end check for any social profile
+}
+add_action( 'vendd_social_profiles', 'vendd_social_profiles' );
+
+
+/**
  * Render document title for backwards compatibility
  *
  * @resource https://make.wordpress.org/core/2015/10/20/document-title-in-4-4/

@@ -726,6 +726,23 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 .info-bar-text a:hover {
 	color: #ddd;
 }
+.info-bar-text + .social-links {
+	padding-left: 10px;
+	border-left: 1px solid #666;
+	margin-left: 6px;
+}
+.info-bar .social-links a {
+	color: #999;
+	font-size: 1.13em;
+	line-height: 1;
+	margin-right: 6px;
+}
+.info-bar .social-links a:hover {
+	color: #ddd;
+}
+.info-bar .social-links a:last-child {
+	margin-right: 0;
+}
 .site-branding {
 	display: inline-block;
 	padding: 40px;
@@ -3353,6 +3370,19 @@ aside[class*="widget_edd_"] .widget-download-title {
 	#masthead,
 	#info-bar {
 		text-align: center;
+	}
+	.info-bar-text + .social-links {
+		display: block;
+		padding-left: 0;
+		border-left: none;
+		margin: 6px 0 0;
+	}
+	.info-bar .social-links a {
+		font-size: 1.6em;
+		margin-right: 8px;
+	}
+	.info-bar .social-links a:last-child {
+		margin-right: 0;
 	}
 	.secondary-navigation {
 		position: static;

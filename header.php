@@ -20,11 +20,17 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'vendd' ); ?></a>
 
-	<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() && ( '' != get_theme_mod( 'vendd_info_bar' ) || has_nav_menu( 'info_bar' ) ) ) : ?>
+	<?php if ( ! vendd_is_checkout() && ! vendd_is_landing_page() && ( '' != get_theme_mod( 'vendd_info_bar' ) || 1 == get_theme_mod( 'vendd_info_bar_social_profiles' ) || has_nav_menu( 'info_bar' ) ) ) : ?>
 		<div id="info-bar" class="info-bar">
 			<?php if ( '' != get_theme_mod( 'vendd_info_bar' ) ) : ?>
 				<span class="info-bar-text"><?php echo get_theme_mod( 'vendd_info_bar' ); ?></span>
 			<?php endif; ?>
+
+			<?php
+				if ( 1 == get_theme_mod( 'vendd_info_bar_social_profiles' ) ) {
+					do_action( 'vendd_social_profiles' );
+				}
+			?>
 
 			<?php if ( has_nav_menu( 'info_bar' ) ) : ?>
 				<div id="info-bar-navigation" class="secondary-navigation" role="navigation">
