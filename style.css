@@ -733,8 +733,9 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 }
 .info-bar .social-links a {
 	color: #999;
-	font-size: 1.13em;
+	font-size: 1.4em;
 	line-height: 1;
+	vertical-align: text-bottom;
 	margin-right: 6px;
 }
 .info-bar .social-links a:hover {
