@@ -789,17 +789,18 @@ add_action( 'customize_preview_init', 'vendd_customize_preview_js' );
  */
 function vendd_customizer_styles() { ?>
 	<style type="text/css">
-		#customize-controls #customize-theme-controls .description { display: block; color: #999; margin: 2px 0 15px; font-style: italic; }
+		#customize-controls #customize-theme-controls .description { display: block; color: #666;  font-style: italic; margin: 2px 0 15px; }
+		#customize-controls #customize-theme-controls .customize-section-description { margin-top: 10px; }
 		textarea, input, select,
 		.customize-description { font-size: 12px !important; }
 		.customize-control-title { font-size: 13px !important; margin: 5px 0 3px !important; }
 		.customize-control label { font-size: 12px !important; }
 		.customize-control { margin-bottom: 10px; }
 		.vendd-toggle-wrap { display: inline-block; line-height: 1; margin-left: 2px; }
-		.vendd-toggle-wrap a { display: block; background: #eee; color: #555; padding: 2px 6px; border-radius: 3px; }
+		.vendd-toggle-wrap a { display: block; background: rgba(0, 0, 0, .2); color: #fff; padding: 2px 6px; border-radius: 3px; margin-left: 6px; }
 		.vendd-toggle-wrap a:hover,
 		.vendd-toggle-wrap .vendd-description-opened { background: #555; color: #fff; }
-		.control-description { color: #999; font-style: italic; margin-bottom: 6px; }
+		.control-description { color: #666; font-style: italic; margin-bottom: 6px; }
 		.vendd-control-description { display: none; }
 		.customize-control-text + .customize-control-checkbox,
 		.customize-control-customtext + .customize-control-checkbox,
