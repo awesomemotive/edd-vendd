@@ -759,6 +759,11 @@ function vendd_customizer_head_styles() {
 			h1, h2 {
 				border-color: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
 			}
+			@media all and ( min-width: 860px ) {
+				.main-navigation ul li:hover > ul {
+					background: <?php echo vendd_sanitize_hex_color( $design_color ); ?>;
+				}
+			}
 		<?php endif; ?>
 	</style>
 	<?php
