@@ -7,18 +7,18 @@
 
 // check to see if this is an actual vendor profile and if so, gather information
 if ( function_exists( 'fes_get_vendor' ) && false !== fes_get_vendor() ) {
-	
+
 	global $current_user;
-	
+
 	$the_vendor = get_query_var( 'vendor' );
 	$the_vendor = get_user_by( 'slug', $the_vendor );
-	
+
 	if ( ! $the_vendor ) {
 		$the_vendor = new WP_User( get_current_user_id() );
 	}
-	
+
 	$vendor_avatar = get_avatar( $the_vendor->ID, 100 );
-	
+
 	$is_vendor_profile = 'is-vendor-profile';
 }
 ?>
