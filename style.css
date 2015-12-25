@@ -2766,6 +2766,11 @@ input[type="submit"].edd-submit {
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-single-variation,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-single-variation {
+	display: block;
+	margin-bottom: 6px;
+}
 .vendd-fes-template .fes-form fieldset .fes-fields table,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields table,
 .vendd-fes-template .fes-form fieldset .fes-fields td,
