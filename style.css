@@ -532,9 +532,6 @@ a:focus {
 	color: #999;
 	text-decoration: none;
 	margin-left: 15px;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
 }
 .secondary-navigation a:hover {
 	color: #ddd;
@@ -715,13 +712,15 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 /*--------------------------------------------------------------
 >>> Header
 --------------------------------------------------------------*/
+#info-bar a {
+	-webkit-transition: color .2s;
+	-moz-transition: color .2s;
+	transition: color .2s;
+}
 .info-bar-text a {
 	color: #999;
 	text-decoration: none;
 	border-bottom: 1px dotted #666;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
 }
 .info-bar-text a:hover {
 	color: #ddd;
