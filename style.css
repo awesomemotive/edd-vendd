@@ -4,7 +4,7 @@ Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: Sean Davis
 Author URI: http://sdavismedia.com/
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.4
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -503,9 +503,9 @@ a:focus {
 	font: 700 .87em/1 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-decoration: none;
 	padding: 8px 14px;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
+	-webkit-transition: background .2s;
+	-moz-transition: background .2s;
+	transition: background .2s;
 }
 .main-navigation .nav-menu > li > a,
 .menu-toggle {
@@ -532,9 +532,6 @@ a:focus {
 	color: #999;
 	text-decoration: none;
 	margin-left: 15px;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
 }
 .secondary-navigation a:hover {
 	color: #ddd;
@@ -715,16 +712,36 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 /*--------------------------------------------------------------
 >>> Header
 --------------------------------------------------------------*/
+#info-bar a {
+	-webkit-transition: color .2s;
+	-moz-transition: color .2s;
+	transition: color .2s;
+}
 .info-bar-text a {
 	color: #999;
 	text-decoration: none;
 	border-bottom: 1px dotted #666;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
 }
 .info-bar-text a:hover {
 	color: #ddd;
+}
+.info-bar-text + .social-links {
+	padding-left: 10px;
+	border-left: 1px solid #666;
+	margin-left: 6px;
+}
+.info-bar .social-links a {
+	color: #999;
+	font-size: 1.4em;
+	line-height: 1;
+	vertical-align: text-bottom;
+	margin-right: 6px;
+}
+.info-bar .social-links a:hover {
+	color: #ddd;
+}
+.info-bar .social-links a:last-child {
+	margin-right: 0;
 }
 .site-branding {
 	display: inline-block;
@@ -761,9 +778,9 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	text-decoration: none;
 	padding: 20px 40px;
 	border-radius: 4px;
-	-webkit-transition: all .2s;
-	-moz-transition: all .2s;
-	transition: all .2s;
+	-webkit-transition: background .2s;
+	-moz-transition: background .2s;
+	transition: background .2s;
 }
 .header-cart .fa {
 	font-size: 1.67em;
@@ -2715,6 +2732,17 @@ input[type="submit"].edd-submit {
 	padding: 0 0 4px;
 	border: none;
 }
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-checkbox-checklist,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-checkbox-checklist,
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-category-checklist,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-category-checklist {
+	list-style: none;
+	margin-left: 0;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-category-checklist .children,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-category-checklist .children {
+	list-style: none;
+}
 .vendd-fes-template .fes-form fieldset .fes-fields select,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select {
 	height: 40px;
@@ -2736,6 +2764,11 @@ input[type="submit"].edd-submit {
 	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-single-variation,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-single-variation {
+	display: block;
+	margin-bottom: 6px;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields table,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields table,
@@ -2947,23 +2980,23 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	border-radius: 4px;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form {
+.vendd-vendor-contact {
 	border-radius: 4px;
 	margin: 0 auto;
 	max-width: 722px;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset {
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset {
 	margin-bottom: 14px;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form .fes-label label {
+.vendd-vendor-contact .fes-vendor-contact-form .fes-label label {
 	font-size: 1.4em;
 }
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="email"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="number"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="password"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="text"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields input[type="url"],
-.vendd-vendor-contact .fes-form-vendor-contact-form div.fes-form fieldset .fes-fields textarea {
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="email"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="number"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="password"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="text"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="url"],
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields textarea {
 	background: #fafafa;
 	border-width: 1px 1px 4px;
 	border-style: solid;
@@ -3342,6 +3375,19 @@ aside[class*="widget_edd_"] .widget-download-title {
 	#masthead,
 	#info-bar {
 		text-align: center;
+	}
+	.info-bar-text + .social-links {
+		display: block;
+		padding-left: 0;
+		border-left: none;
+		margin: 6px 0 0;
+	}
+	.info-bar .social-links a {
+		font-size: 1.6em;
+		margin-right: 8px;
+	}
+	.info-bar .social-links a:last-child {
+		margin-right: 0;
 	}
 	.secondary-navigation {
 		position: static;

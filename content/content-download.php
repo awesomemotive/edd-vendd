@@ -14,7 +14,8 @@
 		<?php
 			// display featured image?
 			if ( has_post_thumbnail() ) :
-				the_post_thumbnail( 'vendd_product_image', array( 'class' => 'featured-img' ) );
+				$product_image = apply_filters( 'vendd_crop_product_image', true ) ? 'vendd_product_image' : 'full';
+				the_post_thumbnail( $product_image, array( 'class' => 'featured-img' ) );
 			endif;
 			the_content();
 		?>
