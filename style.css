@@ -1295,40 +1295,52 @@ object {
 >>> Galleries
 --------------------------------------------------------------*/
 .gallery {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-between;
 	margin-bottom: 1.5em;
 }
 .gallery-item {
 	display: inline-block;
-	text-align: center;
+	margin-bottom: 20px;
 	vertical-align: top;
 	width: 100%;
 }
+.gallery-item img {
+	border-radius: 4px;
+}
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+	max-width: 48%;
 }
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+	max-width: 31%;
 }
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+	max-width: 22%;
 }
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+	max-width: 19%;
 }
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+	max-width: 15.66%;
 }
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+	max-width: 13.2%;
 }
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+	margin-bottom: 10px;
+	max-width: 11.5%;
 }
 .gallery-caption {
 	display: block;
+	font-size: .87em;
+	font-style: italic;
+	text-align: left;
+	padding: 4px 0 0;
 }
 
 
