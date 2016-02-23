@@ -1323,12 +1323,15 @@ object {
 	max-width: 22%;
 }
 .gallery-columns-5 .gallery-item {
+	margin-bottom: 10px;
 	max-width: 19%;
 }
 .gallery-columns-6 .gallery-item {
+	margin-bottom: 10px;
 	max-width: 15.66%;
 }
 .gallery-columns-7 .gallery-item {
+	margin-bottom: 10px;
 	max-width: 13.2%;
 }
 .gallery-columns-8 .gallery-item {
