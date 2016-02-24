@@ -1809,6 +1809,9 @@ input[type="submit"].edd-submit {
 	position: static;
 	display: block;
 }
+.widget .edd_purchase_tax_rate {
+	position: absolute;
+}
 
 /* variable pricing w/ support for descriptions (http://wordpress.org/plugins/edd-variable-pricing-descriptions/) */
 .widget-area .edd_price_options ul {
