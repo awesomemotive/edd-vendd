@@ -10,8 +10,8 @@
  * Constants and important files
  */
 define( 'VENDD_NAME', 'Vendd' );
-define( 'VENDD_AUTHOR', 'Sean Davis' );
-define( 'VENDD_VERSION', '1.1.5' );
+define( 'VENDD_AUTHOR', 'EDD Team' );
+define( 'VENDD_VERSION', '1.1.6' );
 define( 'VENDD_HOME', 'https://easydigitaldownloads.com/downloads/vendd' );
 
 

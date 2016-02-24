@@ -1,10 +1,10 @@
 /*
 Theme Name: Vendd
 Theme URI: https://easydigitaldownloads.com/downloads/vendd
-Author: Sean Davis
-Author URI: http://sdavismedia.com/
+Author: EDD Team
+Author URI: https://easydigitaldownloads.com
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.5
+Version: 1.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -148,6 +148,15 @@ a:active {
 a img {
 	border: 0;
 	vertical-align: bottom;
+}
+
+/* prevent input field zoom on mobile devices */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	select,
+	textarea,
+	input {
+		font-size: 16px;
+	}
 }
 
 
@@ -1286,40 +1295,55 @@ object {
 >>> Galleries
 --------------------------------------------------------------*/
 .gallery {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-between;
 	margin-bottom: 1.5em;
 }
 .gallery-item {
 	display: inline-block;
-	text-align: center;
+	margin-bottom: 20px;
 	vertical-align: top;
 	width: 100%;
 }
+.gallery-item img {
+	border-radius: 4px;
+}
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+	max-width: 48%;
 }
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+	max-width: 31%;
 }
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+	max-width: 22%;
 }
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+	margin-bottom: 10px;
+	max-width: 19%;
 }
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+	margin-bottom: 10px;
+	max-width: 15.66%;
 }
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+	margin-bottom: 10px;
+	max-width: 13.2%;
 }
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+	margin-bottom: 10px;
+	max-width: 11.5%;
 }
 .gallery-caption {
 	display: block;
+	font-size: .87em;
+	font-style: italic;
+	text-align: left;
+	padding: 4px 0 0;
 }
 
 
@@ -1552,7 +1576,7 @@ object {
 	max-height: 375px;
 	overflow-y: auto;
 	box-shadow: 0px -2px 12px 0px rgba(21, 21, 21, .06);
-	z-index: 1;
+	z-index: 100;
 }
 .edd_download_buy_button {
 	font-size: .87em;
@@ -1609,7 +1633,7 @@ object {
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
 	transition: all .2s;
-	z-index: 2;
+	z-index: 101;
 }
 .edd_download:hover .product-link {
 	color: #555;
@@ -1768,18 +1792,25 @@ input[type="submit"].edd-submit {
 }
 .widget-area .edd-cart-added-alert {
 	right: 0;
-	bottom: -22px;
+	bottom: -20px;
 }
 .edd_download_inner .edd-cart-added-alert {
 	position: static;
 	display: inline-block;
 }
 .edd_purchase_tax_rate {
-	position: absolute;
 	color: #999;
 	font-size: .8em;
 	font-style: normal;
-	margin-top: 2px;
+	margin-top: 4px;
+}
+.vendd-price-button-container .edd_purchase_tax_rate,
+.vendd-price-button-container .edd_purchase_tax_rate {
+	position: static;
+	display: block;
+}
+.widget .edd_purchase_tax_rate {
+	position: absolute;
 }
 
 /* variable pricing w/ support for descriptions (http://wordpress.org/plugins/edd-variable-pricing-descriptions/) */
@@ -1793,14 +1824,18 @@ input[type="submit"].edd-submit {
 }
 .edd_download_purchase_form .edd_price_options {
 	color: #757575;
+	font-size: 13px;
 	margin-bottom: 6px;
+}
+.edd_download_purchase_form .edd_price_options li {
+	margin-bottom: 10px;
 }
 .widget-area .edd_download_purchase_form .edd_price_options li {
 	padding: 8px 15px;
 }
 .vendd-price-button-container .edd_download_purchase_form .edd_price_options li {
 	padding: 0 0 10px;
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 2px solid #f2f2f2;
 	margin-bottom: 10px;
 }
 .vendd-price-button-container .edd_download_purchase_form .edd_price_options li:first-child {
@@ -1819,7 +1854,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-price-button-container .edd_download_purchase_form .edd_price_options.edd_multi_mode li:last-child {
 	padding-bottom: 10px;
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 2px solid #f2f2f2;
 	margin-bottom: 10px;
 }
 .vendd-price-button-container .edd_single_mode + .edd_download_quantity_wrapper {
@@ -1853,6 +1888,7 @@ input[type="submit"].edd-submit {
 	display: none;
 }
 .single-download .widget_edd_product_details .edd_download_purchase_form {
+	position: relative;
 	margin-bottom: 0;
 }
 .widget_edd_product_details .edd_download_purchase_form .edd-submit,
@@ -1889,7 +1925,8 @@ input[type="submit"].edd-submit {
 	margin-top: 2px;
 }
 .widget_edd_product_details .edd-meta {
-	margin-bottom: 0;
+	font-size: 13px;
+	margin: 20px 0 0;
 }
 .widget_edd_product_details .edd-meta .download-terms {
 	display: block;
@@ -2012,10 +2049,10 @@ input[type="submit"].edd-submit {
 #edd_purchase_receipt,
 #edd_user_history,
 #edd_purchase_receipt_products,
-.vendd-confirmation-template #edd_purchase_receipt thead th:first-child,
-.vendd-confirmation-template #edd_purchase_receipt tbody td:first-child,
-.vendd-confirmation-template #edd_purchase_receipt thead th:last-child,
-.vendd-confirmation-template #edd_purchase_receipt tbody td:last-child,
+#edd_purchase_receipt thead th:first-child,
+#edd_purchase_receipt tbody td:first-child,
+#edd_purchase_receipt thead th:last-child,
+#edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products tbody td,
 #edd_purchase_receipt_products th,
 #edd_purchase_form_wrap select {
@@ -2055,28 +2092,28 @@ input[type="submit"].edd-submit {
 .vendd-checkout-template tbody tr {
 	font-size: .87em;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child {
+.entry-content #edd_purchase_receipt thead th:first-child,
+.entry-content #edd_purchase_receipt tbody td:first-child {
 	padding: 15px 10px;
 	border-width: 0 1px 0 0;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
+.entry-content #edd_purchase_receipt thead th:first-child,
+.entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child,
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child,
+.entry-content #edd_purchase_receipt thead th:last-child,
+.entry-content #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products th {
 	padding: 15px 10px;
 	border-width: 0 0 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
+.entry-content #edd_purchase_receipt tbody tr:last-child td:last-child {
 	border-bottom-width: 0;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt li {
+.entry-content #edd_purchase_receipt li {
 	list-style-position: inside;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt li:only-child {
+.entry-content #edd_purchase_receipt li:only-child {
 	list-style: none;
 }
 .entry-content #edd_checkout_cart,
@@ -2141,22 +2178,22 @@ input[type="submit"].edd-submit {
 #edd_user_history {
 	margin-bottom: 2em;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:first-child {
+.entry-content #edd_purchase_receipt thead th:first-child,
+.entry-content #edd_purchase_receipt tbody td:first-child {
 	padding: 15px 10px;
 	border-width: 0 1px 0 0;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:first-child,
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
+.entry-content #edd_purchase_receipt thead th:first-child,
+.entry-content #edd_purchase_receipt tbody tr:not(:last-child) td:first-child {
 	border-bottom-width: 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt thead th:last-child,
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody td:last-child {
+.entry-content #edd_purchase_receipt thead th:last-child,
+.entry-content #edd_purchase_receipt tbody td:last-child {
 	padding: 15px 10px;
 	border-width: 0 0 1px;
 }
-.vendd-confirmation-template .entry-content #edd_purchase_receipt tbody tr:last-child td,
-.vendd-confirmation-template .entry-content #edd_purchase_receipt_products tbody tr:last-child td {
+.entry-content #edd_purchase_receipt tbody tr:last-child td,
+.entry-content #edd_purchase_receipt_products tbody tr:last-child td {
 	border-bottom-width: 0;
 }
 #edd_purchase_receipt_products {
@@ -2248,6 +2285,76 @@ input[type="submit"].edd-submit {
 /*--------------------------------------------------------------
  *********************** Plugin Support ***********************
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+>>> Recurring Payments
+>>> https://easydigitaldownloads.com/downloads/recurring-payments/
+--------------------------------------------------------------*/
+.eddr-notice {
+	font-size: 13px;
+	text-align: left;
+}
+.eddr-notice:not(.variable-prices):first-of-type {
+	margin-top: 20px;
+}
+#edd_checkout_cart .eddr-notice.eddr-cart-item-notice,
+.edd-variable-pricing-desc:not(:empty) ~ .eddr-notice {
+	margin-top: 0;
+}
+#edd_checkout_cart .eddr-notice.eddr-cart-item-notice {
+	color: #999;
+}
+
+/* sidebar purchase button */
+.widget .eddr-notice {
+	background: #fff;
+	padding: 10px 15px;
+	border: 1px solid #f2f2f2;
+	margin-top: 0;
+}
+.widget .eddr-notice:only-of-type {
+	border-radius: 4px;
+	margin-top: 30px;
+}
+.widget .eddr-notice:not(:only-of-type):first-of-type {
+	border-radius: 4px 4px 0px 0px;
+	border-width: 1px;
+	margin-top: 30px;
+}
+.widget .eddr-notice:not(:only-of-type):last-of-type {
+	border-radius: 0 0 4px 4px;
+	border-width: 0 1px 1px 1px;
+}
+.widget .edd_price_options[class^="edd_"] .eddr-notice {
+	background: none;
+	padding: 0;
+	border: none;
+}
+.widget .edd_price_options[class^="edd_"] .eddr-notice:first-of-type,
+.widget .edd_price_options[class^="edd_"] .edd-variable-pricing-desc:not(:empty) + .eddr-notice {
+	padding-top: 6px;
+	margin-top: 6px;
+}
+.widget .edd_price_options[class^="edd_"] .edd-variable-pricing-desc:not(:empty) + .eddr-notice {
+	border-top: 1px dashed #f2f2f2;
+}
+
+/* [downloads] shortcode purchase button */
+.vendd-price-button-container .eddr-notice {
+	margin-top: 0;
+}
+.vendd-price-button-container .eddr-notice em {
+	font-style: normal;
+}
+.vendd-price-button-container .eddr-notice:first-of-type,
+.vendd-price-button-container .edd-variable-pricing-desc:not(:empty) + .eddr-notice {
+	padding-top: 6px;
+	margin-top: 6px;
+}
+.vendd-price-button-container .edd-variable-pricing-desc:not(:empty) + .eddr-notice {
+	border-top: 1px dashed #f2f2f2;
+}
 
 
 /*--------------------------------------------------------------
