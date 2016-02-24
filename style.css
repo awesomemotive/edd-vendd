@@ -1854,7 +1854,7 @@ input[type="submit"].edd-submit {
 }
 .vendd-price-button-container .edd_download_purchase_form .edd_price_options.edd_multi_mode li:last-child {
 	padding-bottom: 10px;
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 2px solid #f2f2f2;
 	margin-bottom: 10px;
 }
 .vendd-price-button-container .edd_single_mode + .edd_download_quantity_wrapper {
@@ -2295,11 +2295,15 @@ input[type="submit"].edd-submit {
 	font-size: 13px;
 	text-align: left;
 }
-.eddr-notice:first-of-type {
+.eddr-notice:not(.variable-prices):first-of-type {
 	margin-top: 20px;
 }
+#edd_checkout_cart .eddr-notice.eddr-cart-item-notice,
 .edd-variable-pricing-desc:not(:empty) ~ .eddr-notice {
 	margin-top: 0;
+}
+#edd_checkout_cart .eddr-notice.eddr-cart-item-notice {
+	color: #999;
 }
 
 /* sidebar purchase button */
@@ -2332,9 +2336,6 @@ input[type="submit"].edd-submit {
 	padding-top: 6px;
 	margin-top: 6px;
 }
-.widget .edd_price_options[class^="edd_"] .eddr-notice:first-of-type {
-	border-top: 1px solid #f2f2f2;
-}
 .widget .edd_price_options[class^="edd_"] .edd-variable-pricing-desc:not(:empty) + .eddr-notice {
 	border-top: 1px dashed #f2f2f2;
 }
@@ -2350,9 +2351,6 @@ input[type="submit"].edd-submit {
 .vendd-price-button-container .edd-variable-pricing-desc:not(:empty) + .eddr-notice {
 	padding-top: 6px;
 	margin-top: 6px;
-}
-.vendd-price-button-container .eddr-notice:first-of-type {
-	border-top: 1px solid #f2f2f2;
 }
 .vendd-price-button-container .edd-variable-pricing-desc:not(:empty) + .eddr-notice {
 	border-top: 1px dashed #f2f2f2;
