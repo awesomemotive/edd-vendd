@@ -1300,12 +1300,23 @@ object {
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	display: box;
+	-webkit-flex-direction: row;
 	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
+	align-content: flex-start;
+
 	margin-bottom: 1.5em;
 }
 .gallery-item {
 	display: inline-block;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+
 	margin-bottom: 20px;
 	vertical-align: top;
 	width: 100%;
