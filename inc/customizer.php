@@ -482,15 +482,15 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'     => 40,
 		) ) );
 
-		// Store Front Title
+		// EDD Downloads page template title
 		$wp_customize->add_setting( 'vendd_store_front_title', array(
 			'default'           => null,
 			'sanitize_callback' => 'vendd_sanitize_textarea_lite',
 		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_store_front_title', array(
-			'label'         => __( 'Store Front Title', 'vendd' ),
+			'label'         => __( 'EDD Downloads Template Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
-			'description'   => __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'description'   => __( 'This optional field allows you to replace the title of your EDD Downloads Page Template. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 			'priority'      => 50,
 		) ) );
 
