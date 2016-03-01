@@ -391,6 +391,28 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'      => 50,
 		) );
 
+		// product image uploader
+		$wp_customize->add_setting( 'vendd_product_image_upload', array( 'default' => null ) );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'vendd_product_image_upload', array(
+			'label'        => __( 'Default Product Image', 'vendd' ),
+			'section'      => 'vendd_edd_options',
+			'description'  => __( 'Recommended: default product image should be the same dimensions as your uploaded Download Images (if used). Vendd default product image crop dimensions: 722px 361px.', 'vendd' ),
+			'settings'     => 'vendd_product_image_upload',
+			'priority'     => 10
+		) ) );
+
+		// use default image fallback
+		$wp_customize->add_setting( 'vendd_product_image', array(
+			'default'           => 0,
+			'sanitize_callback' => 'vendd_sanitize_checkbox'
+		) );
+		$wp_customize->add_control( 'vendd_product_image', array(
+			'label'     => __( 'Use Default Product Image Fallback', 'vendd' ),
+			'section'   => 'vendd_edd_options',
+			'priority'  => 20,
+			'type'      => 'checkbox',
+		) );
+
 		// show comments on downloads?
 		$wp_customize->add_setting( 'vendd_download_comments', array(
 			'default'           => 0,
@@ -399,7 +421,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( 'vendd_download_comments', array(
 			'label'     => __( 'Show Comments on Downloads', 'vendd' ),
 			'section'   => 'vendd_edd_options',
-			'priority'  => 10,
+			'priority'  => 30,
 			'type'      => 'checkbox',
 		) );
 
@@ -411,7 +433,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( 'vendd_downloads_taxonomies', array(
 			'label'     => __( 'Show Categories/Tags on Downloads grid', 'vendd' ),
 			'section'   => 'vendd_edd_options',
-			'priority'  => 20,
+			'priority'  => 40,
 			'type'      => 'checkbox',
 		) );
 

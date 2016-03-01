@@ -12,10 +12,14 @@
 	</header>
 	<div class="entry-content">
 		<?php
-			// display featured image?
+			// display featured image? if not, display default featured image?
 			if ( has_post_thumbnail() ) :
 				$product_image = apply_filters( 'vendd_crop_product_image', true ) ? 'vendd_product_image' : 'full';
 				the_post_thumbnail( $product_image, array( 'class' => 'featured-img' ) );
+			elseif ( get_theme_mod( 'vendd_product_image_upload' ) && get_theme_mod( 'vendd_product_image' ) ) :
+				?>
+				<img class="featured-img" src="<?php echo get_theme_mod( 'vendd_product_image_upload' ); ?>" alt="<?php echo esc_attr( get_the_title( get_the_ID() ) ); ?>">
+				<?php
 			endif;
 			the_content();
 		?>
