@@ -7,7 +7,7 @@
 $advanced_search = get_theme_mod( 'vendd_advanced_search_results', 0 );
 get_header(); ?>
 
-	<section id="primary" class="content-area<?php $advanced_search ? 'advanced-search-content' : ''; ?>">
+	<section id="primary" class="content-area<?php echo $advanced_search ? ' advanced-search-content' : ''; ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
