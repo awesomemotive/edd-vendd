@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vendd\n"
-"POT-Creation-Date: 2016-01-18 07:48-0800\n"
-"PO-Revision-Date: 2016-01-18 07:49-0800\n"
+"POT-Creation-Date: 2016-03-03 18:41-0800\n"
+"PO-Revision-Date: 2016-03-03 18:42-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -94,16 +94,12 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content/content-advanced-search.php:30
-#, php-format
-msgctxt "post search results title"
-msgid "%s Results"
+#: content/content-advanced-search.php:59
+msgid "Page Results"
 msgstr ""
 
-#: content/content-advanced-search.php:39
-#, php-format
-msgctxt "page search results title"
-msgid "%s Results"
+#: content/content-advanced-search.php:94
+msgid "Post Results"
 msgstr ""
 
 #: content/content-archive-download.php:14
@@ -681,87 +677,102 @@ msgid ""
 "EDD, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:400
+#: inc/customizer.php:397
+msgid "Default Product Image"
+msgstr ""
+
+#: inc/customizer.php:399
+msgid ""
+"Recommended: default product image should be the same dimensions as your "
+"uploaded Download Images (if used). Vendd default product image crop "
+"dimensions: 722px 361px."
+msgstr ""
+
+#: inc/customizer.php:410
+msgid "Use Default Product Image Fallback"
+msgstr ""
+
+#: inc/customizer.php:422
 msgid "Show Comments on Downloads"
 msgstr ""
 
-#: inc/customizer.php:412
+#: inc/customizer.php:434
 msgid "Show Categories/Tags on Downloads grid"
 msgstr ""
 
-#: inc/customizer.php:457
+#: inc/customizer.php:479
 msgid "EDD Button Color"
 msgstr ""
 
-#: inc/customizer.php:459
+#: inc/customizer.php:481
 msgid ""
 "By default, this will match what you set in the EDD Style Settings. "
 "Selecting another color here will override the EDD setting. Clear the color "
 "field back to default to revert back to the EDD setting."
 msgstr ""
 
-#: inc/customizer.php:469
-msgid "Store Front Title"
+#: inc/customizer.php:491
+msgid "EDD Downloads Template Title"
 msgstr ""
 
-#: inc/customizer.php:471
+#: inc/customizer.php:493
 msgid ""
-"This optional field allows you to replace the title of your Store Front (EDD "
-"Store Front page template). If left blank, the title of the page will show "
-"instead. Allowed tags:"
+"This optional field allows you to replace the title of your EDD Downloads "
+"Page Template. If left blank, the title of the page will show instead. "
+"Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:481
+#: inc/customizer.php:503
 msgid "Empty Cart Title"
 msgstr ""
 
-#: inc/customizer.php:483
+#: inc/customizer.php:505
 msgid ""
 "This is the title on the page that displays when the cart is empty. Allowed "
 "tags:"
 msgstr ""
 
-#: inc/customizer.php:493
+#: inc/customizer.php:515
 msgid "Empty Cart Text"
 msgstr ""
 
-#: inc/customizer.php:495
+#: inc/customizer.php:517
 msgid ""
 "Displays a custom message when the checkout cart is empty. Allowed tags: "
 msgstr ""
 
-#: inc/customizer.php:505
+#: inc/customizer.php:527
 msgid "Empty Cart Downloads Count"
 msgstr ""
 
-#: inc/customizer.php:507
+#: inc/customizer.php:529
 msgid ""
 "Enter the number of downloads you would like to display on the checkout page "
 "when the cart is empty. Additional downloads are available through "
 "pagination."
 msgstr ""
 
-#: inc/customizer.php:519
+#: inc/customizer.php:541
 msgid "EDD Frontend Submissions"
 msgstr ""
 
-#: inc/customizer.php:520
+#: inc/customizer.php:542
 msgid ""
 "All other FES options are under Dashboard => EDD FES. If you deactivate EDD "
 "or FES, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:530
+#: inc/customizer.php:552
 msgid "FES Dashboard Title"
 msgstr ""
 
-#: inc/customizer.php:532
+#: inc/customizer.php:554
 msgid ""
 "This optional field allows you to replace the title of your FES Dashboard. "
 "If left blank, the title of the page will show instead. Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:542
+#: inc/customizer.php:564
 msgid "Show contact form on Vendor template"
 msgstr ""
 
