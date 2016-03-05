@@ -202,15 +202,29 @@ Author URI:
 Description: Child theme for Vendd
 Template: vendd
 */
-@import url( "../vendd/style.css" );
 
 /* ----- Theme customization starts here ----- */
 </pre>
 
 					</li>
-					<li><?php _e( 'You may edit all of what you pasted EXCEPT for the <code>Template</code> line as well as the <code>@import</code> line. Leave those two lines alone or the child theme will not work properly.', 'vendd' ); ?></li>
-					<li><?php _e( 'With your new child theme folder in place and the above CSS pasted inside of your <code>style.css</code> file, go back to your WordPress dashboard and navigate to "Appearance -> Themes" and locate your new theme (you\'ll see the name you chose). Activate your theme.', 'vendd' ); ?></li>
-					<li><?php _e( 'With your child theme activated, you can edit its stylesheet all you like. You may also create a <code>functions.php</code> file in the root of your child theme to add custom PHP.', 'vendd' ); ?></li>
+					<li><?php printf( __( 'You may edit all of what you pasted EXCEPT for the <code>Template: vendd</code> line. Leave that line alone or the child theme will not attach itself to %s.', 'vendd' ), VENDD_NAME ); ?></li>
+					<li><?php _e( 'Also inside of your folder, create another file called <code>functions.php</code> (the name is NOT optional).', 'vendd' ); ?></li>
+					<li><?php _e( 'Inside of your new, blank <code>functions.php</code> file, add the following PHP:', 'vendd' ); ?>
+
+<pre class="vendd-pre">
+&lt;?php
+/**
+ * Vendd Child Theme Functions
+ */
+
+function vendd_child_enqueue_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'vendd_child_enqueue_styles' );
+</pre>
+					</li>
+					<li><?php _e( 'With your new child theme folder in place, the above CSS pasted inside of your <code>style.css</code> file, and the above PHP pasted inside of your <code>functions.php</code> file, go back to your WordPress dashboard and navigate to "Appearance -> Themes" and locate your new theme (you\'ll see the name you chose). Activate your theme.', 'vendd' ); ?></li>
+					<li><?php _e( 'With your child theme activated, you can edit its stylesheet all you like. You may also add custom functions to your new functions file..', 'vendd' ); ?></li>
 					<li><?php _e( 'Enjoy!', 'vendd' ); ?></li>
 				</ol>
 				<?php

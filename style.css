@@ -4,7 +4,7 @@ Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: EDD Team
 Author URI: https://easydigitaldownloads.com
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.6
+Version: 1.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -1300,12 +1300,23 @@ object {
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	display: box;
+	-webkit-flex-direction: row;
 	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
+	align-content: flex-start;
+
 	margin-bottom: 1.5em;
 }
 .gallery-item {
 	display: inline-block;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+
 	margin-bottom: 20px;
 	vertical-align: top;
 	width: 100%;
@@ -2832,6 +2843,7 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .entry-content .fes-fields table th,
 .vendd-edd-fes-shortcode .entry-content .fes-fields table th {
 	background: none;
+	padding-left: 0;
 	border-bottom: none;
 }
 .vendd-fes-template .fes-form .entry-content table th,
@@ -2874,8 +2886,37 @@ input[type="submit"].edd-submit {
 }
 .vendd-fes-template .fes-form fieldset .fes-fields .fes-single-variation,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-single-variation {
-	display: block;
 	margin-bottom: 6px;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-single-variation,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-single-variation {
+	display: block;
+	margin-bottom: 12px;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-name-row,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-name-row,
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-name-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-name-row {
+	width: 25%;
+	vertical-align: middle;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-url-row,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-url-row {
+	width: 58%;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-row,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-row {
+	width: 87.7%;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-choose-row,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-choose-row {
+	width: 10%;
+}
+.vendd-fes-template .fes-form fieldset .fes-fields .fes-delete-row,
+.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-delete-row {
+	text-align: center;
+	padding-right: 0;
+	width: 3%;
 }
 .vendd-fes-template .fes-form fieldset .fes-fields table,
 .vendd-edd-fes-shortcode .fes-form fieldset .fes-fields table,
@@ -2943,15 +2984,17 @@ input[type="submit"].edd-submit {
 	padding: 0;
 	border: none;
 }
-.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-name-row,
-.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-name-row,
-.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-url-row,
-.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-url-row {
-	width: 38%;
-}
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-price-row,
 .vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-price-row {
-	width: 17%;
+	width: 15%;
+}
+.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-url-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-url-row {
+	width: 47%;
+}
+.vendd-fes-template .fes-form .multiple .fes-single-variation .fes-url-choose-row,
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-single-variation .fes-url-choose-row {
+	width: 13%;
 }
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a,
 .vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-delete-row a,
@@ -2978,16 +3021,16 @@ input[type="submit"].edd-submit {
 	text-decoration: none;
 	padding: 9px;
 }
-.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .insert-file-row,
-.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .insert-file-row {
-
-}
-.vendd-fes-template .fes-form .multiple .fes-variations-list-multiple td,
-.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple td {
+.vendd-fes-template .fes-form .multiple td,
+.vendd-edd-fes-shortcode .fes-form .multiple td,
+.vendd-fes-template .fes-form #fes-variations-list-file_upload td,
+.vendd-edd-fes-shortcode .fes-form #fes-variations-list-file_upload td {
+	padding-bottom: 12px;
 	vertical-align: middle;
 }
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple + tfoot th,
-.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple + tfoot th {
+.vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple + tfoot th,
+.vendd-fes-template .entry-content .fes-fields table th {
 	padding: 0;
 }
 .vendd-fes-template .fes-form fieldset .fes-section-wrap,

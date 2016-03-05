@@ -391,6 +391,28 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'      => 50,
 		) );
 
+		// product image uploader
+		$wp_customize->add_setting( 'vendd_product_image_upload', array( 'default' => null ) );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'vendd_product_image_upload', array(
+			'label'        => __( 'Default Product Image', 'vendd' ),
+			'section'      => 'vendd_edd_options',
+			'description'  => __( 'Recommended: default product image should be the same dimensions as your uploaded Download Images (if used). Vendd default product image crop dimensions: 722px 361px.', 'vendd' ),
+			'settings'     => 'vendd_product_image_upload',
+			'priority'     => 10
+		) ) );
+
+		// use default image fallback
+		$wp_customize->add_setting( 'vendd_product_image', array(
+			'default'           => 0,
+			'sanitize_callback' => 'vendd_sanitize_checkbox'
+		) );
+		$wp_customize->add_control( 'vendd_product_image', array(
+			'label'     => __( 'Use Default Product Image Fallback', 'vendd' ),
+			'section'   => 'vendd_edd_options',
+			'priority'  => 20,
+			'type'      => 'checkbox',
+		) );
+
 		// show comments on downloads?
 		$wp_customize->add_setting( 'vendd_download_comments', array(
 			'default'           => 0,
@@ -399,7 +421,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( 'vendd_download_comments', array(
 			'label'     => __( 'Show Comments on Downloads', 'vendd' ),
 			'section'   => 'vendd_edd_options',
-			'priority'  => 10,
+			'priority'  => 30,
 			'type'      => 'checkbox',
 		) );
 
@@ -411,7 +433,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( 'vendd_downloads_taxonomies', array(
 			'label'     => __( 'Show Categories/Tags on Downloads grid', 'vendd' ),
 			'section'   => 'vendd_edd_options',
-			'priority'  => 20,
+			'priority'  => 40,
 			'type'      => 'checkbox',
 		) );
 
@@ -460,15 +482,15 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'     => 40,
 		) ) );
 
-		// Store Front Title
+		// EDD Downloads page template title
 		$wp_customize->add_setting( 'vendd_store_front_title', array(
 			'default'           => null,
 			'sanitize_callback' => 'vendd_sanitize_textarea_lite',
 		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_store_front_title', array(
-			'label'         => __( 'Store Front Title', 'vendd' ),
+			'label'         => __( 'EDD Downloads Template Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
-			'description'   => __( 'This optional field allows you to replace the title of your Store Front (EDD Store Front page template). If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'description'   => __( 'This optional field allows you to replace the title of your EDD Downloads Page Template. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
 			'priority'      => 50,
 		) ) );
 
