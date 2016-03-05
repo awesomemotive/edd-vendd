@@ -93,7 +93,7 @@
 				<?php
 					wp_nav_menu( array(
 						'theme_location'	=> 'main_menu',
-						'menu_class'		=> 'clear',
+						'menu_class'		=> 'clear nav-menu',
 						'fallback_cb'		=> '__return_false'
 					) );
 				?>
