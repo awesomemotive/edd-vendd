@@ -2069,6 +2069,9 @@ input[type="submit"].edd-submit {
 #edd_purchase_form_wrap select {
 	border: 1px solid #f2f2f2;
 }
+#edd_checkout_form_wrap legend {
+	display: inline-block;
+}
 #edd_purchase_form_wrap select {
 	background: #fff;
 	border: 1px solid #e4e4e4;
