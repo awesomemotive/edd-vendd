@@ -56,7 +56,7 @@
 					}
 					if ( ! vendd_is_checkout() || empty( $cart_contents ) ) :
 						?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
 						<?php
 					endif;
 					if ( get_theme_mod( 'vendd_logo' ) ) :
