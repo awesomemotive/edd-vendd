@@ -11,7 +11,7 @@
  */
 define( 'VENDD_NAME', 'Vendd' );
 define( 'VENDD_AUTHOR', 'EDD Team' );
-define( 'VENDD_VERSION', '1.1.7' );
+define( 'VENDD_VERSION', '1.1.8' );
 define( 'VENDD_HOME', 'https://easydigitaldownloads.com/downloads/vendd' );
 
 
