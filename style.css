@@ -2272,11 +2272,10 @@ input[type="submit"].edd-submit {
 #edd_register_form {
 	background: #fafafa;
 	padding: 30px;
-	margin-top: 32px;
 }
 #edd_login_form label {
 	display: inline-block;
-	width: 100px;
+	width: 150px;
 }
 #edd_login_submit {
 	min-width: 150px;
