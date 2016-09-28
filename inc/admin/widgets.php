@@ -86,11 +86,11 @@ class Vendd_Author_Details extends WP_Widget {
 			<?php } ?>
 			<?php
 				if ( $links ) {
-					$website  = get_the_author_meta( 'user_url', get_current_user_id() );
-					$twitter  = get_the_author_meta( 'twitter_profile', get_current_user_id() );
-					$gplus    = get_the_author_meta( 'gplus_profile', get_current_user_id() );
-					$facebook = get_the_author_meta( 'facebook_profile', get_current_user_id() );
-					$youtube  = get_the_author_meta( 'youtube_profile', get_current_user_id() );
+					$website  = get_the_author_meta( 'user_url', $post->post_author );
+					$twitter  = get_the_author_meta( 'twitter_profile', $post->post_author );
+					$gplus    = get_the_author_meta( 'gplus_profile', $post->post_author );
+					$facebook = get_the_author_meta( 'facebook_profile', $post->post_author );
+					$youtube  = get_the_author_meta( 'youtube_profile', $post->post_author );
 					$social_profiles = array(
 						'twitter'	=> array(
 							'name'	=> 'twitter',
