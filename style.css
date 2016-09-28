@@ -3312,6 +3312,19 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+>>> Discounts Pro
+>>> https://easydigitaldownloads.com/downloads/discounts-pro/
+--------------------------------------------------------------*/
+.old-priced-container {
+	color: #757575;
+	font-style: italic;
+}
+.product-price-wrap .old-priced-container {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
 >>> Widgets Pack
 >>> https://easydigitaldownloads.com/downloads/widgets-bundle/
 --------------------------------------------------------------*/
