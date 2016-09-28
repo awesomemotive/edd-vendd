@@ -56,7 +56,7 @@ if ( isset( $_GET['s'] ) ) :
 	if ( ! empty( $page_results->post_count ) ) : ?>
 		<div class="vendd-page-search-results vendd-search-results-container">
 			<span class="vendd-search-results-title">
-				<?php _e( 'Page Results', 'advanced search results page search results title', 'vendd' ); ?>
+				<?php _ex( 'Page Results', 'advanced search results page search results title', 'vendd' ); ?>
 			</span>
 			<ul class="vendd-search-results-list">
 				<?php
@@ -91,7 +91,7 @@ if ( isset( $_GET['s'] ) ) :
 	if ( ! empty( $post_results->post_count ) ) : ?>
 		<div class="vendd-post-search-results vendd-search-results-container">
 			<span class="vendd-search-results-title">
-				<?php _e( 'Post Results', 'advanced search results post search results title', 'vendd' ); ?>
+				<?php _ex( 'Post Results', 'advanced search results post search results title', 'vendd' ); ?>
 			</span>
 			<ul class="vendd-search-results-list">
 				<?php
