@@ -1,22 +1,24 @@
+#, fuzzy
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Vendd\n"
-"POT-Creation-Date: 2016-03-03 18:41-0800\n"
-"PO-Revision-Date: 2016-03-03 18:42-0800\n"
+"POT-Creation-Date: 2016-09-28 10:44-0700\n"
+"PO-Revision-Date: 2016-09-28 10:44-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.8.9\n"
 "X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -95,10 +97,12 @@ msgid "Comments are closed."
 msgstr ""
 
 #: content/content-advanced-search.php:59
+msgctxt "advanced search results page search results title"
 msgid "Page Results"
 msgstr ""
 
 #: content/content-advanced-search.php:94
+msgctxt "advanced search results post search results title"
 msgid "Post Results"
 msgstr ""
 
@@ -152,7 +156,6 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
 #: content/content-single.php:37 content/content-single.php:40
 #: inc/template-tags.php:116 inc/template-tags.php:127
 msgid ", "
@@ -305,33 +308,46 @@ msgstr ""
 msgid "Inside of your new <code>style.css</code> file, add the following CSS:"
 msgstr ""
 
+#: inc/admin/updater/theme-updater-admin.php:210
+#, php-format
+msgid ""
+"You may edit all of what you pasted EXCEPT for the <code>Template: vendd</"
+"code> line. Leave that line alone or the child theme will not attach itself "
+"to %s."
+msgstr ""
+
 #: inc/admin/updater/theme-updater-admin.php:211
 msgid ""
-"You may edit all of what you pasted EXCEPT for the <code>Template</code> "
-"line as well as the <code>@import</code> line. Leave those two lines alone "
-"or the child theme will not work properly."
+"Also inside of your folder, create another file called <code>functions.php</"
+"code> (the name is NOT optional)."
 msgstr ""
 
 #: inc/admin/updater/theme-updater-admin.php:212
 msgid ""
-"With your new child theme folder in place and the above CSS pasted inside of "
-"your <code>style.css</code> file, go back to your WordPress dashboard and "
+"Inside of your new, blank <code>functions.php</code> file, add the following "
+"PHP:"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:226
+msgid ""
+"With your new child theme folder in place, the above CSS pasted inside of "
+"your <code>style.css</code> file, and the above PHP pasted inside of your "
+"<code>functions.php</code> file, go back to your WordPress dashboard and "
 "navigate to \"Appearance -> Themes\" and locate your new theme (you'll see "
 "the name you chose). Activate your theme."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:213
+#: inc/admin/updater/theme-updater-admin.php:227
 msgid ""
 "With your child theme activated, you can edit its stylesheet all you like. "
-"You may also create a <code>functions.php</code> file in the root of your "
-"child theme to add custom PHP."
+"You may also add custom functions to your new functions file.."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:214
+#: inc/admin/updater/theme-updater-admin.php:228
 msgid "Enjoy!"
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:218
+#: inc/admin/updater/theme-updater-admin.php:232
 #, php-format
 msgid "You are currently using a child theme for %s."
 msgstr ""
@@ -870,7 +886,6 @@ msgstr ""
 msgid "post author"
 msgstr ""
 
-#. translators: 1: date, 2: time
 #: inc/template-tags.php:198
 msgid "(Edit)"
 msgstr ""
@@ -890,4 +905,26 @@ msgstr ""
 
 #: sidebar.php:25
 msgid "Meta"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Vendd"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://easydigitaldownloads.com/downloads/vendd"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Vendd is a full-featured marketplace theme for Easy Digital Downloads and "
+"supporting extensions."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "EDD Team"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://easydigitaldownloads.com"
 msgstr ""
