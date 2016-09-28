@@ -4,7 +4,7 @@ Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: EDD Team
 Author URI: https://easydigitaldownloads.com
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.8
+Version: 1.1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -43,8 +43,14 @@ Font Awesome Licenses:
 input[type="submit"],
 input[type="button"],
 .vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
+.vendd-fes-dashboard-template .fes-form .edd-submit.button,
 .vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"],
+.vendd-edd-fes-shortcode .fes-form .edd-submit.button,
 .vendd-vendor-contact .fes-form .fes-submit input[type="submit"],
+.vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
+.vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
+.vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
 button,
 .more-link,
 .by-post-author,
@@ -2266,11 +2272,10 @@ input[type="submit"].edd-submit {
 #edd_register_form {
 	background: #fafafa;
 	padding: 30px;
-	margin-top: 32px;
 }
 #edd_login_form label {
 	display: inline-block;
-	width: 100px;
+	width: 150px;
 }
 #edd_login_submit {
 	min-width: 150px;
@@ -2422,7 +2427,9 @@ input[type="submit"].edd-submit {
 	font-size: .87em;
 }
 .vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"],
-.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"] {
+.vendd-fes-dashboard-template .fes-form .edd-submit.button,
+.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"],
+.vendd-edd-fes-shortcode .fes-form .edd-submit.button {
 	font-size: 1rem;
 	border: none;
 	padding: 8px 10px;
@@ -2430,7 +2437,13 @@ input[type="submit"].edd-submit {
 	height: auto;
 }
 .vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"]:hover,
-.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"]:hover {
+.vendd-fes-dashboard-template .fes-form .edd-submit.button:hover,
+.vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"]:hover,
+.vendd-edd-fes-shortcode .fes-form .edd-submit.button:hover,
+.vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
+.vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
+.vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover,
+.vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover {
 	background: #3d3d3d;
 }
 
@@ -2965,20 +2978,13 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
 .vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn,
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
-.vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn {
-	background: #fafafa;
-	color: #fff;
-	font-size: 1.2em;
-	font-weight: bold;
-	text-decoration: none;
-	text-shadow: none;
-}
+.vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn,
 .vendd-fes-template .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
 .vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover,
 .vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover {
-	background: #d5d5d5;
 	color: #fff;
+	text-decoration: none;
 	text-shadow: none;
 }
 .vendd-fes-template .multiple .fes-fields .multiple th,
@@ -3301,6 +3307,19 @@ input[type="submit"].edd-submit {
 	color: #fff;
 	font-size: .87em;
 	padding: 8px 10px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Discounts Pro
+>>> https://easydigitaldownloads.com/downloads/discounts-pro/
+--------------------------------------------------------------*/
+.old-priced-container {
+	color: #757575;
+	font-style: italic;
+}
+.product-price-wrap .old-priced-container {
+	display: none;
 }
 
 

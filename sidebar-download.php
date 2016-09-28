@@ -53,11 +53,11 @@
 					<?php } ?>
 					<?php
 						if ( apply_filters( 'vendd_show_single_download_author_links', true, $post ) ) {
-							$website  = get_the_author_meta( 'user_url', get_current_user_id() );
-							$twitter  = get_the_author_meta( 'twitter_profile', get_current_user_id() );
-							$gplus    = get_the_author_meta( 'gplus_profile', get_current_user_id() );
-							$facebook = get_the_author_meta( 'facebook_profile', get_current_user_id() );
-							$youtube  = get_the_author_meta( 'youtube_profile', get_current_user_id() );
+							$website  = get_the_author_meta( 'user_url', $post->post_author );
+							$twitter  = get_the_author_meta( 'twitter_profile', $post->post_author );
+							$gplus    = get_the_author_meta( 'gplus_profile', $post->post_author );
+							$facebook = get_the_author_meta( 'facebook_profile', $post->post_author );
+							$youtube  = get_the_author_meta( 'youtube_profile', $post->post_author );
 							$social_profiles = array(
 								'twitter'	=> array(
 									'name'	=> 'twitter',
@@ -80,7 +80,7 @@
 									'icon'	=> '<i class="fa fa-youtube-square"></i>',
 								),
 							);
-	
+
 							if (
 								! empty( $website ) ||
 								! empty( $twitter ) ||
