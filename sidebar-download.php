@@ -18,7 +18,7 @@
 		<div class="widget widget_edd_product_details">
 			<?php
 				the_title( '<h3 class="download-title">', '</h3>' );
-				echo edd_get_purchase_link( array( 'id' => get_the_ID() ) );
+				echo edd_get_purchase_link( array( 'download_id' => get_the_ID() ) );
 			?>
 		</div>
 
