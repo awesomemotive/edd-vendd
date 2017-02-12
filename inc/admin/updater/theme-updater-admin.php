@@ -148,11 +148,18 @@ class Vendd_Updater_Admin {
 		<div class="wrap license-wrap">
 			<h2 class="headline"><?php echo sprintf( __( '%s License Key & Child Theme Management', 'vendd' ), VENDD_NAME ); ?></h2>
 			<div class="vendd-license-management-wrap">
-				<h3 class="vendd-license-management-headline"><?php echo sprintf( __( 'Activate Your %s License Key', 'vendd' ), VENDD_NAME ); ?></h3>
+				<h2 class="vendd-license-management-headline"><?php echo sprintf( __( 'Activate Your %s License Key', 'vendd' ), VENDD_NAME ); ?></h2>
 				<p>
-					<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will still work properly but you will not receive automatic updates.', 'vendd' ) );
+					<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will work properly but you will not receive automatic updates.', 'vendd' ) );
 					?>
 				</p>
+				<h3><strong><?php _e( 'License activation instructions', 'vendd' ); ?></strong></h3>
+				<ol class="vendd-license-instructions">
+					<li><?php _e( 'Enter your license key.', 'vendd' ); ?></li>
+					<li><?php _e( 'Click the "Save License Key Changes" button.', 'vendd' ); ?></li>
+					<li><?php _e( 'Click the new "Activate License" button.', 'vendd' ); ?></li>
+					<li><?php _e( 'You\'re done! The status of your license displays below the License Key field.', 'vendd' ); ?></li>
+				</ol>
 				<form method="post" action="options.php">
 					<?php settings_fields( $this->theme_slug . '-license' ); ?>
 					<h3 class="license-key-label"><?php echo $strings['license-key']; ?></h3>
@@ -227,7 +234,7 @@ add_action( 'wp_enqueue_scripts', 'vendd_child_enqueue_styles' );
 </pre>
 					</li>
 					<li><?php _e( 'With your new child theme folder in place, the above CSS pasted inside of your <code>style.css</code> file, and the above PHP pasted inside of your <code>functions.php</code> file, go back to your WordPress dashboard and navigate to "Appearance -> Themes" and locate your new theme (you\'ll see the name you chose). Activate your theme.', 'vendd' ); ?></li>
-					<li><?php _e( 'With your child theme activated, you can edit its stylesheet all you like. You may also add custom functions to your new functions file..', 'vendd' ); ?></li>
+					<li><?php _e( 'With your child theme activated, you can edit its stylesheet all you like. You may also add custom functions to your new functions file.', 'vendd' ); ?></li>
 					<li><?php _e( 'Enjoy!', 'vendd' ); ?></li>
 				</ol>
 				<?php

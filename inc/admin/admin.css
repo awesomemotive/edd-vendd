@@ -15,6 +15,7 @@
 	margin: 0 0 6px;
 }
 .vendd-license-management-wrap p:not(:last-child),
+.vendd-license-instructions,
 .child-theme-wrap ol {
 	font-size: 14px;
 	line-height: 1.6;
