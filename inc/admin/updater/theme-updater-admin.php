@@ -57,8 +57,8 @@ class Vendd_Updater_Admin {
 		// Strings passed in from the updater config
 		$this->strings = $strings;
 
+		add_action( 'init', array( $this, 'updater' ) );
 		add_action( 'admin_init', array( $this, 'admin_styles' ) );
-		add_action( 'admin_init', array( $this, 'updater' ) );
 		add_action( 'admin_init', array( $this, 'register_option' ) );
 		add_action( 'admin_init', array( $this, 'license_action' ) );
 		add_action( 'admin_menu', array( $this, 'license_menu' ) );
@@ -81,6 +81,9 @@ class Vendd_Updater_Admin {
 	 * since 1.0.0
 	 */
 	function updater() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
 
 		/* If there is no valid license key status, don't allow updates. */
 		if ( get_option( $this->theme_slug . '_license_key_status', false) != 'valid' ) {
