@@ -4,7 +4,7 @@ Theme URI: https://easydigitaldownloads.com/downloads/vendd
 Author: EDD Team
 Author URI: https://easydigitaldownloads.com
 Description: Vendd is a full-featured marketplace theme for Easy Digital Downloads and supporting extensions.
-Version: 1.1.9
+Version: 1.1.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
@@ -2233,6 +2233,9 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	padding: 30px;
 }
+#edd_profile_editor_form label {
+	width: 200px;
+}
 .vendd-edd-fes-shortcode .edd_form input[type="text"],
 .vendd-edd-fes-shortcode .edd_form input[type="email"],
 .vendd-edd-fes-shortcode .edd_form input[type="url"],
@@ -2266,6 +2269,9 @@ input[type="submit"].edd-submit {
 #edd_profile_editor_form p > input:not([type="submit"]),
 #edd_profile_editor_form p > select,
 #edd_profile_editor_form p {
+	margin-bottom: 1em;
+}
+#edd_profile_editor_form .edd-profile-emails {
 	margin-bottom: 1em;
 }
 #edd_login_form,
@@ -3307,6 +3313,15 @@ input[type="submit"].edd-submit {
 	color: #fff;
 	font-size: .87em;
 	padding: 8px 10px;
+}
+
+
+/*--------------------------------------------------------------
+>>> Simple Shipping
+>>> https://easydigitaldownloads.com/downloads/simple-shipping/
+--------------------------------------------------------------*/
+#edd-shipping-new-address-wrapper {
+	margin-top: 20px;
 }
 
 

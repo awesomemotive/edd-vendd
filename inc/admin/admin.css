@@ -1,4 +1,4 @@
-.license-wrap,
+.vendd-license-management-wrap,
 .child-theme-wrap {
 	background: #fff;
 	padding: 30px;
@@ -8,10 +8,14 @@
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 	max-width: 780px
 }
-.license-wrap .license-key-label {
+.vendd-license-management-headline {
+	margin-top: 0;
+}
+.vendd-license-management-wrap .license-key-label {
 	margin: 0 0 6px;
 }
-.license-wrap p:not(:last-child),
+.vendd-license-management-wrap p:not(:last-child),
+.vendd-license-instructions,
 .child-theme-wrap ol {
 	font-size: 14px;
 	line-height: 1.6;
@@ -23,14 +27,13 @@
 	padding: 8px;
 	border-radius: 3px;
 }
-.license-wrap .submit,
-.license-wrap input[type="submit"] {
+.vendd-license-management-wrap .submit,
+.vendd-license-management-wrap input[type="submit"] {
 	display: block;
-	padding: 0;;
 	margin-top: 0;
 	min-width: 200px;
 }
-.license-wrap input[type="submit"].button-secondary {
+.vendd-license-management-wrap input[type="submit"].button-secondary {
 	margin: 0 0 10px;
 }
 .child-theme-wrap li {
@@ -81,4 +84,9 @@
 }
 #sidebar-download .vendd-widget-usage {
 	display: none;
+}
+@media all and ( max-width: 480px ) {
+	#vendd_license_key {
+		width: 100%;
+	}
 }

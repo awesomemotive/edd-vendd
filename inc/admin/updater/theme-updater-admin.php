@@ -57,8 +57,8 @@ class Vendd_Updater_Admin {
 		// Strings passed in from the updater config
 		$this->strings = $strings;
 
+		add_action( 'init', array( $this, 'updater' ) );
 		add_action( 'admin_init', array( $this, 'admin_styles' ) );
-		add_action( 'admin_init', array( $this, 'updater' ) );
 		add_action( 'admin_init', array( $this, 'register_option' ) );
 		add_action( 'admin_init', array( $this, 'license_action' ) );
 		add_action( 'admin_menu', array( $this, 'license_menu' ) );
@@ -81,6 +81,9 @@ class Vendd_Updater_Admin {
 	 * since 1.0.0
 	 */
 	function updater() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
 
 		/* If there is no valid license key status, don't allow updates. */
 		if ( get_option( $this->theme_slug . '_license_key_status', false) != 'valid' ) {
@@ -146,38 +149,48 @@ class Vendd_Updater_Admin {
 		}
 		?>
 		<div class="wrap license-wrap">
-			<h2 class="headline"><?php echo sprintf( __( 'Activate Your %s License Key', 'vendd' ), VENDD_NAME ); ?></h2>
-			<p>
-				<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will still work properly but you will not receive automatic updates.', 'vendd' ) );
-				?>
-			</p>
-			<form method="post" action="options.php">
-				<?php settings_fields( $this->theme_slug . '-license' ); ?>
-				<h3 class="license-key-label"><?php echo $strings['license-key']; ?></h3>
-				<div>
-					<input id="<?php echo $this->theme_slug; ?>_license_key" name="<?php echo $this->theme_slug; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
-				</div>
-				<p class="description">
-					<?php echo $message; ?>
+			<h2 class="headline"><?php echo sprintf( __( '%s License Key & Child Theme Management', 'vendd' ), VENDD_NAME ); ?></h2>
+			<div class="vendd-license-management-wrap">
+				<h2 class="vendd-license-management-headline"><?php echo sprintf( __( 'Activate Your %s License Key', 'vendd' ), VENDD_NAME ); ?></h2>
+				<p>
+					<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will work properly but you will not receive automatic updates.', 'vendd' ) );
+					?>
 				</p>
+				<h3><strong><?php _e( 'License activation instructions', 'vendd' ); ?></strong></h3>
+				<ol class="vendd-license-instructions">
+					<li><?php _e( 'Enter your license key.', 'vendd' ); ?></li>
+					<li><?php _e( 'Click the "Save License Key Changes" button.', 'vendd' ); ?></li>
+					<li><?php _e( 'Click the new "Activate License" button.', 'vendd' ); ?></li>
+					<li><?php _e( 'You\'re done! The status of your license displays below the License Key field.', 'vendd' ); ?></li>
+				</ol>
+				<form method="post" action="options.php">
+					<?php settings_fields( $this->theme_slug . '-license' ); ?>
+					<h3 class="license-key-label"><?php echo $strings['license-key']; ?></h3>
+					<div>
+						<input id="<?php echo $this->theme_slug; ?>_license_key" name="<?php echo $this->theme_slug; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
+					</div>
+					<p class="description">
+						<?php echo $message; ?>
+					</p>
 
-				<?php
-					if ( $license ) {
-						wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
+					<?php
+						if ( $license ) {
+							wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
 
-						if ( 'valid' == $status ) {
-							?>
-							<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_deactivate" value="<?php esc_attr_e( $strings['deactivate-license'] ); ?>"/>
-							<?php
-						} else {
-							?>
-							<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_activate" value="<?php esc_attr_e( $strings['activate-license'] ); ?>"/>
-							<?php
+							if ( 'valid' == $status ) {
+								?>
+								<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_deactivate" value="<?php esc_attr_e( $strings['deactivate-license'] ); ?>"/>
+								<?php
+							} else {
+								?>
+								<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_activate" value="<?php esc_attr_e( $strings['activate-license'] ); ?>"/>
+								<?php
+							}
 						}
-					}
-					submit_button( 'Save License Key Changes' );
-				?>
-			</form>
+						submit_button( 'Save License Key Changes' );
+					?>
+				</form>
+			</div>
 		</div>
 
 		<div class="wrap child-theme-wrap">
@@ -224,7 +237,7 @@ add_action( 'wp_enqueue_scripts', 'vendd_child_enqueue_styles' );
 </pre>
 					</li>
 					<li><?php _e( 'With your new child theme folder in place, the above CSS pasted inside of your <code>style.css</code> file, and the above PHP pasted inside of your <code>functions.php</code> file, go back to your WordPress dashboard and navigate to "Appearance -> Themes" and locate your new theme (you\'ll see the name you chose). Activate your theme.', 'vendd' ); ?></li>
-					<li><?php _e( 'With your child theme activated, you can edit its stylesheet all you like. You may also add custom functions to your new functions file..', 'vendd' ); ?></li>
+					<li><?php _e( 'With your child theme activated, you can edit its stylesheet all you like. You may also add custom functions to your new functions file.', 'vendd' ); ?></li>
 					<li><?php _e( 'Enjoy!', 'vendd' ); ?></li>
 				</ol>
 				<?php

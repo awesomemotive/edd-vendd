@@ -391,6 +391,18 @@ function vendd_customize_register( $wp_customize ) {
 			'priority'      => 50,
 		) );
 
+		// show featured images on products?
+		$wp_customize->add_setting( 'vendd_product_featured_image', array(
+			'default'           => 1,
+			'sanitize_callback' => 'vendd_sanitize_checkbox'
+		) );
+		$wp_customize->add_control( 'vendd_product_featured_image', array(
+			'label'     => __( 'Show Featured Images on Products', 'vendd' ),
+			'section'   => 'vendd_edd_options',
+			'priority'  => 5,
+			'type'      => 'checkbox',
+		) );
+
 		// product image uploader
 		$wp_customize->add_setting( 'vendd_product_image_upload', array( 'default' => null ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'vendd_product_image_upload', array(
