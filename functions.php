@@ -134,7 +134,7 @@ function vendd_scripts() {
 	wp_enqueue_style( 'vendd-style', get_stylesheet_uri() );
 
 	// Font Awesome
-	wp_enqueue_style( 'vendd-fontawesome', get_template_directory_uri() . '/inc/fonts/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'vendd-fontawesome', get_template_directory_uri() . '/inc/fonts/font-awesome/css/font-awesome.min.css', array(), VENDD_VERSION, 'all' );
 
 	// Vendd scripts
 	wp_enqueue_script( 'vendd-scripts', get_template_directory_uri() . '/inc/js/vendd-scripts.js', array( 'jquery' ), VENDD_VERSION, true );
