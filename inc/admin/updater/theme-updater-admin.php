@@ -146,38 +146,41 @@ class Vendd_Updater_Admin {
 		}
 		?>
 		<div class="wrap license-wrap">
-			<h2 class="headline"><?php echo sprintf( __( 'Activate Your %s License Key', 'vendd' ), VENDD_NAME ); ?></h2>
-			<p>
-				<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will still work properly but you will not receive automatic updates.', 'vendd' ) );
-				?>
-			</p>
-			<form method="post" action="options.php">
-				<?php settings_fields( $this->theme_slug . '-license' ); ?>
-				<h3 class="license-key-label"><?php echo $strings['license-key']; ?></h3>
-				<div>
-					<input id="<?php echo $this->theme_slug; ?>_license_key" name="<?php echo $this->theme_slug; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
-				</div>
-				<p class="description">
-					<?php echo $message; ?>
+			<h2 class="headline"><?php echo sprintf( __( '%s License Key & Child Theme Management', 'vendd' ), VENDD_NAME ); ?></h2>
+			<div class="vendd-license-management-wrap">
+				<h3 class="vendd-license-management-headline"><?php echo sprintf( __( 'Activate Your %s License Key', 'vendd' ), VENDD_NAME ); ?></h3>
+				<p>
+					<?php echo sprintf( __( 'Your license key grants you access to theme updates and support. If your license key is deactivated or expired, your theme will still work properly but you will not receive automatic updates.', 'vendd' ) );
+					?>
 				</p>
+				<form method="post" action="options.php">
+					<?php settings_fields( $this->theme_slug . '-license' ); ?>
+					<h3 class="license-key-label"><?php echo $strings['license-key']; ?></h3>
+					<div>
+						<input id="<?php echo $this->theme_slug; ?>_license_key" name="<?php echo $this->theme_slug; ?>_license_key" type="text" class="regular-text" value="<?php echo esc_attr( $license ); ?>" />
+					</div>
+					<p class="description">
+						<?php echo $message; ?>
+					</p>
 
-				<?php
-					if ( $license ) {
-						wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
+					<?php
+						if ( $license ) {
+							wp_nonce_field( $this->theme_slug . '_nonce', $this->theme_slug . '_nonce' );
 
-						if ( 'valid' == $status ) {
-							?>
-							<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_deactivate" value="<?php esc_attr_e( $strings['deactivate-license'] ); ?>"/>
-							<?php
-						} else {
-							?>
-							<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_activate" value="<?php esc_attr_e( $strings['activate-license'] ); ?>"/>
-							<?php
+							if ( 'valid' == $status ) {
+								?>
+								<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_deactivate" value="<?php esc_attr_e( $strings['deactivate-license'] ); ?>"/>
+								<?php
+							} else {
+								?>
+								<input type="submit" class="button-secondary" name="<?php echo $this->theme_slug; ?>_license_activate" value="<?php esc_attr_e( $strings['activate-license'] ); ?>"/>
+								<?php
+							}
 						}
-					}
-					submit_button( 'Save License Key Changes' );
-				?>
-			</form>
+						submit_button( 'Save License Key Changes' );
+					?>
+				</form>
+			</div>
 		</div>
 
 		<div class="wrap child-theme-wrap">
