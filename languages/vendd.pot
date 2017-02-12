@@ -1,18 +1,18 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Vendd\n"
-"POT-Creation-Date: 2016-09-28 10:44-0700\n"
-"PO-Revision-Date: 2016-09-28 10:44-0700\n"
+"POT-Creation-Date: 2017-02-12 14:26-0800\n"
+"PO-Revision-Date: 2017-02-12 14:26-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -274,41 +274,67 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:149
+#: inc/admin/updater/theme-updater-admin.php:152
+#, php-format
+msgid "%s License Key & Child Theme Management"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:154
 #, php-format
 msgid "Activate Your %s License Key"
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:151
+#: inc/admin/updater/theme-updater-admin.php:156
 msgid ""
 "Your license key grants you access to theme updates and support. If your "
-"license key is deactivated or expired, your theme will still work properly "
-"but you will not receive automatic updates."
+"license key is deactivated or expired, your theme will work properly but you "
+"will not receive automatic updates."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:191
+#: inc/admin/updater/theme-updater-admin.php:159
+msgid "License activation instructions"
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:161
+msgid "Enter your license key."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:162
+msgid "Click the \"Save License Key Changes\" button."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:163
+msgid "Click the new \"Activate License\" button."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:164
+msgid ""
+"You're done! The status of your license displays below the License Key field."
+msgstr ""
+
+#: inc/admin/updater/theme-updater-admin.php:204
 #, php-format
 msgid "How to Create a Child Theme for %1$s"
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:193
+#: inc/admin/updater/theme-updater-admin.php:206
 msgid ""
 "Through FTP, navigate to <code>your_website/wp-content/themes/</code> and in "
 "that directory, create a new folder as the name of your child theme. "
 "Something like <code>vendd-child</code> is perfect."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:194
+#: inc/admin/updater/theme-updater-admin.php:207
 msgid ""
 "Inside of your new folder, create a file called <code>style.css</code> (the "
 "name is NOT optional)."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:195
+#: inc/admin/updater/theme-updater-admin.php:208
 msgid "Inside of your new <code>style.css</code> file, add the following CSS:"
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:210
+#: inc/admin/updater/theme-updater-admin.php:223
 #, php-format
 msgid ""
 "You may edit all of what you pasted EXCEPT for the <code>Template: vendd</"
@@ -316,19 +342,19 @@ msgid ""
 "to %s."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:211
+#: inc/admin/updater/theme-updater-admin.php:224
 msgid ""
 "Also inside of your folder, create another file called <code>functions.php</"
 "code> (the name is NOT optional)."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:212
+#: inc/admin/updater/theme-updater-admin.php:225
 msgid ""
 "Inside of your new, blank <code>functions.php</code> file, add the following "
 "PHP:"
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:226
+#: inc/admin/updater/theme-updater-admin.php:239
 msgid ""
 "With your new child theme folder in place, the above CSS pasted inside of "
 "your <code>style.css</code> file, and the above PHP pasted inside of your "
@@ -337,17 +363,17 @@ msgid ""
 "the name you chose). Activate your theme."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:227
+#: inc/admin/updater/theme-updater-admin.php:240
 msgid ""
 "With your child theme activated, you can edit its stylesheet all you like. "
-"You may also add custom functions to your new functions file.."
+"You may also add custom functions to your new functions file."
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:228
+#: inc/admin/updater/theme-updater-admin.php:241
 msgid "Enjoy!"
 msgstr ""
 
-#: inc/admin/updater/theme-updater-admin.php:232
+#: inc/admin/updater/theme-updater-admin.php:245
 #, php-format
 msgid "You are currently using a child theme for %s."
 msgstr ""
@@ -693,102 +719,106 @@ msgid ""
 "EDD, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:397
+#: inc/customizer.php:400
+msgid "Show Featured Images on Products"
+msgstr ""
+
+#: inc/customizer.php:409
 msgid "Default Product Image"
 msgstr ""
 
-#: inc/customizer.php:399
+#: inc/customizer.php:411
 msgid ""
 "Recommended: default product image should be the same dimensions as your "
 "uploaded Download Images (if used). Vendd default product image crop "
 "dimensions: 722px 361px."
 msgstr ""
 
-#: inc/customizer.php:410
+#: inc/customizer.php:422
 msgid "Use Default Product Image Fallback"
 msgstr ""
 
-#: inc/customizer.php:422
+#: inc/customizer.php:434
 msgid "Show Comments on Downloads"
 msgstr ""
 
-#: inc/customizer.php:434
+#: inc/customizer.php:446
 msgid "Show Categories/Tags on Downloads grid"
 msgstr ""
 
-#: inc/customizer.php:479
+#: inc/customizer.php:491
 msgid "EDD Button Color"
 msgstr ""
 
-#: inc/customizer.php:481
+#: inc/customizer.php:493
 msgid ""
 "By default, this will match what you set in the EDD Style Settings. "
 "Selecting another color here will override the EDD setting. Clear the color "
 "field back to default to revert back to the EDD setting."
 msgstr ""
 
-#: inc/customizer.php:491
+#: inc/customizer.php:503
 msgid "EDD Downloads Template Title"
 msgstr ""
 
-#: inc/customizer.php:493
+#: inc/customizer.php:505
 msgid ""
 "This optional field allows you to replace the title of your EDD Downloads "
 "Page Template. If left blank, the title of the page will show instead. "
 "Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:503
+#: inc/customizer.php:515
 msgid "Empty Cart Title"
 msgstr ""
 
-#: inc/customizer.php:505
+#: inc/customizer.php:517
 msgid ""
 "This is the title on the page that displays when the cart is empty. Allowed "
 "tags:"
 msgstr ""
 
-#: inc/customizer.php:515
+#: inc/customizer.php:527
 msgid "Empty Cart Text"
 msgstr ""
 
-#: inc/customizer.php:517
+#: inc/customizer.php:529
 msgid ""
 "Displays a custom message when the checkout cart is empty. Allowed tags: "
 msgstr ""
 
-#: inc/customizer.php:527
+#: inc/customizer.php:539
 msgid "Empty Cart Downloads Count"
 msgstr ""
 
-#: inc/customizer.php:529
+#: inc/customizer.php:541
 msgid ""
 "Enter the number of downloads you would like to display on the checkout page "
 "when the cart is empty. Additional downloads are available through "
 "pagination."
 msgstr ""
 
-#: inc/customizer.php:541
+#: inc/customizer.php:553
 msgid "EDD Frontend Submissions"
 msgstr ""
 
-#: inc/customizer.php:542
+#: inc/customizer.php:554
 msgid ""
 "All other FES options are under Dashboard => EDD FES. If you deactivate EDD "
 "or FES, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:552
+#: inc/customizer.php:564
 msgid "FES Dashboard Title"
 msgstr ""
 
-#: inc/customizer.php:554
+#: inc/customizer.php:566
 msgid ""
 "This optional field allows you to replace the title of your FES Dashboard. "
 "If left blank, the title of the page will show instead. Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:564
+#: inc/customizer.php:576
 msgid "Show contact form on Vendor template"
 msgstr ""
 
