@@ -2233,6 +2233,9 @@ input[type="submit"].edd-submit {
 	background: #fafafa;
 	padding: 30px;
 }
+#edd_profile_editor_form label {
+	width: 200px;
+}
 .vendd-edd-fes-shortcode .edd_form input[type="text"],
 .vendd-edd-fes-shortcode .edd_form input[type="email"],
 .vendd-edd-fes-shortcode .edd_form input[type="url"],
@@ -2266,6 +2269,9 @@ input[type="submit"].edd-submit {
 #edd_profile_editor_form p > input:not([type="submit"]),
 #edd_profile_editor_form p > select,
 #edd_profile_editor_form p {
+	margin-bottom: 1em;
+}
+#edd_profile_editor_form .edd-profile-emails {
 	margin-bottom: 1em;
 }
 #edd_login_form,
