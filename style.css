@@ -3317,6 +3317,15 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+>>> Simple Shipping
+>>> https://easydigitaldownloads.com/downloads/simple-shipping/
+--------------------------------------------------------------*/
+#edd-shipping-new-address-wrapper {
+	margin-top: 20px;
+}
+
+
+/*--------------------------------------------------------------
 >>> Discounts Pro
 >>> https://easydigitaldownloads.com/downloads/discounts-pro/
 --------------------------------------------------------------*/
