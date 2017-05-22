@@ -86,8 +86,8 @@ function vendd_setup() {
 	if ( get_theme_mod( 'vendd_downloads_taxonomies' ) ) {
 		set_theme_mod( 'vendd_downloads_cats', 1 );
 		set_theme_mod( 'vendd_downloads_tags', 1 );
+		remove_theme_mod( 'vendd_downloads_taxonomies' );
 	}
-	remove_theme_mod( 'vendd_downloads_taxonomies' );
 }
 endif; // vendd_setup
 add_action( 'after_setup_theme', 'vendd_setup' );
