@@ -21,12 +21,17 @@ $download_tags = get_the_term_list( // get the download tags
 if ( $download_categories || $download_tags ) {
 	?>
 	<div class="downloads-footer">
-		<div class="vendd-download-terms">
-			<?php echo $download_categories ?>
-		</div>
-		<div class="vendd-download-terms">
-			<?php echo $download_tags ?>
-		</div>
+		<?php if ( $download_categories && get_theme_mod( 'vendd_downloads_cats', 0 ) ) { ?>
+			<div class="vendd-download-terms">
+				<?php echo $download_categories ?>
+			</div>
+		<?php } ?>
+		<?php if ( $download_tags && get_theme_mod( 'vendd_downloads_tags', 0 ) ) { ?>
+			<div class="vendd-download-terms">
+				<?php echo $download_tags ?>
+			</div>
+		<?php } ?>
 	</div>
 	<?php
 }
+

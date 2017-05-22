@@ -79,6 +79,15 @@ function vendd_setup() {
 	 * Add theme support for title tag
 	 */
 	add_theme_support( 'title-tag' );
+
+	/**
+	 * Split [downloads] taxonomy display into separate settings
+	 */
+	if ( get_theme_mod( 'vendd_downloads_taxonomies' ) ) {
+		set_theme_mod( 'vendd_downloads_cats', 1 );
+		set_theme_mod( 'vendd_downloads_tags', 1 );
+	}
+	remove_theme_mod( 'vendd_downloads_taxonomies' );
 }
 endif; // vendd_setup
 add_action( 'after_setup_theme', 'vendd_setup' );
