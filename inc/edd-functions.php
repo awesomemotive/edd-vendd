@@ -71,7 +71,7 @@ function vendd_empty_cart_content( $message ) {
 	$empty_cart_title         = get_theme_mod( 'vendd_empty_cart_title' );
 	$empty_cart_text          = wpautop( get_theme_mod( 'vendd_empty_cart_text' ) );
 	$empty_cart_downloads_qty = intval( get_theme_mod( 'vendd_empty_cart_downloads_count', 6 ) );
-	
+
 	if ( vendd_edd_is_activated() && ! edd_is_checkout() ) {
 		$message = '<span>' . _x( 'Your cart is empty.', 'cart widget output when there are no items in the cart', 'vendd' ) . '</span>';
 		return $message;

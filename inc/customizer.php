@@ -772,10 +772,22 @@ function vendd_customizer_head_styles() {
 		<?php if ( '' != $edd_button_color && ! in_array( $edd_button_color, $edd_color_defaults ) ) : ?>
 			.edd-submit.button {
 				background: <?php echo vendd_sanitize_hex_color( $edd_button_color ); ?> !important;
+				color: #fff;
 			}
 			.edd-submit.button:hover {
-				background: #3d3d3d !important; color: #fff;
+				background: #3d3d3d !important;
+				color: #fff;
 			}
+			<?php if ( 'inherit' == edd_get_option( 'checkout_color' ) ) : ?>
+				.edd_purchase_submit_wrapper .edd-submit.button.white { background: #404040 !important; }
+				.edd_purchase_submit_wrapper .edd-submit.button.gray { background: #f1f1f1 !important; }
+				.edd_purchase_submit_wrapper .edd-submit.button.blue { background: #428bca !important; }
+				.edd_purchase_submit_wrapper .edd-submit.button.red { background: #E74C3C !important; }
+				.edd_purchase_submit_wrapper .edd-submit.button.green { background: #2ECC71 !important; }
+				.edd_purchase_submit_wrapper .edd-submit.button.yellow { background: #F1C40F !important; }
+				.edd_purchase_submit_wrapper .edd-submit.button.orange { background: #E67E22 !important; }
+				.edd_purchase_submit_wrapper .edd-submit.button.dark-gray { background: #3d3d3d !important; }
+			<?php endif; ?>
 		<?php endif; ?>
 		<?php if ( '#428bca' != $design_color && '' != $design_color ) : // Is the design color no longer the default? ?>
 			#masthead,
