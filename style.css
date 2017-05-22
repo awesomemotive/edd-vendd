@@ -944,6 +944,9 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 }
 
 /* Search widget */
+.widget_search #search-input {
+	background: #fff;
+}
 .widget_search .search-submit {
 	display: none;
 }
