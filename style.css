@@ -438,25 +438,36 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
-input[type="number"] {
+input[type="number"],
+input[type="tel"] {
+	background: #fafafa;
 	padding: 8px;
-	border: 1px solid #e4e4e4;
-	border-radius: 4px;
+	border-width: 1px 1px 4px;
+	border-style: solid;
+	border-color: #e4e4e4;
 	box-shadow: none;
 	-webkit-appearance: textfield;
 }
+select {
+	background: #fafafa;
+	border: 1px solid #e4e4e4;
+	height: 40px;
+}
 textarea {
+	background: #fafafa;
 	overflow: auto;
 	padding: 8px;
-	border: 1px solid #e4e4e4;
-	border-radius: 4px;
+	border-width: 1px 1px 4px;
+	border-style: solid;
+	border-color: #e4e4e4;
 	box-shadow: none;
 	vertical-align: top;
 	width: 100%;
 }
 button,
 input[type="submit"],
-input[type="button"] {
+input[type="button"],
+input[type="submit"].edd-submit {
 	color: #fff;
 	padding: 8px;
 	border: none;
@@ -464,9 +475,15 @@ input[type="button"] {
 	cursor: pointer;
 }
 button:hover,
+button:focus,
 input[type="submit"]:hover,
-input[type="button"]:hover {
+input[type="submit"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"].edd-submit:hover,
+input[type="submit"].edd-submit:focus {
 	background: #3d3d3d;
+	color: #fff;
 }
 
 
@@ -811,6 +828,7 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	font-size: .87em;
 	padding: 5px 5px 4px 37px;
 	border: 0;
+	border-radius: 4px;
 	width: 35px;
 	-webkit-transition: all .4s;
 	-moz-transition: all .4s;
@@ -928,16 +946,6 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
-}
-#secondary .widget_search input[type="search"],
-.error-404 input[type="search"],
-.store-404 input[type="search"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 13px 11px;
-	padding-left: 32px;
-}
-.error-404 input[type="search"],
-.store-404 input[type="search"] {
-	background-position-y: 13px;
 }
 
 /* calendar widget */
@@ -1610,7 +1618,7 @@ object {
 }
 .entry-content .edd_download_inner input[type="number"] {
 	font-size: .87em;
-	padding: 2px 8px;
+	padding: 2px 4px;
 }
 .product-price-wrap,
 .product-price-wrap:hover {
@@ -1743,10 +1751,8 @@ div[id*="edd_commissions_"] .page-numbers:hover {
 #edd-purchase-button,
 .edd-submit,
 input[type="submit"].edd-submit {
-	font-size: 1.2em;
 	border: none;
 	border-radius: 4px;
-	padding: 15px;
 }
 .content-area .vendd-price-button-container .vendd-price-button .edd-submit {
 	font-size: .87em;
@@ -1802,7 +1808,7 @@ input[type="submit"].edd-submit {
 	color: #555;
 }
 .edd_download_inner .edd_download_purchase_form .edd_download_quantity_wrapper .edd-item-quantity {
-	width: 65px;
+	width: 55px;
 }
 .edd-cart-added-alert {
 	font-size: .8em;
@@ -1923,7 +1929,9 @@ input[type="submit"].edd-submit {
 	margin-bottom: 1.5em;
 }
 .site-content .edd_download_purchase_form input[type="number"] {
+	background: #fff;
 	padding: 2px 8px;
+	width: 65px;
 }
 .site-content .edd_download_purchase_form .edd_download_quantity_wrapper:before {
 	color: #d8d8d8;
@@ -2071,16 +2079,14 @@ input[type="submit"].edd-submit {
 #edd_purchase_receipt thead th:last-child,
 #edd_purchase_receipt tbody td:last-child,
 #edd_purchase_receipt_products tbody td,
-#edd_purchase_receipt_products th,
-#edd_purchase_form_wrap select {
+#edd_purchase_receipt_products th {
 	border: 1px solid #f2f2f2;
 }
 #edd_checkout_form_wrap legend {
 	display: inline-block;
 }
 #edd_purchase_form_wrap select {
-	background: #fff;
-	border: 1px solid #e4e4e4;
+	border-color: #e4e4e4;
 	height: 40px;
 }
 .vendd-checkout-template #masthead,
@@ -2166,6 +2172,9 @@ input[type="submit"].edd-submit {
 #edd_checkout_form_wrap .edd-cart-adjustment input.edd-submit {
 	max-width: 400px;
 }
+#edd_checkout_form_wrap .edd-cart-adjustment input.edd-input {
+	background: #fff;
+}
 #edd-cancel-license-renewal {
 	color: #999;
 	font-size: .87em;
@@ -2229,10 +2238,6 @@ input[type="submit"].edd-submit {
 #edd_purchase_receipt_products td {
 	padding: 15px 10px;
 }
-#edd_profile_editor_form {
-	background: #fafafa;
-	padding: 30px;
-}
 #edd_profile_editor_form label {
 	width: 200px;
 }
@@ -2242,16 +2247,8 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .edd_form input[type="password"],
 .vendd-edd-fes-shortcode .edd_form input[type="search"],
 .vendd-edd-fes-shortcode .edd_form input[type="number"],
-.vendd-edd-fes-shortcode .edd_form textarea {
-	border-width: 1px 1px 4px;
-	border-radius: 0;
-	width: 300px;
-}
+.vendd-edd-fes-shortcode .edd_form textarea,
 .vendd-edd-fes-shortcode .edd_form select {
-	background: #fff;
-	border: 1px solid #e4e4e4;
-	border-radius: 0;
-	height: 40px;
 	width: 300px;
 }
 #edd_profile_editor_form legend,
@@ -2274,17 +2271,13 @@ input[type="submit"].edd-submit {
 #edd_profile_editor_form .edd-profile-emails {
 	margin-bottom: 1em;
 }
-#edd_login_form,
-#edd_register_form {
-	background: #fafafa;
-	padding: 30px;
-}
 #edd_login_form label {
 	display: inline-block;
 	width: 150px;
 }
-#edd_login_submit {
-	min-width: 150px;
+#edd_login_submit,
+#edd_register_form .button[name="edd_register_submit"] {
+	min-width: 100px;
 }
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_discount_code,
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_purchase_submit {
@@ -2436,9 +2429,8 @@ input[type="submit"].edd-submit {
 .vendd-fes-dashboard-template .fes-form .edd-submit.button,
 .vendd-edd-fes-shortcode .fes-form .fes-submit input[type="submit"],
 .vendd-edd-fes-shortcode .fes-form .edd-submit.button {
-	font-size: 1rem;
 	border: none;
-	padding: 8px 10px;
+	padding: 10px;
 	box-shadow: none;
 	height: auto;
 }
@@ -2837,27 +2829,27 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .fes-label label,
 .vendd-edd-fes-shortcode .fes-label label {
 	display: inline-block;
-	font-size: 2em;
+	font-size: 1.4rem;
 	margin-bottom: 4px;
 }
 .vendd-fes-template .fes-fields label,
 .vendd-edd-fes-shortcode .fes-fields label {
 	display: block;
 }
-.vendd-fes-template div.fes-form fieldset,
-.vendd-edd-fes-shortcode div.fes-form fieldset {
-	margin-bottom: 4em;
+.vendd-fes-template div.fes-form .fes-el,
+.vendd-edd-fes-shortcode div.fes-form .fes-el {
+	margin-bottom: 1rem;
 }
-.vendd-fes-template .fes-form fieldset .fes-label .fes-help,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-label .fes-help {
+.vendd-fes-template .fes-form .fes-el .fes-label .fes-help,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-label .fes-help {
 	color: #a3a3a3;
 	font-size: .87rem;
 	padding-bottom: 6px;
 	border-bottom: 1px solid #f1f1f1;
 	margin-bottom: 15px;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields textarea,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields textarea {
+.vendd-fes-template .fes-form .fes-el .fes-fields textarea,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields textarea {
 	padding: 6px;
 	height: 170px;
 	width: 100%;
@@ -2873,85 +2865,91 @@ input[type="submit"].edd-submit {
 	padding: 0 0 4px;
 	border: none;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-checkbox-checklist,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-checkbox-checklist,
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-category-checklist,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-category-checklist {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-checkbox-checklist,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-checkbox-checklist,
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-category-checklist,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-category-checklist {
 	list-style: none;
 	margin-left: 0;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-category-checklist .children,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-category-checklist .children {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-category-checklist .children,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-category-checklist .children {
 	list-style: none;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields select,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select {
+.vendd-fes-template .fes-form .fes-el .fes-fields select,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields select {
 	height: 40px;
 	border: 1px solid #e4e4e4;
 	border-radius: 0;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields select[multiple],
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields select[multiple] {
+.vendd-fes-template .fes-form .fes-el .fes-fields select[multiple],
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields select[multiple] {
 	background: #fafafa;
 	padding: 0;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields input[type="email"],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type="number"],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type="password"],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type="text"],
-.vendd-fes-template .fes-form fieldset .fes-fields input[type="url"],
-.vendd-fes-template .fes-form fieldset .fes-fields textarea {
+.vendd-fes-template div.fes-form .fes-el .fes-fields input[type="email"],
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-fields input[type="email"],
+.vendd-fes-template div.fes-form .fes-el .fes-fields input[type="number"],
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-fields input[type="number"],
+.vendd-fes-template div.fes-form .fes-el .fes-fields input[type="password"],
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-fields input[type="password"],
+.vendd-fes-template div.fes-form .fes-el .fes-fields input[type="text"],
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-fields input[type="text"],
+.vendd-fes-template div.fes-form .fes-el .fes-fields input[type="url"],
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-fields input[type="url"],
+.vendd-fes-template div.fes-form .fes-el .fes-fields textarea,
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-fields textarea {
 	background: #fafafa;
 	border: 1px solid #e4e4e4;
 	border-width: 1px 1px 4px;
 	box-shadow: none;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-single-variation,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-single-variation {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-single-variation,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-single-variation {
 	margin-bottom: 6px;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-single-variation,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-single-variation {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-variations-list-file_upload .fes-single-variation,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-variations-list-file_upload .fes-single-variation {
 	display: block;
 	margin-bottom: 12px;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-name-row,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-name-row,
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-variations-list-multiple-audio .fes-name-row,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-variations-list-multiple-audio .fes-name-row,
 .vendd-fes-template .fes-form .multiple .fes-variations-list-multiple .fes-name-row,
 .vendd-edd-fes-shortcode .fes-form .multiple .fes-variations-list-multiple .fes-name-row {
 	width: 25%;
 	vertical-align: middle;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-url-row,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-multiple-audio .fes-url-row {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-variations-list-multiple-audio .fes-url-row,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-variations-list-multiple-audio .fes-url-row {
 	width: 58%;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-row,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-row {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-variations-list-file_upload .fes-url-row,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-variations-list-file_upload .fes-url-row {
 	width: 87.7%;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-choose-row,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-variations-list-file_upload .fes-url-choose-row {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-variations-list-file_upload .fes-url-choose-row,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-variations-list-file_upload .fes-url-choose-row {
 	width: 10%;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields .fes-delete-row,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields .fes-delete-row {
+.vendd-fes-template .fes-form .fes-el .fes-fields .fes-delete-row,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields .fes-delete-row {
 	text-align: center;
 	padding-right: 0;
 	width: 3%;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields table,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields table,
-.vendd-fes-template .fes-form fieldset .fes-fields td,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields td {
+.vendd-fes-template .fes-form .fes-el .fes-fields table,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields table,
+.vendd-fes-template .fes-form .fes-el .fes-fields td,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields td {
 	padding-right: 6px;
 }
 .vendd-fes-template .fes-form .fes-el.repeat .fes-fields td,
 .vendd-edd-fes-shortcode .fes-form .fes-el.repeat .fes-fields td {
 	vertical-align: middle;
 }
-.vendd-fes-template .fes-form fieldset #wp-post_content-wrap,
-.vendd-edd-fes-shortcode .fes-form fieldset #wp-post_content-wrap {
+.vendd-fes-template .fes-form .fes-el #wp-post_content-wrap,
+.vendd-edd-fes-shortcode .fes-form .fes-el #wp-post_content-wrap {
 	border: none;
 }
 .vendd-fes-template #wp-post_content-editor-container,
@@ -2963,8 +2961,8 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .wp-media-buttons .insert-media {
 	margin-bottom: 10px;
 }
-.vendd-fes-template .fes-form fieldset .fes-fields textarea[name="toc"],
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-fields textarea[name="toc"] {
+.vendd-fes-template .fes-form .fes-el .fes-fields textarea[name="toc"],
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-fields textarea[name="toc"] {
 	margin-bottom: 10px;
 }
 .vendd-fes-template .fes-fields .fes-feat-image-upload,
@@ -2989,6 +2987,7 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .fes-fields .fes-feat-image-upload a.fes-feat-image-btn:hover,
 .vendd-fes-template .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover,
 .vendd-edd-fes-shortcode .fes-fields .fes-avatar-image-upload a.fes-avatar-image-btn:hover {
+	font-size: 14px;
 	color: #fff;
 	text-decoration: none;
 	text-shadow: none;
@@ -3034,7 +3033,7 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode .upload_file_button {
 	color: #fff !important;
 	text-decoration: none;
-	padding: 9px;
+	padding: 10px;
 }
 .vendd-fes-template .fes-form .multiple td,
 .vendd-edd-fes-shortcode .fes-form .multiple td,
@@ -3048,20 +3047,20 @@ input[type="submit"].edd-submit {
 .vendd-fes-template .entry-content .fes-fields table th {
 	padding: 0;
 }
-.vendd-fes-template .fes-form fieldset .fes-section-wrap,
-.vendd-edd-fes-shortcode .fes-form fieldset .fes-section-wrap {
+.vendd-fes-template .fes-form .fes-el .fes-section-wrap,
+.vendd-edd-fes-shortcode .fes-form .fes-el .fes-section-wrap {
 	border: none;
 	margin: 0;
 }
-.vendd-fes-template div.fes-form fieldset .fes-section-title,
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-section-title {
+.vendd-fes-template div.fes-form .fes-el .fes-section-title,
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-section-title {
 	font-size: 2.4em;
 	text-align: center;
 	padding-bottom: 10px;
 	border-bottom: 2px solid  #f1f1f1;
 	margin-bottom: 30px;
 }
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields .fes-file-validation {
+.vendd-edd-fes-shortcode div.fes-form .fes-el .fes-fields .fes-file-validation {
 	display: none;
 }
 
@@ -3075,59 +3074,10 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode [id*="fes_login_registration_"] {
 	padding: 0;
 }
-.vendd-fes-dashboard-template [id*="fes_login_registration_"],
-.vendd-edd-fes-shortcode [class*="fes-form-"] {
-	background: #fafafa;
-	padding: 30px;
-}
-.vendd-fes-dashboard-template #fes_login_registration_form_row_left,
-.vendd-fes-dashboard-template #fes_login_registration_form_row_left [id*="fes_login_registration_"],
-.vendd-edd-fes-shortcode #fes_login_registration_form_row_left [class*="fes-form-"] {
-	background: #fff;
-	padding-left: 0;
-}
-.vendd-fes-dashboard-template #fes_login_registration_form_row_left,
-.vendd-edd-fes-shortcode #fes_login_registration_form_row_left {
-	margin-right: 10%;
-	width: 40% !important;
-}
-.vendd-fes-dashboard-template #fes_login_registration_form_row_right,
-.vendd-edd-fes-shortcode #fes_login_registration_form_row_right {
-	background: #fafafa;
-	border-radius: 4px;
-	width: 50% !important;
-}
 .vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-headers,
 .vendd-edd-fes-shortcode [id*="fes_login_registration_"] .fes-headers,
 .vendd-edd-fes-shortcode [class*="fes-form-"] .fes-headers {
 	display: block;
-}
-.vendd-fes-dashboard-template [id*="fes_login_registration_"] div.fes-form fieldset,
-.vendd-edd-fes-shortcode [id*="fes_login_registration_"] div.fes-form fieldset,
-.vendd-edd-fes-shortcode [class*="fes-form-"] div.fes-form fieldset {
-	margin-bottom: 1em;
-}
-.vendd-fes-dashboard-template [id*="fes_login_registration_"] .fes-label label,
-.vendd-edd-fes-shortcode [id*="fes_login_registration_"] .fes-label label,
-.vendd-edd-fes-shortcode [class*="fes-form-"] .fes-label label {
-	font-size: 1.4em;
-}
-.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-fields input,
-.vendd-edd-fes-shortcode #fes_login_registration_form_row_right .fes-fields input,
-.vendd-fes-dashboard-template #fes_login_registration_form_row_right .fes-fields textarea,
-.vendd-edd-fes-shortcode #fes_login_registration_form_row_right .fes-fields textarea {
-	background: #fff;
-}
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="email"],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="number"],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="password"],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="text"],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields input[type="url"],
-.vendd-edd-fes-shortcode div.fes-form fieldset .fes-fields textarea {
-	background: #fff;
-	border: 1px solid #e4e4e4;
-	border-width: 1px 1px 4px;
-	box-shadow: none;
 }
 
 /* FES Vendor Template */
@@ -3150,18 +3100,18 @@ input[type="submit"].edd-submit {
 	margin: 0 auto;
 	max-width: 722px;
 }
-.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset {
+.vendd-vendor-contact .fes-vendor-contact-form div.fes-form .fes-el {
 	margin-bottom: 14px;
 }
 .vendd-vendor-contact .fes-vendor-contact-form .fes-label label {
 	font-size: 1.4em;
 }
-.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="email"],
-.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="number"],
-.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="password"],
-.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="text"],
-.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields input[type="url"],
-.vendd-vendor-contact .fes-vendor-contact-form div.fes-form fieldset .fes-fields textarea {
+.fes-vendor-contact-form div.fes-form .fes-el .fes-fields input[type="email"],
+.fes-vendor-contact-form div.fes-form .fes-el .fes-fields input[type="number"],
+.fes-vendor-contact-form div.fes-form .fes-el .fes-fields input[type="password"],
+.fes-vendor-contact-form div.fes-form .fes-el .fes-fields input[type="text"],
+.fes-vendor-contact-form div.fes-form .fes-el .fes-fields input[type="url"],
+.fes-vendor-contact-form div.fes-form .fes-el .fes-fields textarea {
 	background: #fafafa;
 	border-width: 1px 1px 4px;
 	border-style: solid;
@@ -3178,6 +3128,15 @@ input[type="submit"].edd-submit {
 }
 .vendd-vendor-contact .fes-form .fes-submit input[type="submit"]:hover {
 	background: #3d3d3d;
+}
+
+
+/*--------------------------------------------------------------
+>>> Stripe Payment Gateway
+>>> https://easydigitaldownloads.com/downloads/stripe-gateway/
+--------------------------------------------------------------*/
+#edd-stripe-manage-cards {
+	margin-top: 20px;
 }
 
 
@@ -3390,87 +3349,6 @@ aside[class*="widget_edd_"] .widget-download-title {
 }
 #secondary .widget_kol_email .kol-email-field-submit {
 	margin-bottom: 0;
-}
-#secondary .widget_kol_email input[type="text"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 13px -38px;
-	padding-left: 42px;
-}
-#secondary .widget_kol_email input[type="email"] {
-	background: #fff url('inc/images/sprite.png') no-repeat 13px -87px;
-	padding-left: 42px;
-}
-
-
-/*--------------------------------------------------------------
->>> Ninja Forms
->>> https://ninjaforms.com/
---------------------------------------------------------------*/
-[class*="ninja-forms-all-"] .ninja-forms-required-items {
-	background: #fafafa;
-	padding: 10px;
-	border-width: 1px;
-	border-style: solid dotted;
-	border-color: #f2f2f2;
-	margin-bottom: 1.5em;
-}
-[class*="ninja-forms-all-"] .field-wrap {
-	padding-bottom: 30px;
-	border-bottom: 1px dotted #f2f2f2;
-	margin-bottom: 30px;
-}
-[class*="ninja-forms-all-"] .ninja-forms-field-description,
-[class*="ninja-forms-all-"] .input-counter {
-	color: #999;
-	font-size: .87em;
-}
-[class*="ninja-forms-all-"] input[type="text"],
-[class*="ninja-forms-all-"] input[type="email"],
-[class*="ninja-forms-all-"] input[type="url"],
-[class*="ninja-forms-all-"] input[type="password"],
-[class*="ninja-forms-all-"] input[type="search"],
-[class*="ninja-forms-all-"] input[type="number"],
-[class*="ninja-forms-all-"] textarea {
-	background: #fafafa;
-	border: 1px solid #e4e4e4;
-	border-width: 1px 1px 4px;
-	box-shadow: none;
-}
-[class*="ninja-forms-all-"] input:disabled,
-[class*="ninja-forms-all-"] textarea:disabled {
-	color: #999;
-	font-style: italic;
-}
-[class*="ninja-forms-all-"] .label-above label {
-	font-size: 1.4em;
-	font-weight: 400;
-	margin-bottom: 0;
-}
-[class*="ninja-forms-all-"] .textarea-wrap textarea {
-	border-top: none;
-	border-radius: 0 0 4px 4px;
-}
-[class*="ninja-forms-all-"] .textarea-wrap .html-active .quicktags-toolbar,
-[class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-toolbar-grp {
-	border: 1px solid #e8e8e8;
-}
-[class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-edit-area {
-	border-width: 0 1px !important;
-	border-style: solid;
-	border-color: #e4e4e4;
-}
-[class*="ninja-forms-all-"] .textarea-wrap .tmce-active .mce-statusbar {
-	border-width: 1px 1px 4px !important;
-	border-style: solid;
-	border-color: #e4e4e4;
-	border-radius: 0 0 4px 4px;
-}
-[class*="ninja-forms-all-"] .textarea-wrap .wp-editor-tools {
-	margin-bottom: 6px;
-}
-[class*="ninja-forms-all-"] .list-dropdown-wrap select,
-[class*="ninja-forms-all-"] .country-wrap select {
-	border: 1px solid #e4e4e4;
-	height: 40px;
 }
 
 
@@ -3711,33 +3589,6 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.vendd-fes-dashboard-template .fes-vendor-menu > ul > li:last-child:nth-child(odd) {
 		border-right: 1px solid #f2f2f2;
 	}
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_right,
-	.vendd-edd-fes-shortcode #fes_login_registration_form_row_right,
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left,
-	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left,
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left [id*="fes_login_registration_"],
-	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left [class*="fes-form-"],
-	.vendd-edd-fes-shortcode [class*="fes-form-"] {
-		background: #fafafa;
-		padding: 20px;
-		border-radius: 0;
-		width: 100% !important;
-	}
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left {
-		margin-right: 0;
-	}
-	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left [class*="fes-form-"],
-	.vendd-edd-fes-shortcode #fes_login_registration_form_row_right [class*="fes-form-"] {
-		padding: 0;
-	}
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-fields input,
-	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left .fes-fields input,
-	.vendd-edd-fes-shortcode [class*="fes-form-"] div.fes-form fieldset .fes-fields input,
-	.vendd-fes-dashboard-template #fes_login_registration_form_row_left .fes-fields textarea,
-	.vendd-edd-fes-shortcode #fes_login_registration_form_row_left .fes-fields textarea,
-	.vendd-edd-fes-shortcode [class*="fes-form-"] div.fes-form fieldset .fes-fields textarea {
-		background: #fff;
-	}
 	h1, h2,
 	.hentry .entry-title,
 	.store-front-header .entry-title,
@@ -3833,14 +3684,22 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.post-author-label {
 		display: none;
 	}
-	.vendd-edd-fes-shortcode .edd_form input[type="text"],
-	.vendd-edd-fes-shortcode .edd_form input[type="email"],
-	.vendd-edd-fes-shortcode .edd_form input[type="url"],
-	.vendd-edd-fes-shortcode .edd_form input[type="password"],
-	.vendd-edd-fes-shortcode .edd_form input[type="search"],
-	.vendd-edd-fes-shortcode .edd_form input[type="number"],
-	.vendd-edd-fes-shortcode .edd_form textarea,
-	.vendd-edd-fes-shortcode .edd_form select {
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form input[type="text"],
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form input[type="text"],
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form input[type="email"],
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form input[type="email"],
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form input[type="url"],
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form input[type="url"],
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form input[type="password"],
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form input[type="password"],
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form input[type="search"],
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form input[type="search"],
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form input[type="number"],
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form input[type="number"],
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form textarea,
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form textarea,
+	.vendd-edd-fes-shortcode #edd_register_form.edd_form select,
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form select {
 		width: 100%;
 	}
 	.edd_downloads_list[class*="edd_download_columns_"] .edd_download,

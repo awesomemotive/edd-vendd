@@ -16,7 +16,7 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<section <?php post_class( 'full-width-page-section' ); ?>>
+					<section id="post-<?php the_ID(); ?>" <?php post_class( 'full-width-page-section' ); ?>>
 						<header class="entry-header">
 							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						</header><!-- .entry-header -->
