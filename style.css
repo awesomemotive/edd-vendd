@@ -2286,6 +2286,10 @@ input[type="submit"].edd-submit {
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_purchase_submit {
 	background: none;
 }
+#edd_checkout_wrap #edd_cc_fields input:not([type="submit"]),
+#edd_checkout_wrap #edd_cc_fields select {
+	background: #fff;
+}
 #edd_show_terms {
 	font-size: .87em;
 	margin-bottom: 10px;
@@ -3138,8 +3142,40 @@ input[type="submit"].edd-submit {
 >>> Stripe Payment Gateway
 >>> https://easydigitaldownloads.com/downloads/stripe-gateway/
 --------------------------------------------------------------*/
+#edd_cc_fields .edd-stripe-card-radio-item.selected {
+	background: #fff;
+}
 #edd-stripe-manage-cards {
 	margin-top: 20px;
+}
+#edd-stripe-manage-cards legend {
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#edd-stripe-manage-cards #stripe-update-card-user_id ~ div.edd-stripe-card-item {
+	padding: 0;
+	border: none;
+}
+#edd-stripe-manage-cards div.edd-stripe-card-item .card-details {
+	font-weight: 500;
+}
+#edd-stripe-manage-cards div.edd-stripe-card-item .card-update-form {
+	margin-top: 8px;
+}
+#edd-stripe-manage-cards div.edd-stripe-card-item .card-update-form label {
+	display: inline-block;
+	margin-bottom: 8px;
+}
+#edd-stripe-manage-cards div.edd-stripe-card-item .card-update-form .card-address-fields,
+#edd-stripe-manage-cards div.edd-stripe-card-item .card-update-form .card-expiration-fields {
+	margin-bottom: 8px;
+}
+#edd-stripe-manage-cards #stripe-update-card-user_id ~ div.edd-stripe-card-item select {
+	background: #fafafa;
+	border: 1px solid #e4e4e4;
+	height: 40px;
 }
 
 
@@ -3702,8 +3738,14 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.vendd-edd-fes-shortcode #edd_register_form.edd_form textarea,
 	.vendd-edd-fes-shortcode #edd_login_form.edd_form textarea,
 	.vendd-edd-fes-shortcode #edd_register_form.edd_form select,
-	.vendd-edd-fes-shortcode #edd_login_form.edd_form select {
+	.vendd-edd-fes-shortcode #edd_login_form.edd_form select,
+	.edd-stripe-card-item .card-update-form .card-address-fields input,
+	.edd-stripe-card-item .card-update-form .card-address-fields select {
 		width: 100%;
+	}
+	.edd-stripe-card-item .card-update-form .card-address-fields input,
+	.edd-stripe-card-item .card-update-form .card-address-fields select {
+		margin-bottom: 3px;
 	}
 	.edd_downloads_list[class*="edd_download_columns_"] .edd_download,
 	.vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
