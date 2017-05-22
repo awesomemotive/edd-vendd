@@ -21,7 +21,7 @@
 	<a title="<?php the_title_attribute(); ?>" itemprop="url" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 </h3>
 <?php
-	if ( 1 == get_theme_mod( 'vendd_downloads_taxonomies' ) ) {
+	if ( get_theme_mod( 'vendd_downloads_cats', 0 ) || get_theme_mod( 'vendd_downloads_tags', 0 ) ) {
 		get_template_part( 'edd_templates/shortcode', 'content-taxonomies' );
 	}
 ?>

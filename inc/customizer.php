@@ -437,15 +437,27 @@ function vendd_customize_register( $wp_customize ) {
 			'type'      => 'checkbox',
 		) );
 
-		// show categories/tags on [downloads] shortcode?
-		$wp_customize->add_setting( 'vendd_downloads_taxonomies', array(
+		// show categories on [downloads] shortcode?
+		$wp_customize->add_setting( 'vendd_downloads_cats', array(
 			'default'           => 0,
 			'sanitize_callback' => 'vendd_sanitize_checkbox'
 		) );
-		$wp_customize->add_control( 'vendd_downloads_taxonomies', array(
-			'label'     => __( 'Show Categories/Tags on Downloads grid', 'vendd' ),
+		$wp_customize->add_control( 'vendd_downloads_cats', array(
+			'label'     => __( 'Show Categories on Downloads grid', 'vendd' ),
 			'section'   => 'vendd_edd_options',
 			'priority'  => 40,
+			'type'      => 'checkbox',
+		) );
+
+		// show tags on [downloads] shortcode?
+		$wp_customize->add_setting( 'vendd_downloads_tags', array(
+			'default'           => 0,
+			'sanitize_callback' => 'vendd_sanitize_checkbox'
+		) );
+		$wp_customize->add_control( 'vendd_downloads_tags', array(
+			'label'     => __( 'Show Tags on Downloads grid', 'vendd' ),
+			'section'   => 'vendd_edd_options',
+			'priority'  => 41,
 			'type'      => 'checkbox',
 		) );
 
@@ -491,7 +503,7 @@ function vendd_customize_register( $wp_customize ) {
 			'label'        => __( 'EDD Button Color', 'vendd' ),
 			'section'      => 'vendd_edd_options',
 			'description'  => __( 'By default, this will match what you set in the EDD Style Settings. Selecting another color here will override the EDD setting. Clear the color field back to default to revert back to the EDD setting.', 'vendd' ),
-			'priority'     => 40,
+			'priority'     => 50,
 		) ) );
 
 		// EDD Downloads page template title
@@ -503,7 +515,7 @@ function vendd_customize_register( $wp_customize ) {
 			'label'         => __( 'EDD Downloads Template Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
 			'description'   => __( 'This optional field allows you to replace the title of your EDD Downloads Page Template. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
-			'priority'      => 50,
+			'priority'      => 60,
 		) ) );
 
 		// Empty Cart Title
@@ -515,7 +527,7 @@ function vendd_customize_register( $wp_customize ) {
 			'label'         => __( 'Empty Cart Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
 			'description'   => __( 'This is the title on the page that displays when the cart is empty. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
-			'priority'      => 60,
+			'priority'      => 70,
 		) ) );
 
 		// empty cart text
@@ -527,7 +539,7 @@ function vendd_customize_register( $wp_customize ) {
 			'label'        => __( 'Empty Cart Text', 'vendd' ),
 			'section'      => 'vendd_edd_options',
 			'description'  => __( 'Displays a custom message when the checkout cart is empty. Allowed tags: ', 'vendd' ) . ' <img>, <a>, <div>, <span>, <blockquote>, <p>, <em>, <strong>, <form>, <input>, <br>, <s>, <i>, <b>',
-			'priority'     => 70,
+			'priority'     => 80,
 		) ) );
 
 		// store front item count
@@ -539,7 +551,7 @@ function vendd_customize_register( $wp_customize ) {
 			'label'        => __( 'Empty Cart Downloads Count', 'quota' ),
 			'section'      => 'vendd_edd_options',
 			'description'  => __( 'Enter the number of downloads you would like to display on the checkout page when the cart is empty. Additional downloads are available through pagination.', 'vendd' ),
-			'priority'     => 80,
+			'priority'     => 90,
 		) ) );
 	}
 
