@@ -3076,8 +3076,8 @@ input[type="submit"].edd-submit {
 }
 
 /* FES Login / Register */
-.vendd-fes-dashboard-template .fes-dashboard-content > table,
-.vendd-edd-fes-shortcode table {
+.vendd-fes-dashboard-template .fes-dashboard-content .fes-login-registration,
+.vendd-edd-fes-shortcode .fes-login-registration {
 	border: none;
 	margin: 0 auto 30px;
 	max-width: 722px;
