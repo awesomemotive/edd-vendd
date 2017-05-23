@@ -2831,6 +2831,12 @@ input[type="submit"].edd-submit {
 .vendd-edd-fes-shortcode #fes-vendor-dashboard .fes-form-legend {
 	display: none;
 }
+.vendd-fes-template .fes-form-legend,
+.vendd-edd-fes-shortcode .fes-form-legend {
+	display: block;
+	font-size: 2em;
+	margin-bottom: .6em;
+}
 .vendd-fes-template .fes-label label,
 .vendd-edd-fes-shortcode .fes-label label {
 	display: inline-block;
