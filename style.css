@@ -2826,7 +2826,9 @@ input[type="submit"].edd-submit {
 	font-size: .87em;
 }
 .vendd-fes-template .fes-headers,
-.vendd-edd-fes-shortcode .fes-headers {
+.vendd-fes-template #fes-vendor-dashboard .fes-form-legend,
+.vendd-edd-fes-shortcode .fes-headers,
+.vendd-edd-fes-shortcode #fes-vendor-dashboard .fes-form-legend {
 	display: none;
 }
 .vendd-fes-template .fes-label label,
