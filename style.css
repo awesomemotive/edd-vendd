@@ -226,6 +226,37 @@ a img {
 
 
 /*--------------------------------------------------------------
+>>> Full-width structure
+--------------------------------------------------------------*/
+body.vendd-full-width-html-structure,
+body.custom-background.vendd-full-width-html-structure {
+	background-color: #3d3d3d;
+}
+.vendd-full-width-html-structure #page {
+	max-width: none;
+}
+.vendd-full-width-html-structure .page-inner {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1120px;
+}
+.vendd-full-width-html-structure .site-branding,
+.vendd-full-width-html-structure .main-navigation {
+	padding-left: 0;
+}
+.vendd-full-width-html-structure .main-navigation {
+	padding: 0 0 15px;
+}
+.vendd-full-width-html-structure .header-cart {
+	right: 0;
+}
+.vendd-full-width-html-structure .secondary-navigation {
+	right: 0;
+	top: 0;
+}
+
+
+/*--------------------------------------------------------------
 >>> Typography
 --------------------------------------------------------------*/
 body,
@@ -2101,6 +2132,16 @@ input[type="submit"].edd-submit {
 	width: 100%;
 	max-width: 800px;
 }
+.vendd-full-width-html-structure.vendd-checkout-template #page,
+.vendd-full-width-html-structure.vendd-landing-page-template #page {
+	max-width: none;
+}
+.vendd-full-width-html-structure.vendd-checkout-template #page .page-inner {
+	max-width: 722px;
+}
+.vendd-full-width-html-structure.vendd-landing-page-template #page .page-inner {
+	max-width: 800px;
+}
 .vendd-checkout-template #primary {
 	margin: 0 auto;
 	width: 100%;
@@ -3369,6 +3410,17 @@ aside[class*="widget_edd_"] .widget-download-title {
 		width: 24.65% !important;
 		vertical-align: top;
 	}
+	.vendd-full-width-html-structure .page-inner {
+		width: 100%;
+		max-width: none;
+	}
+	#masthead {
+		position: relative;
+		padding-left: 40px;
+	}
+	.vendd-full-width-html-structure .header-cart {
+		right: 40px;
+	}
 }
 
 @media all and ( max-width: 1040px ) {
@@ -3472,9 +3524,16 @@ aside[class*="widget_edd_"] .widget-download-title {
 		border-radius: 4px;
 		margin-bottom: 10px;
 	}
-	.site-branding {
+	.vendd-full-width-html-structure #masthead {
+		padding-left: 0;
+	}
+	.site-branding,
+	.vendd-full-width-html-structure .site-branding {
 		display: block;
 		padding: 30px 20px 20px;
+	}
+	.vendd-full-width-html-structure .main-navigation {
+		padding-left: 40px;
 	}
 	.header-cart {
 		position: static;
@@ -3641,7 +3700,8 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.main-navigation.toggled .nav-menu {
 		padding: 0;
 	}
-	.main-navigation {
+	.main-navigation,
+	.vendd-full-width-html-structure .main-navigation {
 		padding: 0 20px 5px;
 	}
 	.menu-toggle {

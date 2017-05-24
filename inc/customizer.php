@@ -141,6 +141,18 @@ function vendd_customize_register( $wp_customize ) {
 		// put Background Image uploader in a logical spot
 		$wp_customize->get_control( 'background_image' )->priority = 60;
 
+	// full-width HTML structure
+	$wp_customize->add_setting( 'vendd_full_width_html', array(
+		'default'           => 0,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'vendd_full_width_html', array(
+		'label'     => __( 'Enable full-width HTML structure', 'vendd' ),
+		'section'   => 'vendd_design',
+		'priority'  => 70,
+		'type'      => 'checkbox',
+	) );
+
 	// parallax background image
 	$wp_customize->add_setting( 'vendd_parallax_bg', array(
 		'default'           => 0,
@@ -149,7 +161,7 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'vendd_parallax_bg', array(
 		'label'     => __( 'Enable Parallax Background Effect', 'vendd' ),
 		'section'   => 'vendd_design',
-		'priority'  => 70,
+		'priority'  => 80,
 		'type'      => 'checkbox',
 	) );
 
@@ -772,11 +784,11 @@ function vendd_customizer_head_styles() {
 		<?php if ( '' != $edd_button_color && ! in_array( $edd_button_color, $edd_color_defaults ) ) : ?>
 			.edd-submit.button {
 				background: <?php echo vendd_sanitize_hex_color( $edd_button_color ); ?> !important;
-				color: #fff;
+				color: #fff !important;
 			}
 			.edd-submit.button:hover {
 				background: #3d3d3d !important;
-				color: #fff;
+				color: #fff !important;
 			}
 			<?php if ( 'inherit' == edd_get_option( 'checkout_color' ) ) : ?>
 				.edd_purchase_submit_wrapper .edd-submit.button.white { background: #404040 !important; }
