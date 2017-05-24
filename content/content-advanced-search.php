@@ -12,6 +12,8 @@ if ( isset( $_GET['s'] ) ) :
 		's'              => $_GET['s']
 	);
 	$download_results = new WP_Query( $download_args );
+	$excerpt_length   = apply_filters( 'excerpt_length', 35 );
+	$item_prop        = edd_add_schema_microdata() ? ' itemprop="description"' : '';
 
 	if ( ! empty( $download_results->post_count ) ) : ?>
 		<div id="store-front" class="vendd-download-search-results">
@@ -24,7 +26,19 @@ if ( isset( $_GET['s'] ) ) :
 								<?php
 									edd_get_template_part( 'shortcode', 'content-image' );
 									edd_get_template_part( 'shortcode', 'content-title' );
-									edd_get_template_part( 'shortcode', 'content-excerpt' );
+									if ( has_excerpt() ) :
+										?>
+										<div<?php echo $item_prop; ?> class="edd_download_excerpt">
+											<?php echo $post->post_excerpt; ?>
+										</div>
+										<?php
+									else :
+										?>
+										<div<?php echo $item_prop; ?> class="edd_download_excerpt">
+											<?php echo apply_filters( 'edd_downloads_excerpt', wp_trim_words( get_post_field( 'post_content', get_the_ID() ), $excerpt_length ) ); ?>
+										</div>
+										<?php
+									endif;
 									edd_get_template_part( 'shortcode', 'content-price' );
 									edd_get_template_part( 'shortcode', 'content-cart-button' );
 								?>
