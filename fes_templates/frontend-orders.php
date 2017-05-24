@@ -56,7 +56,7 @@ if ( count( $orders ) > 0 ) {
 		<?php
 	endforeach;
 } else {
-	echo '<div>' . __( 'No orders found','edd_fes') . '</div>';
+	echo '<div>' . __( 'No orders found', 'vendd' ) . '</div>';
 }
 
 EDD_FES()->dashboard->order_list_pagination();
