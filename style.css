@@ -230,15 +230,19 @@ a img {
 --------------------------------------------------------------*/
 body.vendd-full-width-html-structure,
 body.custom-background.vendd-full-width-html-structure {
-	background-color: #3d3d3d;
+	background-color: #fff;
 }
 .vendd-full-width-html-structure #page {
+	background-color: #fff;
 	max-width: none;
 }
 .vendd-full-width-html-structure .page-inner {
 	position: relative;
 	margin: 0 auto;
 	max-width: 1120px;
+}
+.vendd-full-width-html-structure #info-bar {
+	background: #3d3d3d;
 }
 .vendd-full-width-html-structure .site-branding,
 .vendd-full-width-html-structure .main-navigation {
@@ -253,6 +257,10 @@ body.custom-background.vendd-full-width-html-structure {
 .vendd-full-width-html-structure .secondary-navigation {
 	right: 0;
 	top: 0;
+}
+.vendd-full-width-html-structure .site-footer .page-inner {
+	padding-top: 10px;
+	border-top: 1px solid #f2f2f2;
 }
 
 
