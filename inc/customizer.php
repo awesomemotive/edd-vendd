@@ -12,6 +12,21 @@ function vendd_customize_register( $wp_customize ) {
 	global $edd_options;
 
 	/** ===============
+	 * Allow arbitrary HTML controls
+	 */
+	class Vendd_Customizer_HTML extends WP_Customize_Control {
+		public $content = '';
+		public function render_content() {
+			if ( isset( $this->label ) ) {
+				echo '<hr><h3 class="settings-heading">' . $this->label . '</h3>';
+			}
+			if ( isset( $this->description ) ) {
+				echo '<div class="description customize-control-description settings-description">' . $this->description . '</div>';
+			}
+		}
+	}
+
+	/** ===============
 	 * Extends controls class to add textarea with description
 	 */
 	class Vendd_WP_Customize_Textarea_Control extends WP_Customize_Control {
@@ -105,6 +120,18 @@ function vendd_customize_register( $wp_customize ) {
 		'priority'      => 20,
 	) );
 
+	// full-width HTML structure
+	$wp_customize->add_setting( 'vendd_full_width_html', array(
+		'default'           => 0,
+		'sanitize_callback' => 'vendd_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'vendd_full_width_html', array(
+		'label'     => __( 'Enable full-width HTML structure', 'vendd' ),
+		'section'   => 'vendd_design',
+		'priority'  => 10,
+		'type'      => 'checkbox',
+	) );
+
 	// design color
 	$wp_customize->add_setting( 'vendd_design_color', array(
 		'default'       => '#428bca',
@@ -117,6 +144,14 @@ function vendd_customize_register( $wp_customize ) {
 		'priority'  => 20
 	) ) );
 
+	// page-width settings
+	$wp_customize->add_setting( 'page_width_settings', array() );
+	$wp_customize->add_control( new Vendd_Customizer_HTML( $wp_customize, 'page_width_settings', array(
+		'section'     => 'vendd_design',
+		'priority'    => 30,
+		'description' => __( 'The effects of the following design controls may not be apparent if the full-width HTML structure setting is enabled.', 'vendd' ),
+	) ) );
+
 	/**
 	 * restructure the default Colors section/control
 	 */
@@ -127,7 +162,7 @@ function vendd_customize_register( $wp_customize ) {
 		// change the Colors label
 		$wp_customize->get_control( 'background_color' )->label = __( 'Full Site Background Color', 'vendd' );
 		// put Colors option in a logical spot
-		$wp_customize->get_control( 'background_color' )->priority = 50;
+		$wp_customize->get_control( 'background_color' )->priority = 40;
 
 	/**
 	 * restructure the default Background Image section
@@ -139,19 +174,7 @@ function vendd_customize_register( $wp_customize ) {
 		// change the Background Image label
 		$wp_customize->get_control( 'background_image' )->label = __( 'Full Site Background Image', 'vendd' );
 		// put Background Image uploader in a logical spot
-		$wp_customize->get_control( 'background_image' )->priority = 60;
-
-	// full-width HTML structure
-	$wp_customize->add_setting( 'vendd_full_width_html', array(
-		'default'           => 0,
-		'sanitize_callback' => 'vendd_sanitize_checkbox'
-	) );
-	$wp_customize->add_control( 'vendd_full_width_html', array(
-		'label'     => __( 'Enable full-width HTML structure', 'vendd' ),
-		'section'   => 'vendd_design',
-		'priority'  => 70,
-		'type'      => 'checkbox',
-	) );
+		$wp_customize->get_control( 'background_image' )->priority = 50;
 
 	// parallax background image
 	$wp_customize->add_setting( 'vendd_parallax_bg', array(
@@ -161,7 +184,7 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'vendd_parallax_bg', array(
 		'label'     => __( 'Enable Parallax Background Effect', 'vendd' ),
 		'section'   => 'vendd_design',
-		'priority'  => 80,
+		'priority'  => 60,
 		'type'      => 'checkbox',
 	) );
 
@@ -870,6 +893,10 @@ add_action( 'customize_preview_init', 'vendd_customize_preview_js' );
  */
 function vendd_customizer_styles() { ?>
 	<style type="text/css">
+		hr { margin-top: 15px; }
+		.settings-heading { margin-bottom: 0; }
+		.settings-description { margin-top: 6px; }
+		.customize-control-checkbox { margin-bottom: 0; }
 		#customize-controls #customize-theme-controls .description { display: block; color: #666;  font-style: italic; margin: 2px 0 15px; }
 		#customize-controls #customize-theme-controls .customize-section-description { margin-top: 10px; }
 		textarea, input, select,
