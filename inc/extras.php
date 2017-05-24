@@ -86,6 +86,11 @@ function vendd_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	// Adds class based on HTML structure
+	if ( 1 == get_theme_mod( 'vendd_full_width_html', 0 ) ) {
+		$classes[] = 'vendd-full-width-html-structure';
+	}
+
 	// Adds classes based on template
 	if ( is_front_page() && ! is_home() ) {
 		$classes[] = 'front-page';
