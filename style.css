@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: vendd
 Domain Path: /languages/
-Tags:
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, theme-options, threaded-comments, translation-ready, e-commerce
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1219,6 +1219,7 @@ body:not(.vendd-advanced-search-results) .page-title {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 }
+.bypostauthor{}
 .by-post-author {
 	display: inline-block;
 	color: #fff;
