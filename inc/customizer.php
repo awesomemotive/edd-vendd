@@ -86,7 +86,10 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->get_control( 'blogname' )->priority = 10;
 
 	// logo uploader
-	$wp_customize->add_setting( 'vendd_logo', array( 'default' => null ) );
+	$wp_customize->add_setting( 'vendd_logo', array(
+		'default'           => null,
+		'sanitize_callback' => 'esc_url_raw',
+	) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'vendd_logo', array(
 		'label'     => __( 'Custom Site Logo (replaces title)', 'vendd' ),
 		'section'   => 'title_tagline',
@@ -134,9 +137,10 @@ function vendd_customize_register( $wp_customize ) {
 
 	// design color
 	$wp_customize->add_setting( 'vendd_design_color', array(
-		'default'       => '#428bca',
-		'type'          => 'option',
-		'capability'    => 'edit_theme_options',
+		'default'           => '#428bca',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback'	=> 'vendd_sanitize_hex_color',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'vendd_design_color', array(
 		'label'     => __( 'Primary Design Color', 'vendd' ),
@@ -145,7 +149,9 @@ function vendd_customize_register( $wp_customize ) {
 	) ) );
 
 	// page-width settings
-	$wp_customize->add_setting( 'page_width_settings', array() );
+	$wp_customize->add_setting( 'page_width_settings', array(
+		'sanitize_callback'	=> 'vendd_sanitize_arbitrary_html',
+	) );
 	$wp_customize->add_control( new Vendd_Customizer_HTML( $wp_customize, 'page_width_settings', array(
 		'section'     => 'vendd_design',
 		'priority'    => 30,
@@ -439,7 +445,10 @@ function vendd_customize_register( $wp_customize ) {
 		) );
 
 		// product image uploader
-		$wp_customize->add_setting( 'vendd_product_image_upload', array( 'default' => null ) );
+		$wp_customize->add_setting( 'vendd_product_image_upload', array(
+			'default'           => null,
+			'sanitize_callback' => 'esc_url_raw',
+		) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'vendd_product_image_upload', array(
 			'label'        => __( 'Default Product Image', 'vendd' ),
 			'section'      => 'vendd_edd_options',
@@ -530,9 +539,10 @@ function vendd_customize_register( $wp_customize ) {
 				break;
 		}
 		$wp_customize->add_setting( 'vendd_edd_button_color', array(
-			'default'     => $edd_button_color_hex,
-			'type'        => 'option',
-			'capability'  => 'edit_theme_options',
+			'default'           => $edd_button_color_hex,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback'	=> 'vendd_sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'vendd_edd_button_color', array(
 			'label'        => __( 'EDD Button Color', 'vendd' ),
@@ -583,7 +593,7 @@ function vendd_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'vendd_sanitize_integer'
 		) );
 		$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_empty_cart_downloads_count', array(
-			'label'        => __( 'Empty Cart Downloads Count', 'quota' ),
+			'label'        => __( 'Empty Cart Downloads Count', 'vendd' ),
 			'section'      => 'vendd_edd_options',
 			'description'  => __( 'Enter the number of downloads you would like to display on the checkout page when the cart is empty. Additional downloads are available through pagination.', 'vendd' ),
 			'priority'     => 90,
@@ -780,6 +790,14 @@ function vendd_sanitize_hex_color( $color ) {
 	endif;
 
 	return null;
+}
+
+
+/**
+ * Dummy sanitization arbitrary HTML
+ */
+function vendd_sanitize_arbitrary_html() {
+	// nothing to see here
 }
 
 
