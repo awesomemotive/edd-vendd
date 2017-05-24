@@ -1797,6 +1797,10 @@ input[type="submit"].edd-submit {
 }
 #edd_purchase_submit #edd-purchase-button {
 	display: block;
+	font-size: 1.2em;
+	padding: 15px;
+	border: none;
+	border-radius: 4px;
 	width: 100%;
 }
 .edd_go_to_checkout {
@@ -2867,8 +2871,16 @@ input[type="submit"].edd-submit {
 	font-size: .87em;
 }
 .vendd-fes-template .fes-headers,
-.vendd-edd-fes-shortcode .fes-headers {
+.vendd-fes-template #fes-vendor-dashboard .fes-form-legend,
+.vendd-edd-fes-shortcode .fes-headers,
+.vendd-edd-fes-shortcode #fes-vendor-dashboard .fes-form-legend {
 	display: none;
+}
+.vendd-fes-template .fes-form-legend,
+.vendd-edd-fes-shortcode .fes-form-legend {
+	display: block;
+	font-size: 2em;
+	margin-bottom: .6em;
 }
 .vendd-fes-template .fes-label label,
 .vendd-edd-fes-shortcode .fes-label label {
@@ -3109,8 +3121,8 @@ input[type="submit"].edd-submit {
 }
 
 /* FES Login / Register */
-.vendd-fes-dashboard-template .fes-dashboard-content > table,
-.vendd-edd-fes-shortcode table {
+.vendd-fes-dashboard-template .fes-dashboard-content .fes-login-registration,
+.vendd-edd-fes-shortcode .fes-login-registration {
 	border: none;
 	margin: 0 auto 30px;
 	max-width: 722px;
