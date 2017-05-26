@@ -279,6 +279,7 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6,
 .widget-title,
+.store-name-heading,
 .post-nav-title,
 .comments-title {
 	clear: both;
@@ -2084,6 +2085,11 @@ input[type="submit"].edd-submit {
 .widget li.vendd-details-list-item:before {
 	content: "";
 	margin-right: 0;
+}
+.store-name-heading {
+	display: block;
+	font-size: 1.5em;
+	text-align: center;
 }
 .vendd-details-list-item .vendd-detail-name,
 .vendd-details-list-item .vendd-detail-info {

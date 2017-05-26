@@ -28,6 +28,15 @@
 				<?php if ( apply_filters( 'vendd_show_single_download_author_avatar', true, $post ) ) { ?>
 					<span class="vendd-download-author"><?php echo get_avatar( $user->ID, 90 ); ?></span>
 				<?php } ?>
+				<?php
+					// only display store name if it exists and is set to show
+					$vendor_store_name  = get_the_author_meta( 'name_of_store', $post->post_author );
+					if ( apply_filters( 'vendd_show_single_download_store_name', true, $post ) && ! empty( $vendor_store_name ) ) {
+						?>
+						<span class="store-name-heading"><?php echo $vendor_store_name; ?></span>
+						<?php
+					}
+				?>
 				<ul class="vendd-details-list vendd-author-info">
 					<?php if ( apply_filters( 'vendd_show_single_download_author_name', true, $post ) ) { ?>
 						<li class="vendd-details-list-item vendd-author-details">
