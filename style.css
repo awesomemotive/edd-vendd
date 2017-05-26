@@ -2493,6 +2493,7 @@ input[type="submit"].edd-submit {
 	border: none;
 	padding: 10px;
 	box-shadow: none;
+	margin-right: 4px;
 	height: auto;
 }
 .vendd-fes-dashboard-template .fes-form .fes-submit input[type="submit"]:hover,
