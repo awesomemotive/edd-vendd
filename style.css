@@ -3182,6 +3182,11 @@ input[type="submit"].edd-submit {
 	margin: 0 auto;
 	max-width: 722px;
 }
+.vendd-vendor-contact .fes-form-legend {
+	display: block;
+	font-size: 2em;
+	margin-bottom: .6em;
+}
 .vendd-vendor-contact .fes-vendor-contact-form div.fes-form .fes-el {
 	margin-bottom: 14px;
 }
