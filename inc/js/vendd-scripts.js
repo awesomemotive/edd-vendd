@@ -1,6 +1,8 @@
 (function($){
 	$(document).ready(function(){
 
+        var body = $(document.body);
+
 		/**
 		 * skip link focus
 		 */
@@ -22,7 +24,6 @@
 		/**
 		 * EDD cart information in the header
 		 */
-		var body = $(document.body);
 		var header_cart_total = $('.header-cart-total');
 		body.on('edd_cart_item_added',function(event, response){
 			header_cart_total.html(response.subtotal);
@@ -34,7 +35,7 @@
 		/**
 		 * EDD [downloads] shortcode button behavior
 		 */
-		$('.vendd-show-button').on('click',function(e){
+        body.on('click', '.vendd-show-button', function(e){
 			e.preventDefault();
 			$(this).toggleClass('vendd-price-button-displayed').siblings('.vendd-price-button-container').slideToggle();
 			$(this).parents('.edd_download').siblings().find('.vendd-price-button-container').slideUp().prev('.vendd-show-button').removeClass('vendd-price-button-displayed');
