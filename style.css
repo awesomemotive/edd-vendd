@@ -3498,6 +3498,8 @@ aside[class*="widget_edd_"] .widget-download-title {
 	}
 	#masthead {
 		position: relative;
+	}
+	.vendd-full-width-html-structure #masthead {
 		padding-left: 40px;
 	}
 	.vendd-full-width-html-structure .header-cart {
