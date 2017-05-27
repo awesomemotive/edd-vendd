@@ -41,7 +41,9 @@ class Vendd_Author_Details extends WP_Widget {
 	public function widget( $args, $instance ) {
 		global $post;
 		$author       = new WP_User( $post->post_author );
-		$vendor_url   = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $author->post_author ) );
+		if ( vendd_fes_is_activated() ) {
+			$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $author->post_author ) );
+		}
 		$vendor_store = get_the_author_meta( 'name_of_store', $post->post_author );
 		$avatar       = isset( $instance['avatar'] )      ? $instance['avatar']      : 1;
 		$store_name   = isset( $instance['store_name'] )  ? $instance['store_name']  : 1;
@@ -60,9 +62,15 @@ class Vendd_Author_Details extends WP_Widget {
 		}
 		if ( $avatar ) {
 			?>
-			<span class="vendd-download-author">
-				<a class="vendor-url" href="<?php echo esc_url( $vendor_url ); ?>"><?php echo get_avatar( $author->ID, 90 ); ?></a>
-			</span>
+			<?php if ( vendd_fes_is_activated() ) { ?>
+				<span class="vendd-download-author">
+					<a class="vendor-url" href="<?php echo esc_url( $vendor_url ); ?>"><?php echo get_avatar( $author->ID, 90 ); ?></a>
+				</span>
+			<?php } else { ?>
+				<span class="vendd-download-author">
+					<?php echo get_avatar( $author->ID, 90 ); ?>
+				</span>
+			<?php } ?>
 			<?php
 		}
 		if ( $store_name ) {
