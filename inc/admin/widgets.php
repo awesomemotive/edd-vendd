@@ -40,11 +40,14 @@ class Vendd_Author_Details extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		global $post;
-		$author      = new WP_User( $post->post_author );
-		$avatar      = isset( $instance['avatar'] )      ? $instance['avatar']      : 1;
-		$name        = isset( $instance['name'] )        ? $instance['name']        : 1;
-		$signup_date = isset( $instance['signup_date'] ) ? $instance['signup_date'] : 1;
-		$links       = isset( $instance['links'] )       ? $instance['links']       : 1;
+		$author       = new WP_User( $post->post_author );
+		$vendor_url   = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $author->post_author ) );
+		$vendor_store = get_the_author_meta( 'name_of_store', $post->post_author );
+		$avatar       = isset( $instance['avatar'] )      ? $instance['avatar']      : 1;
+		$store_name   = isset( $instance['store_name'] )  ? $instance['store_name']  : 1;
+		$name         = isset( $instance['name'] )        ? $instance['name']        : 1;
+		$signup_date  = isset( $instance['signup_date'] ) ? $instance['signup_date'] : 1;
+		$links        = isset( $instance['links'] )       ? $instance['links']       : 1;
 
 		// return early if not a single download
 		if ( 'download' != get_post_type( $post ) ) {
@@ -57,7 +60,14 @@ class Vendd_Author_Details extends WP_Widget {
 		}
 		if ( $avatar ) {
 			?>
-			<span class="vendd-download-author"><?php echo get_avatar( $author->ID, 90 ); ?></span>
+			<span class="vendd-download-author">
+				<a class="vendor-url" href="<?php echo esc_url( $vendor_url ); ?>"><?php echo get_avatar( $author->ID, 90 ); ?></a>
+			</span>
+			<?php
+		}
+		if ( $store_name ) {
+			?>
+			<span class="store-name-heading"><?php echo $vendor_store; ?></span>
 			<?php
 		}
 		?>
@@ -66,9 +76,7 @@ class Vendd_Author_Details extends WP_Widget {
 				<li class="vendd-details-list-item vendd-author-details">
 					<span class="vendd-detail-name"><?php _e( 'Author:', 'vendd' ); ?></span>
 					<span class="vendd-detail-info">
-						<?php if ( vendd_fes_is_activated() ) {
-							$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $author->post_author ) );
-							?>
+						<?php if ( vendd_fes_is_activated() ) { ?>
 							<a class="vendor-url" href="<?php echo esc_url( $vendor_url ); ?>">
 								<?php echo $author->display_name; ?>
 							</a>
@@ -169,12 +177,14 @@ class Vendd_Author_Details extends WP_Widget {
 		// default settings
 		$defaults = array(
 			'avatar'      => 1,
+			'store_name'  => 1,
 			'name'        => 1,
 			'signup_date' => 1,
 			'links'       => 1
 		);
 		$instance    = wp_parse_args( (array) $instance, $defaults );
 		$avatar      = isset( $instance['avatar'] )      ? (bool) $instance['avatar']      : true;
+		$store_name  = isset( $instance['store_name'] )  ? (bool) $instance['store_name']  : true;
 		$name        = isset( $instance['name'] )        ? (bool) $instance['name']        : true;
 		$signup_date = isset( $instance['signup_date'] ) ? (bool) $instance['signup_date'] : true;
 		$links       = isset( $instance['links'] )       ? (bool) $instance['links']       : true;
@@ -187,6 +197,10 @@ class Vendd_Author_Details extends WP_Widget {
 		<p>
 			<input <?php checked( $avatar ); ?> id="<?php echo esc_attr( $this->get_field_id( 'avatar' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'avatar' ) ); ?>" type="checkbox" />
 			<label for="<?php echo esc_attr( $this->get_field_id( 'avatar' ) ); ?>"><?php _e( 'Show Author Avatar', 'vendd' ); ?></label>
+		</p>
+		<p>
+			<input <?php checked( $store_name ); ?> id="<?php echo esc_attr( $this->get_field_id( 'store_name' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'store_name' ) ); ?>" type="checkbox" />
+			<label for="<?php echo esc_attr( $this->get_field_id( 'store_name' ) ); ?>"><?php _e( 'Show Store Name', 'vendd' ); ?></label>
 		</p>
 		<p>
 			<input <?php checked( $name ); ?> id="<?php echo esc_attr( $this->get_field_id( 'name' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'name' ) ); ?>" type="checkbox" />
@@ -213,6 +227,7 @@ class Vendd_Author_Details extends WP_Widget {
 		$instance                = $old_instance;
 		$instance['title']       = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['avatar']      = ! empty( $new_instance['avatar'] )      ? 1 : 0;
+		$instance['store_name']  = ! empty( $new_instance['store_name'] )  ? 1 : 0;
 		$instance['name']        = ! empty( $new_instance['name'] )        ? 1 : 0;
 		$instance['signup_date'] = ! empty( $new_instance['signup_date'] ) ? 1 : 0;
 		$instance['links']       = ! empty( $new_instance['links'] )       ? 1 : 0;

@@ -279,6 +279,7 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6,
 .widget-title,
+.store-name-heading,
 .post-nav-title,
 .comments-title {
 	clear: both;
@@ -2085,6 +2086,11 @@ input[type="submit"].edd-submit {
 	content: "";
 	margin-right: 0;
 }
+.store-name-heading {
+	display: block;
+	font-size: 1.5em;
+	text-align: center;
+}
 .vendd-details-list-item .vendd-detail-name,
 .vendd-details-list-item .vendd-detail-info {
 	display: inline-block;
@@ -2481,6 +2487,12 @@ input[type="submit"].edd-submit {
 	display: block;
 	font-size: 1rem;
 	font-weight: 300;
+}
+.vendd-vendor-profiles {
+	margin-top: 16px;
+}
+.vendd-vendor-profiles .vendd-contact-method:last-child {
+	margin-right: 0;
 }
 .vendd-fes-template .fes-table,
 .vendd-edd-fes-shortcode .fes-table {

@@ -24,18 +24,30 @@
 
 		<?php if ( vendd_fes_is_activated() || apply_filters( 'vendd_show_single_download_author_details', false, $post ) ) { ?>
 			<div class="widget widget_download_author">
-				<?php $user = new WP_User( $post->post_author ); ?>
+				<?php
+					$user       = new WP_User( $post->post_author );
+					$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $post->post_author ) );
+				?>
 				<?php if ( apply_filters( 'vendd_show_single_download_author_avatar', true, $post ) ) { ?>
-					<span class="vendd-download-author"><?php echo get_avatar( $user->ID, 90 ); ?></span>
+					<span class="vendd-download-author">
+						<a href="<?php echo $vendor_url; ?>"><?php echo get_avatar( $user->ID, 90 ); ?></a>
+					</span>
 				<?php } ?>
+				<?php
+					// only display store name if it exists and is set to show
+					$vendor_store_name  = get_the_author_meta( 'name_of_store', $post->post_author );
+					if ( apply_filters( 'vendd_show_single_download_store_name', true, $post ) && ! empty( $vendor_store_name ) ) {
+						?>
+						<span class="store-name-heading"><?php echo $vendor_store_name; ?></span>
+						<?php
+					}
+				?>
 				<ul class="vendd-details-list vendd-author-info">
 					<?php if ( apply_filters( 'vendd_show_single_download_author_name', true, $post ) ) { ?>
 						<li class="vendd-details-list-item vendd-author-details">
 							<span class="vendd-detail-name"><?php _e( 'Author:', 'vendd' ); ?></span>
 							<span class="vendd-detail-info">
-								<?php if ( vendd_fes_is_activated() ) {
-									$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $post->post_author ) );
-									?>
+								<?php if ( vendd_fes_is_activated() ) { ?>
 									<a class="vendor-url" href="<?php echo $vendor_url; ?>">
 										<?php echo $user->display_name; ?>
 									</a>
@@ -53,31 +65,36 @@
 					<?php } ?>
 					<?php
 						if ( apply_filters( 'vendd_show_single_download_author_links', true, $post ) ) {
+							$store    = ! empty( $vendor_store_name ) ? $vendor_store_name : $user->display_name;
 							$website  = get_the_author_meta( 'user_url', $post->post_author );
 							$twitter  = get_the_author_meta( 'twitter_profile', $post->post_author );
 							$gplus    = get_the_author_meta( 'gplus_profile', $post->post_author );
 							$facebook = get_the_author_meta( 'facebook_profile', $post->post_author );
 							$youtube  = get_the_author_meta( 'youtube_profile', $post->post_author );
 							$social_profiles = array(
-								'twitter'	=> array(
-									'name'	=> 'twitter',
-									'data'	=> $twitter,
-									'icon'	=> '<i class="fa fa-twitter-square"></i>',
+								'twitter'   => array(
+									'id'    => 'twitter',
+									'name'  => 'Twitter',
+									'data'  => $twitter,
+									'icon'  => '<i class="fa fa-twitter-square"></i>',
 								),
 								'gplus'	=> array(
-									'name'	=> 'google-plus',
-									'data'	=> $gplus,
-									'icon'	=> '<i class="fa fa-google-plus-square"></i>',
+									'id'	=> 'google-plus',
+									'name'  => 'Google Plus',
+									'data'  => $gplus,
+									'icon'  => '<i class="fa fa-google-plus-square"></i>',
 								),
-								'facebook'	=> array(
-									'name'	=> 'facebook',
-									'data'	=> $facebook,
-									'icon'	=> '<i class="fa fa-facebook-square"></i>',
+								'facebook'  => array(
+									'id'	=> 'facebook',
+									'name'  => 'Facebook',
+									'data'  => $facebook,
+									'icon'  => '<i class="fa fa-facebook-square"></i>',
 								),
-								'youtube'	=> array(
-									'name'	=> 'youtube',
-									'data'	=> $youtube,
-									'icon'	=> '<i class="fa fa-youtube-square"></i>',
+								'youtube'   => array(
+									'id'    => 'youtube',
+									'name'  => 'YouTube',
+									'data'  => $youtube,
+									'icon'  => '<i class="fa fa-youtube-square"></i>',
 								),
 							);
 
@@ -96,8 +113,9 @@
 													?>
 													<span class="vendd-contact-method">
 														<?php
-															printf( '<a href="%1$s" class="vendd-social-profile vendd-%2$s" target="_blank">%3$s</a>',
-																$profile['data'],
+															printf( '<a href="%1$s" class="vendd-social-profile vendd-%2$s" target="_blank" title="' . $store . ' - %3$s">%4$s</a>',
+																esc_url( $profile['data'] ),
+																$profile['id'],
 																$profile['name'],
 																$profile['icon']
 															);
@@ -109,7 +127,7 @@
 										?>
 										<?php if ( ! empty( $website ) ) { ?>
 											<span class="vendd-contact-method vendd-author-website">
-												<a href="<?php echo $website; ?>" title="<?php echo $user->display_name; echo _x( '\'s website', 'title attribute of the FES vendor\'s website link', 'vendd' ); ?>" class="vendd-social-profile vendd-website" target="_blank">
+												<a href="<?php echo $website; ?>" title="<?php echo $store . ' - ' . __( 'Homepage', 'vendd' ); ?>" class="vendd-social-profile vendd-website" target="_blank">
 													<i class="fa fa-home"></i>
 												</a>
 											</span>
