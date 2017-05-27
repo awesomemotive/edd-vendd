@@ -65,31 +65,36 @@
 					<?php } ?>
 					<?php
 						if ( apply_filters( 'vendd_show_single_download_author_links', true, $post ) ) {
+							$store    = ! empty( $vendor_store_name ) ? $vendor_store_name : $user->display_name;
 							$website  = get_the_author_meta( 'user_url', $post->post_author );
 							$twitter  = get_the_author_meta( 'twitter_profile', $post->post_author );
 							$gplus    = get_the_author_meta( 'gplus_profile', $post->post_author );
 							$facebook = get_the_author_meta( 'facebook_profile', $post->post_author );
 							$youtube  = get_the_author_meta( 'youtube_profile', $post->post_author );
 							$social_profiles = array(
-								'twitter'	=> array(
-									'name'	=> 'twitter',
-									'data'	=> $twitter,
-									'icon'	=> '<i class="fa fa-twitter-square"></i>',
+								'twitter'   => array(
+									'id'    => 'twitter',
+									'name'  => 'Twitter',
+									'data'  => $twitter,
+									'icon'  => '<i class="fa fa-twitter-square"></i>',
 								),
 								'gplus'	=> array(
-									'name'	=> 'google-plus',
-									'data'	=> $gplus,
-									'icon'	=> '<i class="fa fa-google-plus-square"></i>',
+									'id'	=> 'google-plus',
+									'name'  => 'Google Plus',
+									'data'  => $gplus,
+									'icon'  => '<i class="fa fa-google-plus-square"></i>',
 								),
-								'facebook'	=> array(
-									'name'	=> 'facebook',
-									'data'	=> $facebook,
-									'icon'	=> '<i class="fa fa-facebook-square"></i>',
+								'facebook'  => array(
+									'id'	=> 'facebook',
+									'name'  => 'Facebook',
+									'data'  => $facebook,
+									'icon'  => '<i class="fa fa-facebook-square"></i>',
 								),
-								'youtube'	=> array(
-									'name'	=> 'youtube',
-									'data'	=> $youtube,
-									'icon'	=> '<i class="fa fa-youtube-square"></i>',
+								'youtube'   => array(
+									'id'    => 'youtube',
+									'name'  => 'YouTube',
+									'data'  => $youtube,
+									'icon'  => '<i class="fa fa-youtube-square"></i>',
 								),
 							);
 
@@ -108,8 +113,9 @@
 													?>
 													<span class="vendd-contact-method">
 														<?php
-															printf( '<a href="%1$s" class="vendd-social-profile vendd-%2$s" target="_blank">%3$s</a>',
-																$profile['data'],
+															printf( '<a href="%1$s" class="vendd-social-profile vendd-%2$s" target="_blank" title="' . $store . ' - %3$s">%4$s</a>',
+																esc_url( $profile['data'] ),
+																$profile['id'],
 																$profile['name'],
 																$profile['icon']
 															);
@@ -121,7 +127,7 @@
 										?>
 										<?php if ( ! empty( $website ) ) { ?>
 											<span class="vendd-contact-method vendd-author-website">
-												<a href="<?php echo $website; ?>" title="<?php echo $user->display_name; echo _x( '\'s website', 'title attribute of the FES vendor\'s website link', 'vendd' ); ?>" class="vendd-social-profile vendd-website" target="_blank">
+												<a href="<?php echo $website; ?>" title="<?php echo $store . ' - ' . __( 'Homepage', 'vendd' ); ?>" class="vendd-social-profile vendd-website" target="_blank">
 													<i class="fa fa-home"></i>
 												</a>
 											</span>
