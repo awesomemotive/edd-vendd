@@ -2482,6 +2482,12 @@ input[type="submit"].edd-submit {
 	font-size: 1rem;
 	font-weight: 300;
 }
+.vendd-vendor-profiles {
+	margin-top: 16px;
+}
+.vendd-vendor-profiles .vendd-contact-method:last-child {
+	margin-right: 0;
+}
 .vendd-fes-template .fes-table,
 .vendd-edd-fes-shortcode .fes-table {
 	font-size: .87em;
