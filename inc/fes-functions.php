@@ -56,3 +56,18 @@ function vendd_fes_shortcodes_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'post_class', 'vendd_fes_shortcodes_classes' );
+
+
+/**
+ * filter document title on FES vendor store pages
+ */
+function vendd_vendor_store_title( $title ) {
+	$page_id = EDD_FES()->helper->get_option( 'fes-vendor-page', false );
+
+	if ( is_page( $page_id ) ) {
+		$title = $title . sprintf( __( ' on %s', 'vendd' ), get_bloginfo( 'name' ) );
+	}
+
+	return $title;
+}
+add_filter( 'pre_get_document_title', 'vendd_vendor_store_title', 99999 );
