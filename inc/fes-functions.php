@@ -65,7 +65,7 @@ function vendd_vendor_store_title( $title ) {
 	$page_id = EDD_FES()->helper->get_option( 'fes-vendor-page', false );
 
 	if ( is_page( $page_id ) ) {
-		$title = $title . sprintf( __( ' on %s', 'vendd' ), get_bloginfo( 'name' ) );
+		$title = sprintf( __( '%1$s on %2$s', 'vendd' ), $title, get_bloginfo( 'name' ) );
 	}
 
 	return $title;
