@@ -1,18 +1,18 @@
+#, fuzzy
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Vendd\n"
-"POT-Creation-Date: 2017-02-12 14:26-0800\n"
-"PO-Revision-Date: 2017-02-12 14:26-0800\n"
+"POT-Creation-Date: 2017-05-29 21:33-0700\n"
+"PO-Revision-Date: 2017-05-29 21:32-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -96,12 +96,12 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content/content-advanced-search.php:59
+#: content/content-advanced-search.php:73
 msgctxt "advanced search results page search results title"
 msgid "Page Results"
 msgstr ""
 
-#: content/content-advanced-search.php:94
+#: content/content-advanced-search.php:108
 msgctxt "advanced search results post search results title"
 msgid "Post Results"
 msgstr ""
@@ -187,7 +187,7 @@ msgid ""
 "\">permalink</a>."
 msgstr ""
 
-#: content/content.php:47 inc/customizer.php:180 inc/extras.php:31
+#: content/content.php:47 inc/customizer.php:221 inc/extras.php:31
 msgid "Continue reading"
 msgstr ""
 
@@ -253,11 +253,11 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:113
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:124
 msgid "Download Sidebar"
 msgstr ""
 
@@ -265,12 +265,12 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:85
+#: header.php:88
 #, php-format
 msgid "Cart total: %s"
 msgstr ""
 
-#: header.php:92
+#: header.php:95
 msgid "Menu"
 msgstr ""
 
@@ -483,342 +483,360 @@ msgid ""
 "networking links."
 msgstr ""
 
-#: inc/admin/widgets.php:67 sidebar-download.php:34
+#: inc/admin/widgets.php:85 sidebar-download.php:48
 msgid "Author:"
 msgstr ""
 
-#: inc/admin/widgets.php:83 sidebar-download.php:50
+#: inc/admin/widgets.php:99 sidebar-download.php:62
 msgid "Author since:"
 msgstr ""
 
-#: inc/admin/widgets.php:145 sidebar-download.php:112
+#: inc/admin/widgets.php:161
 msgctxt "title attribute of the FES vendor's website link"
 msgid "'s website"
 msgstr ""
 
-#: inc/admin/widgets.php:182 inc/admin/widgets.php:369
+#: inc/admin/widgets.php:200 inc/admin/widgets.php:392
 msgid "Only for use in Download Sidebar"
 msgstr ""
 
-#: inc/admin/widgets.php:184 inc/admin/widgets.php:371
+#: inc/admin/widgets.php:202 inc/admin/widgets.php:394
 msgid "Title:"
 msgstr ""
 
-#: inc/admin/widgets.php:185
+#: inc/admin/widgets.php:203
 msgid "Leave empty for no title (recommended)"
 msgstr ""
 
-#: inc/admin/widgets.php:189
+#: inc/admin/widgets.php:207
 msgid "Show Author Avatar"
 msgstr ""
 
-#: inc/admin/widgets.php:193
+#: inc/admin/widgets.php:211
+msgid "Show Store Name"
+msgstr ""
+
+#: inc/admin/widgets.php:215
 msgid "Show Author Name"
 msgstr ""
 
-#: inc/admin/widgets.php:197
+#: inc/admin/widgets.php:219
 msgid "Show Author Sign-up Date"
 msgstr ""
 
-#: inc/admin/widgets.php:201
+#: inc/admin/widgets.php:223
 msgid "Show Author Social Links"
 msgstr ""
 
-#: inc/admin/widgets.php:244 sidebar-download.php:128
+#: inc/admin/widgets.php:267 sidebar-download.php:146
 msgid "Download Details"
 msgstr ""
 
-#: inc/admin/widgets.php:246
+#: inc/admin/widgets.php:269
 msgid "Display the download details such as date published and total sales."
 msgstr ""
 
-#: inc/admin/widgets.php:289 sidebar-download.php:140
+#: inc/admin/widgets.php:312 sidebar-download.php:158
 msgid "Published:"
 msgstr ""
 
-#: inc/admin/widgets.php:296 sidebar-download.php:146
+#: inc/admin/widgets.php:319 sidebar-download.php:164
 msgid "Sales:"
 msgstr ""
 
-#: inc/admin/widgets.php:304 sidebar-download.php:153
+#: inc/admin/widgets.php:327 sidebar-download.php:171
 msgid "Licensed:"
 msgstr ""
 
-#: inc/admin/widgets.php:305 sidebar-download.php:154
+#: inc/admin/widgets.php:328 sidebar-download.php:172
 msgid "Yes"
 msgstr ""
 
-#: inc/admin/widgets.php:305 sidebar-download.php:154
+#: inc/admin/widgets.php:328 sidebar-download.php:172
 msgid "No"
 msgstr ""
 
-#: inc/admin/widgets.php:311 sidebar-download.php:158
+#: inc/admin/widgets.php:334 sidebar-download.php:176
 msgid "Current Version:"
 msgstr ""
 
-#: inc/admin/widgets.php:312 sidebar-download.php:159
+#: inc/admin/widgets.php:335 sidebar-download.php:177
 msgid "Unversioned"
 msgstr ""
 
-#: inc/admin/widgets.php:321 sidebar-download.php:167
+#: inc/admin/widgets.php:344 sidebar-download.php:185
 msgid "Categories:"
 msgstr ""
 
-#: inc/admin/widgets.php:332 sidebar-download.php:177
+#: inc/admin/widgets.php:355 sidebar-download.php:195
 msgid "Tags:"
 msgstr ""
 
-#: inc/admin/widgets.php:376
+#: inc/admin/widgets.php:399
 msgid "Show Published Date"
 msgstr ""
 
-#: inc/admin/widgets.php:380
+#: inc/admin/widgets.php:403
 msgid "Show Sales Total"
 msgstr ""
 
-#: inc/admin/widgets.php:385
+#: inc/admin/widgets.php:408
 msgid "Show License Status"
 msgstr ""
 
-#: inc/admin/widgets.php:389
+#: inc/admin/widgets.php:412
 msgid "Show Version Number"
 msgstr ""
 
-#: inc/admin/widgets.php:394
+#: inc/admin/widgets.php:417
 msgid "Show Categories"
 msgstr ""
 
-#: inc/admin/widgets.php:398
+#: inc/admin/widgets.php:421
 msgid "Show Tags"
 msgstr ""
 
-#: inc/customizer.php:66
+#: inc/customizer.php:81
 msgid "Site Title (Logo) & Tagline"
 msgstr ""
 
-#: inc/customizer.php:76
+#: inc/customizer.php:94
 msgid "Custom Site Logo (replaces title)"
 msgstr ""
 
-#: inc/customizer.php:92
+#: inc/customizer.php:110
 msgid "Hide Tagline"
 msgstr ""
 
-#: inc/customizer.php:103
+#: inc/customizer.php:121
 msgid "Vendd Design"
 msgstr ""
 
-#: inc/customizer.php:104
+#: inc/customizer.php:122
 msgid "Control the primary design color of your site."
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:132
+msgid "Enable full-width HTML structure"
+msgstr ""
+
+#: inc/customizer.php:146
 msgid "Primary Design Color"
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:158
+msgid ""
+"The effects of the following design controls may not be apparent if the full-"
+"width HTML structure setting is enabled."
+msgstr ""
+
+#: inc/customizer.php:169
 msgid "Full Site Background Color"
 msgstr ""
 
-#: inc/customizer.php:140
+#: inc/customizer.php:181
 msgid "Full Site Background Image"
 msgstr ""
 
-#: inc/customizer.php:150
+#: inc/customizer.php:191
 msgid "Enable Parallax Background Effect"
 msgstr ""
 
-#: inc/customizer.php:161
+#: inc/customizer.php:202
 msgid "Content Options"
 msgstr ""
 
-#: inc/customizer.php:162
+#: inc/customizer.php:203
 msgid ""
 "Adjust the display of content on your website. All options have a default "
 "value that can be left as-is but you are free to customize."
 msgstr ""
 
-#: inc/customizer.php:172
+#: inc/customizer.php:213
 msgid "Display Post Excerpts"
 msgstr ""
 
-#: inc/customizer.php:184
+#: inc/customizer.php:225
 msgid "Excerpt & More Link Text"
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:227
 msgid ""
 "This is the link text displayed at the end of blog post excerpts and content "
 "truncated with the \"more tag.\" No HTML allowed."
 msgstr ""
 
-#: inc/customizer.php:196
+#: inc/customizer.php:237
 msgid "Show Featured Images in Post Listings"
 msgstr ""
 
-#: inc/customizer.php:208
+#: inc/customizer.php:249
 msgid "Show Featured Images on Single Posts"
 msgstr ""
 
-#: inc/customizer.php:220
+#: inc/customizer.php:261
 msgid "Show Featured Images on Pages"
 msgstr ""
 
-#: inc/customizer.php:232
+#: inc/customizer.php:273
 msgid "Enable Comments on Standard Pages"
 msgstr ""
 
-#: inc/customizer.php:244
+#: inc/customizer.php:285
 msgid "Show search in Main Menu"
 msgstr ""
 
-#: inc/customizer.php:256
+#: inc/customizer.php:297
 msgid "Use Advanced Search Results"
 msgstr ""
 
-#: inc/customizer.php:268
+#: inc/customizer.php:309
 msgid "Information Bar Text"
 msgstr ""
 
-#: inc/customizer.php:270
+#: inc/customizer.php:311
 msgid ""
 "This text appears at the very top of your site aligned to the left. Allowed "
 "tags:"
 msgstr ""
 
-#: inc/customizer.php:280
+#: inc/customizer.php:321
 msgid "Footer Credits & Copyright"
 msgstr ""
 
-#: inc/customizer.php:282
+#: inc/customizer.php:323
 msgid ""
 "Displays site title, tagline, copyright, and year by default. Allowed tags: "
 msgstr ""
 
-#: inc/customizer.php:291
+#: inc/customizer.php:332
 msgid "Social Profiles"
 msgstr ""
 
-#: inc/customizer.php:292
+#: inc/customizer.php:333
 msgid ""
 "Enter the <strong>full URLs</strong> for your social profiles. They will "
 "display in various areas around the theme."
 msgstr ""
 
-#: inc/customizer.php:302
+#: inc/customizer.php:343
 msgid "Show social profiles in Information Bar?"
 msgstr ""
 
-#: inc/customizer.php:389
+#: inc/customizer.php:430
 msgid "Easy Digital Downloads"
 msgstr ""
 
-#: inc/customizer.php:390
+#: inc/customizer.php:431
 msgid ""
 "All other EDD options are under Dashboard => Downloads. If you deactivate "
 "EDD, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:400
+#: inc/customizer.php:441
 msgid "Show Featured Images on Products"
 msgstr ""
 
-#: inc/customizer.php:409
+#: inc/customizer.php:453
 msgid "Default Product Image"
 msgstr ""
 
-#: inc/customizer.php:411
+#: inc/customizer.php:455
 msgid ""
 "Recommended: default product image should be the same dimensions as your "
 "uploaded Download Images (if used). Vendd default product image crop "
 "dimensions: 722px 361px."
 msgstr ""
 
-#: inc/customizer.php:422
+#: inc/customizer.php:466
 msgid "Use Default Product Image Fallback"
 msgstr ""
 
-#: inc/customizer.php:434
+#: inc/customizer.php:478
 msgid "Show Comments on Downloads"
 msgstr ""
 
-#: inc/customizer.php:446
-msgid "Show Categories/Tags on Downloads grid"
+#: inc/customizer.php:490
+msgid "Show Categories on Downloads grid"
 msgstr ""
 
-#: inc/customizer.php:491
+#: inc/customizer.php:502
+msgid "Show Tags on Downloads grid"
+msgstr ""
+
+#: inc/customizer.php:548
 msgid "EDD Button Color"
 msgstr ""
 
-#: inc/customizer.php:493
+#: inc/customizer.php:550
 msgid ""
 "By default, this will match what you set in the EDD Style Settings. "
 "Selecting another color here will override the EDD setting. Clear the color "
 "field back to default to revert back to the EDD setting."
 msgstr ""
 
-#: inc/customizer.php:503
+#: inc/customizer.php:560
 msgid "EDD Downloads Template Title"
 msgstr ""
 
-#: inc/customizer.php:505
+#: inc/customizer.php:562
 msgid ""
 "This optional field allows you to replace the title of your EDD Downloads "
 "Page Template. If left blank, the title of the page will show instead. "
 "Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:515
+#: inc/customizer.php:572
 msgid "Empty Cart Title"
 msgstr ""
 
-#: inc/customizer.php:517
+#: inc/customizer.php:574
 msgid ""
 "This is the title on the page that displays when the cart is empty. Allowed "
 "tags:"
 msgstr ""
 
-#: inc/customizer.php:527
+#: inc/customizer.php:584
 msgid "Empty Cart Text"
 msgstr ""
 
-#: inc/customizer.php:529
+#: inc/customizer.php:586
 msgid ""
 "Displays a custom message when the checkout cart is empty. Allowed tags: "
 msgstr ""
 
-#: inc/customizer.php:539
+#: inc/customizer.php:596
 msgid "Empty Cart Downloads Count"
 msgstr ""
 
-#: inc/customizer.php:541
+#: inc/customizer.php:598
 msgid ""
 "Enter the number of downloads you would like to display on the checkout page "
 "when the cart is empty. Additional downloads are available through "
 "pagination."
 msgstr ""
 
-#: inc/customizer.php:553
+#: inc/customizer.php:610
 msgid "EDD Frontend Submissions"
 msgstr ""
 
-#: inc/customizer.php:554
+#: inc/customizer.php:611
 msgid ""
 "All other FES options are under Dashboard => EDD FES. If you deactivate EDD "
 "or FES, these options will no longer appear."
 msgstr ""
 
-#: inc/customizer.php:564
+#: inc/customizer.php:621
 msgid "FES Dashboard Title"
 msgstr ""
 
-#: inc/customizer.php:566
+#: inc/customizer.php:623
 msgid ""
 "This optional field allows you to replace the title of your FES Dashboard. "
 "If left blank, the title of the page will show instead. Allowed tags:"
 msgstr ""
 
-#: inc/customizer.php:576
+#: inc/customizer.php:633
 msgid "Show contact form on Vendor template"
 msgstr ""
 
@@ -833,20 +851,25 @@ msgctxt ""
 msgid "Your cart is empty."
 msgstr ""
 
-#: inc/extras.php:160
+#: inc/extras.php:165
 msgid "Twitter Profile URL"
 msgstr ""
 
-#: inc/extras.php:161
+#: inc/extras.php:166
 msgid "Facebook Profile URL"
 msgstr ""
 
-#: inc/extras.php:162
+#: inc/extras.php:167
 msgid "Google Plus Profile URL"
 msgstr ""
 
-#: inc/extras.php:163
+#: inc/extras.php:168
 msgid "YouTube Profile URL"
+msgstr ""
+
+#: inc/fes-functions.php:70
+#, php-format
+msgid "%1$s on %2$s"
 msgstr ""
 
 #: inc/template-tags.php:19
@@ -931,6 +954,10 @@ msgstr ""
 
 #: searchform.php:8
 msgid "Search for:"
+msgstr ""
+
+#: sidebar-download.php:130
+msgid "Homepage"
 msgstr ""
 
 #: sidebar.php:25
