@@ -3340,11 +3340,13 @@ input[type="submit"].edd-submit {
 	color: #ccc;
 }
 .edd_download_inner .edd-reviews-rating {
+	color: #757575;
+	font-size: .87em;
 	padding: 0 20px;
 	margin-bottom: 10px;
 }
 .edd_download_inner .edd-reviews-rating .dashicons-star-filled {
-	color: #757575;
+	color: #daa520;
 	font-size: 18px;
 }
 
