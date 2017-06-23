@@ -3339,6 +3339,16 @@ input[type="submit"].edd-submit {
 .comment-content .edd-reviews-voting-buttons a:hover {
 	color: #ccc;
 }
+.edd_download_inner .edd-reviews-rating {
+	color: #757575;
+	font-size: .87em;
+	padding: 0 20px;
+	margin-bottom: 10px;
+}
+.edd_download_inner .edd-reviews-rating .dashicons-star-filled {
+	color: #f1c40f;
+	font-size: 18px;
+}
 
 
 /*--------------------------------------------------------------
