@@ -868,11 +868,33 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	background: rgba(0, 0, 0, .1);
 	color: #fff;
 }
+.nav-search-form {
+	position: relative;
+	display: inline-block;
+	background: rgba(0, 0, 0, .05);
+	color: #fff;
+	border-radius: 4px;
+}
+.nav-search-form .nav-search-anchor {
+	display: inline;
+	font: inherit;
+	padding: 0;
+}
+.nav-search-form .fa {
+	position: absolute;
+		left: 10px;
+		top: 6px;
+	color: #fff;
+	cursor: pointer;
+}
+.nav-search-form #search-form {
+	display: inline-block;
+}
 .nav-search-form input[type="search"] {
-	background: rgba(0, 0, 0, .05) url('inc/images/sprite.png') no-repeat 13px -143px;
+	background: transparent;
 	color: #ddd;
 	font-size: .87em;
-	padding: 5px 5px 4px 37px;
+	padding: 5px 5px 4px 30px;
 	border: 0;
 	border-radius: 4px;
 	width: 35px;
@@ -884,12 +906,11 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 }
 .nav-search-form input[type="search"]:focus,
 .search-results .nav-search-form input[type="search"] {
-	background: #3d3d3d url('inc/images/sprite.png') no-repeat 13px -143px;
+	background: #3d3d3d;
 	width: 160px;
 	cursor: default;
 }
 .search-results .nav-search-form input[type="search"] {
-	background-color: rgba(0, 0, 0, .05);
 	color: #fff;
 }
 .search-results .nav-search-form input[type="search"]:focus {

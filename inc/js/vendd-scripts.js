@@ -33,6 +33,15 @@
 		});
 
 		/**
+		 * Main Menu search form expand
+		 */
+		body.on('click', '.nav-search-anchor', function(e){
+			e.preventDefault();
+			$(this).siblings('#search-form').find('#search-input').focus();
+		});
+
+
+		/**
 		 * EDD [downloads] shortcode button behavior
 		 */
         body.on('click', '.vendd-show-button', function(e){
