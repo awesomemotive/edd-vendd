@@ -874,6 +874,12 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	background: rgba(0, 0, 0, .05);
 	color: #fff;
 	border-radius: 4px;
+	-webkit-transition: background .2s;
+	-moz-transition: background .2s;
+	transition: background .2s;
+}
+.nav-search-form:hover {
+	background: rgba(0, 0, 0, .1);
 }
 .nav-search-form .nav-search-anchor {
 	display: inline;
