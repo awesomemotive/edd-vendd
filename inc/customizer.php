@@ -355,53 +355,57 @@ function vendd_customize_register( $wp_customize ) {
 	 * 2. update vendd_social_profiles() function in inc/extras.php
 	 */
 	$profiles = array(
-		'twitter'   => array(
-			'id'    => 'twitter',
-			'label' => __( 'Twitter', 'Vendd' ),
+		'twitter'    => array(
+			'id'     => 'twitter',
+			'label'  => __( 'Twitter', 'Vendd' ),
 		),
 		'facebook'   => array(
-			'id'    => 'facebook',
-			'label' => __( 'Facebook', 'Vendd' ),
+			'id'     => 'facebook',
+			'label'  => __( 'Facebook', 'Vendd' ),
 		),
-		'googleplus'   => array(
-			'id'    => 'googleplus',
-			'label' => __( 'Google+', 'Vendd' ),
+		'googleplus' => array(
+			'id'     => 'googleplus',
+			'label'  => __( 'Google+', 'Vendd' ),
 		),
-		'github'   => array(
-			'id'    => 'github',
-			'label' => __( 'GitHub', 'Vendd' ),
+		'github'     => array(
+			'id'     => 'github',
+			'label'  => __( 'GitHub', 'Vendd' ),
 		),
-		'instagram'   => array(
-			'id'    => 'instagram',
-			'label' => __( 'Instagram', 'Vendd' ),
+		'instagram'  => array(
+			'id'     => 'instagram',
+			'label'  => __( 'Instagram', 'Vendd' ),
 		),
-		'tumblr'   => array(
-			'id'    => 'tumblr',
-			'label' => __( 'Tumblr', 'Vendd' ),
+		'tumblr'     => array(
+			'id'     => 'tumblr',
+			'label'  => __( 'Tumblr', 'Vendd' ),
 		),
 		'linkedin'   => array(
-			'id'    => 'linkedin',
-			'label' => __( 'LinkedIn', 'Vendd' ),
+			'id'     => 'linkedin',
+			'label'  => __( 'LinkedIn', 'Vendd' ),
 		),
-		'youtube'   => array(
-			'id'    => 'youtube',
-			'label' => __( 'YouTube', 'Vendd' ),
+		'youtube'    => array(
+			'id'     => 'youtube',
+			'label'  => __( 'YouTube', 'Vendd' ),
 		),
-		'pinterest'   => array(
-			'id'    => 'pinterest',
-			'label' => __( 'Pinterest', 'Vendd' ),
+		'slack'      => array(
+			'id'     => 'slack',
+			'label'  => __( 'Slack', 'Vendd' ),
+		),
+		'pinterest'  => array(
+			'id'     => 'pinterest',
+			'label'  => __( 'Pinterest', 'Vendd' ),
 		),
 		'dribbble'   => array(
-			'id'    => 'dribbble',
-			'label' => __( 'Dribbble', 'Vendd' ),
+			'id'     => 'dribbble',
+			'label'  => __( 'Dribbble', 'Vendd' ),
 		),
-		'wordpress'   => array(
-			'id'    => 'wordpress',
-			'label' => __( 'WordPress', 'Vendd' ),
+		'wordpress'  => array(
+			'id'     => 'wordpress',
+			'label'  => __( 'WordPress', 'Vendd' ),
 		),
-		'etsy'   => array(
-			'id'    => 'etsy',
-			'label' => __( 'Etsy', 'Vendd' ),
+		'etsy'       => array(
+			'id'     => 'etsy',
+			'label'  => __( 'Etsy', 'Vendd' ),
 		),
 	);
 	foreach ( $profiles as $setting ) {

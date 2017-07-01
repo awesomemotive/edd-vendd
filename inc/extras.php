@@ -260,6 +260,11 @@ function vendd_social_profiles() {
 						'icon'   => '<i class="fa fa-youtube"></i>',
 						'option' => esc_url( get_theme_mod( 'vendd_youtube' ) )
 					),
+					'slack'      => array(
+						'class'  => 'vendd-slack',
+						'icon'   => '<i class="fa fa-slack" aria-hidden="true"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_slack' ) )
+					),
 					'pinterest'  => array(
 						'class'  => 'vendd-pinterest',
 						'icon'   => '<i class="fa fa-pinterest-square"></i>',
