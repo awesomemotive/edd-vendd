@@ -214,7 +214,8 @@ function vendd_social_profiles() {
 		 get_theme_mod( 'vendd_youtube' ) ||
 		 get_theme_mod( 'vendd_pinterest' ) ||
 		 get_theme_mod( 'vendd_dribbble' ) ||
-		 get_theme_mod( 'vendd_wordpress' ) ) :
+		 get_theme_mod( 'vendd_wordpress' ) ||
+		 get_theme_mod( 'vendd_etsy' ) ) :
 	?>
 		<span class="social-links">
 			<?php
@@ -273,6 +274,11 @@ function vendd_social_profiles() {
 						'class'  => 'vendd-wordpress',
 						'icon'   => '<i class="fa fa-wordpress"></i>',
 						'option' => esc_url( get_theme_mod( 'vendd_wordpress' ) )
+					),
+					'etsy'       => array(
+						'class'  => 'vendd-etsy',
+						'icon'   => '<i class="fa fa-etsy" aria-hidden="true"></i>',
+						'option' => esc_url( get_theme_mod( 'vendd_etsy' ) )
 					),
 				);
 				foreach ( $social_profiles as $profile ) {

@@ -355,70 +355,67 @@ function vendd_customize_register( $wp_customize ) {
 	 * 2. update vendd_social_profiles() function in inc/extras.php
 	 */
 	$profiles = array(
-		'twitter',
-		'facebook',
-		'googleplus',
-		'github',
-		'instagram',
-		'tumblr',
-		'linkedin',
-		'youtube',
-		'pinterest',
-		'dribbble',
-		'wordpress',
+		'twitter'   => array(
+			'id'    => 'twitter',
+			'label' => __( 'Twitter', 'Vendd' ),
+		),
+		'facebook'   => array(
+			'id'    => 'facebook',
+			'label' => __( 'Facebook', 'Vendd' ),
+		),
+		'googleplus'   => array(
+			'id'    => 'googleplus',
+			'label' => __( 'Google+', 'Vendd' ),
+		),
+		'github'   => array(
+			'id'    => 'github',
+			'label' => __( 'GitHub', 'Vendd' ),
+		),
+		'instagram'   => array(
+			'id'    => 'instagram',
+			'label' => __( 'Instagram', 'Vendd' ),
+		),
+		'tumblr'   => array(
+			'id'    => 'tumblr',
+			'label' => __( 'Tumblr', 'Vendd' ),
+		),
+		'linkedin'   => array(
+			'id'    => 'linkedin',
+			'label' => __( 'LinkedIn', 'Vendd' ),
+		),
+		'youtube'   => array(
+			'id'    => 'youtube',
+			'label' => __( 'YouTube', 'Vendd' ),
+		),
+		'pinterest'   => array(
+			'id'    => 'pinterest',
+			'label' => __( 'Pinterest', 'Vendd' ),
+		),
+		'dribbble'   => array(
+			'id'    => 'dribbble',
+			'label' => __( 'Dribbble', 'Vendd' ),
+		),
+		'wordpress'   => array(
+			'id'    => 'wordpress',
+			'label' => __( 'WordPress', 'Vendd' ),
+		),
+		'etsy'   => array(
+			'id'    => 'etsy',
+			'label' => __( 'Etsy', 'Vendd' ),
+		),
 	);
-	foreach ( $profiles as $profile ) {
-		$wp_customize->add_setting( 'vendd_' . $profile, array(
+	foreach ( $profiles as $setting ) {
+		$wp_customize->add_setting( 'vendd_' . $setting['id'], array(
 			'default'           => null,
 			'sanitize_callback' => 'vendd_sanitize_text'
 		) );
 	}
-
-	// full add_control() list to respect brand names (capitalization, symbols, etc.)
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_twitter', array(
-		'label'     => 'Twitter',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_facebook', array(
-		'label'     => 'Facebook',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_googleplus', array(
-		'label'     => 'Google+',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_github', array(
-		'label'     => 'GitHub',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_instagram', array(
-		'label'     => 'Instagram',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_tumblr', array(
-		'label'     => 'Tumblr',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_linkedin', array(
-		'label'     => 'LinkedIn',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_youtube', array(
-		'label'     => 'YouTube',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_pinterest', array(
-		'label'     => 'Pinterest',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_dribbble', array(
-		'label'     => 'Dribbble',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
-	$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_wordpress', array(
-		'label'     => 'WordPress',
-		'section'   => 'vendd_social_profiles_section'
-	) ) );
+	foreach ( $profiles as $control ) {
+		$wp_customize->add_control( new Vendd_WP_Customize_Text_Control( $wp_customize, 'vendd_' . $control['id'], array(
+			'label'     => $control['label'],
+			'section'   => 'vendd_social_profiles_section'
+		) ) );
+	}
 
 
 	/** ===============
