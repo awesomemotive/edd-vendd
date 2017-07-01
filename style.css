@@ -815,6 +815,12 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 .info-bar .social-links a:last-child {
 	margin-right: 0;
 }
+.info-bar .social-links .vendd-etsy {
+	font-size: 1rem;
+}
+.info-bar .social-links i {
+	vertical-align: top;
+}
 .site-branding {
 	display: inline-block;
 	padding: 40px;
