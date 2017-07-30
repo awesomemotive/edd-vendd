@@ -3491,6 +3491,23 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+>>> EDD Coming Soon
+>>> https://easydigitaldownloads.com/downloads/edd-coming-soon/
+--------------------------------------------------------------*/
+.product-price .edd_price br:not(:first-of-type) {
+	display: none;
+}
+.product-price .edd_price p {
+	display: inline;
+	padding: 0;
+	margin-bottom: 0;
+}
+.product-price .edd_price > strong:before {
+	content: '\2014';
+}
+
+
+/*--------------------------------------------------------------
 >>> Widgets Pack
 >>> https://easydigitaldownloads.com/downloads/widgets-bundle/
 --------------------------------------------------------------*/

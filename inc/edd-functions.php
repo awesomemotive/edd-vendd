@@ -97,3 +97,10 @@ function vendd_empty_cart_content( $message ) {
 	return $message;
 }
 add_filter( 'edd_empty_cart_message', 'vendd_empty_cart_content' );
+
+
+/**
+ * Remove unneeded EDD Coming Soon [downloads] shortcode output
+ * It still filters edd_price() ... that will suffice
+ */
+remove_action( 'edd_download_after', 'edd_coming_soon_display_text' );
