@@ -357,55 +357,55 @@ function vendd_customize_register( $wp_customize ) {
 	$profiles = array(
 		'twitter'    => array(
 			'id'     => 'twitter',
-			'label'  => __( 'Twitter', 'Vendd' ),
+			'label'  => __( 'Twitter', 'vendd' ),
 		),
 		'facebook'   => array(
 			'id'     => 'facebook',
-			'label'  => __( 'Facebook', 'Vendd' ),
+			'label'  => __( 'Facebook', 'vendd' ),
 		),
 		'googleplus' => array(
 			'id'     => 'googleplus',
-			'label'  => __( 'Google+', 'Vendd' ),
+			'label'  => __( 'Google+', 'vendd' ),
 		),
 		'github'     => array(
 			'id'     => 'github',
-			'label'  => __( 'GitHub', 'Vendd' ),
+			'label'  => __( 'GitHub', 'vendd' ),
 		),
 		'instagram'  => array(
 			'id'     => 'instagram',
-			'label'  => __( 'Instagram', 'Vendd' ),
+			'label'  => __( 'Instagram', 'vendd' ),
 		),
 		'tumblr'     => array(
 			'id'     => 'tumblr',
-			'label'  => __( 'Tumblr', 'Vendd' ),
+			'label'  => __( 'Tumblr', 'vendd' ),
 		),
 		'linkedin'   => array(
 			'id'     => 'linkedin',
-			'label'  => __( 'LinkedIn', 'Vendd' ),
+			'label'  => __( 'LinkedIn', 'vendd' ),
 		),
 		'youtube'    => array(
 			'id'     => 'youtube',
-			'label'  => __( 'YouTube', 'Vendd' ),
+			'label'  => __( 'YouTube', 'vendd' ),
 		),
 		'slack'      => array(
 			'id'     => 'slack',
-			'label'  => __( 'Slack', 'Vendd' ),
+			'label'  => __( 'Slack', 'vendd' ),
 		),
 		'pinterest'  => array(
 			'id'     => 'pinterest',
-			'label'  => __( 'Pinterest', 'Vendd' ),
+			'label'  => __( 'Pinterest', 'vendd' ),
 		),
 		'dribbble'   => array(
 			'id'     => 'dribbble',
-			'label'  => __( 'Dribbble', 'Vendd' ),
+			'label'  => __( 'Dribbble', 'vendd' ),
 		),
 		'wordpress'  => array(
 			'id'     => 'wordpress',
-			'label'  => __( 'WordPress', 'Vendd' ),
+			'label'  => __( 'WordPress', 'vendd' ),
 		),
 		'etsy'       => array(
 			'id'     => 'etsy',
-			'label'  => __( 'Etsy', 'Vendd' ),
+			'label'  => __( 'Etsy', 'vendd' ),
 		),
 	);
 	foreach ( $profiles as $setting ) {
