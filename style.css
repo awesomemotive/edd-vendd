@@ -1011,15 +1011,28 @@ aside[class*="widget_edd_"] .widget-download-with-thumbnail:after {
 	font-style: italic;
 }
 
+/* Make all sidebar inputs and select menus white background */
+.widget select,
+.widget input[type="text"],
+.widget input[type="email"],
+.widget input[type="url"],
+.widget input[type="password"],
+.widget input[type="search"],
+.widget input[type="number"],
+.widget input[type="tel"],
+.site-content .widget .edd_download_purchase_form > .edd_download_quantity_wrapper input[type="number"] {
+	background: #fff;
+}
+.site-content .edd_download_purchase_form input[type="number"] {
+	background: #fafafa;
+}
+
 /* Make sure select elements fit in widgets */
 .widget select {
 	max-width: 100%;
 }
 
 /* Search widget */
-.widget_search #search-input {
-	background: #fff;
-}
 .widget_search .search-submit {
 	display: none;
 }
@@ -2015,7 +2028,6 @@ input[type="submit"].edd-submit {
 	margin-bottom: 1.5em;
 }
 .site-content .edd_download_purchase_form input[type="number"] {
-	background: #fff;
 	padding: 2px 8px;
 	width: 65px;
 }
@@ -3308,16 +3320,30 @@ input[type="submit"].edd-submit {
 	margin: 0;
 	border: none;
 }
+#edd_checkout_form_wrap textarea,
+#edd_checkout_form_wrap input[type="text"],
+#edd_checkout_form_wrap input[type="email"],
+#edd_checkout_form_wrap input[type="password"],
+#edd_checkout_form_wrap input[type="tel"] {
+	line-height: 1.6;
+}
 
 
 /*--------------------------------------------------------------
 >>> EDD Custom Prices
 >>> https://easydigitaldownloads.com/downloads/custom-prices/
 --------------------------------------------------------------*/
+.site-content .widget .edd_download_purchase_form label[for*="edd_cp_"] {
+	position: relative;
+	left: -4px;
+}
 .site-content .edd_download_purchase_form input.edd_cp_price {
 	padding: 2px 8px;
 	margin-left: 13px;
 	width: 75px !important;
+}
+.site-content .widget .edd_download_purchase_form .edd_multi_mode + .edd-cp-container input.edd_cp_price {
+	margin-left: 5px;
 }
 .edd_download_inner .edd_download_purchase_form input.edd_cp_price {
 	width: 65px !important;
