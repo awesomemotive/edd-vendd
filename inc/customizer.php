@@ -832,7 +832,7 @@ function vendd_customizer_head_styles() {
 				background: #3d3d3d !important;
 				color: #fff !important;
 			}
-			<?php if ( 'inherit' == edd_get_option( 'checkout_color' ) ) : ?>
+			<?php if ( vendd_edd_is_activated() && 'inherit' == edd_get_option( 'checkout_color' ) ) : ?>
 				.edd_purchase_submit_wrapper .edd-submit.button.white { background: #404040 !important; }
 				.edd_purchase_submit_wrapper .edd-submit.button.gray { background: #f1f1f1 !important; }
 				.edd_purchase_submit_wrapper .edd-submit.button.blue { background: #428bca !important; }
