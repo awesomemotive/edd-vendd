@@ -444,9 +444,11 @@ add_action( 'wp_enqueue_scripts', 'vendd_child_enqueue_styles' );
 			$renew_link = '<a href="' . esc_url( $this->get_renewal_link() ) . '" target="_blank">' . $strings['renew'] . '</a>';
 		}
 
-		// Get site counts
-		$site_count = $license_data->site_count;
-		$license_limit = $license_data->license_limit;
+		// Get site count.
+		$site_count = isset( $license_data->site_count ) ? $license_data->site_count : '';
+
+		// Get license limit.
+		$license_limit = isset( $license_data->license_limit ) ? $license_data->license_limit : '';
 
 		// If unlimited
 		if ( 0 == $license_limit ) {
