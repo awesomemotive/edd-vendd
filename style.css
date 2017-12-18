@@ -3275,7 +3275,7 @@ input[type="submit"].edd-submit {
 .eddcd_repeatable_table:not(:last-of-type) {
 	margin-bottom: 2em;
 }
-#fes-vendor-dashboard > h3 > strong {
+#fes-vendor-dashboard h3 > strong  {
 	font-weight: 400;
 }
 #fes-vendor-dashboard .eddcd-purchased-download-title {
