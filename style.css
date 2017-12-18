@@ -1850,6 +1850,7 @@ input[type="submit"].edd-submit {
 }
 .content-area .vendd-price-button-container .vendd-price-button .edd-submit {
 	font-size: .87em;
+	text-decoration: none;
 	padding: 4px 8px;
 }
 .content-area .vendd-price-button-container .edd_download_purchase_form {
@@ -2014,8 +2015,10 @@ input[type="submit"].edd-submit {
 	margin-bottom: 0;
 }
 .widget_edd_product_details .edd_download_purchase_form .edd-submit,
+.widget_edd_product_details .edd-free-downloads-direct-download-link,
 .content-area .edd_download_purchase_form .edd-submit {
 	font-size: 1rem;
+	text-decoration: none;
 	padding: 10px;
 	border: none;
 	border-radius: 4px;
