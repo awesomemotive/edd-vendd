@@ -77,12 +77,13 @@
 	max-width: 97%;
 	height: auto;
 }
-.vendd-widget-usage {
+.vendd-widget-usage{
 	background: #fbe3e3;
 	padding: 10px;
 	border-radius: 4px;
 }
-#sidebar-download .vendd-widget-usage {
+#sidebar-download .vendd-widget-usage,
+#sub-accordion-section-sidebar-widgets-sidebar-download .vendd-widget-usage {
 	display: none;
 }
 @media all and ( max-width: 480px ) {
