@@ -3272,6 +3272,43 @@ input[type="submit"].edd-submit {
 
 
 /*--------------------------------------------------------------
+>>> Custom Deliverables
+>>> https://easydigitaldownloads.com/downloads/custom-deliverables/
+--------------------------------------------------------------*/
+.eddcd_repeatable_table:not(:last-of-type) {
+	margin-bottom: 2em;
+}
+#fes-vendor-dashboard h3 > strong  {
+	font-weight: 400;
+}
+#fes-vendor-dashboard .eddcd-purchased-download-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+#fes-vendor-dashboard .eddcd-repeatable-row-standard-fields {
+	background: #fff;
+}
+#fes-vendor-dashboard .eddcd-repeatable-row-standard-fields input[type="text"] {
+	padding: 5px;
+}
+#fes-vendor-dashboard .eddcd_upload_file_button.edd-submit.button {
+	text-decoration: none;
+	padding: 10px;
+	height: auto;
+}
+#fes-vendor-dashboard .edd-custom-deliverables-send-email-wrapper,
+#fes-vendor-dashboard .edd-custom-deliverables-send-email-wrapper p:last-of-type {
+	margin-bottom: 0;
+}
+#fes-vendor-dashboard .edd-custom-deliverables-send-email-wrapper {
+	background: none;
+	font-size: 1rem;
+	padding: 0;
+	border: none;
+}
+
+
+/*--------------------------------------------------------------
 >>> Stripe Payment Gateway
 >>> https://easydigitaldownloads.com/downloads/stripe-gateway/
 --------------------------------------------------------------*/
