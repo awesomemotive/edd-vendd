@@ -26,11 +26,20 @@
 			<div class="widget widget_download_author">
 				<?php
 					$user       = new WP_User( $post->post_author );
-					$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $post->post_author ) );
+					$vendor_url = '';
+					if ( vendd_fes_is_activated() ) {
+						$vendor_url = vendd_edd_fes_author_url( get_the_author_meta( 'ID', $post->post_author ) );
+					}
 				?>
 				<?php if ( apply_filters( 'vendd_show_single_download_author_avatar', true, $post ) ) { ?>
 					<span class="vendd-download-author">
-						<a href="<?php echo $vendor_url; ?>"><?php echo get_avatar( $user->ID, 90 ); ?></a>
+						<?php if ( vendd_fes_is_activated() ) { ?>
+							<a href="<?php echo $vendor_url; ?>">
+								<?php echo get_avatar( $user->ID, 90 ); ?>
+							</a>
+						<?php } else { ?>
+							<?php echo get_avatar( $user->ID, 90 ); ?>
+						<?php } ?>
 					</span>
 				<?php } ?>
 				<?php
