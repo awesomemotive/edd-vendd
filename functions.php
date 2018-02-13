@@ -49,8 +49,10 @@ function vendd_setup() {
 	add_image_size( 'vendd_featured_image_full_width', 1120, 361, true );
 	// add a hard cropped (for uniformity) image size for content lists
 	add_image_size( 'vendd_featured_image_thumb', 200, 200, true );
-	// add a hard cropped (for uniformity) image size for the product grid
+	// add a hard cropped (for uniformity) image size for the single downloads
 	add_image_size( 'vendd_product_image', 722, 361, true );
+	// add a hard cropped (for uniformity) image size for the product grid
+	add_image_size( 'vendd_downloads_shortcode_grid_image', 520, 260, true );
 
 	/**
 	 * Theme nav menus
