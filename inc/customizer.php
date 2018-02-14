@@ -810,6 +810,7 @@ function vendd_customizer_head_styles() {
 	$bg_color           = get_option( 'vendd_background_color' );
 	$edd_button_color   = get_option( 'vendd_edd_button_color' );
 	$edd_color_defaults = array( '#404040', '#f1f1f1', '#E74C3C', '#2ECC71', '#F1C40F', '#E67E22', '#3d3d3d' );
+	$html_structure     = get_theme_mod( 'vendd_full_width_html', 0 ) ? '#content' : '#page';
 	?>
 
 	<style type="text/css">
@@ -824,23 +825,23 @@ function vendd_customizer_head_styles() {
 			}
 		<?php endif; ?>
 		<?php if ( '' != $edd_button_color && ! in_array( $edd_button_color, $edd_color_defaults ) ) : ?>
-			.edd-submit.button {
-				background: <?php echo vendd_sanitize_hex_color( $edd_button_color ); ?> !important;
-				color: #fff !important;
+			<?php echo $html_structure; ?> .edd-submit.button {
+				background: <?php echo vendd_sanitize_hex_color( $edd_button_color ); ?>;
+				color: #fff;
 			}
-			.edd-submit.button:hover {
-				background: #3d3d3d !important;
-				color: #fff !important;
+			<?php echo $html_structure; ?> .edd-submit.button:hover {
+				background: #3d3d3d;
+				color: #fff;
 			}
 			<?php if ( vendd_edd_is_activated() && 'inherit' == edd_get_option( 'checkout_color' ) ) : ?>
-				.edd_purchase_submit_wrapper .edd-submit.button.white { background: #404040 !important; }
-				.edd_purchase_submit_wrapper .edd-submit.button.gray { background: #f1f1f1 !important; }
-				.edd_purchase_submit_wrapper .edd-submit.button.blue { background: #428bca !important; }
-				.edd_purchase_submit_wrapper .edd-submit.button.red { background: #E74C3C !important; }
-				.edd_purchase_submit_wrapper .edd-submit.button.green { background: #2ECC71 !important; }
-				.edd_purchase_submit_wrapper .edd-submit.button.yellow { background: #F1C40F !important; }
-				.edd_purchase_submit_wrapper .edd-submit.button.orange { background: #E67E22 !important; }
-				.edd_purchase_submit_wrapper .edd-submit.button.dark-gray { background: #3d3d3d !important; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.white { background: #404040; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.gray { background: #f1f1f1; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.blue { background: #428bca; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.red { background: #E74C3C; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.green { background: #2ECC71; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.yellow { background: #F1C40F; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.orange { background: #E67E22; }
+				<?php echo $html_structure; ?> .edd_purchase_submit_wrapper .edd-submit.button.dark-gray { background: #3d3d3d; }
 			<?php endif; ?>
 		<?php endif; ?>
 		<?php if ( '#428bca' != $design_color && '' != $design_color ) : // Is the design color no longer the default? ?>
