@@ -116,6 +116,10 @@ function vendd_body_classes( $classes ) {
 		} elseif ( is_page_template( 'edd_templates/edd-failed.php' ) ) {
 			$classes[] = 'vendd-failed-template vendd-edd-template';
 		}
+
+		if ( defined( 'EDD_VERSION' ) && version_compare( EDD_VERSION, '3.0', '<' ) ) {
+			$classes[] = 'vendd-pre-edd3';
+		}
 	}
 
 	if ( is_page_template( 'page_templates/landing.php' ) ) {
