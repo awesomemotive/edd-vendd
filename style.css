@@ -1569,18 +1569,18 @@ object {
 	display: inline-block;
 }
 .vendd-pre-edd3 .edd_download_columns_2 .edd_download {
-	width: 49.6% !important;
+	width: 49.5% !important;
 }
 .vendd-pre-edd3 .edd_download_columns_0 .edd_download,
 .vendd-pre-edd3 .edd_download_columns_3 .edd_download {
-	width: 33.03% !important;
+	width: 32.86% !important;
 }
 .vendd-pre-edd3 .edd_download_columns_6 .edd_download {
 	width: 16.66667% !important;
 }
 .vendd-pre-edd3 .edd_downloads_list.edd_download_columns_4 .edd_download,
 .vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download {
-	width: 24.6% !important;
+	width: 24.47% !important;
 }
 .vendd-pre-edd3 .edd_downloads_list.edd_download_columns_5 .edd_download,
 .vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
@@ -1588,6 +1588,19 @@ object {
 .vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 	width: 19.6% !important;
 	padding: 15px;
+}
+body:not(.vendd-full-width-page-template).vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+body:not(.vendd-full-width-page-template).vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+body:not(.vendd-full-width-page-template).vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+	width: 49.5%;
+	padding: 15px;
+}
+@media (min-width: 600px) {
+	body:not(.vendd-full-width-page-template).vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+	body:not(.vendd-full-width-page-template).vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+	body:not(.vendd-full-width-page-template).vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+		width: 49.5% !important;
+	}
 }
 
 /* 1 column [downloads] */
@@ -1634,7 +1647,7 @@ body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd
 body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
 body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
 body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
-	padding: 20px;
+	padding: 15px;
 }
 
 /* general [downloads] styles */
@@ -3673,19 +3686,20 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 		padding: 20px;
 	}
+
 	.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_3 .edd_download,
-	.vendd-pre-edd3 .vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
-	.vendd-pre-edd3 .vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
-	.vendd-pre-edd3 .vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-pre-edd3.vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-pre-edd3.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-pre-edd3.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_4 .edd_download,
-	.vendd-pre-edd3 .vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+	.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
 	.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_5 .edd_download,
-	.vendd-pre-edd3 .vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+	.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
 	.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_6 .edd_download,
-	.vendd-pre-edd3 .vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+	.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 		float: none !important;
 		display: inline-block;
-		width: 49.6% !important;
+		width: 49.5% !important;
 		padding: 20px;
 	}
 	.entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
