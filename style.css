@@ -1563,13 +1563,31 @@ object {
 	display: none;
 }
 
-/* Pre EDD3 styles */
+/* Pre EDD3 styles for backwards compatibility */
+.vendd-pre-edd3 .edd_downloads_list[class*="edd_download_columns_"] .edd_download {
+	float: none !important;
+	display: inline-block;
+}
+.vendd-pre-edd3 .edd_download_columns_2 .edd_download {
+	width: 49.6% !important;
+}
 .vendd-pre-edd3 .edd_download_columns_0 .edd_download,
 .vendd-pre-edd3 .edd_download_columns_3 .edd_download {
-	width: 33.33334%;
+	width: 33.03% !important;
 }
 .vendd-pre-edd3 .edd_download_columns_6 .edd_download {
-	width: 16.66667%;
+	width: 16.66667% !important;
+}
+.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_4 .edd_download,
+.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download {
+	width: 24.6% !important;
+}
+.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_5 .edd_download,
+.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_6 .edd_download,
+.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+	width: 19.6% !important;
+	padding: 10px;
 }
 
 /* 1 column [downloads] */
@@ -1577,13 +1595,15 @@ object {
 	max-width: 720px;
 	margin: 0 auto;
 }
-
 .edd_downloads_list.edd_download_columns_1 .edd_download {
 	font-size: 1em;
 }
 
-/* 2 columns [downloads] */
-
+/* 3 column [downloads] */
+.entry-content .edd_download_columns_3 .edd_download .edd_download_title {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
 
 /* 5, 6 column [downloads] */
 .edd_downloads_list.edd_download_columns_5 .edd_download,
@@ -1594,14 +1614,10 @@ object {
 }
 
 /* 4, 5, 6 column [downloads] - adjust title formatting */
-.entry-content .edd_download_columns_3 .edd_download .edd_download_title {
-	font-size: 1em;
-	margin-bottom: 20px;
-}
 .edd_download_columns_4 .edd_download .edd_download_title,
 .edd_download_columns_5 .edd_download .edd_download_title,
 .edd_download_columns_6 .edd_download .edd_download_title {
-	font-size: 1em;
+	font-size: 1.2em;
 	margin-bottom: 20px;
 }
 
@@ -3659,10 +3675,19 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.vendd-pre-edd3 .vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
 	.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_6 .edd_download,
 	.vendd-pre-edd3 .vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+		float: none !important;
 		display: inline-block;
+		width: 49.6% !important;
+		padding: 20px;
 	}
 	.entry-content .edd_downloads_list.edd_download_columns_3 .edd_download {
 		font-size: 1em;
+	}
+	.edd_download_columns_4 .edd_download .edd_download_title,
+	.edd_download_columns_5 .edd_download .edd_download_title,
+	.edd_download_columns_6 .edd_download .edd_download_title {
+		font-size: 1.5em;
+		margin-bottom: 15px;
 	}
 	#fes-vendor-dashboard {
 		max-width: 722px;
@@ -3887,15 +3912,6 @@ aside[class*="widget_edd_"] .widget-download-title {
 }
 
 @media all and ( max-width: 600px ) {
-	body,
-	button,
-	input,
-	select,
-	textarea,
-	#secondary,
-	.comment-full {
-		font-size: 14px;
-	}
 	.entry-content .alignright,
 	.entry-content .alignleft {
 		display: block;
@@ -4002,8 +4018,21 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 		width: 100% !important;
 	}
-	#content .edd_download_title {
-		font-size: 1.2em;
+	.vendd-pre-edd3 .edd_downloads_list[class*="edd_download_columns_"] .edd_download,
+	.vendd-pre-edd3.vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-pre-edd3.vendd-full-width-page-template .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-pre-edd3.vendd-advanced-search-results .edd_downloads_list.edd_download_columns_3 .edd_download,
+	.vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+	.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+	.vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+	.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+	.vendd-pre-edd3 .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download,
+	.vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+		width: 100% !important;
+	}
+	#content .edd_downloads_list .edd_download .edd_download_title {
+		font-size: 1.5em;
+		margin-bottom: 15px;
 	}
 	#wp-calendar th,
 	#wp-calendar td {
@@ -4028,5 +4057,15 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.vendor-order {
 		width: 100%;
 		margin: 0 0 16px;
+	}
+}
+
+@media all and ( max-width: 360px ) {
+	#content .edd_downloads_list[class*="edd_download_columns_"] .edd_download {
+		padding: 10px !important;
+	}
+	#content .edd_downloads_list[class*="edd_download_columns_"] .edd_download .edd_download_title {
+		font-size: 1.2em;
+		margin-bottom: 20px;
 	}
 }
