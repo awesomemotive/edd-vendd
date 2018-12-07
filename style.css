@@ -1621,10 +1621,19 @@ object {
 	margin-bottom: 20px;
 }
 
-/* 4, 5, 6 column [downloads] - show 2 columns if NOT using the EDD Downloads or Full-width template */
-.entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
-.entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
-.entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
+/* 3, 4, 5, 6 column [downloads] - show 2 columns if NOT using the EDD Downloads or Full-width template */
+@media (min-width: 1200px) {
+	body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_3,
+	body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_4,
+	body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_5,
+	body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_6 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_3 .edd_download,
+body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_4 .edd_download,
+body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
+body:not(.vendd-full-width-page-template) .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 	padding: 20px;
 }
 
