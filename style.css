@@ -1552,18 +1552,18 @@ object {
 .edd_download_columns_6 .edd_download {
 	padding: 10px;
 }
-.edd_download_list {
+.edd_downloads_list {
 	grid-column-gap: 0;
 	grid-row-gap: 0;
 }
 .edd_downloads_list[class*="edd_download_columns_"] .edd_download {
 	vertical-align: top;
 }
-.edd_downloads_list[class*="edd_download_columns_"] > div[style="clear:both;"] {
-	display: none;
-}
 
 /* Pre EDD3 styles for backwards compatibility */
+.vendd-pre-edd3 .edd_downloads_list[class*="edd_download_columns_"] > div[style="clear:both;"] {
+	display: none;
+}
 .vendd-pre-edd3 .edd_downloads_list[class*="edd_download_columns_"] .edd_download {
 	float: none !important;
 	display: inline-block;
@@ -1587,7 +1587,7 @@ object {
 .vendd-pre-edd3 .edd_downloads_list.edd_download_columns_6 .edd_download,
 .vendd-pre-edd3.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 	width: 19.6% !important;
-	padding: 10px;
+	padding: 15px;
 }
 
 /* 1 column [downloads] */
@@ -1610,7 +1610,7 @@ object {
 .vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_5 .edd_download,
 .edd_downloads_list.edd_download_columns_6 .edd_download,
 .vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
-	padding: 10px;
+	padding: 15px;
 }
 
 /* 4, 5, 6 column [downloads] - adjust title formatting */
@@ -3663,7 +3663,6 @@ aside[class*="widget_edd_"] .widget-download-title {
 	.edd_downloads_list.edd_download_columns_6 .edd_download,
 	.vendd-full-width-page-template .entry-content .edd_downloads_list.edd_download_columns_6 .edd_download {
 		padding: 20px;
-		width: 50%;
 	}
 	.vendd-pre-edd3 .edd_downloads_list.edd_download_columns_3 .edd_download,
 	.vendd-pre-edd3 .vendd-downloads-template .edd_downloads_list.edd_download_columns_3 .edd_download,
@@ -4062,7 +4061,7 @@ aside[class*="widget_edd_"] .widget-download-title {
 
 @media all and ( max-width: 360px ) {
 	#content .edd_downloads_list[class*="edd_download_columns_"] .edd_download {
-		padding: 10px !important;
+		padding: 15px !important;
 	}
 	#content .edd_downloads_list[class*="edd_download_columns_"] .edd_download .edd_download_title {
 		font-size: 1.2em;
