@@ -1336,7 +1336,8 @@ body:not(.vendd-advanced-search-results) .page-title {
 	font-size: .73em;
 	margin-top: 6px;
 }
-.comment-form-cookies-consent label {
+#commentform .comment-form-cookies-consent label {
+	display: inline;
 	margin-left: 6px;
 }
 
