@@ -19,7 +19,6 @@ if ( isset( $_GET['s'] ) ) :
 		<div id="store-front" class="vendd-download-search-results">
 			<div class="edd_downloads_list edd_download_columns_3">
 				<?php
-					$i = 1;
 					foreach ( $download_results->posts as $index => $post ) : ?>
 						<div itemscope itemtype="http://schema.org/Product" class="edd_download" id="edd_download_<?php echo $post->ID; ?>">
 							<div class="edd_download_inner">
@@ -45,12 +44,6 @@ if ( isset( $_GET['s'] ) ) :
 							</div>
 						</div>
 						<?php
-						if ( $i % 3 == 0 ) :
-							?>
-							<div style="clear:both;"></div>
-							<?php
-						endif;
-						$i += 1;
 					endforeach;
 				?>
 			</div>
