@@ -2437,6 +2437,10 @@ input[type="submit"].edd-submit {
 #edd_checkout_wrap #edd_checkout_form_wrap #edd_purchase_submit {
 	background: none;
 }
+.vendd-pre-edd3 #edd_checkout_wrap #edd_cc_fields input:not([type="submit"]),
+.vendd-pre-edd3 #edd_checkout_wrap #edd_cc_fields select {
+	background: #fff;
+}
 #edd_show_terms {
 	font-size: .87em;
 	margin-bottom: 10px;
