@@ -308,7 +308,7 @@ function vendd_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_info_bar', array(
 		'label'         => __( 'Information Bar Text', 'vendd' ),
 		'section'       => 'vendd_content_section',
-		'description'   => __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+		'description'   => __( 'This text appears at the very top of your site aligned to the left. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>, <i>',
 		'priority'      => 80,
 	) ) );
 
@@ -560,7 +560,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_store_front_title', array(
 			'label'         => __( 'EDD Downloads Template Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
-			'description'   => __( 'This optional field allows you to replace the title of your EDD Downloads Page Template. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'description'   => __( 'This optional field allows you to replace the title of your EDD Downloads Page Template. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>, <i>',
 			'priority'      => 60,
 		) ) );
 
@@ -572,7 +572,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_empty_cart_title', array(
 			'label'         => __( 'Empty Cart Title', 'vendd' ),
 			'section'       => 'vendd_edd_options',
-			'description'   => __( 'This is the title on the page that displays when the cart is empty. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'description'   => __( 'This is the title on the page that displays when the cart is empty. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>, <i>',
 			'priority'      => 70,
 		) ) );
 
@@ -621,7 +621,7 @@ function vendd_customize_register( $wp_customize ) {
 		$wp_customize->add_control( new Vendd_WP_Customize_Textarea_Control( $wp_customize, 'vendd_fes_dashboard_title', array(
 			'label'         => __( 'FES Dashboard Title', 'vendd' ),
 			'section'       => 'vendd_fes_options',
-			'description'   => __( 'This optional field allows you to replace the title of your FES Dashboard. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>',
+			'description'   => __( 'This optional field allows you to replace the title of your FES Dashboard. If left blank, the title of the page will show instead. Allowed tags:', 'vendd' ) . ' <a>, <span>, <em>, <strong>, <i>',
 			'priority'      => 10,
 		) ) );
 
@@ -771,6 +771,9 @@ function vendd_sanitize_textarea_lite( $input ) {
 			'class'         => array(),
 			'id'            => array(),
 			'style'         => array(),
+		),
+		'i'      => array(
+			'class'         => array(),
 		),
 	);
 	return wp_kses( $input, $allowed );
