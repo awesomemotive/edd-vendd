@@ -29,12 +29,12 @@ if ( is_tax( 'download_category' ) || is_tax( 'download_tag' ) ) {
 	<?php }
 }
 
-if ( have_posts() ) : $i = 1;
+if ( have_posts() ) :
 	?>
 	<div id="store-front">
 		<div class="edd_downloads_list edd_download_columns_3">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div itemscope itemtype="http://schema.org/Product" class="edd_download" id="edd_download_<?php echo get_the_ID(); ?>" style="width: 33.3%; float: left;">
+				<div itemscope itemtype="http://schema.org/Product" class="edd_download" id="edd_download_<?php echo get_the_ID(); ?>">
 					<div class="edd_download_inner">
 						<?php
 							/**
@@ -55,11 +55,8 @@ if ( have_posts() ) : $i = 1;
 						?>
 					</div>
 				</div>
-				<?php if ( $i % 3 == 0 ) { ?><div style="clear:both;"></div><?php } ?>
-				<?php $i+=1; ?>
 			<?php endwhile; ?>
 		</div>
-		<div style="clear:both;"></div>
 		<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 			<div id="edd_download_pagination" class="store-pagination navigation">
 				<?php
