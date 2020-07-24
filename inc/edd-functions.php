@@ -51,6 +51,10 @@ add_action( 'edd_download_after', 'vendd_downloads_shortcode_wrap_close' );
 function vendd_edd_shortcodes_classes( $classes ) {
 	global $post;
 
+	if( ! is_object( $post ) ) {
+		return $classes;
+	}
+
 	if ( is_a( $post, 'WP_Post' ) &&
 		has_shortcode( $post->post_content, 'edd_login' ) ||
 		has_shortcode( $post->post_content, 'edd_register' ) ||
