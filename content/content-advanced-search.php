@@ -13,7 +13,7 @@ if ( isset( $_GET['s'] ) ) :
 	);
 	$download_results = new WP_Query( $download_args );
 	$excerpt_length   = apply_filters( 'excerpt_length', 35 );
-	$item_prop        = edd_add_schema_microdata() ? ' itemprop="description"' : '';
+	$item_prop        = ! function_exists( 'edd_get_order' ) && edd_add_schema_microdata() ? ' itemprop="description"' : '';
 
 	if ( ! empty( $download_results->post_count ) ) : ?>
 		<div id="store-front" class="vendd-download-search-results">
