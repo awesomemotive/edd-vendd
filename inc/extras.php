@@ -117,7 +117,7 @@ function vendd_body_classes( $classes ) {
 			$classes[] = 'vendd-failed-template vendd-edd-template';
 		}
 
-		if ( defined( 'EDD_VERSION' ) && version_compare( EDD_VERSION, '3.0', '<' ) ) {
+		if ( defined( 'EDD_VERSION' ) && version_compare( EDD_VERSION, '3.0-beta1', '<' ) ) {
 			$classes[] = 'vendd-pre-edd3';
 		}
 	}
