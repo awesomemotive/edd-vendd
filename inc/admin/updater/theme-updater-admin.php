@@ -66,6 +66,10 @@ class Vendd_Updater_Admin {
 		add_action( 'update_option_' . $this->theme_slug . '_license_key', array( $this, 'activate_license' ), 10, 2 );
 		add_filter( 'http_request_args', array( $this, 'disable_wporg_request' ), 5, 2 );
 
+		// Check that license is activated.
+		if ( edd_doing_cron() ) {
+			add_action( 'edd_weekly_scheduled_events', array( $this, 'weekly_license_check' ) );
+		}
 	}
 
 	/**
@@ -492,6 +496,35 @@ add_action( 'wp_enqueue_scripts', 'vendd_child_enqueue_styles' );
 		}
 
 		return $message;
+	}
+
+	/**
+	 * Hooks into the EDD Weekly Events cron event and sends off an acivation request if the license hasn't been activated.
+	 *
+	 * @return void
+	 */
+	public function weekly_license_check() {
+		if( ! empty( $_POST['edd_settings'] ) ) {
+			return; // Don't fire when saving settings
+		}
+
+		$vendd_license_key = $this->get_license_key();
+		// If there is no license key, don't try and activate.
+		if( empty( $vendd_license_key ) ) {
+			return;
+		}
+
+		$license_status = get_option( $this->theme_slug . '_license_key_status' );
+		// If we've already got a status, do not activate.
+		if ( ! empty( $license_status ) ) {
+			return;
+		}
+
+		$this->activate_license();
+	}
+
+	private function get_license_key() {
+		return get_option( $this->theme_slug . '_license_key' );
 	}
 
 	/**
