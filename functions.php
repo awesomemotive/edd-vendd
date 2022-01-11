@@ -11,7 +11,7 @@
  */
 define( 'VENDD_NAME', 'Vendd' );
 define( 'VENDD_AUTHOR', 'Sandhills Development, LLC' );
-define( 'VENDD_VERSION', '1.2.5' );
+define( 'VENDD_VERSION', '1.2.6' );
 define( 'VENDD_HOME', 'https://easydigitaldownloads.com/downloads/vendd' );
 
 
