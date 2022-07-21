@@ -29,7 +29,7 @@ class Vendd_Updater_Admin {
 	function __construct( $config = array(), $strings = array() ) {
 
 		$config = wp_parse_args( $config, array(
-			'remote_api_url' => 'http://easydigitaldownloads.com',
+			'remote_api_url' => 'https://easydigitaldownloads.com',
 			'theme_slug' => get_template(),
 			'item_name' => '',
 			'license' => '',
@@ -67,7 +67,7 @@ class Vendd_Updater_Admin {
 		add_filter( 'http_request_args', array( $this, 'disable_wporg_request' ), 5, 2 );
 
 		// Check that license is activated.
-		if ( edd_doing_cron() ) {
+		if ( function_exists( 'edd_doing_cron' ) && edd_doing_cron() ) {
 			add_action( 'edd_weekly_scheduled_events', array( $this, 'weekly_license_check' ) );
 		}
 	}
