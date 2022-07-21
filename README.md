@@ -6,7 +6,7 @@ Vendd was built by [Sean Davis](https://github.com/SDavisMedia) and the EDD Team
 
 Demo: [https://easydigitaldownloads.com/vendd/](https://easydigitaldownloads.com/vendd/)
 
-Documentation: [http://docs.easydigitaldownloads.com/article/863-vendd-getting-started-guide](http://docs.easydigitaldownloads.com/article/863-vendd-getting-started-guide)
+Documentation: [https://easydigitaldownloads.com/docs/vendd-getting-started-guide/](https://easydigitaldownloads.com/docs/vendd-getting-started-guide/)
 
 ### Contributing
 ---
